@@ -1,0 +1,19 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.watcherExclude": {
+        "**.cache": true,
+        "**.cargo": true,
+        "**.ccache": true,
+        "**.icons": true,
+        "**.local": true,
+        "**.mozilla": true,
+        "**.npm": true,
+        "**.rustup": true,
+        "**.steam": true,
+        "**.vscode-oss": true,
+        "**.wine": true,
+        "**dev": true,
+        "**GameData": true,
+        "**nas": true
+    }
+}
