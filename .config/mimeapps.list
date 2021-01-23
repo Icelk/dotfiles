@@ -31,3 +31,5 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/xml=firefox.desktop;
+image/png=firefox.desktop;
+image/jpeg=firefox.desktop;
