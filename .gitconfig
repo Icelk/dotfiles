@@ -5,3 +5,5 @@
 	name = Icelk
 [credential]
 	helper = store
+[pull]
+	rebase = true
