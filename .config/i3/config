@@ -222,8 +222,8 @@ bindsym $mod+Shift+r restart
 
 # Composter and notification manager
 exec_always --no-startup-id systemctl --user restart picom
-exec_always --no-startup-id killall -w dunst; dunst
-exec_always --no-startup-id ~/scripts/polybar.sh
+exec_always --no-startup-id systemctl --user restart dunst
+exec_always --no-startup-id systemctl --user restart polybar
 
 # Wallpaper
-exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id systemctl --user start nitrogen

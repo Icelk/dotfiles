@@ -1,0 +1,6 @@
+[Unit]
+Description=Start (restore) wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=nitrogen --restore

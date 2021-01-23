@@ -1,0 +1,6 @@
+[Unit]
+Description=Notifications
+
+[Service]
+Type=simple
+ExecStart=dunst

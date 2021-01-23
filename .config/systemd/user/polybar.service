@@ -1,0 +1,6 @@
+[Unit]
+Description=My desktop bar
+
+[Service]
+Type=simple
+ExecStart=/home/icelk/scripts/polybar.sh
