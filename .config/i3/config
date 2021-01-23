@@ -226,7 +226,7 @@ exec_always --no-startup-id ~/scripts/misc/Xdbus.sh
 # Composter and notification manager
 exec_always --no-startup-id systemctl --user restart picom
 exec_always --no-startup-id killall -w dunst; dunst
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/scripts/polybar.sh
 
 # Wallpaper
 exec_always --no-startup-id nitrogen --restore
