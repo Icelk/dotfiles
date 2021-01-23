@@ -3,3 +3,5 @@
 [user]
 	email = main@icelk.dev
 	name = Icelk
+[credential]
+	helper = store
