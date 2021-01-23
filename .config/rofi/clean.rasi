@@ -65,7 +65,7 @@ element-text {
 #element.selected.normal {
     background-color: @selected-background;
     text-color:       @selected-foreground;
-    border-color: #d07ef2;
+    border-color:     #d07ef2;
 }
 
 #element.alternate.normal {
@@ -89,12 +89,12 @@ element-text {
 }
 
 #inputbar {
-    spacing: 0;
-    text-color: @selected-foreground;
-    padding: 10px;
+    spacing:          0;
+    text-color:       @selected-foreground;
+    padding:          10px;
     background-color: @selected-background;
     /*rgba(0,0,0,0.5);*/
-    border-radius: 10px;
+    border-radius:    10px;
 }
 
 #case-indicator {
