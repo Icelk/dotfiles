@@ -36,6 +36,8 @@ Videos
 .config/pulse
 .config/spotify-tui
 .config/VSCodium
+.config/dconf
+.config/Thunar/accels.scm
 
 Exclude-backup-archive.txt
 .private
