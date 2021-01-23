@@ -1,0 +1,44 @@
+/etc/ca-certificates/extracted/cadir/
+/etc/ssl/certs/
+/etc/cups/
+/etc/audisp/
+/etc/pacman.d/gnupg/
+/etc/polkit-1/rules.d
+/etc/sudoers.d
+/etc/.pwd.lock
+/etc/crypttab
+/etc/gshadow
+/etc/gshadow-
+/etc/libaudit.conf
+/etc/shadow
+/etc/shadow-
+/etc/default/useradd
+/etc/audit
+
+/var/cache/
+/var/log/
+/var/tmp/
+/var/lib/
+/var/db/sudo
+/var/spool/
+
+/home/icelk/nas/
+/home/icelk/.cache/
+/home/icelk/.rustup/
+/home/icelk/.cargo/registry/
+/home/icelk/.mozilla/
+/home/icelk/.config/Electron/Local Storage/
+/home/icelk/.config/Electron/blob_storage/
+/home/icelk/.config/VSCodium/*Cache*
+/home/icelk/.config/VSCodium/Local Storage/
+/home/icelk/.config/VSCodium/Session Storage/
+/home/icelk/.config/VSCodium/blob_storage/
+/home/icelk/.nv/GLCache/
+/home/icelk/.local/share/Steam/
+*target/*
+*bin/*
+/home/icelk/.ccache/
+/home/icelk/.wine/
+/home/icelk/.vscode-oss/extensions/
+/home/icelk/.private/
+/home/icelk/*log*/*

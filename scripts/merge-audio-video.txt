@@ -1,0 +1,1 @@
+ffmpeg -i <video> -i <audio> -map 0:v -map 1:a -c copy <out-file>

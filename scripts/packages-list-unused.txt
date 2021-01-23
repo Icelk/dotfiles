@@ -1,0 +1,7 @@
+Explicitly installed: -e
+Not explicitly installed: -d
+Not required by others: -t
+Not required by others (not even optional): -tt
+Only native (installed from the official repos): -n
+
+Example: pacman -Qdt

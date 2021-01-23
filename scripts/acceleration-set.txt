@@ -1,0 +1,6 @@
+xinput list # to get the id of your mouse
+xinput list-props 8 # to list the properties of your mouse
+xinput set-prop 8 'Device Accel Profile' -1 # turns off mouseaccel
+xinput set-prop 8 'Device Accel Constant Deceleration' 1.5 # settings the sens
+
+But always use DPI settings instead.

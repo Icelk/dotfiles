@@ -1,0 +1,33 @@
+USE INSTEAD: checkupdates from pacman-contrib
+
+
+List all packages:
+
+pacman -Q
+
+and count them:
+
+pacman -Q | grep "" -c
+
+
+List all packages in need of an update:
+
+pacman -Qu
+
+and count them:
+
+pacman -Qu | grep "" -c
+
+
+Same, with syncing dbs
+
+echo n | 1>/dev/null 2>&1 pacman -Suy; pacman -Qu
+
+and count:
+
+echo n | 1>/dev/null 2>&1 pacman -Suy; pacman -Qu | grep "" -c
+
+
+Without root:
+
+checkupdates | grep "" -c

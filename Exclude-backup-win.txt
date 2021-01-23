@@ -1,0 +1,9 @@
+$Recycle.Bin
+Program Files
+Program Files (x86)
+Windows
+hiberfil.sys
+pagefile.sys
+swapfile.sys
+Users/erik/AppData/Local/Spotify/Data
+*.bphys

@@ -1,0 +1,283 @@
+[colours]
+background = #bf1e2137
+focused-background = #bf262a4c
+foreground = #e3eaf3
+neutral = #0a7383
+distinct = #65a2d9
+selected = #e5c246
+;tertiary = #d07ef2
+;fourth = #e5c246
+success = #02c084
+alert = #ed404c
+underline = none ;${self.neutral}
+
+
+[bar/main]
+monitor = ${env:MONITOR:}
+
+modules-left = i3
+modules-center = xwindow
+modules-right = packages-upgradable-count packages-count cpu mem audio dunst network date powermenu
+
+width = 100%
+offset-x = 0
+offset-y = 0
+
+height = 24
+radius = 0.0
+#radius-bottom-right = 6.0
+
+;; Fancy
+;width = 100%:-24
+;offset-x = 12
+;offset-y = 13
+;height = 32
+;radius = 0.0
+
+override-redirect = true
+wm-restack = i3
+
+background = ${colours.background}
+foreground = ${colours.foreground}
+
+padding-left = 1
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 2
+
+line-size = 2
+
+font-0 = FiraCode Nerd Font:pixelsize=13:antialias=true;3
+font-1 = FiraCode Nerd Font:pixelsize=17:antialias=true;3
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+tray-position = ${env:TRAY_POSITION:right}
+tray-maxsize = 16
+tray-background = ${colours.background}
+tray-padding = 1
+tray-scale = 1.0
+
+enable-ipc = true
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = false
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+;; Icons
+;ws-icon-default = " "
+;ws-icon-0 = "0;0 "
+;ws-icon-1 = "1;%{T2}"
+;ws-icon-2 = "2;%{T2}"
+;ws-icon-3 = "3;%{T2}"
+;ws-icon-4 = "4;%{T2}"
+;ws-icon-5 = "5;%{T1} "
+;ws-icon-6 = "6;%{T1}6 "
+;ws-icon-7 = "7;%{T1}7 "
+;ws-icon-8 = "8;%{T1}8 "
+;ws-icon-9 = "9;%{T1}9 "
+
+ws-icon-default = " "
+ws-icon-0 = "0;0"
+ws-icon-1 = "1;1"
+ws-icon-2 = "2;2"
+ws-icon-3 = "3;3"
+ws-icon-4 = "4;4"
+ws-icon-5 = "5;5"
+ws-icon-6 = "6;6"
+ws-icon-7 = "7;7"
+ws-icon-8 = "8;8"
+ws-icon-9 = "9;9"
+
+format = <label-state>
+
+focused = %icon%
+focused-padding = 1
+
+label-focused = ${self.focused}
+label-focused-foreground = ${colours.selected}
+label-focused-underline = ${colours.underline}
+label-focused-padding = ${self.focused-padding}
+label-focused-background = ${colours.focused-background}
+
+label-unfocused = ${self.focused}
+label-unfocused-foreground = ${colours.neutral}
+label-unfocused-padding = ${self.focused-padding}
+
+label-visible = ${self.focused}
+label-visible-foreground = ${colours.neutral}
+label-visible-padding = ${self.focused-padding}
+
+label-urgent = ${self.focused}
+label-urgent-foreground = ${colours.alert}
+label-urgent-padding = ${self.focused-padding}
+
+
+[module/wireless]
+type = internal/network
+interface = wlan
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = "直 "
+label-connected-foreground = ${colours.success}
+
+format-disconnected = "<label-disconnected> "
+label-disconnected = "睊 "
+label-disconnected-foreground = ${colours.alert}
+
+; a = worst
+ramp-signal-0 = a
+ramp-signal-1 = b
+ramp-signal-2 = c
+ramp-signal-3 = d
+ramp-signal-4 = e
+
+
+[module/network]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = " "
+label-connected-foreground = ${colours.success}
+
+format-disconnected = <label-disconnected>
+label-disconnected = " "
+label-disconnected-foreground = ${colours.alert}
+
+; a = worst
+ramp-signal-0 = a
+ramp-signal-1 = b
+ramp-signal-2 = c
+ramp-signal-3 = d
+ramp-signal-4 = e
+
+
+[module/date]
+type = internal/date
+interval = 1
+
+date =
+date-alt = "%b %d, %Y  "
+time = "%H:%M"
+time-alt = "%H:%M:%S"
+
+format-prefix-foreground = ${colours.foreground}
+format-underline = ${colours.underline}
+label = %date%%time%
+
+
+[module/audio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <ramp-volume>
+;format-volume = <ramp-volume>
+label-volume-foreground = ${colours.foreground}
+ramp-volume-foreground = ${colours.foreground}
+
+label-volume = %percentage%
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+
+label-muted = "ﱝ "
+label-muted-foreground = ${self.ramp-volume-foreground}
+
+
+[module/audio+]
+type = custom/script
+tail = true
+format-underline = ${colours.underline}
+label-padding = 1
+label-foreground = ${colours.foreground}
+
+# Icons mixed from Font Awesome 5 and Material Icons
+# You can copy-paste your options for each possible action, which is more
+# trouble-free but repetitive, or apply only the relevant ones (for example
+# --sink-blacklist is only needed for next-sink).
+exec = pulseaudio-control --icons-volume " , " --icon-muted " " listen
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control --sink-blacklist "alsa_output.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.iec958-stereo" next-sink
+scroll-up = pulseaudio-control --volume-max 130 up
+scroll-down = pulseaudio-control --volume-max 130 down
+
+
+[module/powermenu]
+type = custom/text
+format-spacing = 1
+content = " "
+content-foreground = ${colours.alert}
+click-left = bash ~/scripts/rofi/launch.sh powermenu
+
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+format-underline = ${colours.underline}
+; Other icons. Circuit:  Microchip: 
+label = "%percentage%  "
+
+
+[module/mem]
+type = internal/memory
+format = <label>
+format-underline = ${colours.underline}
+label = "%percentage_used%  "
+
+
+[module/dunst]
+type = custom/ipc
+initial = 1
+format-margin = 0
+
+hook-0 = echo "%{A1:notify-send "DUNST_COMMAND_PAUSE" && polybar-msg hook dunst 2:} %{A}" &
+hook-1 = echo "%{A1:notify-send "DUNST_COMMAND_RESUME" && polybar-msg hook dunst 1:} %{A}" &
+format-foreground = ${colours.foreground}
+
+
+[module/packages-upgradable-count]
+type = custom/script
+
+format = <label> 
+
+exec = ~/scripts/packages-upgradable-count.sh
+
+interval = 1800
+
+
+[module/packages-count]
+type = custom/script
+
+format = <label> 
+
+exec = ~/scripts/packages-count.sh
+
+interval = 300
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = true
+
+[global/wm]
+margin-bottom = 0

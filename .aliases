@@ -1,0 +1,18 @@
+# Rebind programs to easier/common names
+
+alias s="sudo"
+alias e="exit"
+alias c="clear"
+alias pacman="sudo pacman"
+alias l="ls"
+alias ll="ls -alF"
+alias la="ls -A"
+alias cp="cp -i"
+alias mv="mv -i"
+alias gc="git clone"
+
+
+# Aliases for useful complicated commands I don't want to memorize
+
+alias open="xdg-open"
+alias audio-reset="puleaudio -k && sudo alsa force-reload && pulseaudio --start"

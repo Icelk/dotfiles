@@ -1,0 +1,14 @@
+vscodium-bin/
+man/
+doc/
+gtk-doc/
+icons/
+locale/
+perl5/
+terminfo/
+xml/
+zoneinfo/
+zoneinfo-leaps/
+cmake-3.19/
+factory/
+polkit-1/rules.d

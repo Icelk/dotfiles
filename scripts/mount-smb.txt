@@ -1,0 +1,8 @@
+List:
+smbclient -L nas -U icelk
+
+Mount:
+sudo mount -t cifs "//nas/<share>" -o username=icelk /<mountpoint>
+
+https://wiki.archlinux.org/index.php/Samba#Manual_mounting
+https://www.looklinux.com/how-to-mount-samba-share-smbfs-in-linux/
