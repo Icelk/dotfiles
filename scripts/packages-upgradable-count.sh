@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # Wait for internet connection
-while ! ip address | grep "192.168.">/dev/null; do sleep 1; done
+while ! ip address | grep "192.168.">/dev/null; do sleep 0.25; done
 
 # The filename of your apps pid file.
 PIDFILE="packages-upgradable-count.pid"
