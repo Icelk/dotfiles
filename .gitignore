@@ -29,11 +29,7 @@ Videos
 .steampid
 .Xauthority
 .zcompdump
-
-.cargo/bin
-.cargo/env
-.cargo/.package-cache
-.cargo/registry
+.cargo
 
 .config/chromium
 .config/Electron
