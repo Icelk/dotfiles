@@ -170,6 +170,9 @@ font:
 draw_bold_text_with_bright_colors: false
 
 # Likeable: Twilight.dark, Iceberg-Dark, Ayu-*
+# Custom in Tomorrow Night:
+## Changed normal:white to "#8c96a5" and bright:white to "#6a6f7a"
+
 # Colors (Tomorrow Night)
 colors:
   # Default colors
@@ -191,7 +194,7 @@ colors:
     blue: '#81a2be'
     magenta: '#b294bb'
     cyan: '#70c0ba'
-    white: '#373b41'
+    white: '#8c96a5'
 
   # Bright colors
   bright:
@@ -202,7 +205,7 @@ colors:
     blue: '#81a2be'
     magenta: '#b77ee0'
     cyan: '#54ced6'
-    white: '#282a2e'
+    white: '#6a6f7a'
 
 # Background opacity
 #
