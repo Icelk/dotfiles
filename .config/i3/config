@@ -27,7 +27,7 @@ bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd notify"
 # Single applications
 
 bindsym $mod+Return exec --no-startup-id alacritty
-bindsym $mod+w exec firefox
+bindsym $mod+w exec brave
 bindsym $mod+c exec --no-startup-id codium .
 bindsym $mod+f exec thunar
 
