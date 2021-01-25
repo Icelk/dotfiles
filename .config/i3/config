@@ -17,38 +17,31 @@ set $rough_adjustment 8
 
 ## Bind apps
 
-# Start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+# Spotify
 
-# Start a File manager
-bindsym $mod+f exec thunar
-
-# Start top
-bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
-
-# Start Spotify
 bindsym $mod+s exec --no-startup-id "alacritty -e spt"
 
-# Start Codium
-bindsym $mod+c exec --no-startup-id codium .
 
-# Start firefox (Web browser)
+# Single applications
+
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+w exec firefox
+bindsym $mod+c exec --no-startup-id codium .
+bindsym $mod+f exec thunar
 
-# Start Pulsemixer
+
+# CLIs
+
 bindsym $mod+p exec --no-startup-id "alacritty -e pulsemixer"
+bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
 
-# Open development
+
+# Custom utils
+
 bindsym $mod+d exec --no-startup-id $open-dev
-
-# Sleep
 bindsym $mod+Escape exec --no-startup-id ~/scripts/sleep.sh
-
-# Print screen
-bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
-
-# Print whole screen
 bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
+bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 
 
 
