@@ -10,6 +10,7 @@ set $mod Mod4
 set $rofi ~/scripts/rofi/launch.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $open-dev ~/scripts/rofi/open-dev.sh
+set $toggle-service ~/scripts/service-toggle.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -20,6 +21,7 @@ set $rough_adjustment 8
 # Spotify
 
 bindsym $mod+s exec --no-startup-id "alacritty -e spt"
+bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd notify"
 
 
 # Single applications
