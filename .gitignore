@@ -29,14 +29,20 @@ Videos
 .Xauthority
 .zcompdump
 .cargo
+.vpython*
 
 .config/chromium
+.config/BraveSoftware
 .config/Electron
 .config/pulse
 .config/spotify-tui
 .config/VSCodium
 .config/dconf
 .config/Thunar/accels.scm
+.config/configstore
+.config/cef_user_data
+.config/xfce4
+.config/mimeapps.list
 
 Exclude-backup-archive.txt
 .private
