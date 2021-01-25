@@ -27,7 +27,7 @@
 
     # Draw a line between multiple notifications
     separator_height = 3
-    separator_color = "#ffffffaa"
+    separator_color = "#c5c8c69f"
 
     # Set notification padding
     padding = 16
@@ -182,16 +182,16 @@
 # --- Colors --- #
 
 [urgency_low]
-    background = "#1e2137fa"
-    foreground = "#ffffffff"
+    background = "#1d1f213f"
+    foreground = "#c5c8c6"
     timeout = 0
 
 [urgency_normal]
-    background = "#1e2137fa"
-    foreground = "#ffffffff"
+    background = "#1d1f213f"
+    foreground = "#c5c8c6"
     timeout = 0
 
 [urgency_critical]
-    background = "#dd130ddd"
-    foreground = "#ffffff"
+    background = "#dd130d5f"
+    foreground = "#c5c8c6"
     timeout = 0
