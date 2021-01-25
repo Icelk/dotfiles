@@ -49,6 +49,9 @@ bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 
 ## Other setup
 
+# Disable focus wrapping
+focus_wrapping no
+
 # No border
 default_border none
 default_floating_border none
