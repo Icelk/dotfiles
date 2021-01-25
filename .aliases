@@ -10,6 +10,8 @@ alias la="ls -A"
 alias cp="cp -i"
 alias mv="mv -i"
 alias gc="git clone"
+alias sctl="systemctl"
+alias sctlu="systemctl --user"
 
 
 # Aliases for useful complicated commands I don't want to memorize
