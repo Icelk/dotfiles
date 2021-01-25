@@ -43,6 +43,8 @@ Videos
 .config/cef_user_data
 .config/xfce4
 .config/mimeapps.list
+.config/systemd/user/default.target.wants
+.config/systemd/user/timers.target.wants
 
 Exclude-backup-archive.txt
 .private
