@@ -10,7 +10,7 @@ alias la="ls -A"
 alias cp="cp -i"
 alias mv="mv -i"
 alias gc="git clone"
-alias sctl="systemctl"
+alias sctl="sudo systemctl"
 alias sctlu="systemctl --user"
 
 
