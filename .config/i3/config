@@ -21,7 +21,7 @@ set $rough_adjustment 8
 # Spotify
 
 bindsym $mod+s exec --no-startup-id "alacritty -e spt"
-bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd notify"
+bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 
 
 # Single applications

@@ -26,5 +26,5 @@ fi
 echo $message
 
 if [ $notify ]; then
-    notify-send -a "Services" "$message"
+    notify-send -a "$notify" "$message"
 fi
