@@ -4,3 +4,4 @@ Description=My desktop bar
 [Service]
 Type=simple
 ExecStart=/home/icelk/scripts/polybar.sh
+ExecStop=rm /tmp/run/packages-upgradable-count.pid
