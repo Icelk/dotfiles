@@ -3,4 +3,6 @@ path=~/Pictures/screenshot.png
 
 maim $path
 
-notify-send -a "Maim" "Took screenshot of whole screen and saved it to '$path'!"
+if [ $? -eq 0 ]; then
+    notify-send -a "Maim" "Took screenshot of whole screen and saved it to '$path'!"
+fi
