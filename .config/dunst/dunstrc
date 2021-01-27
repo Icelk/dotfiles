@@ -165,20 +165,6 @@
     per_monitor_dpi = false
 
 
-[shortcuts]
-    # Close notification.
-    close = ctrl+shift+space
-
-    # Close all notifications.
-    close_all = none
-
-    # Redisplay last message(s).
-    history = ctrl+Insert
-
-    # Context menu.
-    context = ctrl+shift+period
-
-
 # --- Colors --- #
 
 [urgency_low]
