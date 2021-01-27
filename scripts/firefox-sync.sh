@@ -24,4 +24,3 @@ else
 	rsync -av ./$static/ ./$link/
 	touch $link/.unpacked
 fi
-
