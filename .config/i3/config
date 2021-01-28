@@ -25,6 +25,7 @@ bindsym $mod+w exec brave
 bindsym $mod+c exec --no-startup-id codium .
 bindsym $mod+f exec thunar
 bindsym $mod+s exec --no-startup-id "alacritty -e spt"
+bindsym $mod+t exec thunderbird
 
 
 # CLIs
