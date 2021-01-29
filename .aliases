@@ -1,6 +1,7 @@
 # Rebind programs to easier/common names
 
-alias s="sudo"
+alias s="doas"
+alias sudo="doas"
 alias e="exit"
 alias c="clear"
 alias pacman="sudo pacman"
