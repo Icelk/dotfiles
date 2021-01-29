@@ -4,14 +4,17 @@ alias s="sudo"
 alias e="exit"
 alias c="clear"
 alias pacman="sudo pacman"
-alias l="ls"
-alias ll="ls -alF"
-alias la="ls -A"
 alias cp="cp -i"
 alias mv="mv -i"
 alias gc="git clone"
 alias sctl="sudo systemctl"
 alias sctlu="systemctl --user"
+
+# Rust clones
+alias ls="exa -la -s=Name --group-directories-first"
+alias cat="bat"
+alias grep="rg --hidden"
+alias find="fd -H"
 
 
 # Aliases for useful complicated commands I don't want to memorize
