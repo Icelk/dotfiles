@@ -1,6 +1,8 @@
 Xorg, through 'nvidia-settings'
 modprobe, blacklist edac		/etc/modprobe.d/disable-edac.conf
 disable kernel prints			/etc/sysctl.d/disable-kernel-stdout.conf
-less swappyness				 	/etc/sysctl.d/less_swappy.conf
+less swappyness				/etc/sysctl.d/less_swappy.conf
 no mouse acceleration			/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 set DPMS time to 5 minutes		/etc/X11/xorg.conf.d/10-dpms.conf
+enable auto-login			/etc/systemd/system/getty@tty1.service.d/override.conf
+manual xorg conf			/etc/X11/xorg.conf
