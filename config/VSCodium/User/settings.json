@@ -1,0 +1,33 @@
+{
+    "git.enableSmartCommit": true,
+    "cSpell.enabled": true,
+    "cSpell.language": "sv,en-GB",
+    "cSpell.enableFiletypes": [
+        "ini",
+        "shellscript"
+    ],
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "files.hotExit": "off",
+    "git.confirmSync": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.watcherExclude": {
+        "**cache**": true,
+        "**target/**": true
+    },
+    "rust-analyzer.cargo.allFeatures": true,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.incrementalNaming": "smart",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "cSpell.userWords": [
+        "pacman"
+    ],
+    "files.insertFinalNewline": true,
+    "terminal.integrated.shell.linux": "/usr/bin/fish",
+    "explorer.autoReveal": false
+}
