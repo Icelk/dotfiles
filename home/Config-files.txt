@@ -1,9 +1,31 @@
-Xorg, through 'nvidia-settings'
-modprobe, blacklist edac		/etc/modprobe.d/blacklist-edac.conf
-# https://unix.stackexchange.com/questions/44999/how-can-i-hide-messages-of-udev/45525#45525
-disable kernel prints			/etc/sysctl.d/disable-kernel-info.conf
-less swappyness				/etc/sysctl.d/less_swappy.conf
-no mouse acceleration			/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-set DPMS time to 5 minutes		/etc/X11/xorg.conf.d/40-dpms.conf
-enable auto-login			/etc/systemd/system/getty@tty1.service.d/override.conf
-manual xorg conf			/etc/X11/xorg.conf
+# Config files elsewhere in the system.
+
+## Disabled configs
+
+> Currently disabled due to the next config.
+- modprobe, blacklist edac		/etc/modprobe.d/blacklist-edac.conf
+    ```
+    blacklist edac_mce_amd
+    ```
+
+> Currently disabled. Don't know why I have it.
+- modprobe, no nvidia modset		/etc/modprobe.d/nvidia-nomodset.conf
+    ```
+    options nvidia-drm modset=1
+    ```
+
+## Active configs
+
+> More info: <https://unix.stackexchange.com/questions/44999/how-can-i-hide-messages-of-udev/45525#45525>
+- disable kernel prints			/etc/sysctl.d/disable-kernel-info.conf
+
+- less swappyness				/etc/sysctl.d/less_swappy.conf
+
+- no mouse acceleration			/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+
+- set DPMS time to 5 minutes		/etc/X11/xorg.conf.d/40-dpms.conf
+
+- enable auto-login			/etc/systemd/system/getty@tty1.service.d/override.conf
+
+- manual xorg conf			/etc/X11/xorg.conf
+
