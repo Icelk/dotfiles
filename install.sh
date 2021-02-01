@@ -47,7 +47,7 @@ l $wdc/polybar.ini $hc/polybar/config.ini
 l $wdc/rofi/ $hc/rofi
 
 ## Spotifyd
-l $wdc/spotifyd.conf $hc/spotifyd/spotifyd.conf
+l $wdc/spotifyd.conf $hc/spotifyd/
 
 ## Systemd
 l $wdc/systemd/ $hc/systemd/user
@@ -79,9 +79,11 @@ l $wdh/profile ~/.profile
 l $wdh/xinitrc ~/.xinitrc
 l $wdh/zprofile ~/.zprofile
 l $wdh/zshrc ~/.zshrc
+l $wdh/Config-files.txt ~/
 
 ## Backup exclude
-l $wdh/Exclude-backup.txt ~/Exclude-backup.txt
-l $wdh/Exclude-backup-archive.txt ~/Exclude-backup-archive.txt
-l $wdh/Exclude-backup-usr-share.txt ~/Exclude-backup-usr-share.txt
-l $wdh/Exclude-backup-win.txt ~/Exclude-backup-win.txt
+l $wdh/Exclude-backup.txt ~/
+l $wdh/Exclude-backup-archive.txt ~/
+l $wdh/Exclude-backup-usr-share.txt ~/
+l $wdh/Exclude-backup-win.txt ~/
+
