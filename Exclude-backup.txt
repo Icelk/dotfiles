@@ -14,6 +14,7 @@
 /etc/shadow-
 /etc/default/useradd
 /etc/audit
+/etc/ssh/
 
 /var/cache/
 /var/log/
