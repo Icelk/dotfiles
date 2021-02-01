@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Warning: You must be in the dotfile's root directory when running this script."
 echo "Warning: This folder should be in a permanent place before running this script."
 echo "This script will not create or remove any folders/files. If errors appear, nothing has been overriden."
 read -p "Press enter to continue or Ctrl+C to exit..."
