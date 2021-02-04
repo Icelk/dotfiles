@@ -29,5 +29,9 @@
     ],
     "files.insertFinalNewline": true,
     "terminal.integrated.shell.linux": "/usr/bin/fish",
-    "explorer.autoReveal": false
+    "explorer.autoReveal": false,
+    "gitlens.views.contributors.pullRequests.enabled": false,
+    "gitlens.views.searchAndCompare.pullRequests.enabled": false,
+    "gitlens.views.remotes.pullRequests.enabled": false,
+    "gitlens.views.branches.pullRequests.enabled": false
 }
