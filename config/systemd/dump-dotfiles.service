@@ -1,0 +1,10 @@
+[Unit]
+Description=Dump all installed packages to a file
+
+[Service]
+Type=simple
+ExecStart=/home/icelk/scripts/dump-packages.sh
+
+[Install]
+WantedBy=default.target
+
