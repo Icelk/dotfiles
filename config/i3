@@ -42,7 +42,7 @@ bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
-
+bindsym $mod+F6 exec --no-startup-id "$playerctl pause"
 
 
 ## Other setup
