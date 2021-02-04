@@ -1,10 +1,8 @@
 # Rebind programs to easier/common names
 
 alias s="doas"
-alias sudo="doas"
 alias e="exit"
 alias c="clear"
-alias pacman="sudo pacman"
 alias cp="cp -i"
 alias mv="mv -i"
 alias gc="git clone"
