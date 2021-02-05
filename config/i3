@@ -11,6 +11,7 @@ set $rofi ~/scripts/rofi/launch.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
+set $i3lock ~/scripts/i3lock.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -233,5 +234,5 @@ exec_always --no-startup-id systemctl --user restart polybar
 exec_always --no-startup-id systemctl --user start nitrogen
 
 # Lock screen on startup
-exec --no-startup-id i3lock
+exec --no-startup-id $i3lock
 
