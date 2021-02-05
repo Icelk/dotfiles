@@ -1,7 +1,7 @@
 #!/bin/fish
 
 function pctl
-    dbus-send --print-reply --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.mpris.MediaPlayer2.Player.$argv[2]"
+    dbus-send --type=method_call --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.mpris.MediaPlayer2.Player.$argv[2]"
 end
 
 # Super-fast compared to (playerctl status)
@@ -14,10 +14,12 @@ function pctl_get
     end
 end
 
+set spt_status (pctl_get "spotifyd" "PlaybackStatus")
+
 function pref_spt
     set player (playerctl -l | grep "spotifyd")
     
-    if test $status -eq 0 && ! string match -q (pctl_get spotifyd "PlaybackStatus") 'Stopped'
+    if test $status -eq 0 && ! string match -q $spt_status "Stopped"
         set player (echo $player | head -n 1)
     else
         set player (playerctl -l | head -n 1)
@@ -27,10 +29,16 @@ function pref_spt
 end
 
 for player in (playerctl -l)
-    set response (pctl_get $player "PlaybackStatus")
-    if string match (pctl_get $player "PlaybackStatus") 'Playing'
-        pctl $player "Pause"
-        exit 0
+    if string match -q $player "spotifyd"
+        if string match -q $spt_status "Playing"
+            pctl $player "Pause"
+            exit 0
+        end
+    else
+        if string match -q (pctl_get $player "PlaybackStatus") "Playing"
+            pctl $player "Pause"
+            exit 0
+        end
     end
 end
 
