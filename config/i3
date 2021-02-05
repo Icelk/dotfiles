@@ -12,6 +12,7 @@ set $playerctl ~/scripts/playerctl-fast.sh
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $i3lock ~/scripts/i3lock.sh
+set $playerctl-play-pause ~/scripts/playerctl-custom.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -86,8 +87,8 @@ font pango:DejaVu Sans 8
 ## Audio
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id $playerctl play-pause
-bindsym XF86AudioPause exec --no-startup-id $playerctl play-pause
+bindsym XF86AudioPlay exec --no-startup-id $playerctl-play-pause
+bindsym XF86AudioPause exec --no-startup-id $playerctl-play-pause
 bindsym XF86AudioNext exec --no-startup-id $playerctl next
 bindsym XF86AudioPrev exec --no-startup-id $playerctl previous
 
