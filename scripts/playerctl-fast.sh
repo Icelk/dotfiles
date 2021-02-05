@@ -32,6 +32,6 @@ esac
 
 exec dbus-send                                                           \
   --print-reply                                                          \
-  --dest="org.mpris.MediaPlayer2.$(~/scripts/playerctl-prefer-spotifyd)" \
+  --dest="org.mpris.MediaPlayer2.$(~/scripts/playerctl-prefer-spotifyd.sh)" \
   /org/mpris/MediaPlayer2                                                \
   "org.mpris.MediaPlayer2.Player.$MEMBER"
