@@ -231,3 +231,7 @@ exec_always --no-startup-id systemctl --user restart polybar
 
 # Wallpaper
 exec_always --no-startup-id systemctl --user start nitrogen
+
+# Lock screen on startup
+exec --no-startup-id i3lock
+
