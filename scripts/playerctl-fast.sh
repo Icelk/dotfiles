@@ -1,5 +1,17 @@
 #!/bin/bash
 
+function pref_spt {
+    player=$(playerctl -l | grep "spotifyd")
+
+    if test $? -eq 0; then
+        set player $(echo $player | head -n 1)
+    else
+        set player $(playerctl -l | head -n 1)
+    fi
+
+    echo $player
+}
+
 set -euo pipefail
 
 case "${1:-}" in
@@ -32,6 +44,6 @@ esac
 
 exec dbus-send                                                           \
   --print-reply                                                          \
-  --dest="org.mpris.MediaPlayer2.$(~/scripts/playerctl-prefer-spotifyd.sh)" \
+  --dest="org.mpris.MediaPlayer2.$(pref_spt)" \
   /org/mpris/MediaPlayer2                                                \
   "org.mpris.MediaPlayer2.Player.$MEMBER"
