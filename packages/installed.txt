@@ -13,8 +13,11 @@ ccache
 clang
 deepin-gtk-theme
 dhcpcd
+dnsmasq
 dosfstools
 dunst
+ebtables
+edk2-ovmf
 exa
 fakeroot
 fd
@@ -88,6 +91,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-control
 pulsemixer
+qemu
 reflector
 ripgrep
 rofi
@@ -105,6 +109,7 @@ ttf-dejavu
 tumbler
 ungoogled-chromium
 vi
+virt-manager
 vscodium-bin
 which
 wine-gecko
