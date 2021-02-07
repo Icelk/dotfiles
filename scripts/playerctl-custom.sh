@@ -6,7 +6,7 @@ end
 
 # Super-fast compared to (playerctl status)
 function pctl_get
-    set response (dbus-send --reply-timeout=1000 --print-reply --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.freedesktop.DBus.Properties.Get" string:"org.mpris.MediaPlayer2.Player" string:"$argv[2]")
+    set response (dbus-send --reply-timeout=500 --print-reply --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.freedesktop.DBus.Properties.Get" string:"org.mpris.MediaPlayer2.Player" string:"$argv[2]")
     if test $status -ne 0
         echo "Stopped"
     else
