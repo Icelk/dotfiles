@@ -35,8 +35,6 @@ gvfs
 hexedit
 i3-gaps
 i3lock
-java-runtime-common
-jre-openjdk-headless
 kora-icon-theme
 lib32-gamemode
 lib32-giflib
@@ -89,7 +87,6 @@ ponymix
 procs
 pulseaudio
 pulseaudio-alsa
-pulseaudio-control
 pulsemixer
 qemu
 reflector
