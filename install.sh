@@ -55,6 +55,9 @@ echo "Make sure to change apropriate values in services. For example, the user i
 read -p "I understand..."
 l $wdc/systemd/ $hc/systemd/user
 
+## Starship
+l $wdc/starship.toml $hc/
+
 ## Thunar
 l $wdc/thunar-uca.xml $hc/Thunar/uca.xml
 
