@@ -13,8 +13,10 @@ alias gc="git commit -m"
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
+alias gd="git diff"
 alias sctl="sudo systemctl"
 alias sctlu="systemctl --user"
+alias cu="cd .."
 
 # Rust clones
 alias ls="exa -la -s=Name --group-directories-first"
