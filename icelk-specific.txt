@@ -1,0 +1,59 @@
+# Generated with "rg -n --heading > icelk-specific.txt"
+
+
+config/spotifyd.conf
+59:cache_path = "/home/icelk/.cache/spotifyd"
+
+config/fish_variables
+33:SETUVAR fish_user_paths:/home/icelk/dev/Rust/Kvarn/target/release/\x1e/home/icelk/\x2ecargo/bin\x1e/home/icelk/dev/Rust/osxcross/target/bin
+
+install.sh
+3:echo "Some of the files has me (icelk) as a hardcoded user, mostly in ssh and /home/icelk."
+4:echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
+59:echo "Make sure to change apropriate values in services. For example, the user icelk (me) is present. Change that for your username."
+
+home/zshrc
+37:zstyle :compinstall filename '/home/icelk/.zshrc'
+
+home/Exclude-backup.txt
+26:/home/icelk/nas/
+27:/home/icelk/.cache/
+28:/home/icelk/.rustup/
+29:/home/icelk/.cargo/registry/
+30:/home/icelk/.mozilla/
+31:/home/icelk/.config/Electron/Local Storage/
+32:/home/icelk/.config/Electron/blob_storage/
+33:/home/icelk/.config/VSCodium/*Cache*
+34:/home/icelk/.config/VSCodium/Local Storage/
+35:/home/icelk/.config/VSCodium/Session Storage/
+36:/home/icelk/.config/VSCodium/blob_storage/
+37:/home/icelk/.nv/GLCache/
+38:/home/icelk/.local/share/Steam/
+41:/home/icelk/.ccache/
+42:/home/icelk/.wine/
+43:/home/icelk/.vscode-oss/extensions/
+44:/home/icelk/.private/
+45:/home/icelk/*log*/*
+
+scripts/mount-smb.txt
+2:smbclient -L nas -U icelk
+5:sudo mount -t cifs "//nas/<share>" -o username=icelk /<mountpoint>
+
+scripts/rsync.sh
+7:rsync -a --del --delete-excluded /home icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
+9:rsync -a --del --delete-excluded /var icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
+11:rsync -a --del --delete-excluded /usr/share icelk@nas:/mnt/main/computer_erik/usr/ --exclude-from="/home/icelk/Exclude-backup-usr-share.txt"
+13:rsync -a --del --delete-excluded /usr/local icelk@nas:/mnt/main/computer_erik/usr/
+15:rsync -a --del --delete-excluded /etc icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
+17:rsync -a --del --delete-excluded /boot icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
+20:rsync -a --del --delete-excluded /archive icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-archive.txt"
+22:rsync -a --del --delete-excluded /win icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-win.txt"
+
+home/gtkrc-2.0
+4:include "/home/icelk/.gtkrc-2.0.mine"
+
+home/gitconfig
+4:	email = main@icelk.dev
+
+root/getty.conf
+3:ExecStart=-/usr/bin/agetty --autologin icelk --noclear %I $TERM

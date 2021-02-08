@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "Some of the files has me (icelk) as a hardcoded user, mostly in ssh and /home/icelk."
+echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
+
+echo
+
 echo "Warning: You must be in the dotfile's root directory when running this script."
 echo "Warning: This folder should be in a permanent place before running this script."
 echo "This script will not create or remove any folders/files. If errors appear, nothing has been overriden."
