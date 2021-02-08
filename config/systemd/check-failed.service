@@ -1,0 +1,7 @@
+[Unit]
+Description=Check systemd failed units
+
+[Service]
+Type=oneshot
+ExecStart=/home/icelk/scripts/check-failed.sh
+

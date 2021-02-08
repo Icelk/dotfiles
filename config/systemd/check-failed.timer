@@ -1,0 +1,10 @@
+[Unit]
+Description=Check systemd for failed units
+
+[Timer]
+OnCalendar=*:0/5
+Persistent=false
+
+[Install]
+WantedBy=timers.target
+
