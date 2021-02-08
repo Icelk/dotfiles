@@ -18,5 +18,5 @@ function on_exit --on-event fish_exit
 end
 
 function fish_user_key_bindings
-    bind \cH backward-kill-path-component
+    bind \cH backward-kill-word
 end
