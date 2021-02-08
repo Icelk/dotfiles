@@ -1,0 +1,7 @@
+[Unit]
+Description=Send notification with a document
+
+[Service]
+Type=oneshot
+ExecStart=/home/icelk/scripts/send-reminders.sh
+
