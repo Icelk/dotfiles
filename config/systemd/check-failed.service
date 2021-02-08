@@ -3,5 +3,5 @@ Description=Check systemd failed units
 
 [Service]
 Type=oneshot
-ExecStart=/home/icelk/scripts/check-failed.sh
+ExecStart=sh -c "~/scripts/check-failed.sh"
 

@@ -5,4 +5,4 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=sh -c /home/icelk/scripts/rsync.sh
+ExecStart=sh -c "~/scripts/rsync.sh"
