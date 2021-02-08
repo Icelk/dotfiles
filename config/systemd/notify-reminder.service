@@ -1,7 +1,7 @@
 [Unit]
-Description=Send notification with a document
+Description=Send notifications from each line in ~/Reminder.txt
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/home/icelk/scripts/send-reminders.sh
 
