@@ -29,6 +29,16 @@ alias cat="bat"
 alias grep="rg --hidden"
 alias find="fd -H"
 
+# Cargo
+alias cb="cargo build"
+alias cbr="cargo build --release"
+alias cr="cargo run"
+alias crr="cargo run --release"
+alias ct="cargo test"
+alias ca="cargo add"
+alias cclip="cargo clippy"
+alias ciwd="cargo install --path ."
+
 
 # Aliases for useful complicated commands I don't want to memorize
 
