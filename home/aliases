@@ -1,10 +1,18 @@
 # Rebind programs to easier/common names
 
+# Common small utils
 alias s="doas"
 alias e="exit"
 alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
+alias cu="cd .."
+
+# Systemctl
+alias sctl="sudo systemctl"
+alias sctlu="systemctl --user"
+
+# Git
 alias gclo="git clone"
 alias gr="git remove --cache"
 alias gp="git push"
@@ -14,9 +22,6 @@ alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
 alias gd="git diff"
-alias sctl="sudo systemctl"
-alias sctlu="systemctl --user"
-alias cu="cd .."
 
 # Rust clones
 alias ls="exa -la -s=Name --group-directories-first"
