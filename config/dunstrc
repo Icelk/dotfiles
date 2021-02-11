@@ -31,7 +31,7 @@
     
     # CORPL section separator_color = "#
     # c5c8c69f" # dark
-    separator_color = "#0f173fdf" # light
+    separator_color = "#262c3fdf" # light
     # CORPL end
 
     # Set notification padding
@@ -185,12 +185,12 @@
 
 [urgency_low]
     background = "#bfd3efdf"
-    foreground = "#0f173f"
+    foreground = "#262c3f"
     timeout = 0
 
 [urgency_normal]
     background = "#bfd3efdf"
-    foreground = "#0f173f"
+    foreground = "#262c3f"
     timeout = 0
 
 # CORPL end
