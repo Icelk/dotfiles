@@ -63,7 +63,7 @@ default_floating_border none
 
 # Boring gaps
 gaps outer 0
-gaps inner 4
+gaps inner 8
 gaps top 24
 
 # Enable back and fourth
