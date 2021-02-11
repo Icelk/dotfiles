@@ -67,11 +67,13 @@ workspace_auto_back_and_forth yes
 # class                 border  backgr. text    indicator child_border
 client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
 # CORPL option dark
-# client.focused_inactive #1d1f21 #1d1f21 #1d1f21 #1d1f21   #1d1f21
-# client.unfocused        #1d1f21 #1d1f21 #1d1f21 #1d1f21   #1d1f21
+# set $color #1d1f21
+# client.focused_inactive $color  $color  $color  $color    $color
+# client.unfocused        $color  $color  $color  $color    $color
 # CORPL option light
-client.focused_inactive #bfd3ef #bfd3ef #bfd3ef #bfd3ef   #bfd3ef
-client.unfocused        #bfd3ef #bfd3ef #bfd3ef #bfd3ef   #bfd3ef
+set $color #bfd3ef
+client.focused_inactive $color  $color  $color  $color    $color
+client.unfocused        $color  $color  $color  $color    $color
 # CORPL end
 
 
