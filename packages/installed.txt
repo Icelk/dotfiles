@@ -78,7 +78,7 @@ opendoas
 pacman-contrib
 paru
 patch
-picom-ibhagwan-git
+picom-jonaburg-git
 piper
 pkgconf
 playerctl
