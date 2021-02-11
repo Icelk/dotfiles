@@ -27,7 +27,10 @@
 
     # Draw a line between multiple notifications
     separator_height = 3
-    separator_color = "#c5c8c69f"
+    
+    # CORPL section separator_color = "#
+    separator_color = "#c5c8c69f" # dark
+    # CORPL end
 
     # Set notification padding
     padding = 16
@@ -164,6 +167,8 @@
 
 # --- Colors --- #
 
+# CORPL option dark
+
 [urgency_low]
     background = "#1d1f219f"
     foreground = "#c5c8c6"
@@ -173,6 +178,20 @@
     background = "#1d1f219f"
     foreground = "#c5c8c6"
     timeout = 0
+
+# CORPL option light
+
+[urgency_low]
+    background = "#bfd3ef9f"
+    foreground = "#0f173f"
+    timeout = 0
+
+[urgency_normal]
+    background = "#bfd3ef9f"
+    foreground = "#0f173f"
+    timeout = 0
+
+# CORPL end
 
 [urgency_critical]
     background = "#dd130d5f"
