@@ -29,7 +29,8 @@
     separator_height = 3
     
     # CORPL section separator_color = "#
-    separator_color = "#c5c8c69f" # dark
+    # c5c8c69f" # dark
+    separator_color = "#0f173fdf" # light
     # CORPL end
 
     # Set notification padding
@@ -168,26 +169,26 @@
 # --- Colors --- #
 
 # CORPL option dark
-
-[urgency_low]
-    background = "#1d1f219f"
-    foreground = "#c5c8c6"
-    timeout = 0
-
-[urgency_normal]
-    background = "#1d1f219f"
-    foreground = "#c5c8c6"
-    timeout = 0
-
+# 
+# [urgency_low]
+    # background = "#1d1f219f"
+    # foreground = "#c5c8c6"
+    # timeout = 0
+# 
+# [urgency_normal]
+    # background = "#1d1f219f"
+    # foreground = "#c5c8c6"
+    # timeout = 0
+# 
 # CORPL option light
 
 [urgency_low]
-    background = "#bfd3ef9f"
+    background = "#bfd3efdf"
     foreground = "#0f173f"
     timeout = 0
 
 [urgency_normal]
-    background = "#bfd3ef9f"
+    background = "#bfd3efdf"
     foreground = "#0f173f"
     timeout = 0
 
