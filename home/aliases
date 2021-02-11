@@ -22,7 +22,7 @@ alias gs="git status"
 alias ga="git add"
 alias gaa="git add *"
 alias gd="git diff"
-alias gu="git revert"
+alias gu="git reset"
 
 # Rust clones
 alias ls="exa -la -s=Name --group-directories-first"
