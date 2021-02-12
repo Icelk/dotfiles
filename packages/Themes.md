@@ -21,13 +21,13 @@
 <https://aur.archlinux.org/packages/breeze-hacked-cursor-theme/>
 
 ## Candidates
+<https://aur.archlinux.org/packages/bibata-cursor-translucent/>
+
 <https://aur.archlinux.org/packages/bibata-cursor-theme/>
 
 <https://aur.archlinux.org/packages/whitesur-cursor-theme-git/>
 
 <https://aur.archlinux.org/packages/sweet-cursor-theme-git/>
-
-<https://aur.archlinux.org/packages/breeze-obsidian-cursor-theme/>
 
 
 # Widget
