@@ -7,3 +7,5 @@
 	helper = store
 [pull]
 	rebase = true
+[advice]
+	addIgnoredFile = false
