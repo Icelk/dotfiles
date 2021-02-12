@@ -108,6 +108,7 @@ ungoogled-chromium
 vi
 virt-manager
 vscodium-bin
+watchexec
 which
 wine-gecko
 wine-mono
