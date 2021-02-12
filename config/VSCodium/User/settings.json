@@ -22,7 +22,6 @@
     "explorer.incrementalNaming": "smart",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
     "cSpell.userWords": [
         "pacman"
@@ -33,5 +32,6 @@
     "gitlens.views.contributors.pullRequests.enabled": false,
     "gitlens.views.searchAndCompare.pullRequests.enabled": false,
     "gitlens.views.remotes.pullRequests.enabled": false,
-    "gitlens.views.branches.pullRequests.enabled": false
+    "gitlens.views.branches.pullRequests.enabled": false,
+    "workbench.colorTheme": "Monokai"
 }
