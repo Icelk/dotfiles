@@ -36,15 +36,20 @@ bindsym $mod+p exec --no-startup-id "alacritty -e pulsemixer"
 bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
 
 
+# Rofi
+bindsym $mod+d exec --no-startup-id $open-dev
+bindsym $mod+b exec clipcat-menu
+
+
 # No-ui utilities
 
-bindsym $mod+d exec --no-startup-id $open-dev
 bindsym $mod+Escape exec --no-startup-id ~/scripts/sleep.sh
 bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
 bindsym Pause exec --no-startup-id $i3lock
+bindsym $mod+Shift+b exec --no-startup-id clipcatctl clear
 
 
 ## Other setup
@@ -232,14 +237,22 @@ bindsym $mod+Shift+r restart
 
 
 ## Start programs
+set $sctlu --no-startup-id systemctl --user
 
-# Composter and notification manager
-exec_always --no-startup-id systemctl --user restart picom
-exec_always --no-startup-id systemctl --user restart dunst
-exec_always --no-startup-id systemctl --user restart polybar
+# Composter
+exec_always $sctlu restart picom
+
+# Notifications
+exec_always $sctlu restart dunst
+
+# Status bar
+exec_always $sctlu restart polybar
+
+# Clipboard manager
+exec_always $sctlu restart clipcat
 
 # Wallpaper
-exec_always --no-startup-id systemctl --user start nitrogen
+exec_always $sctlu start nitrogen
 
 # Lock screen on startup
 #exec --no-startup-id $i3lock

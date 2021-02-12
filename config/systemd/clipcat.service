@@ -1,0 +1,10 @@
+[Unit]
+Description=Starts the clipboard daemon
+
+[Service]
+Type=simple
+ExecStart=clipcatd --no-daemon
+
+[Install]
+WantedBy=default.target
+

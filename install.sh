@@ -33,6 +33,9 @@ l $wdc/alacritty.yml $hc/alacritty/
 ## Dunst
 l $wdc/dunstrc $hc/dunst/
 
+## Clipcat
+l $wdc/clipcat/ $hc/clipcat
+
 ## Fish
 l $wdc/config.fish $hc/fish/
 l $wdc/fish_variables $hc/fish/
