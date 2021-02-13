@@ -115,7 +115,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/
-    icon_path = /usr/share/icons/korla/emotes/scalable:/usr/share/icons/korla/actions/scalable:/usr/share/icons/korla/apps/scalable:/usr/share/icons/korla/categories/scalable:/usr/share/icons/korla/mimetypes/scalable:/usr/share/icons/korla/emblems/scalable:/usr/share/icons/korla/emotes/symbolic:/usr/share/icons/korla/actions/symbolic:/usr/share/icons/korla/apps/symbolic:/usr/share/icons/korla/categories/symbolic:/usr/share/icons/korla/mimetypes/symbolic:/usr/share/icons/korla/emblems/symbolic
+    icon_path = /usr/share/icons/kora/emotes/scalable:/usr/share/icons/kora/actions/scalable:/usr/share/icons/kora/apps/scalable:/usr/share/icons/kora/categories/scalable:/usr/share/icons/kora/mimetypes/scalable:/usr/share/icons/kora/emblems/scalable:/usr/share/icons/kora/emotes/symbolic:/usr/share/icons/kora/actions/symbolic:/usr/share/icons/kora/apps/symbolic:/usr/share/icons/kora/categories/symbolic:/usr/share/icons/kora/mimetypes/symbolic:/usr/share/icons/kora/emblems/symbolic
 
 
     # --- History --- #
