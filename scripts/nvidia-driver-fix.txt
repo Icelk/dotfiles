@@ -1,3 +1,0 @@
-Sometimes after installing windows(?) you have to reinstall nvidia-settings.
-Else picom won't recognice vsync.
-
