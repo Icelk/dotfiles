@@ -8,8 +8,7 @@ configuration {
 @import "colors.rasi"
 
 * {
-    selected-background: #d8c45d;
-    selected-foreground: black;
+    selected-background: @background-selected;
 }
 
 #window {
@@ -63,8 +62,8 @@ element-text {
 }
 
 #element.selected.normal {
-    background-color: @selected-background;
-    text-color:       @selected-foreground;
+    background-color: @background-selected;
+    text-color:       @foreground;
     border-color:     #d07ef2;
 }
 
@@ -84,34 +83,34 @@ element-text {
 }
 
 #button.selected {
-    background-color: @selected-background;
-    text-color:       @selected-foreground;
+    background-color: @background-selected;
+    text-color:       @foreground;
 }
 
 #inputbar {
     spacing:          0;
-    text-color:       @selected-foreground;
+    text-color:       @foreground;
     padding:          10px;
-    background-color: @selected-background;
+    background-color: @background-selected;
     /*rgba(0,0,0,0.5);*/
     border-radius:    10px;
 }
 
 #case-indicator {
     spacing:    0;
-    text-color: @selected-foreground;
+    text-color: @foreground;
     background-color: rgba(0,0,0,0);
 }
 
 #entry {
     spacing:    0;
-    text-color: @selected-foreground;
+    text-color: @foreground;
     background-color: rgba(0,0,0,0);
 }
 
 #prompt {
     spacing:    0;
-    text-color: @selected-foreground;
+    text-color: @foreground;
     background-color: rgba(0,0,0,0);
 }
 
@@ -119,7 +118,7 @@ element-text {
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @selected-foreground;
+    text-color: @foreground;
     background-color: rgba(0,0,0,0);
 }
 

@@ -1,16 +1,14 @@
 * {
-    foreground:           #c5c8c6ff;
-    selected-foreground:  #ffffffff;
-
-    background:           #1d1f21a0;
-    background-solid:     #1d1f21ff;
-    selected-background:  rgba(0, 0, 0, 40%);
-
-    /*#87b5d7;*/  
-    /*#6eacda;*/
-    /*#deca72;*/
-    /*#39c9fe;*/
-
-    red:                  rgba ( 220, 50, 47, 100 % );
-    blue:                 rgba ( 38, 139, 210, 100 % );
+    /* CORPL option dark */
+    /* foreground:             #c5c8c6ff; */
+    /* background:             #1d1f219f; */
+    /* background-solid:       #1d1f21ff; */
+    /* background-selected:    #0000007f; */
+    /* CORPL option light */
+    foreground:             #262c3fff;
+    foreground-selected:    #262c3fff;
+    background:             #bfd3ef9f;
+    background-solid:       #bfd3efff;
+    background-selected:    #1793D17f;
+    /* CORPL end */
 }

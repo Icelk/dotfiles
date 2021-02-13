@@ -7,11 +7,6 @@ configuration {
 
 @import "colors.rasi"
 
-* {
-    selected-background: #d8c45d;
-    selected-foreground: black;
-}
-
 #window {
     width: 450px;
     height: 120px;
@@ -55,8 +50,8 @@ element-text {
 }
 
 #element.selected.normal {
-    background-color: @selected-background;
-    text-color:       @selected-foreground;
+    background-color: @background-selected;
+    text-color:       @foreground;
     border-color: #d07ef2;
 }
 
@@ -76,6 +71,6 @@ element-text {
 }
 
 #button.selected {
-    background-color: @selected-background;
-    text-color:       @selected-foreground;
+    background-color: @background-selected;
+    text-color:       @foreground;
 }
