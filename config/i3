@@ -239,22 +239,23 @@ bindsym $mod+Shift+r restart
 set $sctlu --no-startup-id systemctl --user
 
 # Composter
-exec_always $sctlu restart picom
+exec $sctlu restart picom
 
 # Notifications
-exec_always $sctlu restart dunst
+exec $sctlu restart dunst
 
 # Status bar
-exec_always $sctlu restart polybar
+exec $sctlu restart polybar
 
 # Clipboard manager
-exec_always $sctlu restart clipcat
+exec $sctlu restart clipcat
 
 # Wallpaper
-exec_always $sctlu start nitrogen
+exec $sctlu start nitrogen
 
 # Start checking systemctl for failed services
 exec --no-startup-id $sctlu start check-failed.timer
+
 
 # Lock screen on startup
 exec --no-startup-id i3lock
