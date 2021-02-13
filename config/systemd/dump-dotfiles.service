@@ -7,4 +7,3 @@ ExecStart=sh -c "~/scripts/dump-packages.sh"
 
 [Install]
 WantedBy=default.target
-

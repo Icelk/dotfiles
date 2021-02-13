@@ -4,4 +4,3 @@ Description=Check systemd failed units
 [Service]
 Type=oneshot
 ExecStart=sh -c "~/scripts/check-failed.sh"
-

@@ -255,4 +255,3 @@ exec_always $sctlu start nitrogen
 
 # Lock screen on startup
 #exec --no-startup-id $i3lock
-

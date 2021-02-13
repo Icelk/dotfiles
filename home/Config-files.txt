@@ -28,4 +28,3 @@
 - enable auto-login			/etc/systemd/system/getty@tty1.service.d/override.conf
 
 - manual xorg conf			/etc/X11/xorg.conf
-

@@ -16,4 +16,3 @@ for line in $content
         sleep $interval_time
     end
 end
-

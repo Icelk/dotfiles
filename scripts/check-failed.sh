@@ -7,4 +7,3 @@ if test $failed -eq 1
 else if test $failed -ne 0
    notify-send -a "Service Failed" -u critical "$failed services have failed. See systemctl status for more info."
 end
-

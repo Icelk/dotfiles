@@ -25,4 +25,3 @@ https://www.reddit.com/r/linux_gaming/comments/jjxdqx/proton_resolution_funkines
 https://www.reddit.com/r/linux_gaming/comments/jjs11r/what_are_the_current_downsides_of_gaming_on/
 
 https://www.reddit.com/r/xfce/comments/4aeqda/xfce_wayland_support/
-

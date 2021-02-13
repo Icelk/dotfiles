@@ -7,4 +7,3 @@ if [ "which paru" ]; then
 else
     yay -S $packages
 fi
-

@@ -4,4 +4,3 @@ Description=Composter
 [Service]
 Type=simple
 ExecStart=picom --experimental-backends
-

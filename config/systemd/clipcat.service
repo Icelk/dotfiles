@@ -7,4 +7,3 @@ ExecStart=clipcatd --no-daemon
 
 [Install]
 WantedBy=default.target
-

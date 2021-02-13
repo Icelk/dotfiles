@@ -7,4 +7,3 @@ Persistent=false
 
 [Install]
 WantedBy=timers.target
-
