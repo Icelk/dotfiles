@@ -11,7 +11,6 @@ set $rofi ~/scripts/rofi/launch.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
-set $i3lock ~/scripts/i3lock.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
 
 set $granular_adjustment 1
@@ -48,7 +47,7 @@ bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
-bindsym Pause exec --no-startup-id $i3lock
+bindsym Pause exec --no-startup-id i3lock
 bindsym $mod+Shift+b exec --no-startup-id clipcatctl clear
 
 
