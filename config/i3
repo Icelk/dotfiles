@@ -8,9 +8,10 @@
 set $mod Mod4
 
 set $rofi ~/scripts/rofi/launch.sh
-set $playerctl ~/scripts/playerctl-fast.sh
+set $change-theme ~/scripts/theme-change-rofi.sh
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
+set $playerctl ~/scripts/playerctl-fast.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
 
 set $granular_adjustment 1
@@ -38,6 +39,7 @@ bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
 # Rofi
 bindsym $mod+d exec --no-startup-id $open-dev
 bindsym $mod+b exec clipcat-menu
+bindsym $mod+Shift+t exec $change-theme
 
 
 # No-ui utilities
