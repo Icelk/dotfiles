@@ -253,5 +253,8 @@ exec_always $sctlu restart clipcat
 # Wallpaper
 exec_always $sctlu start nitrogen
 
+# Start checking systemctl for failed services
+exec --no-startup-id $sctlu start check-failed.timer
+
 # Lock screen on startup
 exec --no-startup-id i3lock
