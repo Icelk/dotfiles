@@ -3,7 +3,7 @@ Description=Dump all installed packages to a file
 
 [Service]
 Type=simple
-ExecStart=sh -c "~/scripts/dump-packages.sh"
+ExecStart=sh -c "~/scripts/packages-dump.sh"
 
 [Install]
 WantedBy=default.target
