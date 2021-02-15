@@ -25,3 +25,10 @@ I have provided install scripts in the root of this directory. By default, they 
 If you want to install one version permanently (making it harder to upgrade), change the line `alias l="ln -s"` to `alias l="cp"`.
 
 Other instructions will be shown when running the scripts.
+
+
+# Contribution
+
+Well, these are my personal dot-files. If you notice any issues, please open an issue, but I don't think I'll accept PRs if they're not well justified.
+
+Anyway, you can use this under the MIT license.
