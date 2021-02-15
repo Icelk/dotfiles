@@ -170,17 +170,17 @@
 # --- Colors --- #
 
 # CORPL option dark
-# 
+
 # [urgency_low]
     # background = "#1d1f219f"
     # foreground = "#c5c8c6"
     # timeout = 0
-# 
+
 # [urgency_normal]
     # background = "#1d1f219f"
     # foreground = "#c5c8c6"
     # timeout = 0
-# 
+
 # CORPL option light
 
 [urgency_low]

@@ -41,7 +41,7 @@ client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
 # set $color #1d1f21
 # client.focused_inactive $color  $color  $color  $color    $color
 # client.unfocused        $color  $color  $color  $color    $color
-# 
+
 # set $lock-color \#000000
 # CORPL option light
 set $color #bfd3ef
