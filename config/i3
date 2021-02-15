@@ -18,6 +18,40 @@ set $granular_adjustment 1
 set $rough_adjustment 8
 
 
+## Other setup
+
+# Disable focus wrapping
+focus_wrapping no
+
+# 2px border
+for_window [class = "^.*"] border pixel 2
+
+# Gaps
+gaps outer 0
+gaps inner 8
+gaps top 24
+
+# Enable back and fourth
+workspace_auto_back_and_forth yes
+
+# Set border colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
+# CORPL option dark
+# set $color #1d1f21
+# client.focused_inactive $color  $color  $color  $color    $color
+# client.unfocused        $color  $color  $color  $color    $color
+# 
+# set $lock-color \#000000
+# CORPL option light
+set $color #bfd3ef
+client.focused_inactive $color  $color  $color  $color    $color
+client.unfocused        $color  $color  $color  $color    $color
+
+set $lock-color \#3f3f3f
+# CORPL end
+
+
 ## Bind apps
 
 # Single applications
@@ -49,38 +83,8 @@ bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
-bindsym Pause exec --no-startup-id i3lock
+bindsym Pause exec --no-startup-id i3lock -c $lock-color
 bindsym $mod+Shift+b exec --no-startup-id clipcatctl clear
-
-
-## Other setup
-
-# Disable focus wrapping
-focus_wrapping no
-
-# 2px border
-for_window [class = "^.*"] border pixel 2
-
-# Boring gaps
-gaps outer 0
-gaps inner 8
-gaps top 24
-
-# Enable back and fourth
-workspace_auto_back_and_forth yes
-
-# Set border colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
-# CORPL option dark
-# set $color #1d1f21
-# client.focused_inactive $color  $color  $color  $color    $color
-# client.unfocused        $color  $color  $color  $color    $color
-# CORPL option light
-set $color #bfd3ef
-client.focused_inactive $color  $color  $color  $color    $color
-client.unfocused        $color  $color  $color  $color    $color
-# CORPL end
 
 
 ## Workspace locations
@@ -260,4 +264,4 @@ exec --no-startup-id $sctlu start check-failed.timer
 
 
 # Lock screen on startup
-exec --no-startup-id i3lock
+exec --no-startup-id i3lock -c $lock-color
