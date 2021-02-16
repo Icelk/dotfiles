@@ -16,4 +16,3 @@ ls $dev_path"$language"/"$project" >/dev/null
 if [ $? -ne 0 ]; then exit 1; fi
 
 $editor $dev_path"$language"/"$project"
-

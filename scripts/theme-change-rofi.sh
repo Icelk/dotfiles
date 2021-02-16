@@ -2,7 +2,7 @@
 
 set themes "Light Dark"
 
-set selected (string split ' ' $themes | rofi -dmenu)
+set selected (string split ' ' $themes | rofi -dmenu -i -p "Select theme")
 
 echo $selected
 
