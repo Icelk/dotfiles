@@ -45,6 +45,7 @@ linux-firmware
 linux-headers
 lxappearance
 m4
+mailspring
 maim
 make
 man-db
@@ -87,7 +88,6 @@ steam
 texinfo
 thunar
 thunar-volman
-thunderbird
 tokei
 ttf-dejavu
 tumbler
