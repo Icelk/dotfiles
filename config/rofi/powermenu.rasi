@@ -1,5 +1,5 @@
 configuration {
-    modi: "window,run,drun";
+    modi: "window";
     theme: "clean";
     show-icons: true;
     font: "FiraCode 10";
@@ -7,10 +7,18 @@ configuration {
 
 @import "colors.rasi"
 
+* {
+    bg: @bg-lighter;
+    bg-select: @bg-light;
+    background-color: @bg;
+
+    txt: @text-normal;
+    txt-select: @text-color;
+}
+
 #window {
     width: 450px;
     height: 120px;
-    background-color: @background-solid;
     padding: 5px;
 }
 
@@ -18,7 +26,6 @@ configuration {
     border:  0;
     padding: 0;
     children: [listview];
-    background-color: @background-solid;
 }
 
 #listview {
@@ -45,32 +52,27 @@ element-text {
 }
 
 #element.normal.normal {
-    background-color: rgba(0, 0, 0, 0);
-    text-color:       @foreground;
+    background-color: transparent;
+    text-color:       @txt;
 }
 
 #element.selected.normal {
-    background-color: @background-selected;
-    text-color:       @foreground;
+    background-color: @bg-select;
+    text-color:       @txt;
     border-color: #d07ef2;
 }
 
 #element.alternate.normal {
-    background-color: rgba(0,0,0,0);
-    text-color:       @foreground;
-}
-
-#mode-switcher {
-    border:       0px 0px 0px ;
-    border-color: @separatorcolor;
+    background-color: transparent;
+    text-color:       @txt;
 }
 
 #button {
     spacing:    0;
-    text-color: @foreground;
+    text-color: @txt;
 }
 
 #button.selected {
-    background-color: @background-selected;
-    text-color:       @foreground;
+    background-color: @bg;
+    text-color:       @txt;
 }
