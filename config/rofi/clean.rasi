@@ -8,7 +8,11 @@ configuration {
 @import "colors.rasi"
 
 * {
-    selected-background: @background-selected;
+    bg: @bg-lighter;
+    bg-select: @bg-light;
+
+    txt: @text-normal;
+    txt-select: @text-color;
 }
 
 #window {
@@ -22,11 +26,11 @@ configuration {
     border:  0;
     border-radius: 15;
     padding: 20;
-    background-color: @background-solid;
+    background-color: @bg;
 }
 
 #textbox {
-    text-color: @foreground;
+    text-color: @txt;
 }
 
 #listview {
@@ -58,18 +62,18 @@ element-text {
 
 #element.normal.normal {
     background-color: transparent;
-    text-color:       @foreground;
+    text-color:       @txt;
 }
 
 #element.selected.normal {
-    background-color: @background-selected;
-    text-color:       @foreground;
+    background-color: @bg-select;
+    text-color:       @txt;
     border-color:     #d07ef2;
 }
 
 #element.alternate.normal {
     background-color: transparent;
-    text-color:       @foreground;
+    text-color:       @txt;
 }
 
 #mode-switcher {
@@ -79,49 +83,49 @@ element-text {
 
 #button {
     spacing:    0;
-    text-color: @foreground;
+    text-color: @txt;
 }
 
 #button.selected {
-    background-color: @background-selected;
-    text-color:       @foreground;
+    background-color: @bg-select;
+    text-color:       @txt-select;
 }
 
 #inputbar {
     spacing:          0;
-    text-color:       @foreground;
+    text-color:       @txt;
     padding:          10px;
-    background-color: @background-selected;
+    background-color: @bg-select;
     /*rgba(0,0,0,0.5);*/
     border-radius:    10px;
 }
 
 #case-indicator {
     spacing:    0;
-    text-color: @foreground;
-    background-color: rgba(0,0,0,0);
+    text-color: @txt-select;
+    background-color: transparent;
 }
 
 #entry {
     spacing:    0;
-    text-color: @foreground;
-    background-color: rgba(0,0,0,0);
+    text-color: @txt;
+    background-color: transparent;
 }
 
 #prompt {
     spacing:    0;
-    text-color: @foreground;
-    background-color: rgba(0,0,0,0);
+    text-color: @txt;
+    background-color: transparent;
 }
 
 #textbox-prompt-colon {
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @foreground;
-    background-color: rgba(0,0,0,0);
+    text-color: @txt;
+    background-color: transparent;
 }
 
-#inputbar {
+#inputbar { 
     children: [prompt,textbox-prompt-colon,entry,case-indicator];
 }
