@@ -34,5 +34,6 @@
     "gitlens.views.branches.pullRequests.enabled": false,
     "workbench.colorTheme": "Monokai",
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "vim.useSystemClipboard": true
 }
