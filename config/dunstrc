@@ -184,12 +184,12 @@
 # CORPL option light
 
 [urgency_low]
-    background = "#bfd3efdf"
+    background = "#bfd3efbf"
     foreground = "#262c3f"
     timeout = 0
 
 [urgency_normal]
-    background = "#bfd3efdf"
+    background = "#bfd3efbf"
     foreground = "#262c3f"
     timeout = 0
 
