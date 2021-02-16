@@ -13,6 +13,7 @@ set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
+set $restart ~/scripts/restart.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -85,6 +86,7 @@ bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
 bindsym Pause exec --no-startup-id i3lock -c $lock-color
 bindsym $mod+Shift+b exec --no-startup-id clipcatctl clear
+bindsym $mod+r exec --no-startup-id $restart
 
 
 ## Workspace locations
@@ -236,9 +238,6 @@ bindsym $mod+Shift+l resize grow width $granular_adjustment px or $granular_adju
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
-
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
 
 
 ## Start programs
