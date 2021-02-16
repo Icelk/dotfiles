@@ -1,14 +1,19 @@
 * {
     /* CORPL option dark */
-    /* foreground:             #c5c8c6ff; */
-    /* background:             #1d1f219f; */
-    /* background-solid:       #1d1f21ff; */
-    /* background-selected:    #0000007f; */
+    /* bg-darker: #020619; */
+    /* bg-dark: #070c26; */
+    /* bg-light: #1a1f3a; */
+    /* bg-lighter: #2a2f4c; */
+  
+    /* text-normal: #fffffa; */
+    /* text-color: #a2c6d8; */
     /* CORPL option light */
-    foreground:             #262c3fff;
-    foreground-selected:    #262c3fff;
-    background:             #bfd3ef9f;
-    background-solid:       #bfd3efff;
-    background-selected:    #1793D17f;
+    bg-darker: #e6e8f2;
+    bg-dark: #cbd7ed;
+    bg-light: #acc4e5;
+    bg-lighter: #98acd3;
+
+    text-normal: #262c3f;
+    text-color: #6688cc;
     /* CORPL end */
 }
