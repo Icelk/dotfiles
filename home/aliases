@@ -6,7 +6,7 @@ alias e="exit"
 alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
-alias cu="cd .."
+alias rm="rm -i"
 
 # Systemctl
 alias sctl="sudo systemctl"
