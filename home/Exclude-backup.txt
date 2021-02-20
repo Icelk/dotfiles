@@ -1,3 +1,6 @@
+**bin/**
+**target/**
+
 /etc/ca-certificates/extracted/cadir/
 /etc/ssl/certs/
 /etc/cups/
@@ -15,6 +18,11 @@
 /etc/default/useradd
 /etc/audit
 /etc/ssh/
+/etc/brlapi.key
+/etc/libvirt/secrets/
+/etc/libvirt/nwfilter/
+/etc/libvirt/storage/
+/etc/libvirt/qemu/
 
 /var/cache/
 /var/log/
@@ -30,16 +38,21 @@
 /home/icelk/.mozilla/
 /home/icelk/.config/Electron/Local Storage/
 /home/icelk/.config/Electron/blob_storage/
-/home/icelk/.config/VSCodium/*Cache*
 /home/icelk/.config/VSCodium/Local Storage/
 /home/icelk/.config/VSCodium/Session Storage/
 /home/icelk/.config/VSCodium/blob_storage/
-/home/icelk/.nv/GLCache/
-/home/icelk/.local/share/Steam/
-*target/*
-*bin/*
+/home/icelk/.config/**Cache**
+/home/icelk/.config/**cache**
+/home/icelk/.config/**Storage**
+/home/icelk/.config/**storage**
+/home/icelk/.config/**logs**
+/home/icelk/.config/Thunar/accels.scm
+/home/icelk/.config/BraveSoftware/Brave-Browser/Default/Cookies
+/home/icelk/.config/BraveSoftware/Brave-Browser/Default/Cookies-journal
+/home/icelk/.config/BraveSoftware/Brave-Browser/Default/Network Persistent State
 /home/icelk/.ccache/
+/home/icelk/.local/share/Steam/
+/home/icelk/.nv/GLCache/
 /home/icelk/.wine/
 /home/icelk/.vscode-oss/extensions/
 /home/icelk/.private/
-/home/icelk/*log*/*
