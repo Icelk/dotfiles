@@ -1,7 +1,11 @@
 server_host = '127.0.0.1'
 server_port = 45045
-finder = 'rofi'
+finder = 'custom'
 
 [rofi]
 line_length = 100
 menu_length = 30
+
+[custom_finder]
+program = 'rofi'
+args = ['-dmenu', '-l', '30', '-format', 'i', '-i', '-p', 'Select copied text']
