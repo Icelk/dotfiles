@@ -2,7 +2,7 @@
 
 # Common small utils
 alias s="doas"
-alias e="exit"
+alias e="exit 0"
 alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
