@@ -14,6 +14,7 @@ set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
 set $restart ~/scripts/restart.sh
+set $clipboard-clear ~/scripts/clipcat-clear.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -85,7 +86,7 @@ bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
 bindsym Pause exec --no-startup-id i3lock -c $lock-color
-bindsym $mod+Shift+b exec --no-startup-id clipcatctl clear
+bindsym $mod+Shift+b exec --no-startup-id $clipboard-clear
 bindsym $mod+r exec --no-startup-id $restart
 
 
