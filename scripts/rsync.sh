@@ -4,7 +4,7 @@ echo "Starting backup sync!"
 
 # -P: progress h: human a: archive v: verbose
 
-rsync -ahP --del --delete-excluded /home icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
+rsync -ahP --del --delete-excluded /home icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-home.txt"
 echo "Done with /home"
 rsync -ahP --del --delete-excluded /var icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
 echo "Done with /var"
