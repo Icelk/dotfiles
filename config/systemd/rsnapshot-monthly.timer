@@ -1,0 +1,11 @@
+[Unit]
+Description=rsnapshot monthly backup
+
+[Timer]
+# Run once per month at 3:30 UTC, after daily and weekly runs
+OnCalendar=*-*-1 03:30:00
+Persistent=true
+Unit=rsnapshot@monthly.service
+
+[Install]
+WantedBy=timers.target

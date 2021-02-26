@@ -1,0 +1,11 @@
+[Unit]
+Description=rsnapshot daily backup
+
+[Timer]
+# 05:30 is the clock time when to start it
+OnCalendar=05:30
+Persistent=true
+Unit=rsnapshot@daily.service
+
+[Install]
+WantedBy=timers.target
