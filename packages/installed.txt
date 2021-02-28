@@ -81,6 +81,7 @@ qemu
 reflector
 ripgrep
 rofi
+rsnapshot
 rsync
 rustup
 spotify-tui
