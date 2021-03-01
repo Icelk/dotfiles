@@ -5,4 +5,4 @@ Description=rsnapshot (%I) backup
 Type=oneshot
 Nice=19
 IOSchedulingClass=idle
-ExecStart=/usr/bin/rsnapshot %I
+ExecStart=sh -c "~/scripts/rsnapshot.sh %I"
