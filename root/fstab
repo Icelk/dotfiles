@@ -49,4 +49,3 @@ nas:/mnt/main/computer_erik			/home/icelk/nas	nfs	defaults,_netdev,noauto,x-syst
 
 # File sharing
 nas:/mnt/main/file_share			/share		nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
-
