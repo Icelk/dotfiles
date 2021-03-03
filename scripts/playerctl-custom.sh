@@ -19,7 +19,7 @@ set spt_status (pctl_get "spotifyd" "PlaybackStatus")
 function pref_spt
     set player (playerctl -l | grep "spotifyd")
     
-    if test $status -eq 0 && ! string match -q $spt_status "Stopped"
+    if test $status -eq 0
         set player (echo $player | head -n 1)
     else
         set player (playerctl -l | head -n 1)
