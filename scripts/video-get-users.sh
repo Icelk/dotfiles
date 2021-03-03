@@ -10,12 +10,11 @@ if test $status -ne 0
 end
 
 for device in $devices
-    set pid (fuser $device 2>/dev/null | grep -oP " \K[0-9]*")
-    # set pid 1
+    set pid (fuser $device 2>/dev/null | grep -Po " *\K.*")
     if test $status -ne 0
         continue
     end
-    set name ps -p $pid -o comm=
+    set name (ps -p $pid -o comm=)
 
     echo $on
     exit 0
