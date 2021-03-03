@@ -6,7 +6,9 @@ set off $argv[2]
 set devices (v4l2-ctl --list-devices 2>/dev/null | grep -o "/dev/video[0-9]*")
 
 if test $status -ne 0
-    exit 1
+    # No video device is connected
+    echo $off
+    exit 0
 end
 
 for device in $devices
