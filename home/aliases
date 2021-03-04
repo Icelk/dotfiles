@@ -25,7 +25,7 @@ alias gd="git diff"
 alias gu="git reset"
 
 # Rust clones
-alias ls="exa -la1 -s=Name --group-directories-first --git"
+alias ls="exa -la -s=Name --group-directories-first --git"
 alias cat="bat"
 alias grep="rg --hidden --one-file-system"
 alias find="fd --hidden --one-file-system"
