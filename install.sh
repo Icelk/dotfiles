@@ -37,8 +37,7 @@ l $wdc/dunstrc $hc/dunst/
 l $wdc/clipcat/ $hc/clipcat
 
 ## Fish
-l $wdc/config.fish $hc/fish/
-l $wdc/fish_variables $hc/fish/
+l $wdc/fish/ $hc/fish
 
 ## Gtk
 l $wdc/gtk-3.0.ini $hc/gtk-3.0/

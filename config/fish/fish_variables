@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x22col\x20\x2dbx\x20\x7c\x20bat\x20\x2dpl\x20man\x22
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
