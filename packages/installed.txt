@@ -34,10 +34,12 @@ gnome-keyring
 gptfdisk
 groff
 gvfs
+gvfs-afc
 hexedit
 i3-gaps
 i3lock
 kora-icon-theme
+libheif
 libmpeg2
 libnet
 libtool
