@@ -86,7 +86,6 @@ rofi
 rsnapshot
 rsync
 rustup
-rxvt-unicode
 spotify-tui
 starship
 steam

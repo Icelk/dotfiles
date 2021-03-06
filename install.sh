@@ -95,9 +95,6 @@ l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/
 
-## Xresources
-l $wdh/Xresources ~/.Xresources
-
 ## Backup exclude
 l $wdh/Exclude-backup.txt ~/
 l $wdh/Exclude-backup-archive.txt ~/
