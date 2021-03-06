@@ -1,0 +1,28 @@
+!
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+! CORPL option light
+URxvt.background: #262c3f
+URxvt.foreground: #bfd3ef
+! CORPL option dark
+! URxvt.background: #1d1f21
+! URxvt.foreground: #c5c8c6
+! CORPL end
+
+URxvt.cursorColor: #ffffff
+URxvt.cursorColor2: #1d1f21
+
+!URxvt.font: 12:19
+URxvt.font: xft:FiraCode:size=12
+URxvt.letterSpace: -3
+URxvt.scrollBar: False
