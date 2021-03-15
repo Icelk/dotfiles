@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/fish
 
 set failed (math (echo (echo (systemctl list-units --failed | tail -n 1) | string split ' ')[1]) + (echo (echo (systemctl --user list-units --failed | tail -n 1) | string split ' ')[1]))
 
