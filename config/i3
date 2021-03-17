@@ -26,7 +26,9 @@ set $rough_adjustment 8
 focus_wrapping no
 
 # 2px border
+# CORPL option light
 for_window [class = "^.*"] border pixel 2
+# CORPL end
 
 # Gaps
 gaps outer 0
@@ -37,20 +39,21 @@ gaps top 24
 workspace_auto_back_and_forth yes
 
 # Set border colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
 # CORPL option dark
-# set $color #1d1f21
-# client.focused_inactive $color  $color  $color  $color    $color
-# client.unfocused        $color  $color  $color  $color    $color
 
 # set $lock-color \#000000
+
 # CORPL option light
+
 set $color #bfd3ef
+
+#class                  border  backgr. text    indicator child_border
 client.focused_inactive $color  $color  $color  $color    $color
 client.unfocused        $color  $color  $color  $color    $color
+client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
 
 set $lock-color \#3f3f3f
+
 # CORPL end
 
 
