@@ -26,8 +26,9 @@ set $rough_adjustment 8
 focus_wrapping no
 
 # 2px border
-# CORPL option light
-for_window [class = "^.*"] border pixel 2
+# CORPL section for_window [class = "^.*"] border pixel
+#  0 # dark
+for_window [class = "^.*"] border pixel 2 # light
 # CORPL end
 
 # Gaps
