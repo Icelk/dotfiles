@@ -196,7 +196,7 @@ draw_bold_text_with_bright_colors: false
     # blue: '#81a2be'
     # magenta: '#b294bb'
     # cyan: '#70c0ba'
-    # white: '#8c96a5'
+    # white: '#b8c5d8'
 
   # #Bright colors
   # bright:
@@ -207,7 +207,7 @@ draw_bold_text_with_bright_colors: false
     # blue: '#81a2be'
     # magenta: '#b77ee0'
     # cyan: '#54ced6'
-    # white: '#6a6f7a'
+    # white: '#9ba2b2'
 
 # CORPL option light
 
