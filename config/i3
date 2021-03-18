@@ -187,10 +187,10 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+x split h
 
 # Split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+z split v
 
 # Change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -229,13 +229,13 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 ## Resize
 
-bindsym $mod+j resize shrink width $rough_adjustment px or $rough_adjustment
-bindsym $mod+k resize grow height $rough_adjustment px or $rough_adjustment
-bindsym $mod+i resize shrink height $rough_adjustment px or $rough_adjustment
+bindsym $mod+h resize shrink width $rough_adjustment px or $rough_adjustment
+bindsym $mod+j resize grow height $rough_adjustment px or $rough_adjustment
+bindsym $mod+k resize shrink height $rough_adjustment px or $rough_adjustment
 bindsym $mod+l resize grow width $rough_adjustment px or $rough_adjustment
-bindsym $mod+Shift+j resize shrink width $granular_adjustment px or $granular_adjustment
-bindsym $mod+Shift+k resize grow height $granular_adjustment px or $granular_adjustment
-bindsym $mod+Shift+i resize shrink height $granular_adjustment px or $granular_adjustment
+bindsym $mod+Shift+h resize shrink width $granular_adjustment px or $granular_adjustment
+bindsym $mod+Shift+j resize grow height $granular_adjustment px or $granular_adjustment
+bindsym $mod+Shift+k resize shrink height $granular_adjustment px or $granular_adjustment
 bindsym $mod+Shift+l resize grow width $granular_adjustment px or $granular_adjustment
 
 
