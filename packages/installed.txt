@@ -58,6 +58,7 @@ neofetch
 nfs-utils
 ninja
 nitrogen
+nodejs
 noto-fonts-emoji
 ntfs-3g
 numlockx
