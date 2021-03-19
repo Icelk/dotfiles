@@ -38,6 +38,7 @@ gvfs-afc
 hexedit
 i3-gaps
 i3lock
+imwheel
 kora-icon-theme
 libheif
 libmpeg2
