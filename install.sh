@@ -94,7 +94,6 @@ l $wdh/zprofile ~/.zprofile
 l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/
-l $wdh/imwheelrc ~/.imwheelrc
 
 ## Backup exclude
 l $wdh/Exclude-backup.txt ~/
