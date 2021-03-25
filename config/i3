@@ -96,9 +96,8 @@ bindsym $mod+r exec --no-startup-id $restart
 
 
 ## Workspace locations
-workspace 1 output HDMI-0
+workspace 1 output DP-2
 workspace 2 output DP-0
-workspace 3 output DVI-D-0
 
 
 ## Fonts

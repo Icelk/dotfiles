@@ -35,5 +35,6 @@
     "workbench.colorTheme": "Monokai",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "window.zoomLevel": 1
 }
