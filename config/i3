@@ -64,6 +64,7 @@ set $lock-color \#3f3f3f
 
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+w exec brave
+bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
 bindsym $mod+c exec --no-startup-id codium .
 bindsym $mod+f exec thunar
 bindsym $mod+s exec --no-startup-id "alacritty -e spt"
