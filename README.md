@@ -7,6 +7,10 @@ These are all my dotfiles, which can be used to complete a setup with Nvidia gra
 Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
 
+## macOS
+
+Lately, I've had to start using macOS. A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+
 # Major components
 
 I use
@@ -15,9 +19,11 @@ I use
 - polybar
 - dunst
 - rofi
+- Alacritty
 - Brave
 - VSCodium
 - paru
+- spotifyd
 
 
 # Installation
