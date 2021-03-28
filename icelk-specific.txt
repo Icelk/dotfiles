@@ -4,13 +4,10 @@
 config/spotifyd.conf
 59:cache_path = "/home/icelk/.cache/spotifyd"
 
-config/fish_variables
-33:SETUVAR fish_user_paths:/home/icelk/dev/Rust/Kvarn/target/release/\x1e/home/icelk/\x2ecargo/bin\x1e/home/icelk/dev/Rust/osxcross/target/bin
-
 install.sh
 3:echo "Some of the files has me (icelk) as a hardcoded user, mostly in ssh and /home/icelk."
 4:echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
-59:echo "Make sure to change apropriate values in services. For example, the user icelk (me) is present. Change that for your username."
+59:echo "Make sure to change appropriate values in services. For example, the user icelk (me) is present. Change that for your username."
 
 home/zshrc
 37:zstyle :compinstall filename '/home/icelk/.zshrc'
