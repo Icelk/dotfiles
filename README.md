@@ -1,23 +1,16 @@
 # About
 
-These are all my dotfiles, which can be used to complete a setup with Nvidia graphics and an AMD processor (amd-ucode, can be easily swapped with intel-ucode).
+These are all my macOS dotfiles, which can be used to make transitioning to macOS easier when using my Linux dotfiles.
 
-> Right, almost forgot, I use **Arch Linux**
-
-Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
+> Right, almost forgot, I mainly use **Arch Linux**
 
 
 # Major components
 
 I use
-- i3 gaps
-- picom (ibhagwan's fork)
-- polybar
-- dunst
-- rofi
+- Alacritty
 - Brave
 - VSCodium
-- paru
 
 
 # Installation
