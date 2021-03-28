@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+		<key>Label</key>
+		<string>rustlang.spotifyd</string>
+		<key>ProgramArguments</key>
+		<array>
+			<string>/Users/icelk/.cargo/bin/spotifyd</string>
+			<string>--config-path=/Users/icelk/.config/spotifyd/spotifyd.conf</string>
+			<string>--no-daemon</string>
+		</array>
+		<key>UserName</key>
+		<string>icelk</string>
+		<key>KeepAlive</key>
+		<true/>
+		<key>ThrottleInterval</key>
+		<integer>3</integer>
+	</dict>
+</plist>
