@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pacman -Qeq > ~/packages/installed.txt
+brew list --full-name > packages/installed.txt

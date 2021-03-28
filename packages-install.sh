@@ -1,9 +1,7 @@
 #!/bin/sh
 
+echo "You have to have homebrew installed."
+
 packages=$( cat packages/installed.txt )
 
-if [ "which paru" ]; then
-    paru -S $packages
-else
-    yay -S $packages
-fi
+brew install $packages
