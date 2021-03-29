@@ -2,7 +2,7 @@
 Description=rsnapshot (%I) backup
 
 [Service]
-Type=oneshot
+Type=simple
 Nice=19
 IOSchedulingClass=idle
 ExecStart=sh -c "~/scripts/rsnapshot.sh %I"

@@ -11,7 +11,6 @@ mkdir -p "/tmp/run/"
 echo $$ > "/tmp/run/$PIDFILE"
 
 ## Your command!
-sleep 1
 rsnapshot $1
 
 # Delete it
