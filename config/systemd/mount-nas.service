@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount nas before Starship is run
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=sh -c "mount nas"
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
