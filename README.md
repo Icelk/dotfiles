@@ -5,6 +5,10 @@ These are all my macOS dotfiles, which can be used to make transitioning to macO
 > Right, almost forgot, I mainly use **Arch Linux**
 
 
+## macOS
+
+Lately, I've had to start using macOS. A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+
 # Major components
 
 I use
