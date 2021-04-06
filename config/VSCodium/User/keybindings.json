@@ -93,5 +93,10 @@
         "key": "ctrl+shift+7",
         "command": "-editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
-    }
+    },
+    {
+        "key": "Enter",
+        "command": "rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"
+    },
 ]
