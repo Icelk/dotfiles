@@ -70,6 +70,7 @@ opendoas
 pacman-contrib
 paru
 patch
+php-fpm
 picom-ibhagwan-git
 piper
 pkgconf
