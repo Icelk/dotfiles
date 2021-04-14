@@ -45,3 +45,5 @@ alias ciwd="cargo install --path ."
 
 alias open="xdg-open"
 alias audio-reset="puleaudio -k && sudo alsa force-reload && pulseaudio --start"
+
+alias upgrade="brew upgrade; and brew upgrade --cask"
