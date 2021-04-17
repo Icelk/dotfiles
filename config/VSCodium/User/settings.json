@@ -38,5 +38,23 @@
     "vim.useSystemClipboard": true,
     "window.zoomLevel": 1,
     "vim.autoindent": false,
-    "rust-analyzer.checkOnSave.command": "clippy"
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "terminal.integrated.enablePersistentSessions": false,
+    "prettier.tabWidth": 4,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.semi": false,
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.statusBar.pullRequests.enabled": false,
+    "gitlens.hovers.pullRequests.enabled": false,
+    "gitlens.views.commits.pullRequests.enabled": false,
+    "gitlens.views.repositories.pullRequests.enabled": false,
+    "update.mode": "none",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.enableExperiments": false,
+    "json.schemaDownload.enable": false
 }
