@@ -18,7 +18,6 @@ dhcpcd
 dnsmasq
 dosfstools
 dunst
-ebtables
 edk2-ovmf
 exa
 fakeroot
@@ -38,6 +37,7 @@ gvfs-afc
 hexedit
 i3-gaps
 i3lock
+iptables-nft
 kora-icon-theme
 libheif
 libmpeg2
@@ -97,6 +97,7 @@ thunar-volman
 tokei
 ttf-dejavu
 tumbler
+typescript
 vi
 virt-manager
 vscodium-bin
