@@ -34,7 +34,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "vim.useSystemClipboard": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "vim.autoindent": false,
     "rust-analyzer.checkOnSave.command": "clippy",
     "terminal.integrated.enablePersistentSessions": false,
