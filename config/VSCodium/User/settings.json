@@ -17,7 +17,6 @@
         "**target/**": true
     },
     "rust-analyzer.cargo.allFeatures": true,
-    "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "explorer.incrementalNaming": "smart",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -26,7 +25,6 @@
     "cSpell.userWords": [
         "pacman"
     ],
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
     "explorer.autoReveal": false,
     "gitlens.views.contributors.pullRequests.enabled": false,
     "gitlens.views.searchAndCompare.pullRequests.enabled": false,
@@ -36,5 +34,25 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "vim.useSystemClipboard": true,
-    "vim.autoindent": false
+    "window.zoomLevel": 1,
+    "vim.autoindent": false,
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "terminal.integrated.enablePersistentSessions": false,
+    "prettier.tabWidth": 4,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.semi": false,
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.statusBar.pullRequests.enabled": false,
+    "gitlens.hovers.pullRequests.enabled": false,
+    "gitlens.views.commits.pullRequests.enabled": false,
+    "gitlens.views.repositories.pullRequests.enabled": false,
+    "update.mode": "none",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.enableExperiments": false,
+    "json.schemaDownload.enable": false
 }
