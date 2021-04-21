@@ -17,7 +17,6 @@
         "**target/**": true
     },
     "rust-analyzer.cargo.allFeatures": true,
-    "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "explorer.incrementalNaming": "smart",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -26,7 +25,6 @@
     "cSpell.userWords": [
         "pacman"
     ],
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
     "explorer.autoReveal": false,
     "gitlens.views.contributors.pullRequests.enabled": false,
     "gitlens.views.searchAndCompare.pullRequests.enabled": false,
