@@ -88,6 +88,7 @@ rofi
 rsnapshot
 rsync
 rustup
+sd
 spotify-tui
 starship
 steam
