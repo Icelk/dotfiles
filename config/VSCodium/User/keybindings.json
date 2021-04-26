@@ -95,8 +95,12 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "Enter",
+        "key": "enter",
         "command": "rust-analyzer.onEnter",
-        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
     },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.files.saveWithoutFormatting"
+    }
 ]
