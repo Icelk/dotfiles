@@ -13,7 +13,7 @@ set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
-set $restart ~/scripts/restart.sh
+set $restart ~/scripts/service-restart.fish
 set $clipboard-clear ~/scripts/clipcat-clear.sh
 
 set $granular_adjustment 1
