@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sh
 
 if [ -z "$@" ]; then
     # CORPL option light

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 # Copyright © Icelk 2021-present
 
 dev_path=~/dev/

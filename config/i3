@@ -7,7 +7,7 @@
 
 set $mod Mod4
 
-set $rofi ~/scripts/rofi/launch.sh
+set $powermenu ~/scripts/rofi/launch-powermenu.sh
 set $change-theme ~/scripts/theme-change-rofi.fish
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
@@ -81,7 +81,8 @@ bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
 bindsym $mod+d exec --no-startup-id $open-dev
 bindsym $mod+b exec clipcat-menu
 bindsym $mod+Shift+t exec $change-theme
-
+bindsym $mod+space exec rofi -show drun -theme clean
+bindsym $mod+Pause exec $powermenu
 
 # No-ui utilities
 
@@ -123,13 +124,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5%
 
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id ponymix increase 1%
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id ponymix decrease 1%
-
-
-## Rofi
-
-# Start rofi
-bindsym $mod+space exec $rofi appmenu
-bindsym $mod+Pause exec $rofi powermenu
 
 
 ## Other bindings
