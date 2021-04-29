@@ -41,5 +41,5 @@
         "key": "Enter",
         "command": "rust-analyzer.onEnter",
         "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"
-    },
+    }
 ]

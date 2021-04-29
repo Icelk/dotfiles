@@ -1,16 +1,12 @@
 # Rebind programs to easier/common names
 
 # Common small utils
-alias s="doas"
+alias s="sudo"
 alias e="exit 0"
 alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-
-# Systemctl
-alias sctl="sudo systemctl"
-alias sctlu="systemctl --user"
 
 # Git
 alias gclo="git clone"
@@ -42,8 +38,4 @@ alias ciwd="cargo install --path ."
 
 
 # Aliases for useful complicated commands I don't want to memorize
-
-alias open="xdg-open"
-alias audio-reset="puleaudio -k && sudo alsa force-reload && pulseaudio --start"
-
 alias upgrade="brew upgrade; and brew upgrade --cask"
