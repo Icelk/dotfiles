@@ -1,0 +1,15 @@
+Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+
+Compression no
+
+ControlMaster auto
+ControlPersist yes
+ControlPath ~/.ssh/sockets/socket-%r@%h:%p
+
+ControlPersist yes
+
+AddressFamily inet
+
+Host 192.168.86.8 icelk.dev
+IdentityFile ~/.private/icelk.dev.rsa
+User icelk

@@ -46,3 +46,4 @@ l $wdc/starship.toml $hc/
 l $wdh/aliases ~/.aliases
 l $wdh/gitconfig ~/.gitconfig
 l $wdh/Config-files.txt ~/
+l $wdh/ssh ~/.ssh/config
