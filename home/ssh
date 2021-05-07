@@ -3,10 +3,8 @@ Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.
 Compression no
 
 ControlMaster auto
-ControlPersist yes
+ControlPersist no
 ControlPath ~/.ssh/sockets/socket-%r@%h:%p
-
-ControlPersist yes
 
 AddressFamily inet
 
