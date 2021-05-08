@@ -76,7 +76,6 @@ piper
 pkgconf
 playerctl
 polybar
-ponymix
 procs
 pulseaudio
 pulseaudio-alsa
