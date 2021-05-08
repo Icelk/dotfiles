@@ -12,6 +12,7 @@ echo "Add the -f flag to the following line in this script to override any prese
 e used after moving the dotfiles directory."
 alias l="ln -s"
 wdr="$PWD/root"
+bin="/usr/bin"
 
 # Suppress kernel info messages at boot.
 l $wdr/kernel-info.conf /etc/sysctl.d/disable-kernel-info.conf
@@ -38,3 +39,6 @@ echo "A xorg configuration file is included but not in this install script due t
 #ln -s $PWD/root/fstab /etc/
 #ln -s $PWD/root/rsnapshot.config /etc/
 echo "rsnapshot and fstab config files in included but not in this install script due to hardware-specific mount-points."
+
+l $bin/nvim $bin/vi
+l $bin/nvim $bin/vim

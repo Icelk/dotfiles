@@ -55,6 +55,8 @@ man-db
 meson
 mpg123
 neofetch
+neovim
+neovim-plug
 nfs-utils
 ninja
 nitrogen
@@ -80,6 +82,7 @@ procs
 pulseaudio
 pulseaudio-alsa
 pulsemixer
+python-pip
 qemu
 reflector
 ripgrep
@@ -99,7 +102,6 @@ tor-browser
 ttf-dejavu
 tumbler
 typescript
-vi
 virt-manager
 vscodium-bin
 watchexec
@@ -108,8 +110,10 @@ wine-gecko
 wine-mono
 wine-staging
 winetricks
+xclip
 xdg-user-dirs
 xorg-server
 xorg-xauth
+xorg-xev
 xorg-xinit
 xorg-xwininfo
