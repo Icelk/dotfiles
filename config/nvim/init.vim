@@ -15,10 +15,37 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 " Initialize plugin system
 call plug#end()
 
-let mapleader = ","
-map ' :
+" Important configuration
 
-nmap <C-n> :NERDTreeToggle<CR>
+" Set mapleader
+let mapleader = ","
+" Use ' as beginning of command (e.g. 'q = :q)
+map ' :
+" Set clipboard to the one used by all other applications
+set clipboard+=unnamedplus
+" Enable mouse support
+set mouse:a
+" Enable spell warnings
+" set spell
+" Disable leader key timeout
+set notimeout
+set ttimeout
+" set relativenumber
+set number
+" Indent the next line at the same level as the current on <enter>
+set autoindent
+" Tabs are viewed as 4 spaces
+set tabstop=4
+" Indent 4 spaces
+set shiftwidth=4
+" always uses spaces instead of tab characters
+set expandtab
+" Makes typing tabs more consistent
+set smarttab
+" Format on Alt+f
+nmap <A-f> :Format<CR>
+" Enables plugins based on filetypes, such as syntax highlighting
+filetype plugin on
 
 " Navigate windows
 nmap <C-h> <C-w>h
@@ -26,18 +53,28 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-nmap <C-f> :Format<CR>
+" Remap for rename current word
+nmap <F9> <Plug>(coc-rename)
 
-set clipboard+=unnamedplus
-set mouse:a
-" set spell
-set notimeout
-set ttimeout
+" Remap to go to definition
+nmap <F12> <Plug>(coc-definition)
 
+
+
+" j/k will move virtual lines (lines that wrap)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 
+" NERDCommenter
+let g:NETDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
+map <A-a> <plug>NERDCommenterToggle
+nmap <S-A-a> <plug>NERDCommenterAltDelims
 
 " vim-prettier
 " prettier command for coc
@@ -46,25 +83,6 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" j/k will move virtual lines (lines that wrap)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" set relativenumber
-set number
-set smarttab
-set cindent
-set tabstop=4
-set shiftwidth=4
-" always uses spaces instead of tab characters
-set expandtab
-set autoindent
-
-filetype plugin on
-let g:NETDCreateDefaultMappings = 1
-" map <A-a> <leader>cc<CR>
-map <A-a> <plug>NERDCommenterToggle
-nmap <S-A-a> <plug>NERDCommenterAltDelims
 
 " coc config
 let g:coc_global_extensions = [
@@ -82,6 +100,9 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
+
+
+" Copied from COC readme
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -129,23 +150,9 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 "autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Remap for rename current word
-nmap <F2> <Plug>(coc-rename)
-
-" Remap to go to definition
-nmap <F12> <Plug>(coc-definition)
-
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
