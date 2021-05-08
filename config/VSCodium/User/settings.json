@@ -45,6 +45,9 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "vscode.markdown-language-features",
+    },
     "prettier.semi": false,
     "gitlens.currentLine.pullRequests.enabled": false,
     "gitlens.statusBar.pullRequests.enabled": false,
