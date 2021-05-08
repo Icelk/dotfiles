@@ -32,6 +32,9 @@ set notimeout
 set ttimeout
 " set relativenumber
 set number
+" Ignore case in search
+set ignorecase
+set smartcase
 " Indent the next line at the same level as the current on <enter>
 set autoindent
 " Tabs are viewed as 4 spaces
