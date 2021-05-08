@@ -1,0 +1,4 @@
+keysym F1 = bracketleft
+keysym F2 = bracketright
+keysym F3 = braceleft
+keysym F4 = braceright
