@@ -95,6 +95,7 @@ texinfo
 thunar
 thunar-volman
 tokei
+tor-browser
 ttf-dejavu
 tumbler
 typescript
