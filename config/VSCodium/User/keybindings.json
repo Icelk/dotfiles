@@ -102,5 +102,15 @@
     {
         "key": "ctrl+alt+s",
         "command": "workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "f9",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f9",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     }
 ]
