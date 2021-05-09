@@ -56,13 +56,14 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Toggle ignorecase
+nmap <F8> :set ignorecase! ignorecase?<CR>
+
 " Remap for rename current word
 nmap <F9> <Plug>(coc-rename)
 
 " Remap to go to definition
 nmap <F12> <Plug>(coc-definition)
-
-
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
