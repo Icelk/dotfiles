@@ -20,7 +20,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "explorer.incrementalNaming": "smart",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss07'",
     "editor.minimap.enabled": false,
     "cSpell.userWords": [
         "pacman"
