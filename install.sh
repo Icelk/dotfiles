@@ -33,6 +33,10 @@ l $wdc/alacritty.yml $hc/alacritty/
 ## Fish
 l $wdc/fish/ $hc/fish
 
+## NeoVim
+l $wdc/nvim/init.vim $hc/nvim/
+l $wdc/nvim/coc-settings.json $hc/nvim/
+
 ## Spotifyd
 l $wdc/spotifyd.conf $hc/spotifyd/
 

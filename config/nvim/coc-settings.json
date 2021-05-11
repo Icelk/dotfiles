@@ -9,5 +9,5 @@
     "html",
     "css"
   ],
-  "rust-analyzer.server.path": "/home/icelk/.config/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-unknown-linux-gnu"
+  "rust-analyzer.server.path": "/Users/icelk/Library/Application Support/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-apple-darwin"
 }
