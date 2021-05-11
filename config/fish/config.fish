@@ -19,6 +19,10 @@ function on_exit --on-event fish_exit
     # Now logging out!
 end
 
+function ps
+    paru -Ss --color=always $argv[1] | $PAGER
+end
+
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end

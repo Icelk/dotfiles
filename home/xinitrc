@@ -15,5 +15,6 @@ fi
 numlockx
 
 setxkbmap se
+xmodmap ~/.Xmodmap
 
 exec i3

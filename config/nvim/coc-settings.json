@@ -1,0 +1,13 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnTypeFiletypes": [
+    "javascript",
+    "typescript",
+    "json",
+    "graphql",
+    "rust",
+    "html",
+    "css"
+  ],
+  "rust-analyzer.server.path": "/home/icelk/.config/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-unknown-linux-gnu"
+}

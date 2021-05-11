@@ -20,7 +20,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "explorer.incrementalNaming": "smart",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss07'",
     "editor.minimap.enabled": false,
     "cSpell.userWords": [
         "pacman"
@@ -45,6 +45,9 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "vscode.markdown-language-features",
+    },
     "prettier.semi": false,
     "gitlens.currentLine.pullRequests.enabled": false,
     "gitlens.statusBar.pullRequests.enabled": false,
@@ -54,5 +57,8 @@
     "update.mode": "none",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.enableExperiments": false,
-    "json.schemaDownload.enable": false
+    "json.schemaDownload.enable": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

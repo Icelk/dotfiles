@@ -12,7 +12,7 @@ alias rm="rm -i"
 alias gclo="git clone"
 alias gr="git rm --cache"
 alias gp="git push"
-alias gpp="git push && git pull"
+alias gpp="git pull && git push"
 alias gc="git commit -m"
 alias gs="git status"
 alias ga="git add"
@@ -36,6 +36,12 @@ alias ca="cargo add"
 alias cclip="cargo clippy"
 alias ciwd="cargo install --path ."
 
+# Pacman / Paru
+alias pa="paru -S"
+alias pr="paru -Rns"
+alias pu="paru && doas pacdiff"
+alias pl="paru -Qi"
+alias pi="paru -Si"
 
 # Aliases for useful complicated commands I don't want to memorize
 alias upgrade="brew upgrade; and brew upgrade --cask"

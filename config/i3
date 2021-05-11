@@ -7,14 +7,15 @@
 
 set $mod Mod4
 
-set $rofi ~/scripts/rofi/launch.sh
+set $powermenu ~/scripts/rofi/launch-powermenu.sh
 set $change-theme ~/scripts/theme-change-rofi.fish
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
 set $playerctl-play-pause ~/scripts/playerctl-custom.sh
-set $restart ~/scripts/restart.sh
+set $restart ~/scripts/service-restart.fish
 set $clipboard-clear ~/scripts/clipcat-clear.sh
+set $pmc pulsemixer --max-volume 100 --change-volume
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -81,7 +82,8 @@ bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
 bindsym $mod+d exec --no-startup-id $open-dev
 bindsym $mod+b exec clipcat-menu
 bindsym $mod+Shift+t exec $change-theme
-
+bindsym $mod+space exec rofi -show drun -theme clean
+bindsym $mod+Pause exec $powermenu
 
 # No-ui utilities
 
@@ -118,18 +120,11 @@ bindsym XF86AudioPrev exec --no-startup-id $playerctl previous
 #bindsym Shift+XF86AudioNext exec --no-startup-id playerctl position 5+
 #bindsym Shift+XF86AudioPrev exec --no-startup-id playerctl position 5-
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 5%
-bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id $pmc +5
+bindsym XF86AudioLowerVolume exec --no-startup-id $pmc -5
 
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id ponymix increase 1%
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id ponymix decrease 1%
-
-
-## Rofi
-
-# Start rofi
-bindsym $mod+space exec $rofi appmenu
-bindsym $mod+Pause exec $rofi powermenu
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id $pmc +1
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id $pmc -1
 
 
 ## Other bindings
