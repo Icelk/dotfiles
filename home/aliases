@@ -46,6 +46,8 @@ alias pi="paru -Si"
 # Aliases for useful complicated commands I don't want to memorize
 alias upgrade="brew upgrade; and brew upgrade --cask"
 alias ssh-proxy="ssh -TN icelk.dev -D"
-alias sshp="ssh -TND 41523 icelk.dev"
+#alias sshp="ssh -TND 41523 icelk.dev"
+## Loop on proxy
+alias sshp="while true; ssh -TND 41523 icelk.dev; end"
 ## Export PRoxy
 alias epr="export ALL_PROXY='socks5h://localhost:41523'"
