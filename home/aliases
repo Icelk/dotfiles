@@ -7,6 +7,7 @@ alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+alias rsn="rsync -avPhL --del --exclude '**target**' --exclude '**.git/'"
 
 # Git
 alias gclo="git clone"

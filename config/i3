@@ -68,14 +68,14 @@ bindsym $mod+w exec brave
 bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
 bindsym $mod+c exec --no-startup-id codium .
 bindsym $mod+f exec thunar
-bindsym $mod+s exec --no-startup-id "alacritty -e spt"
 bindsym $mod+m exec --no-startup-id mailspring
 
 
 # CLIs
 
+bindsym $mod+s exec --no-startup-id "alacritty -e spt"
 bindsym $mod+p exec --no-startup-id "alacritty -e pulsemixer"
-bindsym $mod+Shift+Escape exec --no-startup-id "alacritty -e top"
+bindsym $mod+t exec --no-startup-id "alacritty -e top"
 
 
 # Rofi
@@ -88,6 +88,7 @@ bindsym $mod+Pause exec $powermenu
 # No-ui utilities
 
 bindsym $mod+Escape exec --no-startup-id ~/scripts/sleep.sh
+bindsym $mod+Shift+Escape exec --no-startup-id ~/scripts/xrandr-outputs-enable.sh
 bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
