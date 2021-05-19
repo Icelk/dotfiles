@@ -23,6 +23,12 @@ function ps
     paru -Ss --color=always $argv[1] | $PAGER
 end
 
+function sshp
+    while true
+        ssh -TND 41523 icelk.dev
+    end
+end
+
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end
