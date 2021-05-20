@@ -37,6 +37,7 @@ gvfs-afc
 hexedit
 i3-gaps
 i3lock
+inkscape
 iptables-nft
 kora-icon-theme
 libheif
@@ -82,6 +83,7 @@ procs
 pulseaudio
 pulseaudio-alsa
 pulsemixer
+pureref
 python-pip
 qemu
 reflector
@@ -90,6 +92,7 @@ rofi
 rsnapshot
 rsync
 rustup
+scour
 sd
 spotify-tui
 starship
