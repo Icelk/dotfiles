@@ -7,7 +7,7 @@ alias c="clear"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-alias rsn="rsync -avPhL --del --exclude '**target**' --exclude '**.git/'"
+alias rsn="rsync -rvPhL --del --exclude '**target**' --exclude '**.git/'"
 
 # Systemctl
 alias sctl="sudo systemctl"
@@ -24,6 +24,9 @@ alias ga="git add"
 alias gaa="git add *"
 alias gd="git diff"
 alias gu="git reset"
+alias gsm="git submodule"
+alias gst="git stash -u"
+alias gstp="git stash pop"
 
 # Rust clones
 alias ls="exa -la -s=Name --group-directories-first --git"
