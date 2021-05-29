@@ -45,8 +45,8 @@ set shiftwidth=4
 set expandtab
 " Makes typing tabs more consistent
 set smarttab
-" Format on Alt+f
-nmap <A-f> :Format<CR>
+" Format on capital F
+nmap F :Format<CR>
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
 
