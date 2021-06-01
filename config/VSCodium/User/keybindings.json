@@ -112,5 +112,29 @@
         "key": "f9",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "f1",
+        "command": "workbench.action.showCommands",
+        "when": "false"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f3",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus && false"
+    },
+    {
+        "key": "f3",
+        "command": "-editor.action.nextMatchFindAction",
+        "when": "editorFocus"
     }
 ]
