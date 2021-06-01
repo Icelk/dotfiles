@@ -43,7 +43,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[markdown]": {
         "editor.defaultFormatter": "vscode.markdown-language-features",
@@ -60,5 +60,6 @@
     "json.schemaDownload.enable": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "prettier.htmlWhitespaceSensitivity": "strict"
 }
