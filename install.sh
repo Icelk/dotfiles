@@ -99,6 +99,7 @@ l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/
 l $wdh/Xmodmap ~/.Xmodmap
+l $wdh/vim-things.md ~/
 
 ## Backup exclude
 l $wdh/Exclude-backup.txt ~/
