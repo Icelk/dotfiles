@@ -33,6 +33,9 @@ l $wdc/alacritty.yml $hc/alacritty/
 ## Fish
 l $wdc/fish/ $hc/fish
 
+## Kitty
+l $wdc/kitty.conf $hc/kitty/kitty.conf
+
 ## NeoVim
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
@@ -51,3 +54,4 @@ l $wdh/aliases ~/.aliases
 l $wdh/gitconfig ~/.gitconfig
 l $wdh/Config-files.txt ~/
 l $wdh/ssh ~/.ssh/config
+l $wdh/vim-things.md ~/
