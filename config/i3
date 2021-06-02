@@ -63,7 +63,7 @@ set $lock-color \#3f3f3f
 
 # Single applications
 
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+w exec brave
 bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
 bindsym $mod+c exec --no-startup-id codium .
