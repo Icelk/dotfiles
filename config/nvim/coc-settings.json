@@ -1,13 +1,19 @@
 {
-  "suggest.noselect": false,
-  "coc.preferences.formatOnTypeFiletypes": [
-    "javascript",
-    "typescript",
-    "json",
-    "graphql",
-    "rust",
-    "html",
-    "css"
-  ],
-  "rust-analyzer.server.path": "/Users/icelk/Library/Application Support/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-apple-darwin"
+    "suggest.noselect": false,
+    "coc.preferences.formatOnTypeFiletypes": [
+        "javascript",
+        "typescript",
+        "json",
+        "graphql",
+        "rust",
+        "html",
+        "css"
+    ],
+
+    "rust-analyzer.server.path": "/Users/icelk/Library/Application Support/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-apple-darwin",
+
+    "html.autoClosingTags": true,
+
+    "prettier.semi": false,
+    "prettier.tabWidth": 4
 }

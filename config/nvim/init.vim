@@ -93,10 +93,11 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
   \ 'coc-rust-analyzer',
+  \ 'coc-html',
   \ ]
 
 " don't give |ins-completion-menu| messages.
