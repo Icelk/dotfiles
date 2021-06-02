@@ -39,6 +39,7 @@ i3-gaps
 i3lock
 inkscape
 iptables-nft
+kitty
 kora-icon-theme
 libheif
 libmpeg2

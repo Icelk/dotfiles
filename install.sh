@@ -45,6 +45,9 @@ l $wdc/gtk-3.0.ini $hc/gtk-3.0/
 ## i3
 l $wdc/i3 $hc/i3/config
 
+## Kitty
+l $wdc/kitty.conf $hc/kitty/kitty.conf
+
 ## NeoVim
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
