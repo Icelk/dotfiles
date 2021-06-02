@@ -8,6 +8,10 @@ ControlPath ~/.ssh/sockets/socket-%r@%h:%p
 
 AddressFamily inet
 
-Host 192.168.86.8 icelk.dev
+Host 10.0.0.8 icelk.dev
 IdentityFile ~/.private/icelk.dev.rsa
 User icelk
+
+Host onlinecode
+    Hostname 10.0.0.9
+    ProxyCommand /usr/bin/nc -x localhost:41523 %h %p
