@@ -73,9 +73,9 @@ bindsym $mod+m exec --no-startup-id mailspring
 
 # CLIs
 
-bindsym $mod+s exec --no-startup-id "alacritty -e spt"
-bindsym $mod+p exec --no-startup-id "alacritty -e pulsemixer"
-bindsym $mod+t exec --no-startup-id "alacritty -e top"
+bindsym $mod+s exec --no-startup-id "kitty -1 -e spt"
+bindsym $mod+p exec --no-startup-id "kitty -1 -e pulsemixer"
+bindsym $mod+t exec --no-startup-id "kitty -1 -e top"
 
 
 # Rofi
