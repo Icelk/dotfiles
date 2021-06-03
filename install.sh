@@ -27,11 +27,11 @@ l $wdc/VSCodium/User/keybindings.json $hc/VSCodium/User/
 l $wdc/VSCodium/User/settings.json $hc/VSCodium/User/
 l $wdc/vscode.json $hc/.vscode/settings.json
 
-## Alacritty
-l $wdc/alacritty.yml $hc/alacritty/
-
 ## Fish
 l $wdc/fish/ $hc/fish
+
+## Kitty
+l $wdc/kitty.conf $hc/kitty/kitty.conf
 
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf

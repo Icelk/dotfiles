@@ -49,6 +49,12 @@ set smarttab
 nmap F :Format<CR>
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
+" Adds folding by syntax
+set fdm=syntax
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Set CursorHold time to 0.5 seconds
+set updatetime=500
 
 " Navigate windows
 nmap <C-h> <C-w>h
@@ -56,14 +62,18 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Expand rust macro
+" command! -nargs=0 rsx :CocCommand rust-analyzer.expandMacro
+nmap <C-x> :CocCommand rust-analyzer.expandMacro<CR>
+
 " Toggle ignorecase
 nmap <F8> :set ignorecase! ignorecase?<CR>
 
 " Remap for rename current word
-nmap <F9> <Plug>(coc-rename)
+map <F9> <Plug>(coc-rename)
 
 " Remap to go to definition
-nmap <F12> <Plug>(coc-definition)
+map <F12> <Plug>(coc-definition)
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -151,9 +161,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)

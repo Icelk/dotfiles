@@ -11,6 +11,11 @@
     ],
 
     "rust-analyzer.server.path": "/Users/icelk/Library/Application Support/VSCodium/User/globalStorage/matklad.rust-analyzer/rust-analyzer-x86_64-apple-darwin",
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.lens.references": true,
+
+    "codeLens.enable": true,
 
     "html.autoClosingTags": true,
 

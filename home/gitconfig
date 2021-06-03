@@ -9,3 +9,7 @@
 	rebase = true
 [advice]
 	addIgnoredFile = false
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = nvimdiff
