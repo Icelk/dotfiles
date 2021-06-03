@@ -49,6 +49,8 @@ set smarttab
 nmap F :Format<CR>
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
+" Adds folding by syntax
+set fdm=syntax
 
 " Navigate windows
 nmap <C-h> <C-w>h
