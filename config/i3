@@ -146,22 +146,22 @@ bindsym $mod+Shift+space floating toggle
 ## Focus
 
 # Change focus
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # Change focus between tiling / floating windows
 bindsym $mod+Ctrl+space focus mode_toggle
 
 # Focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+u focus parent
 
 # Focus the child container
 #bindsym $mod+d focus child
@@ -224,15 +224,22 @@ bindsym $mod+Shift+Tab move workspace to output left
 
 
 ## Resize
+mode "resize" {
+    # Dedicated resize bindings
+    bindsym $mod+h resize shrink width $rough_adjustment px or $rough_adjustment
+    bindsym $mod+j resize grow height $rough_adjustment px or $rough_adjustment
+    bindsym $mod+k resize shrink height $rough_adjustment px or $rough_adjustment
+    bindsym $mod+l resize grow width $rough_adjustment px or $rough_adjustment
+    bindsym $mod+Shift+h resize shrink width $granular_adjustment px or $granular_adjustment
+    bindsym $mod+Shift+j resize grow height $granular_adjustment px or $granular_adjustment
+    bindsym $mod+Shift+k resize shrink height $granular_adjustment px or $granular_adjustment
+    bindsym $mod+Shift+l resize grow width $granular_adjustment px or $granular_adjustment
 
-bindsym $mod+h resize shrink width $rough_adjustment px or $rough_adjustment
-bindsym $mod+j resize grow height $rough_adjustment px or $rough_adjustment
-bindsym $mod+k resize shrink height $rough_adjustment px or $rough_adjustment
-bindsym $mod+l resize grow width $rough_adjustment px or $rough_adjustment
-bindsym $mod+Shift+h resize shrink width $granular_adjustment px or $granular_adjustment
-bindsym $mod+Shift+j resize grow height $granular_adjustment px or $granular_adjustment
-bindsym $mod+Shift+k resize shrink height $granular_adjustment px or $granular_adjustment
-bindsym $mod+Shift+l resize grow width $granular_adjustment px or $granular_adjustment
+    bindsym $mod+a mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+a mode "resize"
 
 
 ## i3 development
