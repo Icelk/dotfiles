@@ -62,8 +62,6 @@ l $wdc/rofi/ $hc/rofi
 l $wdc/spotifyd.conf $hc/spotifyd/
 
 ## Systemd
-echo "Make sure to change apropriate values in services. For example, the user icelk (me) is present. Change that for your username."
-read -p "I understand..."
 l $wdc/systemd/ $hc/systemd/user
 
 ## Starship
