@@ -20,5 +20,8 @@
     "html.autoClosingTags": true,
 
     "prettier.semi": false,
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "prettier.endOfLine": "lf",
+    "prettier.printWidth": 120,
+    "prettier.trailingComma": "es5"
 }

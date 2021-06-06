@@ -36,9 +36,13 @@ l $wdc/kitty.conf $hc/kitty/kitty.conf
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf
 
+## Kitty
+l $wdc/kitty.conf $hc/kitty/kitty.conf
+
 ## NeoVim
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
+l $wdc/nvim/snippets $hc/coc/ultisnips
 
 ## Spotifyd
 l $wdc/spotifyd.conf $hc/spotifyd/
