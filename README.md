@@ -4,7 +4,6 @@ These are all my macOS dotfiles, which can be used to make transitioning to macO
 
 > Right, almost forgot, I mainly use **Arch Linux**
 
-
 ## macOS
 
 Lately, I've had to start using macOS. A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
@@ -12,10 +11,10 @@ Lately, I've had to start using macOS. A branch named `macos` is available in th
 # Major components
 
 I use
-- Alacritty
+- Homebrew
+- Kitty
+- NeoVim
 - Brave
-- VSCodium
-
 
 # Installation
 
@@ -25,6 +24,10 @@ If you want to install one version permanently (making it harder to upgrade), ch
 
 Other instructions will be shown when running the scripts.
 
+To install the Homebrew, run this in a Fish shell.
+```shell
+$ brew install (cat packages/installed-macos.txt)
+```
 
 # Contribution
 
