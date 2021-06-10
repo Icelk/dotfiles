@@ -6,7 +6,6 @@ These are all my dotfiles, which can be used to complete a setup with Nvidia gra
 
 Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
-
 ## macOS
 
 Lately, I've had to start using macOS. A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
@@ -19,12 +18,11 @@ I use
 - polybar
 - dunst
 - rofi
-- Alacritty
+- Kitty
+- NeoVim
 - Brave
-- VSCodium
 - paru
 - spotifyd
-
 
 # Installation
 
@@ -34,6 +32,10 @@ If you want to install one version permanently (making it harder to upgrade), ch
 
 Other instructions will be shown when running the scripts.
 
+To install all the packages with Pacman, run this in a Fish shell.
+```shell
+$ pacman -Suy (cat packages/installed.txt)
+```
 
 # Contribution
 
