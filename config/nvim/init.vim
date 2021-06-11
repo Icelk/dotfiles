@@ -53,6 +53,8 @@ set smarttab
 nmap F :Format<CR>
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
+" Add filetype-dependent indetation
+filetype plugin indent on
 " Adds folding by syntax
 set fdm=syntax
 " Highlight symbol under cursor on CursorHold
