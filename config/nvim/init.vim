@@ -61,6 +61,8 @@ set fdm=syntax
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Set CursorHold time to 0.5 seconds
 set updatetime=500
+" Set hover card background
+highlight CocFloating ctermbg=darkgray
 
 " Navigate windows
 nmap <C-h> <C-w>h
@@ -71,6 +73,14 @@ nmap <C-l> <C-w>l
 " Expand rust macro
 " command! -nargs=0 rsx :CocCommand rust-analyzer.expandMacro
 nmap <C-x> :CocCommand rust-analyzer.expandMacro<CR>
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
 " Toggle ignorecase
 nmap <F8> :set ignorecase! ignorecase?<CR>
