@@ -63,11 +63,11 @@ set $lock-color \#3f3f3f
 
 # Single applications
 
-bindsym $mod+Return exec --no-startup-id kitty -1
+bindsym $mod+Return exec kitty -1
 bindsym $mod+w exec brave
 bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
 bindsym $mod+c exec --no-startup-id codium .
-bindsym $mod+f exec thunar
+bindsym $mod+f exec --no-startup-id thunar
 bindsym $mod+m exec --no-startup-id mailspring
 
 

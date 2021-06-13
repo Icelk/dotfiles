@@ -55,7 +55,6 @@ alias ciwd="cargo install --path ."
 # Pacman / Paru
 alias pa="paru -S"
 alias pr="paru -Rns"
-alias pu="paru && doas pacdiff"
 alias pl="paru -Qi"
 alias pi="paru -Si"
 

@@ -29,6 +29,16 @@ function sshp
     end
 end
 
+function pu
+    paru
+
+    set diff (pacdiff)
+
+    if test -n "$diff"
+        doas pacdiff
+    end
+end
+
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end
