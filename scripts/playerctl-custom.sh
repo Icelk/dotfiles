@@ -39,7 +39,6 @@ function pref_spt {
 # Loop on each media player
 # This checks for any media player playing, and if they are, pause and exit.
 for player in $(playerctl -l); do
-    echo $player
     # If it's spotifyd
     if [[ "$player" == *"spotifyd"* ]]; then
         # and playing, pause it.
