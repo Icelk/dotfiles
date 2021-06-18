@@ -12,7 +12,7 @@ set $change-theme ~/scripts/theme-change-rofi.fish
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
-set $playerctl-play-pause ~/scripts/playerctl-custom.sh
+set $playerctl-play-pause ~/scripts/playerctl-custom.fish
 set $restart ~/scripts/service-restart.fish
 set $clipboard-clear ~/scripts/clipcat-clear.sh
 set $pmc pulsemixer --max-volume 100 --change-volume
