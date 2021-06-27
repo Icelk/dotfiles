@@ -8,6 +8,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 alias rsn="rsync -rvPhL --del --exclude '**target**' --exclude '**.git/' --exclude '**.pem' --exclude '**private'"
+alias sssh="kitty +kitten ssh use-python"
 
 # Systemctl
 alias sctl="sudo systemctl"
