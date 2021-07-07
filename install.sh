@@ -85,6 +85,12 @@ l $PWD/scripts/ ~/scripts
 l $PWD/packages/ ~/packages
 
 ##-----------
+# Wallpapers
+##-----------
+
+l $PWD/wallpapers/ ~/Pictures/wallpapers
+
+##-----------
 # Home files
 ##-----------
 
@@ -105,3 +111,5 @@ l $wdh/Exclude-backup.txt ~/
 l $wdh/Exclude-backup-archive.txt ~/
 l $wdh/Exclude-backup-usr-share.txt ~/
 l $wdh/Exclude-backup-win.txt ~/
+
+echo "Install complete. Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
