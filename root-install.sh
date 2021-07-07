@@ -30,6 +30,7 @@ l $wdr/dpms.conf /etc/X11/xorg.conf.d/40-dpms.conf
 l $wdr/pacman.conf /etc/
 
 # Enable auto-login
+#mkdir /etc/systemd/system/getty@tty1.service.d
 #ln -s $PWD/root/getty.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 echo "An automatic login configuration file is included but not in this install script due to the username being needed. The line above (in this script) can be used to create a symlink."
 
