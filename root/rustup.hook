@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Updating Rust
+Depends = rustup
+Depends = opendoas
+When = PostTransaction
+Exec = /usr/bin/sh -c 'for user_path in /home/*; do user=${user_path:6} && cd "$user_path" && doas -nu "$user" rustup update; done'
