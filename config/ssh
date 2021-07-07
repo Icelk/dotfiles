@@ -1,0 +1,15 @@
+Host nas
+    IdentityFile ~/.private/nas.rsa
+    User icelk
+Host server icelk.dev
+    IdentityFile ~/.private/server.rsa
+    User icelk
+Host pi
+    IdentityFile ~/.private/pi.rsa
+    User pi
+Host aur.archlinux.org
+    IdentityFile ~/.private/aur.rsa
+    User aur
+Host server icelk.dev
+    IdentityFile ~/.private/server-root.rsa
+    User root

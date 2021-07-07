@@ -60,11 +60,14 @@ l ~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/rus
 ## Spotifyd
 l $wdc/spotifyd.conf $hc/spotifyd/
 
-## Systemd
-l $wdc/systemd/ $hc/systemd/user
+## SSH
+l $wdc/ssh ~/.ssh/config
 
 ## Starship
 l $wdc/starship.toml $hc/
+
+## Systemd
+l $wdc/systemd/ $hc/systemd/user
 
 ## Thunar
 l $wdc/thunar-uca.xml $hc/Thunar/uca.xml
