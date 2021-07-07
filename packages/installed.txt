@@ -107,7 +107,6 @@ ttf-dejavu
 tumbler
 typescript
 virt-manager
-vscodium-bin
 watchexec
 which
 wine-gecko

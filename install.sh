@@ -22,11 +22,6 @@ hc=~/.config
 # Config
 ##-------
 
-## VSCodium
-l $wdc/VSCodium/User/keybindings.json $hc/VSCodium/User/
-l $wdc/VSCodium/User/settings.json $hc/VSCodium/User/
-l $wdc/vscode.json $hc/.vscode/settings.json
-
 ## Dunst
 l $wdc/dunstrc $hc/dunst/
 
