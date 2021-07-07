@@ -25,6 +25,9 @@ hc=~/.config
 ## Dunst
 l $wdc/dunstrc $hc/dunst/
 
+## Cargo
+l $wdc/cargo ~/.cargo/config
+
 ## Clipcat
 l $wdc/clipcat/ $hc/clipcat
 
