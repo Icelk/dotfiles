@@ -47,6 +47,7 @@ libtool
 linux
 linux-firmware
 linux-headers
+lld
 lxappearance
 m4
 mailspring
