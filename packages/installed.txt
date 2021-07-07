@@ -76,11 +76,12 @@ patch
 php-fpm
 picom-ibhagwan-git
 piper
+pipewire
+pipewire-pulse
 pkgconf
 playerctl
 polybar
 procs
-pulseaudio
 pulseaudio-alsa
 pulsemixer
 pureref
