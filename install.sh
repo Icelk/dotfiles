@@ -102,6 +102,7 @@ l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/
 l $wdh/Xmodmap ~/.Xmodmap
+l $wdh/Xmodmap-alternative ~/.Xmodmap-alternative
 l $wdh/vim-things.md ~/
 
 ## Backup exclude
