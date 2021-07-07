@@ -1,0 +1,9 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+::1		localhost icelk
+127.0.0.1	localhost icelk
+127.0.1.1	icelk.localdomain
+
+10.0.0.2	nas
+10.0.0.3	pi
+10.0.0.8	server

@@ -47,3 +47,27 @@ echo "A rustup pacman hook has been installed. It will update Rust when the syst
 
 l $bin/nvim $bin/vi
 l $bin/nvim $bin/vim
+
+read -p "The following will override certain system files. Press Ctrl+C to quit."
+read -p "Please make sure this is what you want; it'll DELETE the target files!"
+read -p "Also make sure your user is part of the 'wheel' group as the doas configuration file only allows users in that group."
+
+# Reduced pam failure timeout
+l -f $wdr/pam-system-auth /etc/pam.d/system-auth
+
+# Hosts
+l -f $wdr/hosts /etc/
+echo "The hosts file contains 'icelk' as the name of the computer. You might want to change that if you want another name to link to localhost."
+
+# makepkg
+l -f $wdr/makepkg.conf /etc/
+
+# doas
+l -f $wdr/doas.conf /etc/
+
+# pacman
+l -f $wdr/pacman.conf /etc/
+
+# reflector
+# ln -sf $wdr/reflector.conf /etc/xdg/reflector/
+echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
