@@ -59,6 +59,9 @@ l $wdc/polybar.ini $hc/polybar/config.ini
 ## Rofi
 l $wdc/rofi/ $hc/rofi
 
+## rust-analyzer
+l ~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/rust-analyzer
+
 ## Spotifyd
 l $wdc/spotifyd.conf $hc/spotifyd/
 
