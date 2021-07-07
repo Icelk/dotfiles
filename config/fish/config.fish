@@ -7,7 +7,7 @@ end
 if status --is-interactive
     set fish_greeting
 
-    set -px PATH ~/.cargo/bin ~/dev/Rust/Kvarn/target/release ~/dev/Rust/osxcross/target/bin
+    set -px PATH ~/.cargo/bin ~/dev/Rust/Kvarn/target/release ~/dev/Rust/osxcross/target/bin ~/.local/bin
 
     starship init fish | source
     
