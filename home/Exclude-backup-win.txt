@@ -5,5 +5,7 @@ Windows
 hiberfil.sys
 pagefile.sys
 swapfile.sys
-Users/erik/AppData/Local/Spotify/Data
+Users/Icelk/AppData/Local/Spotify/Data
 *.bphys
+ProgramData
+Users/Icelk/AppData/Local/Temp
