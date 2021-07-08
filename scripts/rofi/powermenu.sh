@@ -2,15 +2,15 @@
 
 if [ -z "$@" ]; then
     # CORPL option light
-    echo -en "Shutdown\0icon\x1fsystem-shutdown\n"
-    echo -en "Close GUI\0icon\x1fsystem-log-out\n"
-    echo -en "Suspend\0icon\x1fsystem-suspend\n"
-    echo -en "Reboot\0icon\x1fsystem-restart\n"
+    # echo -en "Shutdown\0icon\x1fsystem-shutdown\n"
+    # echo -en "Close GUI\0icon\x1fsystem-log-out\n"
+    # echo -en "Suspend\0icon\x1fsystem-suspend\n"
+    # echo -en "Reboot\0icon\x1fsystem-restart\n"
     # CORPL option dark
-    # echo -en "Shutdown\0icon\x1fsystem-shutdown-symbolic\n"
-    # echo -en "Close GUI\0icon\x1fsystem-log-out-symbolic\n"
-    # echo -en "Suspend\0icon\x1fsystem-suspend-symbolic\n"
-    # echo -en "Reboot\0icon\x1fsystem-restart-symbolic\n"
+    echo -en "Shutdown\0icon\x1fsystem-shutdown-symbolic\n"
+    echo -en "Close GUI\0icon\x1fsystem-log-out-symbolic\n"
+    echo -en "Suspend\0icon\x1fsystem-suspend-symbolic\n"
+    echo -en "Reboot\0icon\x1fsystem-restart-symbolic\n"
     # CORPL end
 else
     if [ "$1" = "Shutdown" ]; then
