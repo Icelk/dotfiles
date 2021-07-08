@@ -47,6 +47,7 @@ libtool
 linux
 linux-firmware
 linux-headers
+lld
 lxappearance
 m4
 mailspring
@@ -76,11 +77,12 @@ patch
 php-fpm
 picom-ibhagwan-git
 piper
+pipewire
+pipewire-pulse
 pkgconf
 playerctl
 polybar
 procs
-pulseaudio
 pulseaudio-alsa
 pulsemixer
 pureref
@@ -107,7 +109,6 @@ ttf-dejavu
 tumbler
 typescript
 virt-manager
-vscodium-bin
 watchexec
 which
 wine-gecko

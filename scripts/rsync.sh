@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-echo "Starting backup sync!"
+notify-send -a "Sync" "Starting..."
 
 # -P: progress h: human a: archive v: verbose
 
@@ -35,3 +35,5 @@ if echo $mounted | grep -q "/win "; then
 else
     echo "/win is not mounted, not syncing."
 fi
+
+notify-send -a "Sync" "Complete!"

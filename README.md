@@ -2,6 +2,7 @@
 
 These are all my macOS dotfiles, which can be used to make transitioning to macOS easier when using my Linux dotfiles.
 
+<<<<<<< HEAD
 > Right, almost forgot, I mainly use **Arch Linux**
 
 =======
@@ -21,9 +22,9 @@ I use
 
 # Installation
 
-I have provided install scripts in the root of this directory. By default, they will not override anything and symlink to this directory.
+I have provided install scripts in the root of this directory. By default, they will not override anything, but symlink to this directory.
 
-If you want to install one version permanently (making it harder to upgrade), change the line `alias l="ln -s"` to `alias l="cp"`.
+If you want to install one version permanently (making it harder to upgrade, as deleted files are left), change the line `alias l="ln -s"` to `alias l="cp"`.
 
 Other instructions will be shown when running the scripts.
 

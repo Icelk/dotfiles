@@ -7,7 +7,7 @@ end
 if status --is-interactive
     set fish_greeting
 
-    set -px PATH ~/.cargo/bin ~/dev/Rust/Kvarn/target/release ~/dev/Rust/osxcross/target/bin
+    set -px PATH ~/.cargo/bin ~/dev/Rust/Kvarn/target/release ~/dev/Rust/osxcross/target/bin ~/.local/bin
 
     starship init fish | source
     
@@ -26,6 +26,16 @@ end
 function sshp
     while true
         ssh -TND 41523 icelk.dev
+    end
+end
+
+function pu
+    paru
+
+    set diff (pacdiff)
+
+    if test -n "$diff"
+        doas pacdiff
     end
 end
 

@@ -12,7 +12,7 @@ set $change-theme ~/scripts/theme-change-rofi.fish
 set $open-dev ~/scripts/rofi/open-dev.sh
 set $toggle-service ~/scripts/service-toggle.sh
 set $playerctl ~/scripts/playerctl-fast.sh
-set $playerctl-play-pause ~/scripts/playerctl-custom.sh
+set $playerctl-play-pause ~/scripts/playerctl-custom.fish
 set $restart ~/scripts/service-restart.fish
 set $clipboard-clear ~/scripts/clipcat-clear.sh
 set $pmc pulsemixer --max-volume 100 --change-volume
@@ -96,6 +96,7 @@ bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
 bindsym Pause exec --no-startup-id i3lock -c $lock-color
 bindsym $mod+Shift+b exec --no-startup-id $clipboard-clear
 bindsym $mod+r exec --no-startup-id $restart
+bindsym $mod+F1 exec --no-startup-id ~/scripts/xmodmap-toggle.sh
 
 
 ## Workspace locations
