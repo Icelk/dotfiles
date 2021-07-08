@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+~/scripts/internet-wait.sh
+
 notify-send -a "Sync" "Starting..."
 
 # -P: progress h: human a: archive v: verbose
