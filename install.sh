@@ -48,6 +48,11 @@ l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
 l $wdc/nvim/snippets $hc/coc/ultisnips
 
+## Nitrogen
+# ln -s $wdc/nitrogen-saved.cfg $hc/nitrogen/bg-saved.cfg
+# This is user-specific
+echo "My saved backgrounds as a nitrogen save file is included, but not installed as it's user specific."
+
 ## Picom
 l $wdc/picom.conf $hc/picom/
 
