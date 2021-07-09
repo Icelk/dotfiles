@@ -7,14 +7,12 @@
 
 set $mod Mod4
 
-set $powermenu ~/scripts/rofi/launch-powermenu.sh
-set $change-theme ~/scripts/theme-change-rofi.fish
-set $open-dev ~/scripts/rofi/open-dev.sh
-set $toggle-service ~/scripts/service-toggle.sh
-set $playerctl ~/scripts/playerctl-fast.sh
-set $playerctl-play-pause ~/scripts/playerctl-custom.fish
-set $restart ~/scripts/service-restart.fish
-set $clipboard-clear ~/scripts/clipcat-clear.sh
+set $s      ~/scripts
+set $sr     ~/scripts/rofi
+set $x      exec --no-startup-id
+set $xs     exec --no-startup-id ~/scripts
+set $xsr    exec --no-startup-id ~/scripts/rofi
+
 set $pmc pulsemixer --max-volume 100 --change-volume
 
 set $granular_adjustment 1
@@ -27,9 +25,11 @@ set $rough_adjustment 8
 focus_wrapping no
 
 # 2px border
-# CORPL section for_window [class = "^.*"] border pixel
-for_window [class = "^.*"] border pixel 0 # dark
-#  2 # light
+# CORPL option dark
+## CORPL section for_window [class = "^.*"] border pixel
+for_window [class = "^.*"] border pixel 0
+# CORPL option light
+# for_window [class = "^.*"] border pixel 2
 # CORPL end
 
 # Gaps
@@ -63,39 +63,39 @@ set $lock-color \#000000
 
 # Single applications
 
-bindsym $mod+Return exec kitty -1
-bindsym $mod+w exec brave
-bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
-bindsym $mod+f exec --no-startup-id thunar
-bindsym $mod+m exec --no-startup-id mailspring
+bindsym $mod+Return         exec kitty -1
+bindsym $mod+w              exec brave
+bindsym $mod+Shift+w        exec brave --disable-frame-rate-limit
+bindsym $mod+f              $x thunar
+bindsym $mod+m              $x mailspring
 
 
 # CLIs
 
-bindsym $mod+s exec --no-startup-id "kitty -1 -e spt"
-bindsym $mod+p exec --no-startup-id "kitty -1 -e pulsemixer"
-bindsym $mod+t exec --no-startup-id "kitty -1 -e top"
+bindsym $mod+s              $x "kitty -1 -e spt"
+bindsym $mod+p              $x "kitty -1 -e pulsemixer"
+bindsym $mod+t              $x "kitty -1 -e top"
 
 
 # Rofi
-bindsym $mod+d exec --no-startup-id $open-dev
-bindsym $mod+c exec clipcat-menu
-bindsym $mod+Shift+t exec $change-theme
-bindsym $mod+space exec rofi -show drun -theme clean
-bindsym $mod+Pause exec $powermenu
+bindsym $mod+d              exec $sr/open-dev.sh
+bindsym $mod+c              exec clipcat-menu
+bindsym $mod+Shift+t        exec $sr/theme-change.fish
+bindsym $mod+space          exec rofi -show drun -theme clean
+bindsym $mod+Pause          exec $sr/launch-powermenu.sh
 
 # No-ui utilities
 
-bindsym $mod+Escape exec --no-startup-id ~/scripts/sleep.sh
-bindsym $mod+Shift+Escape exec --no-startup-id ~/scripts/xrandr-outputs-enable.sh
-bindsym $mod+Print exec --no-startup-id ~/scripts/screenshot-whole.sh
-bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
-bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
-bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
-bindsym Pause exec --no-startup-id i3lock -c $lock-color
-bindsym $mod+Shift+c exec --no-startup-id $clipboard-clear
-bindsym $mod+r exec --no-startup-id $restart
-bindsym $mod+F1 exec --no-startup-id ~/scripts/xmodmap-toggle.sh
+bindsym $mod+Escape         $xs/sleep.sh
+bindsym $mod+Shift+Escape   $xs/xrandr-outputs-enable.sh
+bindsym $mod+Print          $xs/screenshot-whole.sh
+bindsym Print               $xs/screenshot.sh
+bindsym $mod+Shift+s        $xs/service-toggle.sh spotifyd Services
+bindsym $mod+Shift+q        $x      "dunstctl close"
+bindsym Pause               $x      i3lock -c $lock-color
+bindsym $mod+Shift+c        $xs/clipcat-clear.sh
+bindsym $mod+r              $xs/service-restart.fish
+bindsym $mod+F1             $xs/xmodmap-toggle.sh
 
 
 ## Workspace locations
@@ -113,19 +113,19 @@ font pango:DejaVu Sans 8
 ## Audio
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id $playerctl-play-pause
-bindsym XF86AudioPause exec --no-startup-id $playerctl-play-pause
-bindsym XF86AudioNext exec --no-startup-id $playerctl next
-bindsym XF86AudioPrev exec --no-startup-id $playerctl previous
+bindsym XF86AudioPlay               $xs/playerctl-custom.fish
+bindsym XF86AudioPause              $xs/playerctl-custom.fish
+bindsym XF86AudioNext               $xs/playerctl-fast.sh next
+bindsym XF86AudioPrev               $xs/playerctl-fast.sh previous
 
-#bindsym Shift+XF86AudioNext exec --no-startup-id playerctl position 5+
-#bindsym Shift+XF86AudioPrev exec --no-startup-id playerctl position 5-
+#bindsym Shift+XF86AudioNext         $x playerctl position 5+
+#bindsym Shift+XF86AudioPrev         $x playerctl position 5-
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id $pmc +5
-bindsym XF86AudioLowerVolume exec --no-startup-id $pmc -5
+bindsym XF86AudioRaiseVolume        $x $pmc +5
+bindsym XF86AudioLowerVolume        $x $pmc -5
 
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id $pmc +1
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id $pmc -1
+bindsym Shift+XF86AudioRaiseVolume  $x $pmc +1
+bindsym Shift+XF86AudioLowerVolume  $x $pmc -1
 
 
 ## Other bindings
@@ -245,30 +245,30 @@ bindsym $mod+a mode "resize"
 ## i3 development
 
 # Reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 
 
 ## Start programs
-set $sctlu --no-startup-id systemctl --user
+set $sctlu exec --no-startup-id systemctl --user
 
 # Composter
-exec $sctlu restart picom
+$sctlu restart picom
 
 # Notifications
-exec $sctlu restart dunst
+$sctlu restart dunst
 
 # Status bar
-exec $sctlu restart polybar
+$sctlu restart polybar
 
 # Clipboard manager
-exec $sctlu restart clipcat
+$sctlu restart clipcat
 
 # Wallpaper
-exec $sctlu start nitrogen
+$sctlu start nitrogen
 
 # File manager
 $sctlu start thunar
 
 
 # Lock screen on startup
-exec --no-startup-id i3lock -c $lock-color
+$x i3lock -c $lock-color
