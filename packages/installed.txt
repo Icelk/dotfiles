@@ -18,6 +18,7 @@ dnsmasq
 dosfstools
 dunst
 edk2-ovmf
+efibootmgr
 exa
 fakeroot
 fd
