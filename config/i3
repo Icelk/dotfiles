@@ -267,10 +267,7 @@ exec $sctlu restart clipcat
 exec $sctlu start nitrogen
 
 # File manager
-exec $sctlu start thunar
-
-# Start checking systemctl for failed services
-exec --no-startup-id $sctlu start check-failed.timer
+$sctlu start thunar
 
 
 # Lock screen on startup
