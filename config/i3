@@ -66,7 +66,6 @@ set $lock-color \#000000
 bindsym $mod+Return exec kitty -1
 bindsym $mod+w exec brave
 bindsym $mod+Shift+w exec brave --disable-frame-rate-limit
-bindsym $mod+c exec --no-startup-id codium .
 bindsym $mod+f exec --no-startup-id thunar
 bindsym $mod+m exec --no-startup-id mailspring
 
@@ -80,7 +79,7 @@ bindsym $mod+t exec --no-startup-id "kitty -1 -e top"
 
 # Rofi
 bindsym $mod+d exec --no-startup-id $open-dev
-bindsym $mod+b exec clipcat-menu
+bindsym $mod+c exec clipcat-menu
 bindsym $mod+Shift+t exec $change-theme
 bindsym $mod+space exec rofi -show drun -theme clean
 bindsym $mod+Pause exec $powermenu
@@ -94,7 +93,7 @@ bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id "$toggle-service spotifyd Services"
 bindsym $mod+Shift+q exec --no-startup-id "dunstctl close"
 bindsym Pause exec --no-startup-id i3lock -c $lock-color
-bindsym $mod+Shift+b exec --no-startup-id $clipboard-clear
+bindsym $mod+Shift+c exec --no-startup-id $clipboard-clear
 bindsym $mod+r exec --no-startup-id $restart
 bindsym $mod+F1 exec --no-startup-id ~/scripts/xmodmap-toggle.sh
 
