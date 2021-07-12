@@ -51,6 +51,8 @@ set expandtab
 set smarttab
 " Format on capital F
 nmap F :Format<CR>
+" Open spelling suggestions on capital S
+nmap S z=
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
 " Add filetype-dependent indetation
