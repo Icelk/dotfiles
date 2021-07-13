@@ -108,10 +108,6 @@ let g:NERDSpaceDelims = 1
 map <A-a> <plug>NERDCommenterToggle
 nmap <S-A-a> <plug>NERDCommenterAltDelims
 
-" vim-prettier
-" prettier command for coc
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
