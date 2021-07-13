@@ -117,6 +117,19 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+" Download coc extensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-prettier',
+  \ 'coc-pairs',
+  \ 'coc-html',
+  \ 'coc-eslint',
+  \ 'coc-tsserver',
+  \ 'coc-rust-analyzer',
+  \ 'coc-json',
+  \ 'coc-css',
+  \ ]
+
 " Copied from COC readme
 
 " Use tab for trigger completion with characters ahead and navigate.
