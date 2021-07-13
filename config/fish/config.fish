@@ -23,22 +23,6 @@ function ps
     paru -Ss --color=always $argv[1] | $PAGER
 end
 
-function sshp
-    while true
-        ssh -TND 41523 icelk.dev
-    end
-end
-
-function pu
-    paru
-
-    set diff (pacdiff)
-
-    if test -n "$diff"
-        doas pacdiff
-    end
-end
-
 function pu
     paru
 
@@ -52,3 +36,10 @@ end
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end
+
+function sshp
+    while true
+        ssh -TND 41523 icelk.dev
+    end
+end
+

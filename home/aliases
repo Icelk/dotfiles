@@ -58,9 +58,12 @@ alias pa="paru -S"
 alias pr="paru -Rns"
 alias pl="paru -Qi"
 alias pi="paru -Si"
+<<<<<<< HEAD
 
 # Aliases for useful complicated commands I don't want to memorize
 alias upgrade="brew upgrade; and brew upgrade --cask --greedy; and rustup upgrade"
 alias ssh-proxy="ssh -TN icelk.dev -D"
 ## Export PRoxy
 alias epr="export ALL_PROXY='socks5h://localhost:41523'"
+=======
+>>>>>>> main

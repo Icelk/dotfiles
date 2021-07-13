@@ -1,19 +1,19 @@
 * {
     /* CORPL option dark */
-    /* bg-darker: #020619; */
-    /* bg-dark: #070c26; */
-    /* bg-light: #1a1f3a; */
-    /* bg-lighter: #2a2f4c; */
+    bg-darker: #020619;
+    bg-dark: #070c26;
+    bg-light: #1a1f3a;
+    bg-lighter: #2a2f4c;
   
-    /* text-normal: #fffffa; */
-    /* text-color: #a2c6d8; */
+    text-normal: #fffffa;
+    text-color: #a2c6d8;
     /* CORPL option light */
-    bg-darker: #e6e8f2;
-    bg-dark: #cbd7ed;
-    bg-light: #acc4e5;
-    bg-lighter: #98acd3;
+    /* bg-darker: #e6e8f2; */
+    /* bg-dark: #cbd7ed; */
+    /* bg-light: #acc4e5; */
+    /* bg-lighter: #98acd3; */
 
-    text-normal: #262c3f;
-    text-color: #6688cc;
+    /* text-normal: #262c3f; */
+    /* text-color: #6688cc; */
     /* CORPL end */
 }

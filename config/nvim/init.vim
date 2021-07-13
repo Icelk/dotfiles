@@ -51,6 +51,8 @@ set expandtab
 set smarttab
 " Format on capital F
 nmap F :Format<CR>
+" Open spelling suggestions on capital S
+nmap S z=
 " Enables plugins based on filetypes, such as syntax highlighting
 filetype plugin on
 " Add filetype-dependent indetation
@@ -106,10 +108,6 @@ let g:NERDSpaceDelims = 1
 map <A-a> <plug>NERDCommenterToggle
 nmap <S-A-a> <plug>NERDCommenterAltDelims
 
-" vim-prettier
-" prettier command for coc
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
@@ -118,6 +116,19 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
+
+" Download coc extensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-prettier',
+  \ 'coc-pairs',
+  \ 'coc-html',
+  \ 'coc-eslint',
+  \ 'coc-tsserver',
+  \ 'coc-rust-analyzer',
+  \ 'coc-json',
+  \ 'coc-css',
+  \ ]
 
 " Copied from COC readme
 
@@ -171,6 +182,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+map <C-a> <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)

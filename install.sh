@@ -34,17 +34,11 @@ l $wdc/clipcat/ $hc/clipcat
 ## Fish
 l $wdc/fish/ $hc/fish
 
-## Kitty
-l $wdc/kitty.conf $hc/kitty/kitty.conf
+## Gtk
+l $wdc/gtk-3.0.ini $hc/gtk-3.0/
 
-## Kitty
-l $wdc/kitty.conf $hc/kitty/kitty.conf
-
-## Kitty
-l $wdc/kitty.conf $hc/kitty/kitty.conf
-
-## Kitty
-l $wdc/kitty.conf $hc/kitty/kitty.conf
+## i3
+l $wdc/i3 $hc/i3/config
 
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf
@@ -53,6 +47,23 @@ l $wdc/kitty.conf $hc/kitty/kitty.conf
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
 l $wdc/nvim/snippets $hc/coc/ultisnips
+
+## Nitrogen
+# ln -s $wdc/nitrogen-saved.cfg $hc/nitrogen/bg-saved.cfg
+# This is user-specific
+echo "My saved backgrounds as a nitrogen save file is included, but not installed as it's user specific."
+
+## Picom
+l $wdc/picom.conf $hc/picom/
+
+## Polybar
+l $wdc/polybar.ini $hc/polybar/config.ini
+
+## Rofi
+l $wdc/rofi/ $hc/rofi
+
+## rust-analyzer
+l ~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/rust-analyzer
 
 ## Spotifyd
 l $wdc/spotifyd.conf $hc/spotifyd/
@@ -82,7 +93,6 @@ l $PWD/scripts/ ~/scripts
 
 l $PWD/packages/ ~/packages
 
->>>>>>> main
 ##-----------
 # Wallpapers
 ##-----------
@@ -95,6 +105,10 @@ l $PWD/wallpapers/ ~/Pictures/wallpapers
 
 l $wdh/aliases ~/.aliases
 l $wdh/gitconfig ~/.gitconfig
+l $wdh/gtkrc-2.0 ~/.gtkrc-2.0
+l $wdh/profile ~/.profile
+l $wdh/xinitrc ~/.xinitrc
+l $wdh/zprofile ~/.zprofile
 l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/

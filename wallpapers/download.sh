@@ -50,6 +50,9 @@ curl -Ls https://unsplash.com/photos/5477L9Z5eqI/download?force=true -o "Hurrica
 curl -Ls https://unsplash.com/photos/RbbdzZBKRDY/download?force=true -o "landscape mountains with cloudy skies during golden hour photo.jpg" &
 curl -Ls https://unsplash.com/photos/89PFnHKg8HE/download?force=true -o "bird's view of tall trees covered with smokes.jpg" &
 curl -Ls https://unsplash.com/photos/p3OzJuT_Dks/download?force=true -o "river overflow in between rock formation.jpg" &
+curl -Ls https://unsplash.com/photos/trnTvywx2Rg/download?force=true -o "thunderstorm with lightning.jpg" &
+curl -Ls https://unsplash.com/photos/7BjhtdogU3A/download?force=true -o "flowing river between tall trees.jpg" &
+curl -Ls https://unsplash.com/photos/YOxk_g6Daa4/download?force=true -o "silhouette of person on cliff.jpg" &
 
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 
