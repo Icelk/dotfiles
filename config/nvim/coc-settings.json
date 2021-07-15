@@ -1,5 +1,6 @@
 {
-    "coc.preferences.formatOnTypeFiletypes": [
+  "suggest.noselect": false,
+  "coc.preferences.formatOnTypeFiletypes": [
         "javascript",
         "typescript",
         "json",
