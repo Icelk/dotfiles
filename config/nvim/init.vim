@@ -12,6 +12,8 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
+Plug 'morhetz/gruvbox'
+
 " Initialize plugin system
 call plug#end()
 
@@ -62,9 +64,11 @@ set fdm=syntax
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Set CursorHold time to 0.5 seconds
-set updatetime=500
-" Set hover card background
-highlight CocFloating ctermbg=darkgray
+set updatetime=300
+" Set color scheme to gruvbox
+colorscheme gruvbox
+let g:gruvbox_contrast_dark="medium"
+set background=dark
 
 " Navigate windows
 nmap <C-h> <C-w>h
