@@ -10,6 +10,12 @@ alias rm="rm -i"
 alias rsn="rsync -rvPhL --del --exclude '**target**' --exclude '**.git/' --exclude '**.pem' --exclude '**private'"
 alias sssh="kitty +kitten ssh use-python"
 
+# Aliases for useful complicated commands I don't want to memorize
+alias upgrade="brew upgrade; and brew upgrade --cask --greedy; and rustup upgrade"
+alias ssh-proxy="ssh -TN icelk.dev -D"
+## Export PRoxy
+alias epr="export ALL_PROXY='socks5h://localhost:41523'"
+
 # Systemctl
 alias sctl="sudo systemctl"
 alias sctlu="systemctl --user"
