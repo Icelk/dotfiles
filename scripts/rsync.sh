@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-~/scripts/internet-wait.sh
+while ! ssh icelk@nas; do sleep 1; done
 
 notify-send -a "Sync" "Starting..."
 
