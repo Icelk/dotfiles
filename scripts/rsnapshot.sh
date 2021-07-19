@@ -1,14 +1,8 @@
 #!/usr/bin/sh
 
-# The filename of your apps pid file.
-PIDFILE="rsyncsnapshot-custom.pid"
+PIDFILE=".rsnapshot.pid"
 
-# Wait while it exists
-while [[ -f "/tmp/run/$PIDFILE" ]]; do sleep 0.5; done
-# Make sure the directory exists
-mkdir -p "/tmp/run/"
-# Create file
-echo $$ > "/tmp/run/$PIDFILE"
+while [[ -f "$HOME/$PIDFILE" ]]; do sleep 0.5; done
 
 notify-send -a "rsnapshot" "Running $1"
 
@@ -16,6 +10,3 @@ notify-send -a "rsnapshot" "Running $1"
 rsnapshot $1
 
 notify-send -a "rsnapshot" "Finished $1"
-
-# Delete it
-rm "/tmp/run/$PIDFILE"
