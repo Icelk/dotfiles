@@ -57,6 +57,7 @@ maim
 make
 man-db
 meson
+minecraft-launcher
 mpg123
 neofetch
 neovim
