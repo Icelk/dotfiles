@@ -47,6 +47,8 @@ libtool
 linux
 linux-firmware
 linux-headers
+linux-zen
+linux-zen-headers
 lld
 lxappearance
 m4
@@ -67,6 +69,7 @@ noto-fonts-emoji
 ntfs-3g
 numlockx
 nvidia
+nvidia-dkms
 nvidia-settings
 ocl-icd
 openal
