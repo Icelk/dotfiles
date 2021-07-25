@@ -87,7 +87,7 @@ bindsym $mod+Pause          exec $sr/launch-powermenu.sh
 # No-ui utilities
 
 bindsym $mod+Escape         $xs/sleep.sh
-bindsym $mod+Shift+Escape   $xs/xrandr-outputs-enable.sh
+bindsym $mod+Shift+Escape   $xs/xrandr-outputs-fix.sh
 bindsym $mod+Print          $xs/screenshot-whole.sh
 bindsym Print               $xs/screenshot.sh
 bindsym $mod+Shift+s        $xs/service-toggle.sh spotifyd Services
