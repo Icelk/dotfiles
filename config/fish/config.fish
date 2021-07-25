@@ -26,7 +26,7 @@ end
 function pu
     paru
 
-    set diff (pacdiff)
+    set diff (echo "q" | pacdiff)
 
     if test -n "$diff"
         doas pacdiff
