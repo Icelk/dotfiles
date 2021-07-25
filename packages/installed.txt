@@ -125,3 +125,4 @@ xorg-xauth
 xorg-xev
 xorg-xinit
 xorg-xwininfo
+zip
