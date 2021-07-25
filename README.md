@@ -32,9 +32,10 @@ If you want to install one version permanently (making it harder to upgrade, as 
 
 Other instructions will be shown when running the scripts.
 
-To install all the packages with Pacman, run this in a Fish shell.
+To install all the packages with Paru, follow the installation instructions from [their GitHub](https://github.com/Morganamilo/paru)
+and run this in a Fish shell (or add a `$` before the parentheses in Bash).
 ```shell
-$ pacman -Suy (cat packages/installed.txt)
+$ paru -Suy (cat packages/installed.txt)
 ```
 
 # Contribution
