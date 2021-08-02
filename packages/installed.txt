@@ -10,7 +10,6 @@ brave-bin
 breeze-hacked-cursor-theme
 ccache
 clang
-clipcat
 deepin-gtk-theme
 dhcpcd
 dnsmasq

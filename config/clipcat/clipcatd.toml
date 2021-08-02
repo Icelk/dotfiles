@@ -1,12 +1,13 @@
 daemonize = false
 max_history = 250
-history_file_path = '/home/icelk/.cache/clipcat/clipcatd/db'
+history_file_path = '/home/icelk/.cache/clipcat/clipcatd/history.cch'
 log_level = 'INFO'
 
 [monitor]
 load_current = true
 enable_clipboard = true
 enable_primary = false
+filter_min_size = 1
 
 [grpc]
 host = '127.0.0.1'

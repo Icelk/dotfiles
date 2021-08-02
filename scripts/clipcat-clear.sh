@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+PATH=~/.cargo/bin/:$PATH
+
 if clipcatctl clear; then
   notify-send -a "clipcat" "Cleared clipboard history"
 else

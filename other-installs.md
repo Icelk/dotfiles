@@ -12,6 +12,8 @@ All binaries in <https://github.com/Icelk/iclu>
 
 My version of spotifyd ([until it's merged with the master branch](https://github.com/Spotifyd/spotifyd/pull/750)) <https://github.com/Icelk/spotifyd> with `cargo install --path . --features "pulseaudio_backend, dbus_mpris"`
 
+[My fork of clipcat](https://github.com/Icelk/clipcat)
+
 <https://github.com/okaneco/kmeans-colors>
 
 # NVimPager
