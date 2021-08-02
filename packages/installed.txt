@@ -61,6 +61,7 @@ mpg123
 neofetch
 neovim
 neovim-plug
+nerd-fonts-fira-code
 nfs-utils
 ninja
 nitrogen
