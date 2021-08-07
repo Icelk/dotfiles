@@ -45,6 +45,8 @@ echo "rsnapshot and fstab config files in included but not in this install scrip
 # rustup pacman hook
 l $wdr/rustup.hook /etc/pacman.d/hooks/
 echo "A rustup pacman hook has been installed. It will update Rust when the system updates. To remove it, remove /etc/pacman.d/hooks/rustup.hook"
+# Kora icon theme hook
+l $wdr/kora.hook /etc/pacman.d/hooks/
 
 l $bin/nvim $bin/vi
 l $bin/nvim $bin/vim
