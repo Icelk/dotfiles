@@ -30,6 +30,7 @@ gn
 gnome-keyring
 gptfdisk
 groff
+gtk3-demos
 gvfs
 gvfs-afc
 hexedit
