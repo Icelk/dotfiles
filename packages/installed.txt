@@ -110,6 +110,7 @@ thunar-volman
 tokei
 tor-browser
 ttf-dejavu
+ttf-roboto
 tumbler
 typescript
 virt-manager
