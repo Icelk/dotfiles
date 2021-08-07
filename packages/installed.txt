@@ -109,6 +109,8 @@ thunar
 thunar-volman
 tokei
 tor-browser
+ttc-iosevka-aile
+ttc-iosevka-etoile
 ttf-dejavu
 ttf-roboto
 tumbler
