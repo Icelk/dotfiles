@@ -36,7 +36,7 @@ set spell
 " Disable leader key timeout
 set notimeout
 set ttimeout
-" set relativenumber
+set relativenumber
 set number
 " Ignore case in search
 set ignorecase
