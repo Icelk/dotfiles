@@ -12,7 +12,7 @@ if [ -z "$@" ]; then
     echo -en "Close GUI\0icon\x1fsystem-log-out-symbolic\n"
     echo -en "Windows®\0icon\x1fdistributor-logo-windows\n"
     echo -en "Suspend\0icon\x1fsystem-suspend-symbolic\n"
-    echo -en "Reboot\0icon\x1fsystem-restart-symbolic\n"
+    echo -en "Reboot\0icon\x1fsystem-reboot-symbolic\n"
     # CORPL end
 else
     if [ "$1" = "Shutdown" ]; then
