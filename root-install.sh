@@ -4,6 +4,7 @@ echo "Warning: You must be in the dotfile's root directory when running this scr
 echo "Warning: This folder should be in a permanent place before running this script. Else critical system files will be broken links!"
 echo "This script will not create or remove any folders/files. If errors appear, nothing has be
 en overriden. You must have root privileges to run this script."
+echo "The owner of the doas config file will be changed to root."
 read -p "Press enter to continue or Ctrl+C to exit..."
 
 shopt -s expand_aliases
@@ -64,6 +65,7 @@ l -f $wdr/makepkg.conf /etc/
 
 # doas
 l -f $wdr/doas.conf /etc/
+chown root /etc/doas.conf
 
 # pacman
 l -f $wdr/pacman.conf /etc/
