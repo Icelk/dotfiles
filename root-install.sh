@@ -43,7 +43,7 @@ echo "A xorg configuration file is included but not in this install script due t
 echo "rsnapshot and fstab config files in included but not in this install script due to hardware-specific mount-points."
 
 # rustup pacman hook
-l $wdc/rustup.hook /etc/pacman.d/hooks/
+l $wdr/rustup.hook /etc/pacman.d/hooks/
 echo "A rustup pacman hook has been installed. It will update Rust when the system updates. To remove it, remove /etc/pacman.d/hooks/rustup.hook"
 
 l $bin/nvim $bin/vi
