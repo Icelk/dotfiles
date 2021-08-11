@@ -124,7 +124,6 @@ wine-staging
 winetricks
 xclip
 xdg-user-dirs
-xf86-video-fbdev
 xorg-server
 xorg-xauth
 xorg-xev
