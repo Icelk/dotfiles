@@ -31,13 +31,14 @@ UUID=12d05e48-3271-4149-b34c-cd723e600f17	/misc		ext4		rw,noatime	0 2
 ##--------
 
 # /dev/sdd2 LABEL=WinOS
-UUID=E04ACDC54ACD98A4				/win		ntfs		rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes	0 0
+UUID=E04ACDC54ACD98A4				/win		ntfs		rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes,noauto,x-systemd.automount	0 0
 
 # /dev/sdb1 LABEL=WinMisc
-UUID=6399D09B1C274826				/win-misc 	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes	0 0
+UUID=6399D09B1C274826				/win-misc 	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes,noauto,x-systemd.automount	0 0
 
 # /dev/sda2 LABEL=Archive
-UUID=C84CADFE4CADE800				/archive  	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes	0 0
+UUID=C84CADFE4CADE800				/archive  	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes,noauto,x-systemd.automount	0 0
+
 
 
 ##----
