@@ -1,4 +1,4 @@
-# This file is generated using "rg -nj 1 --heading icelk > icelk-specific.txt"
+# This file is generated using "rg -nij 1 --heading icelk > icelk-specific.txt"
 
 root/getty.conf
 3:ExecStart=-/usr/bin/agetty --autologin icelk --noclear %I $TERM
@@ -8,11 +8,14 @@ root/rsnapshot.conf
 164:exclude	/home/icelk/nas/
 165:exclude	/home/icelk/.local/share/Steam/
 166:exclude	/home/icelk/.cache/
-167:exclude	/home/icelk/.rustup/
-168:exclude	/home/icelk/.ccache/
-169:exclude	/home/icelk/.npm
-170:exclude	/home/icelk/dev/Rust/**target**
-180:exclude_file	/home/icelk/Exclude-backup.txt
+167:exclude	/home/icelk/.cargo/
+168:exclude	/home/icelk/.rustup/
+169:exclude	/home/icelk/.wine/drive_c/
+170:exclude	/home/icelk/.tor-browser/
+171:exclude	/home/icelk/.ccache/
+172:exclude	/home/icelk/.npm
+173:exclude	/home/icelk/dev/Rust/**target**
+183:exclude_file	/home/icelk/Exclude-backup.txt
 
 root/hosts
 3:::1		localhost icelk
@@ -20,9 +23,10 @@ root/hosts
 5:127.0.1.1	icelk.localdomain
 
 root/fstab
-48:nas:/mnt/main/computer_erik			/home/icelk/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
+49:nas:/mnt/main/computer_erik			/home/icelk/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
 
 scripts/rsync.sh
+3:while ! ssh icelk@nas; do sleep 1; done
 9:rsync -ahP --del --delete-excluded /home icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-home.txt"
 11:rsync -ahP --del --delete-excluded /var icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup.txt"
 13:rsync -ahP --del --delete-excluded /usr/share icelk@nas:/mnt/main/computer_erik/usr/ --exclude-from="/home/icelk/Exclude-backup-usr-share.txt"
@@ -32,12 +36,20 @@ scripts/rsync.sh
 29:    rsync -ahP --del --delete-excluded /archive icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-archive.txt"
 35:    rsync -ahP --del --delete-excluded /win icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-win.txt"
 
+scripts/rofi/open-dev.sh
+2:# Copyright © Icelk 2021-present
+
 scripts/mount-smb.txt
 2:smbclient -L nas -U icelk
 5:sudo mount -t cifs "//nas/<share>" -o username=icelk /<mountpoint>
 
+home/Exclude-backup-win.txt
+8:Users/Icelk/AppData/Local/Spotify/Data
+11:Users/Icelk/AppData/Local/Temp
+
 home/gitconfig
 4:	email = main@icelk.dev
+5:	name = Icelk
 
 home/gtkrc-2.0
 4:include "/home/icelk/.gtkrc-2.0.mine"
@@ -77,7 +89,15 @@ install.sh
 4:echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
 
 root-install.sh
-60:echo "The hosts file contains 'icelk' as the name of the computer. You might want to change that if you want another name to link to localhost."
+64:echo "The hosts file contains 'icelk' as the name of the computer. You might want to change that if you want another name to link to localhost."
+
+other-installs.md
+11:All binaries in <https://github.com/Icelk/iclu>
+13:My version of spotifyd ([until it's merged with the master branch](https://github.com/Spotifyd/spotifyd/pull/750)) <https://github.com/Icelk/spotifyd> with `cargo install --path . --features "pulseaudio_backend, dbus_mpris"`
+15:[My fork of clipcat](https://github.com/Icelk/clipcat)
+
+config/systemd/spotifyd.service
+10:ExecStart=sh -c "set -m; ~/.cargo/bin/spotifyd --no-daemon & sleep 1 && spt pb --transfer Icelk -t && fg"
 
 config/ssh
 3:    User icelk
@@ -86,7 +106,7 @@ config/ssh
 13:Host server icelk.dev
 
 config/clipcat/clipcatd.toml
-3:history_file_path = '/home/icelk/.cache/clipcat/clipcatd/db'
+3:history_file_path = '/home/icelk/.cache/clipcat/clipcatd/history.cch'
 
 config/rofi/config.rasi
 3:    theme: "icelk";
@@ -96,4 +116,5 @@ config/nitrogen-saved.cfg
 7:file=/home/icelk/Pictures/wallpapers/aerial view of land.jpg
 
 config/spotifyd.conf
+48:device_name = "Icelk"
 59:cache_path = "/home/icelk/.cache/spotifyd"
