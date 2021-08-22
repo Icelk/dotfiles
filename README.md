@@ -6,19 +6,13 @@ These are all my dotfiles (lightly modified to fit my laptop), which can be used
 
 Removing the Intel packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
-Wayland should function regardless (see `config/hyprland.conf`)
-
-> **Important**: Use Btrfs while installing Arch, not Ext4!
-
-![screenshot of my rice](images/nvim-matrix-neofetch-kvarn.png)
-
 ## Branches
 
 To use this setup on multiple systems, I've got multiple branches.
 
 A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
 
-One named `laptop` is for a more light-weight install for a laptop using Intel graphics, with Intel microcode. It looks the same but with smaller margins for smaller screens.
+One named `laptop` is for a more light-weight install for a laptop using Intel graphics, with Intel microcode. It looks virtually the same.
 
 # Major components
 
