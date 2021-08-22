@@ -4,6 +4,7 @@ automake
 base
 binutils
 bison
+blueman
 brave-bin
 ccache
 clang
