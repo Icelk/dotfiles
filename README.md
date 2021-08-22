@@ -1,10 +1,10 @@
 # About
 
-These are all my dotfiles, which can be used to complete a setup with Nvidia graphics and an AMD processor (amd-ucode, can be easily swapped with intel-ucode).
+These are all my dotfiles (lightly modified to fit my laptop), which can be used to complete a setup with Intel integrated graphics and an Intel processor (intel-ucode, can be easily swapped with amd-ucode).
 
 > Right, almost forgot, I use **Arch Linux**. Sorry, `i use arch btw` 😎
 
-Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
+Removing the Intel packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
 ## macOS
 
