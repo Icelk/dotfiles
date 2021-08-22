@@ -83,6 +83,7 @@ bindsym $mod+c              exec ~/.cargo/bin/clipcat-menu
 bindsym $mod+Shift+t        exec $sr/theme-change.fish
 bindsym $mod+space          exec rofi -show drun -theme clean
 bindsym $mod+Pause          exec $sr/launch-powermenu.sh
+bindsym $mod+Shift+p        exec $sr/launch-powermenu.sh
 
 # No-ui utilities
 
