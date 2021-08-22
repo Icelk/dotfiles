@@ -6,9 +6,13 @@ These are all my dotfiles, which can be used to complete a setup with Nvidia gra
 
 Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
-## macOS
+## Branches
 
-Lately, I've had to start using macOS. A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+To use this setup on multiple systems, I've got multiple branches.
+
+A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+
+One named `laptop` is for a more light-weight install for a laptop using Intel graphics, with Intel microcode. It looks virtually the same.
 
 # Major components
 
