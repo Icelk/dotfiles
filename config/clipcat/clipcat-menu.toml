@@ -8,4 +8,4 @@ menu_length = 30
 
 [custom_finder]
 program = 'rofi'
-args = ['-dmenu', '-l', '30', '-format', 'i', '-i', '-p', 'Select copied text']
+args = ['-dmenu', '-l', '20', '-format', 'i', '-i', '-p', 'Select copied text']
