@@ -121,5 +121,6 @@ l $wdh/Exclude-backup.txt ~/
 l $wdh/Exclude-backup-archive.txt ~/
 l $wdh/Exclude-backup-usr-share.txt ~/
 l $wdh/Exclude-backup-win.txt ~/
+l $wdh/Exclude-backup-home.txt ~/
 
 echo "Install complete. Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
