@@ -31,10 +31,8 @@ dosfstools
 dunst
 easyeffects
 efibootmgr
-epiphany
-evince
-exfatprogs
-eza
+elementary-planner
+exa
 fakeroot
 fd
 ffmpegthumbnailer
