@@ -6,6 +6,7 @@ binutils
 bison
 blueman
 brave-bin
+breeze-hacked-cursor-theme
 ccache
 clang
 deepin-gtk-theme
