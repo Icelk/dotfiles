@@ -5,6 +5,7 @@ echo "Warning: This folder should be in a permanent place before running this sc
 echo "This script will not create or remove any folders/files. If errors appear, nothing has be
 en overriden. You must have root privileges to run this script."
 echo "The owner of the doas config file will be changed to root."
+echo "Warning: The doas config will NOT be symlinked, but always copied. This is to reduce the likelihood of a broken config."
 read -p "Press enter to continue or Ctrl+C to exit..."
 
 shopt -s expand_aliases
@@ -70,7 +71,7 @@ echo "The hosts file contains 'icelk' as the name of the computer. You might wan
 l -f $wdr/makepkg.conf /etc/
 
 # doas
-l -f $wdr/doas.conf /etc/
+cp $wdr/doas.conf /etc/
 chown root /etc/doas.conf
 
 # pacman
