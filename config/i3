@@ -128,6 +128,9 @@ bindsym XF86AudioLowerVolume        $x $pmc -5
 bindsym Shift+XF86AudioRaiseVolume  $x $pmc +1
 bindsym Shift+XF86AudioLowerVolume  $x $pmc -1
 
+bindsym XF86MonBrightnessUp         $x light -A 10%
+bindsym XF86MonBrightnessDown       $x light -U 10%
+
 
 ## Other bindings
 
