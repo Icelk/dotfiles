@@ -45,6 +45,7 @@ libheif
 libmpeg2
 libnet
 libtool
+light
 linux
 linux-firmware
 lld
