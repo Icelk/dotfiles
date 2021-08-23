@@ -27,6 +27,8 @@ I use
 - Brave
 - paru
 - spotifyd
+- iwctl (for connecting to WiFi)
+- Blueman (for connecting to Bluetooth)
 
 # Installation
 
