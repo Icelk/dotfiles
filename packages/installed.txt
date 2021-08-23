@@ -71,9 +71,9 @@ kitty
 kora-icon-theme
 libheif
 libmpeg2
-libreoffice-fresh
-libreoffice-fresh-en-gb
-libva-nvidia-driver-git
+libnet
+libtool
+light
 linux
 linux-firmware
 lld
