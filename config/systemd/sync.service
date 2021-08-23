@@ -6,3 +6,6 @@ After=network-online.target
 [Service]
 Type=simple
 ExecStart=sh -c "~/scripts/rsync.sh"
+
+[Install]
+WantedBy=default.target
