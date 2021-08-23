@@ -16,6 +16,7 @@ dosfstools
 dunst
 edk2-ovmf
 efibootmgr
+elementary-planner
 exa
 fakeroot
 fd
