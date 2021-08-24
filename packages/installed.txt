@@ -152,6 +152,9 @@ tumbler
 watchexec
 waybar
 which
+wine-gecko
+wine-mono
+wine-staging
 x86_energy_perf_policy
 xclip
 xdg-user-dirs
