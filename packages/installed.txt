@@ -111,6 +111,9 @@ ttf-roboto
 tumbler
 watchexec
 which
+wine-gecko
+wine-mono
+wine-staging
 x86_energy_perf_policy
 xclip
 xdg-user-dirs
