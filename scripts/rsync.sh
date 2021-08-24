@@ -2,7 +2,7 @@
 
 iter=0
 declare -i iter
-while ! ssh icelk@nas; do
+while ! ssh -o ConnectTimeout=1 icelk@nas; do
     sleep 1
     iter+=1
     if [ $iter -gt 10 ]; then
