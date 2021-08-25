@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=sh -c "mount nas"
+ExecStart=sh -c "if ping -c 1 -W 1 nas; then mount nas; else exit 0; fi"
 Restart=always
 RestartSec=3
 

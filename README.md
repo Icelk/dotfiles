@@ -24,6 +24,7 @@ I use
 - rofi
 - Kitty
 - NeoVim
+- Firefox
 - Brave
 - paru
 - spotifyd
