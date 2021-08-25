@@ -1,0 +1,9 @@
+[Unit]
+Description=View local notes
+
+[Service]
+Type=simple
+ExecStart=sh -c "cd ~/dev/Rust/local-viewer && cargo run --no-default-features --features mt,https,kvarn/default"
+
+[Install]
+WantedBy=default.target
