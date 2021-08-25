@@ -68,6 +68,7 @@ bindsym $mod+w              exec brave
 bindsym $mod+Shift+w        exec brave --disable-frame-rate-limit
 bindsym $mod+f              $x thunar
 bindsym $mod+m              $x mailspring
+bindsym $mod+b              $x blueman-manager
 
 
 # CLIs
