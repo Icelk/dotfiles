@@ -32,7 +32,7 @@ set clipboard+=unnamedplus
 " Enable mouse support
 set mouse:a
 " Enable spell warnings
-set spell
+set spell spelllang=sv,en
 " Disable leader key timeout
 set notimeout
 set ttimeout
