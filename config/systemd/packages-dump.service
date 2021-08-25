@@ -2,7 +2,7 @@
 Description=Dump all installed packages to a file
 
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=sh -c "~/scripts/packages-dump.sh"
 
 [Install]
