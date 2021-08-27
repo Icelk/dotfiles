@@ -44,6 +44,8 @@ kora-icon-theme
 libheif
 libmpeg2
 libnet
+libreoffice-fresh
+libreoffice-fresh-en-gb
 libtool
 light
 linux
