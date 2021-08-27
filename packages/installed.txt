@@ -117,6 +117,7 @@ wine-staging
 x86_energy_perf_policy
 xclip
 xdg-user-dirs
+xdg-utils
 xf86-video-intel
 xorg-server
 xorg-xauth
