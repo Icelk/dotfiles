@@ -101,6 +101,7 @@ scour
 sd
 spotify-tui-bin
 starship
+steam
 texinfo
 thunar
 thunar-volman
