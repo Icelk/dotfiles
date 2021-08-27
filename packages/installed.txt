@@ -132,6 +132,7 @@ scour
 sd
 spotify-tui-bin
 starship
+steam
 texinfo
 texlab
 texlive-basic
@@ -167,6 +168,5 @@ xorg-xauth
 xorg-xev
 xorg-xinit
 xorg-xrandr
-xorg-xset
 xorg-xwininfo
 zip
