@@ -106,3 +106,8 @@ l -f $wdr/pacman.conf /etc/
 # reflector
 # ln -sf $wdr/reflector.conf /etc/xdg/reflector/
 echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
+
+echo
+read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
+read -p "Are you sure you want to enable dhcpcd and periodic TRIM?"
+systemctl enable --now dhcpcd fstrim.timer
