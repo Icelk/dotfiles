@@ -97,7 +97,7 @@ echo "The hosts file contains 'icelk' as the name of the computer. You might wan
 l -f $wdr/makepkg.conf /etc/
 
 # doas
-l -f $wdr/doas.conf /etc/
+cp $wdr/doas.conf /etc/
 chown root /etc/doas.conf
 
 # pacman
