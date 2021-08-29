@@ -68,6 +68,7 @@ ninja
 nitrogen
 nodejs
 noto-fonts-emoji
+npm
 ntfs-3g
 numlockx
 nvidia
@@ -125,9 +126,11 @@ wine-staging
 winetricks
 xclip
 xdg-user-dirs
+xdg-utils
 xorg-server
 xorg-xauth
 xorg-xev
 xorg-xinit
+xorg-xrandr
 xorg-xwininfo
 zip
