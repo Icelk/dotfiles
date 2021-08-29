@@ -56,6 +56,7 @@ l $wdc/cargo ~/.cargo/config
 
 ## Clipcat
 l $wdc/clipcat/ $hc/clipcat
+mkdir -p ~/.cache/clipcat/clipcatd
 
 ## Fish
 l $wdc/fish/ $hc/fish
