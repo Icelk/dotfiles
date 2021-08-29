@@ -30,9 +30,12 @@ printfailed=$(if [[ "$1" == "-f" ]]; then echo yes; fi)
 function l {
     from=$1
     to=$2
+    if [[ "$from" == "-f" ]]; then
+        from="-f $2"
+        to="$3"
+    fi
     mkdir -p $(dirname $to)
     result=$(l_cmd $from $to 2>&1)
-    # echo "$result, $(if [[ "$result" != *"File exists"* ]]; then echo hi; fi)"
     if [[ "$result" == *"File exists"* && -z $printfailed ]]; then
         # Do nothing
         :
