@@ -1,22 +1,45 @@
 #!/bin/bash
 
+cr=$(tput setaf 1)
+cb=$(tput setaf 8)
+cc=$(tput sgr0)
+
 echo "Some of the files has me (icelk) as a hardcoded user, mostly in ssh and /home/icelk."
 echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
 
 echo
 
-echo "Warning: You must be in the dotfile's root directory when running this script."
-echo "Warning: This folder should be in a permanent place before running this script."
-echo "This script will not create or remove any folders/files. If errors appear, nothing has been overriden."
+echo "${cr}Warning:${cc} You must be in the dotfile's root directory when running this script."
+echo "${cr}Warning:${cc} This folder should be in a permanent place before running this script."
+echo
+echo "This will not override any files. Use the flag '-f' to see all errors."
+
 read -p "Press enter to continue or Ctrl+C to exit..."
 
 shopt -s expand_aliases
 
-echo "Add the -f flag to the following line in this script to override any present files. Can be used after moving the dotfiles directory."
-alias l="ln -s"
+echo "Add the -f flag to the following line in this script to override any present files. Useful if you move this directory."
+echo
+alias l_cmd="ln -s"
 wdc="$PWD/config"
 wdh="$PWD/home"
 hc=~/.config
+
+printfailed=$(if [[ "$1" == "-f" ]]; then echo yes; fi)
+
+function l {
+    from=$1
+    to=$2
+    mkdir -p $(dirname $to)
+    result=$(l_cmd $from $to 2>&1)
+    # echo "$result, $(if [[ "$result" != *"File exists"* ]]; then echo hi; fi)"
+    if [[ "$result" == *"File exists"* && -z $printfailed ]]; then
+        # Do nothing
+        :
+    else
+        echo "${cb}$result${cc}" >&2
+    fi
+}
 
 ##-------
 # Config
@@ -51,7 +74,9 @@ l $wdc/nvim/snippets $hc/coc/ultisnips
 ## Nitrogen
 # ln -s $wdc/nitrogen-saved.cfg $hc/nitrogen/bg-saved.cfg
 # This is user-specific
+echo
 echo "My saved backgrounds as a nitrogen save file is included, but not installed as it's user specific."
+echo
 
 ## Picom
 l $wdc/picom.conf $hc/picom/
@@ -121,5 +146,7 @@ l $wdh/Exclude-backup.txt ~/
 l $wdh/Exclude-backup-archive.txt ~/
 l $wdh/Exclude-backup-usr-share.txt ~/
 l $wdh/Exclude-backup-win.txt ~/
+
+echo
 
 echo "Install complete. Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
