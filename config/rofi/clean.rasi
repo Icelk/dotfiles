@@ -52,12 +52,14 @@ element {
 
 element-icon {
     size: 90px;
-    margin: 0 10px 0 0;
+    background-color: inherit;
+    horizontal-align: 0.5;
 }
 
 element-text {
     horizontal-align:               0.5;
     vertical-align:                 0.5;
+    background-color: inherit;
 }
 
 #element.normal.normal {
