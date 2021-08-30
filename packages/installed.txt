@@ -127,6 +127,5 @@ xorg-xauth
 xorg-xev
 xorg-xinit
 xorg-xrandr
-xorg-xset
 xorg-xwininfo
 zip
