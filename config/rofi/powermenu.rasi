@@ -44,11 +44,14 @@ element {
 element-icon {
     size: 48px;
     margin: 2px;
+    background-color: inherit;
+    horizontal-align: 0.5;
 }
 
 element-text {
     horizontal-align: 0.5;
     vertical-align: 0.5;
+    background-color: inherit;
 }
 
 #element.normal.normal {
