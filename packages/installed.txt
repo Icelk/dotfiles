@@ -117,6 +117,7 @@ ttf-dejavu
 ttf-roboto
 tumbler
 typescript
+unzip
 virt-manager
 watchexec
 which
