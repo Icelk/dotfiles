@@ -137,6 +137,7 @@ l $wdh/gitconfig ~/.gitconfig
 l $wdh/gtkrc-2.0 ~/.gtkrc-2.0
 l $wdh/profile ~/.profile
 l $wdh/xinitrc ~/.xinitrc
+l $wdh/xserverrc ~/.xserverrc
 l $wdh/zprofile ~/.zprofile
 l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
