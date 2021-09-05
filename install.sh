@@ -156,4 +156,6 @@ l $wdh/Exclude-backup-home.txt ~/
 
 echo
 
-echo "Install complete. Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
+echo "Install complete."
+echo "Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
+echo "Install boot themes by running 'install-plymouth-themes.sh'."

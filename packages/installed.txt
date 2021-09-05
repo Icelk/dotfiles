@@ -127,6 +127,7 @@ xf86-video-intel
 xorg-server
 xorg-xauth
 xorg-xev
+xorg-xhost
 xorg-xinit
 xorg-xrandr
 xorg-xwininfo
