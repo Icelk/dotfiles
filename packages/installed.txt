@@ -53,6 +53,7 @@ linux-firmware
 lld
 lxappearance
 m4
+macchanger
 mailspring
 maim
 make
