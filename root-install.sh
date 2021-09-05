@@ -65,6 +65,7 @@ l $wdr/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 echo
 echo "An automatic login configuration file is included but not in this install script due to the username being needed. The line above (in this script) can be used to create a symlink."
 
+l $wdr/Xwrapper.config /etc/X11/
 #ln -s $PWD/root/xorg.conf /etc/X11/
 echo "A xorg configuration file is included but not in this install script due to hardware-specific configuration. The line above (in this script) can be used to create a symlink."
 

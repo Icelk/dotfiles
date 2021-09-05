@@ -113,6 +113,7 @@ ttc-iosevka-etoile
 ttf-dejavu
 ttf-roboto
 tumbler
+unzip
 watchexec
 which
 wine-gecko

@@ -99,6 +99,7 @@ l $wdc/spotifyd.conf $hc/spotifyd/
 
 ## SSH
 l $wdc/ssh ~/.ssh/config
+mkdir -m 700 ~/.ssh/sockets
 
 ## Starship
 l $wdc/starship.toml $hc/
@@ -137,6 +138,7 @@ l $wdh/gitconfig ~/.gitconfig
 l $wdh/gtkrc-2.0 ~/.gtkrc-2.0
 l $wdh/profile ~/.profile
 l $wdh/xinitrc ~/.xinitrc
+l $wdh/xserverrc ~/.xserverrc
 l $wdh/zprofile ~/.zprofile
 l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
