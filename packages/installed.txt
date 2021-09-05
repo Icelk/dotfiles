@@ -83,6 +83,9 @@ lsp-plugins-lv2
 lua-language-server
 lxappearance-gtk3
 m4
+macchanger
+mailspring
+maim
 make
 man-db
 maven
