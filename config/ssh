@@ -2,13 +2,15 @@ Host nas
     IdentityFile ~/.private/nas.rsa
     User icelk
 # This is first, so it'll default to `server`, which has the same domain but occurs later.
+# "Port" here is important.
+Host server icelk.dev
+    IdentityFile ~/.private/server.rsa
+    User icelk
+    Port 22
 Host 10.0.0.16 icelk.dev
     IdentityFile ~/.private/home.rsa
     User icelk
     Port 477
-Host server icelk.dev
-    IdentityFile ~/.private/server.rsa
-    User icelk
 Host pi
     IdentityFile ~/.private/pi.rsa
     User pi
