@@ -131,6 +131,7 @@ xdg-utils
 xorg-server
 xorg-xauth
 xorg-xev
+xorg-xhost
 xorg-xinit
 xorg-xrandr
 xorg-xwininfo
