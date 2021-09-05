@@ -109,7 +109,7 @@ opencl-nvidia
 octave
 opendoas
 pacman-contrib
-paru-bin
+paru
 patch
 picom-ibhagwan-git
 piper
@@ -133,7 +133,7 @@ rustup
 sccache
 scour
 sd
-spotify-tui-bin
+spotify-tui
 starship
 steam
 texinfo
