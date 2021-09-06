@@ -64,6 +64,8 @@ echo "A rustup pacman hook has been installed. It will update Rust when the syst
 l $wdr/breeze.hook /etc/pacman.d/hooks/
 l $wdr/nvidia.hook /etc/pacman.d/hooks/
 
+# Pacman config
+l $wdr/pacman.conf /etc/
 
 # Enable auto-login
 #mkdir /etc/systemd/system/getty@tty1.service.d
