@@ -56,8 +56,8 @@ l $wdr/dpms.conf /etc/X11/xorg.conf.d/40-dpms.conf
 # Enable tapping and two-finger tapping on touchpad
 l $wdr/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 
--# Pacman config
--l $wdr/pacman.conf /etc/
+# Pacman config
+l $wdr/pacman.conf /etc/
 
 # Enable auto-login
 #mkdir /etc/systemd/system/getty@tty1.service.d
