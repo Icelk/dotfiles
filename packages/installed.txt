@@ -21,6 +21,7 @@ exa
 fakeroot
 fd
 firefox
+firefox-tridactyl
 fish
 fuse2
 gamemode
