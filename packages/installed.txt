@@ -119,6 +119,7 @@ ttf-roboto
 tumbler
 typescript
 unzip
+ventoy-bin
 virt-manager
 watchexec
 which
