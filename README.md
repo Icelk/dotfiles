@@ -31,16 +31,24 @@ I use
 
 # Installation
 
-I have provided install scripts in the root of this directory. By default, they will not override anything, but symlink to this directory.
+I have provided install scripts in the root of this directory. By default they will symlink to this directory.
 
-If you want to install one version permanently (making it harder to upgrade, as deleted files are left), change the line `alias l="ln -s"` to `alias l="cp"`.
+- `install.sh` (run as user)
+- `install-root.sh` (run as a superuser)
+- `install-plymouth-themes.sh` (run as user, the script requests superuser privileges)
+- `install-rust-analyzer.sh` (run as user, if you plan to edit Rust source code)
+- `install-packages.sh` (run as user, the script requests superuser privileges)
+
+**Note:** Also see [`other-installs`](other-installs.md) for the things I use which are not in the repos. I also recommend Firefox extensions here.
+
+> If you want to install one version permanently (making it harder to upgrade, as deleted files are left), change the line `alias l="ln -s"` to `alias l="cp"`.
 
 Other instructions will be shown when running the scripts.
 
 To install all the packages with Paru, follow the installation instructions from [their GitHub](https://github.com/Morganamilo/paru)
 and run this in a Fish shell (or add a `$` before the parentheses in Bash).
 
-> To view the PKGBUILDs, you need to have [NvimPager](https://github.com/lucc/nvimpager) installed,
+> **Important:** To view the PKGBUILDs, you need to have [NvimPager](https://github.com/lucc/nvimpager) installed,
 > as described in my [other installs](other-installs.md) document.
 > It is set as the `$PAGER`, and not having it installed results in no output from Paru about PKGBUILDs.
 

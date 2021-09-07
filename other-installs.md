@@ -22,3 +22,23 @@ I built [NVimPager](https://github.com/lucc/nvimpager) without the man pages (th
 the `makefile` in a local clone. It is therefore not present in `installed.txt`.
 
 That *should* be all... (PR me if I'm wrong)
+
+# Firefox
+
+I use these extensions:
+- Bitwarden (free password manager with sync and support to self-host passwords!)
+- Multi-Account Containers (a must-have with Firefox. Lets you have multiple "containers" of cookies)
+- Forget Me Not (great extension to clear unused `localstorage` and cookies)
+- Tridactyl (installed using `pacman`. Navigation with the keyboard)
+
+These settings in `about:config` are changed:
+- `browser.compactmode.show = true` (then go to "Customize toolbar" and select `Compact` in density)
+- `browser.search.hiddenOneOffs = Google,Amazon.co.uk` (hide awful search engines)
+- `gfx.webrender.all = true
+    gfx.webrender.compositor = true
+    gfx.webrender.svg-images = true` (performance)
+- `privacy.resistFingerprinting = true`
+- `privacy.resistFingerprinting.testGranularityMask = 2` (enables `privacy.resistFingerprinting.exemptedDomains`)
+- `privacy.spoof_english = 1
+    privacy.trackingprotection.enabled = true
+    privacy.trackingprotection.socialtracking.enabled = true`
