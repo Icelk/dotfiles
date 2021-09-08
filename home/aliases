@@ -23,7 +23,7 @@ alias gpp="git pull && git push"
 alias gf="git fetch"
 
 alias ga="git add"
-alias gaa="git add *"
+alias gaa="git add '*'"
 alias gc="git commit -m"
 alias gs="git status"
 alias gd="git diff"
