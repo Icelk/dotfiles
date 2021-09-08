@@ -73,7 +73,7 @@ bindsym $mod+m              $x mailspring
 
 bindsym $mod+s              $x "kitty -1 -e spt"
 bindsym $mod+p              $x "kitty -1 -e pulsemixer"
-bindsym $mod+t              $x "kitty -1 -e top"
+bindsym $mod+t              $x "kitty -1 -e htop"
 
 
 # Rofi
