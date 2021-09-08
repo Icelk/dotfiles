@@ -265,9 +265,6 @@ $sctlu restart clipcat
 # Wallpaper
 $sctlu start nitrogen
 
-# File manager
-$sctlu start thunar
-
 
 # Lock screen on startup
 $x i3lock -c $lock-color
