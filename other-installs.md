@@ -42,3 +42,6 @@ These settings in `about:config` are changed:
 - `privacy.spoof_english = 1
     privacy.trackingprotection.enabled = true
     privacy.trackingprotection.socialtracking.enabled = true`
+- `apz.fling_friction = 0.006
+apz.fling_stopped_threshold = 0.05` (Make flinging have more friction)
+- `apz.overscroll.enabled = true` (enable overscroll like on macOS. Makes flinging feel nicer)
