@@ -21,6 +21,7 @@ exa
 fakeroot
 fd
 firefox
+firefox-tridactyl
 fish
 fuse2
 gcc
@@ -87,7 +88,6 @@ playerctl
 plymouth-git
 polybar
 procs
-pulseaudio-alsa
 pulsemixer
 pureref
 python-pip
@@ -114,6 +114,7 @@ ttf-dejavu
 ttf-roboto
 tumbler
 unzip
+ventoy-bin
 watchexec
 which
 wine-gecko

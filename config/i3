@@ -64,8 +64,7 @@ set $lock-color \#000000
 # Single applications
 
 bindsym $mod+Return         exec kitty -1
-bindsym $mod+w              exec brave
-bindsym $mod+Shift+w        exec brave --disable-frame-rate-limit
+bindsym $mod+w              exec firefox
 bindsym $mod+f              $x thunar
 bindsym $mod+m              $x mailspring
 bindsym $mod+b              $x blueman-manager
