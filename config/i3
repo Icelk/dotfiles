@@ -49,12 +49,13 @@ set $lock-color \#000000
 
 # CORPL option light
 
-# set $color #bfd3ef
+# set $border_color #e8eff27f
+# set $border_focused #e8eff2bf
 
-# #class                  border  backgr. text    indicator child_border
-# client.focused_inactive $color  $color  $color  $color    $color
-# client.unfocused        $color  $color  $color  $color    $color
-# client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
+# #class                  border          background      text            indicator       child_border
+# client.focused_inactive $border_color   $border_color   $border_color   $border_color   $border_color
+# client.unfocused        $border_color   $border_color   $border_color   $border_color   $border_color
+# client.focused          $border_focused $border_focused $border_focused $border_focused $border_focused
 
 # set $lock-color \#3f3f3f
 
