@@ -26,12 +26,12 @@ focus_wrapping no
 
 # 2px border
 # CORPL option dark
-## CORPL section for_window [class = "^.*"] border pixel
-for_window [class = "^.*"] border pixel 0
+# ## CORPL section for_window [class = "^.*"] border pixel
+# for_window [class = "^.*"] border pixel 0
 # CORPL option light
-# for_window [class = "^.*"] border pixel 2
-# for_window [class = "Dunst"] border pixel 0
-# for_window [class = "Rofi"] border pixel 0
+for_window [class = "^.*"] border pixel 2
+for_window [class = "Dunst"] border pixel 0
+for_window [class = "Rofi"] border pixel 0
 # CORPL end
 
 # Gaps
@@ -45,19 +45,19 @@ workspace_auto_back_and_forth yes
 # Set border colors
 # CORPL option dark
 
-set $lock-color \#000000
+# set $lock-color \#000000
 
 # CORPL option light
 
-# set $border_color #e8eff27f
-# set $border_focused #e8eff2bf
+set $border_color #e8eff27f
+set $border_focused #e8eff2bf
 
-# #class                  border          background      text            indicator       child_border
-# client.focused_inactive $border_color   $border_color   $border_color   $border_color   $border_color
-# client.unfocused        $border_color   $border_color   $border_color   $border_color   $border_color
-# client.focused          $border_focused $border_focused $border_focused $border_focused $border_focused
+#class                  border          background      text            indicator       child_border
+client.focused_inactive $border_color   $border_color   $border_color   $border_color   $border_color
+client.unfocused        $border_color   $border_color   $border_color   $border_color   $border_color
+client.focused          $border_focused $border_focused $border_focused $border_focused $border_focused
 
-# set $lock-color \#3f3f3f
+set $lock-color \#3f3f3f
 
 # CORPL end
 
