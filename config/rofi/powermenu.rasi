@@ -9,21 +9,19 @@ configuration {
 
 * {
     bg: @bg-lighter;
-    bg-select: @bg-light;
     background-color: @bg;
 
     txt: @text-normal;
-    txt-select: @text-color;
 }
 
 #window {
     width: 560px;
     height: 120px;
-    padding: 5px;
+    padding: 0;
 }
 
 #mainbox {
-    border:  0;
+    border: 0;
     padding: 0;
     children: [listview];
 }
@@ -31,6 +29,7 @@ configuration {
 #listview {
     columns: 5;
     layout: vertical;
+    margin: 5px;
     background-color: transparent;
 }
 
@@ -44,38 +43,21 @@ element {
 element-icon {
     size: 48px;
     margin: 2px;
-    background-color: inherit;
+    background-color: transparent;
     horizontal-align: 0.5;
 }
 
 element-text {
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    background-color: inherit;
+    background-color: transparent;
+    color: @txt;
 }
 
-#element.normal.normal {
+#element.normal {
     background-color: transparent;
-    text-color:       @txt;
 }
 
 #element.selected.normal {
     background-color: @bg-select;
-    text-color:       @txt;
-    border-color: #d07ef2;
-}
-
-#element.alternate.normal {
-    background-color: transparent;
-    text-color:       @txt;
-}
-
-#button {
-    spacing:    0;
-    text-color: @txt;
-}
-
-#button.selected {
-    background-color: @bg;
-    text-color:       @txt;
 }
