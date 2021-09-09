@@ -83,7 +83,7 @@ bindsym $mod+t              $x "kitty -1 -e htop"
 bindsym $mod+d              exec $sr/open-dev.sh
 bindsym $mod+c              exec ~/.cargo/bin/clipcat-menu
 bindsym $mod+Shift+t        exec $sr/theme-change.fish
-bindsym $mod+space          exec rofi -show drun -theme clean
+bindsym $mod+space          exec rofi -show drun -modi drun -theme clean
 bindsym $mod+Pause          exec $sr/launch-powermenu.sh
 
 # No-ui utilities
