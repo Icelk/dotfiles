@@ -2,133 +2,84 @@
 
 * {
     /* Theme settings */
-    highlight: bold;
     scrollbar: true;
 
     /* Theme colors */
-    background:                  @bg-lighter;
-    background-color:            @background;
-    foreground:                  @text-normal;
-    border-color:                @text-color;
-    separatorcolor:              @bg-dark;
-    scrollbar-handle:            @separatorcolor;
+    background-color: transparent;
+    foreground: @text-normal;
+    separator-color: @bg-dark;
+    scrollbar-handle: @separator-color;
 
-    normal-background:           @background;
-    normal-foreground:           @foreground;
+    normal-background: @bg-lighter;
+    normal-foreground: @text-normal;
     alternate-normal-background: @bg-light;
-    alternate-normal-foreground: @foreground;
-    selected-normal-background:  @text-color;
-    selected-normal-foreground:  @bg-darker;
-
-    active-background:           @text-color;
-    active-foreground:           @background;
-    alternate-active-background: @active-background;
-    alternate-active-foreground: @active-foreground;
-    selected-active-background:  @active-background;
-    selected-active-foreground:  @active-foreground;
+    alternate-normal-foreground: @text-normal;
+    selected-normal-background: @bg-darker;
+    selected-normal-foreground: @text-normal;
 }
 
 window {
-    background-color:   @background;
-    border:             2;
-    padding:            2;
+    border: 0;
+    padding: 2;
+    background-color: @bg-lighter;
 }
 
 mainbox {
-    border:  0;
+    border: 0;
     padding: 0;
 }
 
-message {
-    border:         2px 0 0;
-    border-color:   @separatorcolor;
-    padding:        1px;
-}
-
-textbox {
-    highlight:      @highlight;
-    text-color:     @foreground;
-}
-
 listview {
-    border:         2px solid 0 0;
-    padding:        2px 0 0;
-    border-color:   @separatorcolor;
-    spacing:        2px;
-    scrollbar:      @scrollbar;
+    spacing: 2px;
+    scrollbar: @scrollbar;
 }
 
-element {
-    border:         0;
-    padding:        2px;
+element-text {
+    border: 0;
+    padding: 0.2em;
 }
 
-element.normal.normal {
-    background-color:   @normal-background;
-    text-color:         @normal-foreground;
+element-text.normal.normal {
+    /* This layers when transparent on top of background, making it lighter in colour */
+    background-color: @normal-background;
+    text-color: @normal-foreground;
 }
 
-element.normal.active {
-    background-color:   @active-background;
-    text-color:         @active-foreground;
+element-text.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
 }
 
-element.selected.normal {
-    background-color:   @selected-normal-background;
-    text-color:         @selected-normal-foreground;
-}
-
-element.selected.active {
-    background-color:   @selected-active-background;
-    text-color:         @selected-active-foreground;
-}
-
-element.alternate.normal {
-    background-color:   @alternate-normal-background;
-    text-color:         @alternate-normal-foreground;
-}
-
-element.alternate.active {
-    background-color:   @alternate-active-background;
-    text-color:         @alternate-active-foreground;
+element-text.alternate {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
 }
 
 scrollbar {
-    width:              4px;
-    border:             0;
-    handle-color:       @scrollbar-handle;
-    handle-width:       8px;
-    padding:            0;
-}
-
-mode-switcher {
-    border:             2px 0 0;
-    border-color:       @separatorcolor;
+    border: 0;
+    handle-color: @scrollbar-handle;
+    handle-width: 8px;
+    padding: 0;
 }
 
 inputbar {
-    spacing:            0;
-    text-color:         @normal-foreground;
-    padding:            2px;
-    children:           [ prompt, textbox-prompt-sep, entry, case-indicator ];
+    text-color: @normal-foreground;
+    background-color: transparent;
+    padding: 0.2em;
+    children: [ prompt, textbox-prompt-sep, entry, case-indicator ];
 }
 
 case-indicator,
 entry,
 prompt,
 button {
-    spacing:            0;
-    text-color:         @normal-foreground;
-}
-
-button.selected {
-    background-color:   @selected-normal-background;
-    text-color:         @selected-normal-foreground;
+    spacing: 0;
+    text-color: @normal-foreground;
 }
 
 textbox-prompt-sep {
-    expand:             false;
-    str:                ":";
-    text-color:         @normal-foreground;
-    margin:             0 0.3em 0 0;
+    expand: false;
+    str: ":";
+    text-color: @normal-foreground;
+    margin: 0 0.3em 0 0;
 }
