@@ -23,7 +23,7 @@ configuration {
 }
 
 #mainbox {
-    border:  0;
+    border: 0;
     border-radius: 15;
     padding: 20;
     background-color: @bg;
@@ -52,82 +52,82 @@ element {
 
 element-icon {
     size: 90px;
-    background-color: inherit;
+    background-color: transparent;
     horizontal-align: 0.5;
 }
 
 element-text {
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    background-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: transparent;
+    color: @txt;
 }
 
 #element.normal.normal {
     background-color: transparent;
-    text-color:       @txt;
+    text-color: @txt;
 }
 
 #element.selected.normal {
     background-color: @bg-select;
-    text-color:       @txt;
-    border-color:     #d07ef2;
+    text-color: @txt;
+    border-color: #d07ef2;
 }
 
 #element.alternate.normal {
     background-color: transparent;
-    text-color:       @txt;
+    text-color: @txt;
 }
 
 #mode-switcher {
-    border:       0px 0px 0px ;
+    border: 0px 0px 0px;
     border-color: @separatorcolor;
 }
 
 #button {
-    spacing:    0;
+    spacing: 0;
     text-color: @txt;
 }
 
 #button.selected {
     background-color: @bg-select;
-    text-color:       @txt-select;
+    text-color: @txt-select;
 }
 
 #inputbar {
-    spacing:          0;
-    text-color:       @txt;
-    padding:          10px;
+    spacing: 0;
+    text-color: @txt;
+    padding: 10px;
     background-color: @bg-select;
-    /*rgba(0,0,0,0.5);*/
-    border-radius:    10px;
+    border-radius: 10px;
 }
 
 #case-indicator {
-    spacing:    0;
+    spacing: 0;
     text-color: @txt-select;
     background-color: transparent;
 }
 
 #entry {
-    spacing:    0;
+    spacing: 0;
     text-color: @txt;
     background-color: transparent;
 }
 
 #prompt {
-    spacing:    0;
+    spacing: 0;
     text-color: @txt;
     background-color: transparent;
 }
 
 #textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
+    expand: false;
+    str: "❯";
+    margin: -0.1em 0.3em 0 0;
     text-color: @txt;
     background-color: transparent;
 }
 
-#inputbar { 
-    children: [prompt,textbox-prompt-colon,entry,case-indicator];
+#inputbar {
+    children: [textbox-prompt-colon, entry, case-indicator];
 }
