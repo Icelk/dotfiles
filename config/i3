@@ -26,7 +26,6 @@ focus_wrapping no
 
 # 2px border
 # CORPL option dark
-# ## CORPL section for_window [class = "^.*"] border pixel
 # for_window [class = "^.*"] border pixel 0
 # CORPL option light
 for_window [class = "^.*"] border pixel 2

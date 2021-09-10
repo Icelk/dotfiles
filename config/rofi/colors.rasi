@@ -12,8 +12,8 @@
     /* CORPL option light */
     bg-darker: #6c747f;
     bg-dark: #828b99;
-    bg-light: #e8eff29f;
-    bg-lighter: #b7bdcc9f;
+    bg-light: #e8eff2bf;
+    bg-lighter: #b7bdccbf;
 
     bg-select: @bg-dark;
 

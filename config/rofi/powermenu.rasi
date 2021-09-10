@@ -7,30 +7,25 @@ configuration {
 
 @import "colors.rasi"
 
-* {
-    bg: @bg-lighter;
-    background-color: @bg;
-
-    txt: @text-normal;
-}
-
-#window {
+window {
     width: 560px;
     height: 120px;
     padding: 0;
+    background-color: @bg-lighter;
 }
 
-#mainbox {
+mainbox {
     border: 0;
     padding: 0;
     children: [listview];
+    background-color: transparent;
 }
 
-#listview {
+listview {
     columns: 5;
     layout: vertical;
     margin: 5px;
-    background-color: transparent;
+    background-color: inherit;
 }
 
 element {
@@ -51,13 +46,13 @@ element-text {
     horizontal-align: 0.5;
     vertical-align: 0.5;
     background-color: transparent;
-    color: @txt;
+    color: @text-normal;
 }
 
-#element.normal {
+element.normal {
     background-color: transparent;
 }
 
-#element.selected.normal {
+element.selected {
     background-color: @bg-select;
 }

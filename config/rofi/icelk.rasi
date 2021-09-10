@@ -8,13 +8,13 @@
     background-color: transparent;
     foreground: @text-normal;
     separator-color: @bg-dark;
-    scrollbar-handle: @separator-color;
+    scrollbar-handle: @bg-light;
 
     normal-background: @bg-lighter;
     normal-foreground: @text-normal;
     alternate-normal-background: @bg-light;
     alternate-normal-foreground: @text-normal;
-    selected-normal-background: @bg-darker;
+    selected-normal-background: @bg-dark;
     selected-normal-foreground: @text-normal;
 }
 
@@ -31,7 +31,6 @@ mainbox {
 
 listview {
     spacing: 2px;
-    scrollbar: @scrollbar;
 }
 
 element-text {
