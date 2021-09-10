@@ -26,10 +26,12 @@ focus_wrapping no
 
 # 2px border
 # CORPL option dark
-## CORPL section for_window [class = "^.*"] border pixel
-for_window [class = "^.*"] border pixel 0
+# ## CORPL section for_window [class = "^.*"] border pixel
+# for_window [class = "^.*"] border pixel 0
 # CORPL option light
-# for_window [class = "^.*"] border pixel 2
+for_window [class = "^.*"] border pixel 2
+for_window [class = "Dunst"] border pixel 0
+for_window [class = "Rofi"] border pixel 0
 # CORPL end
 
 # Gaps
@@ -43,18 +45,19 @@ workspace_auto_back_and_forth yes
 # Set border colors
 # CORPL option dark
 
-set $lock-color \#000000
+# set $lock-color \#000000
 
 # CORPL option light
 
-# set $color #bfd3ef
+set $border_color #e8eff27f
+set $border_focused #e8eff2bf
 
-# #class                  border  backgr. text    indicator child_border
-# client.focused_inactive $color  $color  $color  $color    $color
-# client.unfocused        $color  $color  $color  $color    $color
-# client.focused          #1793D1 #1793D1 #1793D1 #1793D1   #1793D1
+#class                  border          background      text            indicator       child_border
+client.focused_inactive $border_color   $border_color   $border_color   $border_color   $border_color
+client.unfocused        $border_color   $border_color   $border_color   $border_color   $border_color
+client.focused          $border_focused $border_focused $border_focused $border_focused $border_focused
 
-# set $lock-color \#3f3f3f
+set $lock-color \#3f3f3f
 
 # CORPL end
 
@@ -74,14 +77,14 @@ bindsym $mod+b              $x blueman-manager
 
 bindsym $mod+s              $x "kitty -1 -e spt"
 bindsym $mod+p              $x "kitty -1 -e pulsemixer"
-bindsym $mod+t              $x "kitty -1 -e top"
+bindsym $mod+t              $x "kitty -1 -e htop"
 
 
 # Rofi
 bindsym $mod+d              exec $sr/open-dev.sh
 bindsym $mod+c              exec ~/.cargo/bin/clipcat-menu
 bindsym $mod+Shift+t        exec $sr/theme-change.fish
-bindsym $mod+space          exec rofi -show drun -theme clean
+bindsym $mod+space          exec rofi -show drun -modi drun -theme clean
 bindsym $mod+Pause          exec $sr/launch-powermenu.sh
 bindsym $mod+Shift+p        exec $sr/launch-powermenu.sh
 
@@ -269,9 +272,6 @@ $sctlu restart clipcat
 
 # Wallpaper
 $sctlu start nitrogen
-
-# File manager
-$sctlu start thunar
 
 
 # Lock screen on startup

@@ -34,6 +34,7 @@ gtk3-demos
 gvfs
 gvfs-afc
 hexedit
+htop
 i3-gaps
 i3lock
 intel-media-driver
