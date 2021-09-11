@@ -18,6 +18,7 @@ edk2-ovmf
 efibootmgr
 elementary-planner
 exa
+exfatprogs
 fakeroot
 fd
 firefox
@@ -74,6 +75,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 numlockx
+obsidian
 ocl-icd
 openal
 opendoas
