@@ -18,6 +18,7 @@ dunst
 edk2-ovmf
 efibootmgr
 exa
+exfatprogs
 fakeroot
 fd
 firefox
