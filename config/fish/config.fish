@@ -36,3 +36,10 @@ end
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end
+
+function sshp
+    while true
+        ssh -TND 41523 icelk.dev
+        sleep 2
+    end
+end
