@@ -62,3 +62,8 @@ alias pa="paru -S"
 alias pr="paru -Rns"
 alias pl="paru -Qi"
 alias pi="paru -Si"
+
+# Aliases for useful complicated commands I don't want to memorize
+alias ssh-proxy="ssh -TN icelk.dev -D 41523"
+## Export PRoxy
+alias epr="export ALL_PROXY='socks5h://localhost:41523'"
