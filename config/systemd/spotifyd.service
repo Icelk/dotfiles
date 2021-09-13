@@ -7,7 +7,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=sh -c "set -m; ~/.cargo/bin/spotifyd --no-daemon & sleep 1 && spt pb --transfer Icelk -t && fg"
+ExecStart=sh -c "set -m; ~/.cargo/bin/spotifyd --no-daemon & sleep 2 && spt pb --transfer Icelk -t; fg"
 Restart=always
 RestartSec=12
 
