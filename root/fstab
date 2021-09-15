@@ -46,7 +46,7 @@ UUID=C84CADFE4CADE800				/archive  	ntfs      	rw,uid=1000,gid=988,dmask=007,fma
 ##----
 
 # Home nas share
-nas:/mnt/main/computer_erik			/home/icelk/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
+nas:/mnt/main/computer_erik			/home/icelk/nfs/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
 
 # File sharing
-nas:/mnt/main/file_share			/share		nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
+nas:/mnt/main/file_share			/share			nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0

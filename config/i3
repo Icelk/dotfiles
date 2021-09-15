@@ -69,6 +69,7 @@ bindsym $mod+Return         exec kitty -1
 bindsym $mod+w              exec firefox
 bindsym $mod+f              $x thunar
 bindsym $mod+m              $x mailspring
+bindsym $mod+o              $x obsidian
 bindsym $mod+b              $x blueman-manager
 
 
@@ -271,6 +272,9 @@ $sctlu restart clipcat
 
 # Wallpaper
 $sctlu start nitrogen
+
+# Start file manager and disk manager for faster start of Thunar
+$sctlu start thunar gvfs-udisks2-volume-monitor
 
 
 # Lock screen on startup
