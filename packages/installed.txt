@@ -31,7 +31,6 @@ dosfstools
 dunst
 easyeffects
 efibootmgr
-elementary-planner
 exa
 fakeroot
 fd
