@@ -69,6 +69,7 @@ bindsym $mod+Return         exec kitty -1
 bindsym $mod+w              exec firefox
 bindsym $mod+f              $x thunar
 bindsym $mod+m              $x mailspring
+bindsym $mod+o              $x obsidian
 
 
 # CLIs
