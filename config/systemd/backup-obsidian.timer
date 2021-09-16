@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup Obsidian vaults
+
+[Timer]
+OnCalendar=17:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
