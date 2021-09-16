@@ -1,7 +1,7 @@
 **bin/**
 **target/**
 
-/home/icelk/nas/
+/home/icelk/nfs/
 /home/icelk/.cache/
 /home/icelk/.rustup/
 /home/icelk/.cargo/registry/
