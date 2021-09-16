@@ -274,7 +274,7 @@ $sctlu restart clipcat
 $sctlu start nitrogen
 
 # Start file manager and disk manager for faster start of Thunar
-$sctlu start thunar gvfs-udisks2-volume-monitor
+$x ~/scripts/thunar-start-daemon.sh
 
 
 # Lock screen on startup
