@@ -21,6 +21,7 @@ exa
 exfatprogs
 fakeroot
 fd
+ffmpegthumbnailer
 firefox
 firefox-tridactyl
 fish
