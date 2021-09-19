@@ -8,6 +8,7 @@ binutils
 bison
 blender
 brave-bin
+breeze
 breeze-hacked-cursor-theme
 ccache
 clang
@@ -26,6 +27,7 @@ ffmpegthumbnailer
 firefox
 firefox-tridactyl
 fish
+frei0r-plugins
 fuse2
 gamemode
 gcc
@@ -43,6 +45,7 @@ i3-gaps
 i3lock
 inkscape
 iptables-nft
+kdenlive
 kitty
 kora-icon-theme
 libheif
