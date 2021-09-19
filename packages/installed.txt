@@ -79,6 +79,7 @@ numlockx
 nvidia
 nvidia-dkms
 nvidia-settings
+obs-studio
 obsidian
 ocl-icd
 openal
