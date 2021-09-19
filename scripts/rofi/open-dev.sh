@@ -2,7 +2,7 @@
 # Copyright © Icelk 2021-present
 
 dev_path=~/dev/
-editor="${EDITOR:-codium}"
+editor="kitty -e"
 
 language=$(ls $dev_path | rofi -i -dmenu -p "Choose language")
 if [ $? -ne 0 ]; then exit 1; fi
