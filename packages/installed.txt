@@ -35,6 +35,7 @@ gimp
 git
 gn
 gnome-keyring
+gparted
 gptfdisk
 groff
 gvfs
