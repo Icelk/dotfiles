@@ -29,6 +29,7 @@ fish
 fuse2
 gamemode
 gcc
+gimp
 git
 gn
 gnome-keyring
