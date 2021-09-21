@@ -2,6 +2,6 @@
 
 timeout 10 ~/scripts/internet-wait.sh
 
-sleep 1
+sleep 10
 
 systemctl --user start thunar gvfs-udisks2-volume-monitor

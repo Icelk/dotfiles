@@ -1,4 +1,5 @@
 alsa-utils
+audacity
 autoconf
 automake
 base
@@ -6,6 +7,7 @@ binutils
 bison
 blueman
 brave-bin
+breeze
 breeze-hacked-cursor-theme
 ccache
 clang
@@ -20,14 +22,18 @@ exa
 exfatprogs
 fakeroot
 fd
+ffmpegthumbnailer
 firefox
 firefox-tridactyl
 fish
+frei0r-plugins
 fuse2
 gcc
+gimp
 git
 gn
 gnome-keyring
+gparted
 gptfdisk
 groff
 gvfs
@@ -40,6 +46,7 @@ intel-media-driver
 intel-ucode
 iptables-nft
 iwd
+kdenlive
 kitty
 kora-icon-theme
 libheif
@@ -73,6 +80,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 numlockx
+obs-studio
 obsidian
 ocl-icd
 openal
