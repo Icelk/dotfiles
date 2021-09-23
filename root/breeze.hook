@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Type = Package
+Target = breeze
+
+[Action]
+Description = Removing unwanted icons
+When = PostTransaction
+Exec = /usr/bin/sh -c 'cd /usr/share/icons && rem="48/inkscape.svg" && for item in $(echo $rem); do echo $item && rm -f breeze/apps/$item breeze-dark/apps/$item; done'

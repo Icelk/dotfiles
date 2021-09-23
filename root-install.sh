@@ -77,6 +77,7 @@ echo "A rustup pacman hook has been installed. It will update Rust when the syst
 echo
 # Kora icon theme hook
 l $wdr/kora.hook /etc/pacman.d/hooks/
+l $wdr/breeze.hook /etc/pacman.d/hooks/
 l $wdr/nvidia.hook /etc/pacman.d/hooks/
 
 l $bin/nvim $bin/vi
