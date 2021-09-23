@@ -12,6 +12,7 @@ breeze
 breeze-hacked-cursor-theme
 ccache
 clang
+compsize
 cups
 deepin-gtk-theme
 dhcpcd

@@ -10,7 +10,7 @@
 
 # Main ext4 file system
 # /dev/nvme0n1p3 LABEL=os
-UUID=685ac991-69cd-463b-8045-a68056578b8a	/         	ext4      	rw,noatime	0 1
+UUID=63fb5c7b-3368-4a58-90b7-c9b6c317ad19	/         	btrfs      	noatime,compress=zstd,autodefrag	0 0
 
 # UEFI boot partition, using fat32.
 # /dev/nvme0n1p1
@@ -23,7 +23,12 @@ UUID=b79e7888-544b-4c36-9df9-2482a8f0a5e7	none      	swap      	defaults  	0 0
 
 # Misc drive
 # /dev/sdc1
-UUID=12d05e48-3271-4149-b34c-cd723e600f17	/misc		ext4		rw,noatime	0 2
+UUID=e1e5be87-8c45-46a1-8d35-c689352fa71e	/misc		btrfs		noatime,compress=zstd,autodefrag	0 0
+
+
+# Archive
+# /dev/sda1 LABEL=archive
+UUID=ae5c19e3-e015-47c8-b3d4-41c3af9398e0	/archive  	btrfs      	noatime,compress=zstd,autodefrag 0 0
 
 
 ##--------
@@ -35,10 +40,6 @@ UUID=E04ACDC54ACD98A4				/win		ntfs		rw,uid=1000,gid=988,dmask=007,fmask=117,noa
 
 # /dev/sdb1 LABEL=WinMisc
 UUID=6399D09B1C274826				/win-misc 	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes,noauto,x-systemd.automount	0 0
-
-# /dev/sda2 LABEL=Archive
-UUID=C84CADFE4CADE800				/archive  	ntfs      	rw,uid=1000,gid=988,dmask=007,fmask=117,noatime,big_writes,noauto,x-systemd.automount	0 0
-
 
 
 ##----
