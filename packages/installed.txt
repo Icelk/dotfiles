@@ -12,6 +12,7 @@ breeze
 breeze-hacked-cursor-theme
 ccache
 clang
+cups
 deepin-gtk-theme
 dhcpcd
 dnsmasq
@@ -78,6 +79,7 @@ nitrogen
 nodejs
 noto-fonts-emoji
 npm
+nss-mdns
 ntfs-3g
 numlockx
 nvidia

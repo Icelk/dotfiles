@@ -109,7 +109,10 @@ l -f $wdr/pacman.conf /etc/
 # ln -sf $wdr/reflector.conf /etc/xdg/reflector/
 echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
 
+# avahi
+l -f $wdr/nsswitch.conf /etc/
+
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
-read -p "Are you sure you want to enable dhcpcd and periodic TRIM?"
-systemctl enable --now dhcpcd fstrim.timer
+read -p "Are you sure you want to enable dhcpcd, periodic TRIM, CUPS (printing), and Avahi (network discovery)? These will not eat much processor time. Disable avahi-daemon for a minimal setup."
+systemctl enable --now dhcpcd fstrim.timer cups avahi-daemon
