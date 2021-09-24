@@ -100,7 +100,7 @@ l $wdc/spotifyd.conf $hc/spotifyd/
 
 ## SSH
 l $wdc/ssh ~/.ssh/config
-mkdir -m 700 ~/.ssh/sockets
+mkdir -p -m 700 ~/.ssh/sockets
 
 ## Starship
 l $wdc/starship.toml $hc/
