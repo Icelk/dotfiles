@@ -1,2 +1,7 @@
+# Ignore downloaded wallpapers
 wallpapers/*.png
 wallpapers/*.jpg
+
+# Ignore enabled services.
+config/systemd/timers.target.wants
+config/systemd/default.target.wants

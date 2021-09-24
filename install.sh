@@ -73,6 +73,7 @@ l $wdc/kitty.conf $hc/kitty/kitty.conf
 ## NeoVim
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
+echo "${cb}The snippets are notoriously difficult to install. If you don't have any snippets in neovim, remove the folder at ~/.config/coc/ultisnips and rerun this.${cc}"
 l $wdc/nvim/snippets $hc/coc/ultisnips
 
 ## Nitrogen
@@ -99,7 +100,7 @@ l $wdc/spotifyd.conf $hc/spotifyd/
 
 ## SSH
 l $wdc/ssh ~/.ssh/config
-mkdir -m 700 ~/.ssh/sockets
+mkdir -p -m 700 ~/.ssh/sockets
 
 ## Starship
 l $wdc/starship.toml $hc/
@@ -153,6 +154,14 @@ l $wdh/Exclude-backup-archive.txt ~/
 l $wdh/Exclude-backup-usr-share.txt ~/
 l $wdh/Exclude-backup-win.txt ~/
 l $wdh/Exclude-backup-home.txt ~/
+
+echo
+
+echo "Enabling user services. Only the hardware-independent are enabled. See this script for the others."
+
+systemctl --user enable --now xdg-user-dirs-update.service packages-dump.service backup-obsidian.timer check-failed.timer reminder-notify.timer
+# Hardware-dependent
+# systemctl --user enable --now sync.timer
 
 echo
 

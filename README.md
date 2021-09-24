@@ -6,6 +6,8 @@ These are all my dotfiles (lightly modified to fit my laptop), which can be used
 
 Removing the Intel packages, tweaking the Xorg config and changing the [ucode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
+> **Important**: Use Btrfs while installing Arch, not Ext4!
+
 ## Branches
 
 To use this setup on multiple systems, I've got multiple branches.
@@ -17,6 +19,7 @@ One named `laptop` is for a more light-weight install for a laptop using Intel g
 # Major components
 
 I use
+- Btrfs
 - i3 gaps
 - picom (ibhagwan's fork)
 - polybar
@@ -42,6 +45,8 @@ I have provided install scripts in the root of this directory. By default they w
 - `install-packages.sh` (run as user, the script requests superuser privileges)
 
 **Note:** Also see [`other-installs`](other-installs.md) for the things I use which are not in the repos. I also recommend Firefox extensions here.
+
+See [my drive layout](drive-layout.md) for info about backups.
 
 > If you want to install one version permanently (making it harder to upgrade, as deleted files are left), change the line `alias l="ln -s"` to `alias l="cp"`.
 

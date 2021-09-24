@@ -1,4 +1,4 @@
-.snapshots
+.backup
 $RECYCLE.BIN
 C 2019
 C 2020

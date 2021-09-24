@@ -9,8 +9,11 @@ blueman
 brave-bin
 breeze
 breeze-hacked-cursor-theme
+btrbk
 ccache
 clang
+compsize
+cups
 deepin-gtk-theme
 dhcpcd
 dnsmasq
@@ -78,6 +81,7 @@ nitrogen
 nodejs
 noto-fonts-emoji
 npm
+nss-mdns
 ntfs-3g
 numlockx
 obs-studio
@@ -104,7 +108,6 @@ python-pynvim
 reflector
 ripgrep
 rofi
-rsnapshot
 rsync
 rustup
 scour
