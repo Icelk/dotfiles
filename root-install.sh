@@ -73,15 +73,18 @@ echo
 
 # rustup pacman hook
 l $wdr/rustup.hook /etc/pacman.d/hooks/
-echo "A rustup pacman hook has been installed. It will update Rust when the system updates. To remove it, remove /etc/pacman.d/hooks/rustup.hook"
+echo "A rustup pacman hook has been installed. It will update Rust when the system updates. To remove it, unlink /etc/pacman.d/hooks/rustup.hook"
 echo
 # Kora icon theme hook
 l $wdr/kora.hook /etc/pacman.d/hooks/
 l $wdr/breeze.hook /etc/pacman.d/hooks/
 l $wdr/nvidia.hook /etc/pacman.d/hooks/
 
+echo "Linking vi and vim to nvim, and sudo to doas."
+
 l $bin/nvim $bin/vi
 l $bin/nvim $bin/vim
+l $bin/doas $bin/sudo
 
 echo
 read -p "The following will override certain system files. Press Ctrl+C to quit."
