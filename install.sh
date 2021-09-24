@@ -155,6 +155,14 @@ l $wdh/Exclude-backup-win.txt ~/
 
 echo
 
+echo "Enabling user services. Only the hardware-independent are enabled. See this script for the others."
+
+systemctl --user enable --now xdg-user-dirs-update.service packages-dump.service backup-obsidian.timer check-failed.timer reminder-notify.timer
+# Hardware-dependent
+# systemctl --user enable --now sync.timer
+
+echo
+
 echo "Install complete."
 echo "Install the wallpapers by running the 'download.sh' script in ~/Pictures/wallpapers."
 echo "Install boot themes by running 'install-plymouth-themes.sh'."
