@@ -8,7 +8,7 @@
 # Main linux drive
 ##-----------------
 
-# Main ext4 file system
+# Main Btrfs file system
 # /dev/nvme0n1p3 LABEL=os
 UUID=63fb5c7b-3368-4a58-90b7-c9b6c317ad19	/         	btrfs      	noatime,compress=zstd,autodefrag	0 0
 
@@ -19,6 +19,10 @@ UUID=BA44-1AB8      	/boot     	vfat      	rw,noatime,fmask=0022,dmask=0022,code
 # Swap partion. 16GB
 # /dev/nvme0n1p2
 UUID=b79e7888-544b-4c36-9df9-2482a8f0a5e7	none      	swap      	defaults  	0 0
+
+# Snapshot subvolume
+# Same as main FS
+UUID=63fb5c7b-3368-4a58-90b7-c9b6c317ad19	/snapshots         	btrfs      	subvol=snapshots,noatime,compress=zstd,autodefrag	0 0
 
 
 # Misc drive
