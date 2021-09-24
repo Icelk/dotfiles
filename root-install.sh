@@ -67,8 +67,8 @@ l $wdr/Xwrapper.config /etc/X11/
 echo "A xorg configuration file is included but not in this install script due to hardware-specific configuration. The line above (in this script) can be used to create a symlink."
 
 #ln -s $PWD/root/fstab /etc/
-#ln -s $PWD/root/rsnapshot.config /etc/
-echo "rsnapshot and fstab config files in included but not in this install script due to hardware-specific mount-points."
+#ln -sf $PWD/root/btrbk.conf /etc/btrbk/
+echo "btrbk (backup utility) and fstab config files in included but commented out in this install script due to hardware-specific mount-points."
 echo
 
 # rustup pacman hook
