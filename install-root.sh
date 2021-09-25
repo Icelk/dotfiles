@@ -117,5 +117,5 @@ l -f $wdr/nsswitch.conf /etc/
 
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
-read -p "Are you sure you want to enable dhcpcd, periodic TRIM, CUPS (printing), and Avahi (network discovery)? These will not eat much processor time. Disable avahi-daemon for a minimal setup."
-systemctl enable --now dhcpcd fstrim.timer cups avahi-daemon
+read -p "Are you sure you want to enable dhcpcd, periodic TRIM, and CUPS (printing)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
+systemctl enable --now dhcpcd fstrim.timer cups
