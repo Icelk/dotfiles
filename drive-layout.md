@@ -112,7 +112,7 @@ UUID=<redacted>	/misc		btrfs		noatime,compress-force=zstd,autodefrag	0 0
 
 # Archive
 # /dev/sdx1 LABEL=archive
-UUID=<redacted>	/archive  	btrfs      	noatime,compress-force=zstd,autodefrag 0 0
+UUID=<redacted>	/archive  	btrfs      	noatime,compress=zstd,autodefrag 0 0
 
 
 ##--------

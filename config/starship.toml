@@ -11,6 +11,10 @@ disabled = true
 [character]
 success_symbol = "[❯](none)"
 
+[cmd_duration]
+min_time = 200
+show_notifications = true
+
 # Disable the package module, hiding it from the prompt completely
 #[package]
 #disabled = true

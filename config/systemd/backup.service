@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup and snapshot
+
+[Service]
+Type=simple
+ExecStart=btrbk run
