@@ -3,4 +3,4 @@ Description=Backup and snapshot
 
 [Service]
 Type=simple
-ExecStart=btrbk run
+ExecStart=sh -c 'notify-send -a "Backup" "Starting..."; btrbk run; notify-send -a "Backup" Complete!'
