@@ -247,7 +247,7 @@ bindsym $mod+a mode "resize"
 ## i3 development
 
 # Reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r restart
 
 
 ## Start programs
