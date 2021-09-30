@@ -34,7 +34,7 @@ zstyle :prompt:pure:git:stash show yes
 prompt pure
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/icelk/.zshrc'
+zstyle :compinstall filename ~/.zshrc
 
 autoload -Uz compinit
 compinit
