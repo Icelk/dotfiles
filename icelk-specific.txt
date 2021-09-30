@@ -3,20 +3,6 @@
 root/getty.conf
 3:ExecStart=-/usr/bin/agetty --autologin icelk --noclear %I $TERM
 
-root/rsnapshot.conf
-130:lockfile	/home/icelk/.rsnapshot.pid
-164:exclude	/home/icelk/nas/
-165:exclude	/home/icelk/.local/share/Steam/
-166:exclude	/home/icelk/.cache/
-167:exclude	/home/icelk/.cargo/
-168:exclude	/home/icelk/.rustup/
-169:exclude	/home/icelk/.wine/drive_c/
-170:exclude	/home/icelk/.tor-browser/
-171:exclude	/home/icelk/.ccache/
-172:exclude	/home/icelk/.npm
-173:exclude	/home/icelk/dev/Rust/**target**
-183:exclude_file	/home/icelk/Exclude-backup.txt
-
 root/hosts
 3:::1		localhost icelk
 4:127.0.0.1	localhost icelk
