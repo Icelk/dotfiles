@@ -9,6 +9,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'dag/vim-fish'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
