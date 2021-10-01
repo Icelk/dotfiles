@@ -98,7 +98,7 @@ bindsym $mod+Shift+s        $xs/service-toggle.sh spotifyd Services
 bindsym $mod+Shift+q        $x      "dunstctl close"
 bindsym Pause               $x      i3lock -c $lock-color
 bindsym $mod+Shift+c        $xs/clipcat-clear.sh
-bindsym $mod+r              $xs/service-restart.fish
+bindsym $mod+r              $xs/service-management.sh
 bindsym $mod+F1             $xs/xmodmap-toggle.sh
 
 
@@ -252,7 +252,7 @@ bindsym $mod+a mode "resize"
 ## i3 development
 
 # Reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r restart
 
 
 ## Start programs

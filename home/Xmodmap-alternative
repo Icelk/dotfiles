@@ -1,6 +1,6 @@
 ! The repeated Fn keys at the end are there to enable pressing the (actual) Fn keys with shift and alt.
 ! This is important; some programs don't accept Fn keys while holding shift.
-keycode 67 = F1
-keycode 68 = F2
-keycode 69 = F3
-keycode 70 = F4
+keycode 67 = F1 F1 F1 F1 F1 F1
+keycode 68 = F2 F2 F2 F2 F2 F2
+keycode 69 = F3 F3 F3 F3 F3 F3
+keycode 70 = F4 F4 F4 F4 F4 F4

@@ -1,8 +1,0 @@
-[Unit]
-Description=rsnapshot (%I) backup
-
-[Service]
-Type=simple
-Nice=19
-IOSchedulingClass=idle
-ExecStart=sh -c "~/scripts/rsnapshot.sh %I"

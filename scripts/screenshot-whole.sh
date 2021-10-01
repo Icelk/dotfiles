@@ -1,5 +1,5 @@
 #!/usr/bin/sh
-path=~/Pictures/screenshot.png
+path=~/Pictures/screenshot-"$(date "+%+4Y-%m-%d-%T")".png
 
 maim $path
 
