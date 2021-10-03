@@ -38,8 +38,7 @@ Restart
 Stop
 Start"
 
-mode=$(echo -e "$modes" | dm 3 "Mode" "prefix")
-
+mode=$(echo "$modes" | dm 3 "Mode" "prefix")
 
 case $mode in
     "Restart")
