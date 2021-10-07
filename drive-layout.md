@@ -1,10 +1,3 @@
-!> hide
-<head>
-    <title>TEST</title>
-    [highlight]
-</head>
-
-
 # Disks
 
 For the intents of this document, I have

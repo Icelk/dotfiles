@@ -38,21 +38,25 @@ Restart
 Stop
 Start"
 
-mode=$(echo -e "$modes" | dm 3 "Mode" "prefix")
+mode=$(echo "$modes" | dm 3 "Mode" "prefix")
 
+name="Service management"
 
 case $mode in
     "Restart")
         service=$(get-running-service "Restart")
         systemctl --user restart "$service"
+        notify-send -a "$name" "Restarted $service"
     ;;
     "Stop")
         service=$(get-running-service "Stop")
         systemctl --user stop "$service"
+        notify-send -a "$name" "Stopped $service"
     ;;
     "Start")
         service=$(get-inactive-service "Start")
         systemctl --user start "$service"
+        notify-send -a "$name" "Started $service"
     ;;
     *)
         exit 1
