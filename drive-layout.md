@@ -135,5 +135,5 @@ nas:/mnt/main/file_share			/share			nfs	defaults,_netdev,noauto,x-systemd.automo
 ##---------
 
 # LUKS-encrypted partition when unlocked.
-UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	nofail,x-systemd.device-timeout=1ms,compress-force=zstd	0  0
+UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	noauto,nofail,compress-force=zstd	0  0
 ```
