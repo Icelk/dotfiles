@@ -87,6 +87,7 @@ numlockx
 nvidia
 nvidia-dkms
 nvidia-settings
+nvtop
 obs-studio
 obsidian
 ocl-icd
