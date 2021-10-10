@@ -10,6 +10,6 @@ for m in $(polybar --list-monitors | cut -d ":" -f1); do
         export TRAY_POSITION=none
     fi
 
-    polybar -c ~/.config/polybar/config.ini -r main &
+    polybar -c ~/.config/polybar/config.ini -r main -l warning &
 done
 wait
