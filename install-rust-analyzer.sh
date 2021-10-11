@@ -10,6 +10,16 @@ gzip -d rust-analyzer.gz
 
 chmod +x rust-analyzer
 
+mkdir -p ~/.local/bin/coc-rust-analyzer-data
+
+mv ~/.config/coc/extensions/coc-rust-analyzer-data/* ~/.local/bin/coc-rust-analyzer-data/
+
+rm -rf ~/.config/coc/extensions/coc-rust-analyzer-data
+
+ln -sf ~/.local/bin/coc-rust-analyzer-data ~/.config/coc/extensions/coc-rust-analyzer-data
+
+ln -sf ~/.local/bin/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/
+
 mv -i rust-analyzer ~/.local/bin
 
 if test -f "rust-analyzer"; then
