@@ -63,7 +63,7 @@ filetype plugin indent on
 " Adds folding by syntax
 set fdm=syntax
 " Highlight symbol under cursor on CursorHold
-if exists("CocActionAsync")
+if exists(":CocAction")
     autocmd CursorHold * silent call CocActionAsync('highlight')
 endif
 " Set CursorHold time to 0.5 seconds
@@ -208,9 +208,6 @@ xmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
