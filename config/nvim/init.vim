@@ -63,9 +63,9 @@ filetype plugin indent on
 " Adds folding by syntax
 set fdm=syntax
 " Highlight symbol under cursor on CursorHold
-if exists(":CocAction")
+autocmd VimEnter * if exists(":CocAction")
     autocmd CursorHold * silent call CocActionAsync('highlight')
-endif
+
 " Set CursorHold time to 0.5 seconds
 set updatetime=300
 " Set color scheme to gruvbox
