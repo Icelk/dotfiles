@@ -3,6 +3,7 @@ amd-ucode
 audacity
 autoconf
 automake
+baobab
 base
 binutils
 bison
