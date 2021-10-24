@@ -104,7 +104,8 @@ UUID=<redacted>	/misc		btrfs		noatime,compress-force=zstd,autodefrag	0 0
 
 # Archive
 # /dev/sdx1 LABEL=archive
-UUID=<redacted>	/archive  	btrfs      	noatime,compress=zstd,autodefrag,noauto,x-systemd.after=local-fs.target     0 0
+# nofail causes the mount to be async, a no part of the boot process requires the archive drive.
+UUID=<redacted>	/archive  	btrfs      	noatime,compress=zstd,autodefrag,nofail     0 0
 
 
 ##--------
