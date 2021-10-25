@@ -10,8 +10,7 @@ For the intents of this document, I have
 
 I'm using [btrbk](https://github.com/digint/btrbk) with systemd timers.
 
-I snapshot my SSD one a day and keep them for 14 days.
-I backup my SSD to my HDD.
+I snapshot my SSD one a day and keep them for 14 days.  I backup my SSD to my HDD.
 I back up all my drives (including my win drive, HDD, SSD, drives for supporting data such as games)
 to the NAS via `rsync` and use ZFS snapshots on the NAS.
 
@@ -105,7 +104,8 @@ UUID=<redacted>	/misc		btrfs		noatime,compress-force=zstd,autodefrag	0 0
 
 # Archive
 # /dev/sdx1 LABEL=archive
-UUID=<redacted>	/archive  	btrfs      	noatime,compress=zstd,autodefrag 0 0
+# nofail causes the mount to be async, a no part of the boot process requires the archive drive.
+UUID=<redacted>	/archive  	btrfs      	noatime,compress=zstd,autodefrag,nofail     0 0
 
 
 ##--------
@@ -135,5 +135,5 @@ nas:/mnt/main/file_share			/share			nfs	defaults,_netdev,noauto,x-systemd.automo
 ##---------
 
 # LUKS-encrypted partition when unlocked.
-UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	nofail,x-systemd.device-timeout=1ms,compress-force=zstd	0  0
+UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	noauto,nofail,compress-force=zstd	0  0
 ```

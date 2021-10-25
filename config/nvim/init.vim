@@ -63,9 +63,8 @@ filetype plugin indent on
 " Adds folding by syntax
 set fdm=syntax
 " Highlight symbol under cursor on CursorHold
-if exists("CocActionAsync")
-    autocmd CursorHold * silent call CocActionAsync('highlight')
-endif
+autocmd VimEnter * if exists(":CocAction") | autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " Set CursorHold time to 0.5 seconds
 set updatetime=300
 " Set color scheme to gruvbox
@@ -79,9 +78,10 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Expand rust macro
-" command! -nargs=0 rsx :CocCommand rust-analyzer.expandMacro
+" Expand Rust macro
 nmap <C-x> :CocCommand rust-analyzer.expandMacro<CR>
+" Open official web docs in Rust
+nmap <C-d> :CocCommand rust-analyzer.openDocs<CR>
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -202,15 +202,9 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
-" Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
