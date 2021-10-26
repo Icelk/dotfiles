@@ -119,7 +119,13 @@ l -f $wdr/pacman.conf /etc/
 # ln -sf $wdr/reflector.conf /etc/xdg/reflector/
 echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
 
+# Configure DNSSEC and DNS-over-TLS
+mkdir -p /etc/systemd/resolved.conf.d
+cp -f $wdr/dns.conf /etc/systemd/resolved.conf.d/cloudflare.conf
+l -f  $wdr/dhcpcd.conf /etc/
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), and CUPS (printing)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups systemd-resolved
