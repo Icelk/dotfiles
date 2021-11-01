@@ -8,6 +8,8 @@ Removing the Nvidia packages, tweaking the Xorg config and changing the [ucode](
 
 > **Important**: Use Btrfs while installing Arch, not Ext4!
 
+![screenshot of my rice](images/nvim-matrix-neofetch-kvarn.png)
+
 ## Branches
 
 To use this setup on multiple systems, I've got multiple branches.
