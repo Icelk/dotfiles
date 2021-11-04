@@ -141,6 +141,7 @@ wine-gecko
 wine-mono
 wine-staging
 winetricks
+wireplumber
 xclip
 xdg-user-dirs
 xdg-utils
