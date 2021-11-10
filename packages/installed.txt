@@ -16,10 +16,12 @@ ccache
 clang
 cmake
 compsize
+cross
 cups
 deepin-gtk-theme
 dhcpcd
 dnsmasq
+docker
 dosfstools
 dunst
 edk2-ovmf
