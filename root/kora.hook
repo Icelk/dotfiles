@@ -7,4 +7,4 @@ Target = kora-icon-theme
 [Action]
 Description = Removing unwanted icons
 When = PostTransaction
-Exec = /usr/bin/sh -c 'cd /usr/share/icons/kora/apps/scalable && rm inkscape.svg neovim.svg org.freedesktop.Piper.svg org.xfce.volman.svg virt-manager.svg minecraft.svg minecraft-launcher.svg thunar.svg thunar-filemanager.svg file-manager.svg Thunar.svg preferences-desktop-theme.svg'
+Exec = /usr/bin/sh -c 'cd /usr/share/icons/kora/apps/scalable && rm inkscape.svg neovim.svg org.freedesktop.Piper.svg org.xfce.volman.svg virt-manager.svg minecraft.svg minecraft-launcher.svg thunar.svg thunar-filemanager.svg file-manager.svg Thunar.svg preferences-desktop-theme.svg gimp.svg'
