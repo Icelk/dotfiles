@@ -103,6 +103,7 @@ patch
 picom-ibhagwan-git
 piper
 pipewire
+pipewire-alsa
 pipewire-pulse
 pkgconf
 playerctl
