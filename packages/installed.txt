@@ -18,15 +18,13 @@ candy-icons-git
 cargo-bloat
 cargo-flamegraph
 clang
-cmake
-cross
+compsize
 cups
 darktable
 dbus-broker
 deno
 dhcpcd
 dnsmasq
-docker
 dosfstools
 dunst
 easyeffects
@@ -154,6 +152,9 @@ ttc-iosevka-etoile
 ttf-dejavu
 ttf-roboto
 tumbler
+typescript
+unzip
+ventoy-bin
 watchexec
 waybar
 which
