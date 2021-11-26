@@ -13,14 +13,11 @@ breeze-hacked-cursor-theme
 btrbk
 ccache
 clang
-cmake
 compsize
-cross
 cups
 deepin-gtk-theme
 dhcpcd
 dnsmasq
-docker
 dosfstools
 dunst
 edk2-ovmf
@@ -137,8 +134,8 @@ which
 wine-gecko
 wine-mono
 wine-staging
-x86_energy_perf_policy
 wireplumber
+x86_energy_perf_policy
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
