@@ -13,11 +13,14 @@ breeze-hacked-cursor-theme
 btrbk
 ccache
 clang
+cmake
 compsize
+cross
 cups
 deepin-gtk-theme
 dhcpcd
 dnsmasq
+docker
 dosfstools
 dunst
 edk2-ovmf
@@ -96,6 +99,7 @@ patch
 picom-ibhagwan-git
 piper
 pipewire
+pipewire-alsa
 pipewire-pulse
 pkgconf
 playerctl
@@ -134,7 +138,7 @@ wine-gecko
 wine-mono
 wine-staging
 x86_energy_perf_policy
-xclip
+wireplumber
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
@@ -144,5 +148,6 @@ xorg-xev
 xorg-xinit
 xorg-xrandr
 xorg-xwininfo
+xsel
 yad
 zip

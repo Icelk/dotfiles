@@ -14,7 +14,6 @@ curl -Ls https://unsplash.com/photos/c9AQD0ZwOsI/download?force=true -o "blue an
 curl -Ls https://unsplash.com/photos/TlrVTwdg7LA/download?force=true -o "brown sand with shadow of person.jpg" &
 curl -Ls https://unsplash.com/photos/iBq9gBaP9J4/download?force=true -o "purple jellyfish in water during daytime.jpg" &
 curl -Ls https://unsplash.com/photos/8BFWBUkSqQo/download?force=true -o "Yosemite National Park digital wallpaper.jpg" &
-curl -Ls https://unsplash.com/photos/89PFnHKg8HE/download?force=true -o "bird&#39;s view of tall trees covered with smokes.jpg" &
 curl -Ls https://unsplash.com/photos/M6XC789HLe8/download?force=true -o "photo of valley.jpg" &
 curl -Ls https://unsplash.com/photos/8c6eS43iq1o/download?force=true -o "mountains and tree range during golden hour.jpg" &
 curl -Ls https://unsplash.com/photos/RRLb2zFzRK8/download?force=true -o "grayscale of mountain covered with snow photo.jpg" &
