@@ -52,6 +52,17 @@ curl -Ls https://unsplash.com/photos/p3OzJuT_Dks/download?force=true -o "river o
 curl -Ls https://unsplash.com/photos/trnTvywx2Rg/download?force=true -o "thunderstorm with lightning.jpg" &
 curl -Ls https://unsplash.com/photos/7BjhtdogU3A/download?force=true -o "flowing river between tall trees.jpg" &
 curl -Ls https://unsplash.com/photos/YOxk_g6Daa4/download?force=true -o "silhouette of person on cliff.jpg" &
+curl -Ls https://unsplash.com/photos/nvBfwtaUBnI/download?force=true -o "iceberg mountain white.jpg" &
+curl -Ls https://unsplash.com/photos/kWsT6p_S3cY/download?force=true -o "iceberg blue cluster.jpg" &
+curl -Ls https://unsplash.com/photos/PXdBkNF8rlk/download?force=true -o "iceberg close-up foam.jpg" &
+curl -Ls https://unsplash.com/photos/yuF2B5Zyz88/download?force=true -o "iceberg valley.jpg" &
+curl -Ls https://unsplash.com/photos/RdLF_7_J5IM/download?force=true -o "iceberg blue pile.jpg" &
+curl -Ls https://unsplash.com/photos/VSGEH7tKiUg/download?force=true -o "iceberg refractive tilted.jpg" &
+curl -Ls https://unsplash.com/photos/E2nrh-aTkC8/download?force=true -o "iceberg reflection tall.jpg" &
+curl -Ls https://unsplash.com/photos/dEzd6GpIEys/download?force=true -o "iceberg mountain range.jpg" &
+curl -Ls https://unsplash.com/photos/eG7lZD9c5aI/download?force=true -o "iceberg soft.jpg" &
+curl -Ls https://unsplash.com/photos/VzEgZgibC5Y/download?force=true -o "iceberg grey pile.jpg" &
+curl -Ls https://unsplash.com/photos/N46IkbWUvMU/download?force=true -o "iceberg mountain contrast.jpg" &
 
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 
