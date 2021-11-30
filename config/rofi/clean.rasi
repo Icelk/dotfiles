@@ -1,6 +1,5 @@
 configuration {
     modi: "window,run,drun";
-    theme: "clean";
     show-icons: true;
     font: "FiraCode 11";
 }
