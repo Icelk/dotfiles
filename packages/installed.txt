@@ -127,6 +127,7 @@ ttc-iosevka-etoile
 ttf-dejavu
 ttf-roboto
 tumbler
+typescript
 unzip
 ventoy-bin
 watchexec
