@@ -76,13 +76,6 @@ l $wdc/nvim/coc-settings.json $hc/nvim/
 echo "${cb}The snippets are notoriously difficult to install. If you don't have any snippets in neovim, remove the folder at ~/.config/coc/ultisnips and rerun this.${cc}"
 l $wdc/nvim/snippets $hc/coc/ultisnips
 
-## Nitrogen
-# ln -s $wdc/nitrogen-saved.cfg $hc/nitrogen/bg-saved.cfg
-# This is user-specific
-echo
-echo "My saved backgrounds as a nitrogen save file is included, but not installed as it's user specific."
-echo
-
 ## Picom
 l $wdc/picom.conf $hc/picom/
 
