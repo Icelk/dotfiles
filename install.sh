@@ -156,6 +156,8 @@ systemctl --user enable --now xdg-user-dirs-update.service packages-dump.service
 # Hardware-dependent
 # systemctl --user enable --now sync.timer backup.timer
 
+systemctl --user enable --now dbus-broker
+
 echo
 
 echo "Install complete."

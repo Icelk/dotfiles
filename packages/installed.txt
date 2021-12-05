@@ -15,6 +15,7 @@ ccache
 clang
 compsize
 cups
+dbus-broker
 deepin-gtk-theme
 dhcpcd
 dnsmasq

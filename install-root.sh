@@ -131,4 +131,4 @@ echo "A reflector configuration file was included, but it contains location-spec
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), and CUPS (printing)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups dbus-broker
