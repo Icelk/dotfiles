@@ -20,9 +20,8 @@ cargo-flamegraph
 clang
 compsize
 cups
-darktable
 dbus-broker
-deno
+deepin-gtk-theme
 dhcpcd
 dnsmasq
 dosfstools
