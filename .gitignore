@@ -5,3 +5,4 @@ wallpapers/*.jpg
 # Ignore enabled services.
 config/systemd/timers.target.wants
 config/systemd/default.target.wants
+config/systemd/dbus.service

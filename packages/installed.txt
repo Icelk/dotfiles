@@ -18,6 +18,7 @@ cmake
 compsize
 cross
 cups
+dbus-broker
 deepin-gtk-theme
 dhcpcd
 dnsmasq
