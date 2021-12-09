@@ -5,7 +5,7 @@ declare -i iter
 while ! ssh -o ConnectTimeout=1 icelk@nas; do
     sleep 1
     iter+=1
-    if [ $iter -gt 10 ]; then
+    if [ $iter -gt 30 ]; then
         # Not connected to the home LAN
         exit 0
     fi
