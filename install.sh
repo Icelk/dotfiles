@@ -82,6 +82,10 @@ l $wdc/picom.conf $hc/picom/
 ## Polybar
 l $wdc/polybar.ini $hc/polybar/config.ini
 
+## Python
+
+l $wdc/python/ $hc/python
+
 ## Rofi
 l $wdc/rofi/ $hc/rofi
 
