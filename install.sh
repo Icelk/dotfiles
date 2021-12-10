@@ -89,6 +89,10 @@ l /usr/share/nvim/runtime/syntax/shared/typescriptcommon.vim $hc/nvim/syntax/sha
 
 l $wdc/python/ $hc/python
 
+## Python
+
+l $wdc/python/ $hc/python
+
 ## Rofi
 l $wdc/rofi/ $hc/rofi
 
