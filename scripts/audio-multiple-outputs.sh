@@ -36,6 +36,7 @@ if [ "$1" != "stop" ]; then
 
     for dev in "$@"
     do
+        dev=$(~/scripts/audio-get-device.sh "$dev")
         echo "Linking $dev."
         pw-link $ml $dev:$l
         pw-link $mr $dev:$r
