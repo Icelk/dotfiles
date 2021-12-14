@@ -18,9 +18,9 @@ rm -rf ~/.config/coc/extensions/coc-rust-analyzer-data
 
 ln -sf ~/.local/bin/coc-rust-analyzer-data ~/.config/coc/extensions/coc-rust-analyzer-data
 
-ln -sf ~/.local/bin/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/
+mv rust-analyzer ~/.local/bin/coc-rust-analyzer-data
 
-mv -i rust-analyzer ~/.local/bin
+ln -si ~/.local/bin/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/
 
 if test -f "rust-analyzer"; then
     rm rust-analyzer
