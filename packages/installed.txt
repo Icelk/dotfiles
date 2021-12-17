@@ -123,6 +123,7 @@ texinfo
 thunar
 thunar-volman
 tlp
+tldr
 tokei
 ttc-iosevka-aile
 ttc-iosevka-etoile
