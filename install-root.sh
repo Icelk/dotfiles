@@ -98,8 +98,14 @@ read -p "The following will override certain system files. Press Ctrl+C to quit.
 read -p "Please make sure this is what you want; it'll DELETE the target files!"
 read -p "Also make sure your user is part of the 'wheel' group as the doas configuration file only allows users in that group."
 
-# avahi
+# Networking: Avahi, Unbound, dhcpcd, resolv.conf
 l -f $wdr/nsswitch.conf /etc/
+l -f $wdr/unbound.conf /etc/unbound/
+l -f $wdr/dhcpcd.conf /etc/
+l -f $wdr/resolv.conf /etc/
+
+# Redis (used for DNS cache)
+l -f $wdr/redis.conf /etc/redis/
 
 # Reduced pam failure timeout
 l -f $wdr/pam-system-auth /etc/pam.d/system-auth
@@ -122,13 +128,7 @@ l -f $wdr/pacman.conf /etc/
 # ln -sf $wdr/reflector.conf /etc/xdg/reflector/
 echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
 
-# Configure DNSSEC and DNS-over-TLS
-# mkdir -p /etc/systemd/resolved.conf.d
-# cp -f $wdr/dns.conf /etc/systemd/resolved.conf.d/cloudflare.conf
-# l -f  $wdr/dhcpcd.conf /etc/
-# ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
-read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), and CUPS (printing)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups dbus-broker
+read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker

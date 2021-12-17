@@ -108,6 +108,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
+redis
 reflector
 ripgrep
 rofi
@@ -129,6 +130,7 @@ ttf-dejavu
 ttf-roboto
 tumbler
 typescript
+unbound
 unzip
 ventoy-bin
 watchexec

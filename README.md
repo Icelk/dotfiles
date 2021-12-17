@@ -35,6 +35,7 @@ I use
 - spotifyd
 - iwctl (for connecting to WiFi)
 - Blueman (for connecting to Bluetooth)
+- Unbound
 
 # Installation
 
