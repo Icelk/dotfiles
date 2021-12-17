@@ -144,6 +144,7 @@ texlive-luatex
 texlive-publishers
 thunar
 thunar-volman
+tldr
 tlp
 tokei
 ttc-iosevka-aile
