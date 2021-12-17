@@ -130,6 +130,7 @@ steam
 texinfo
 thunar
 thunar-volman
+tldr
 tokei
 tor-browser
 ttc-iosevka-aile
