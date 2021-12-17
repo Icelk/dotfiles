@@ -122,8 +122,8 @@ steam
 texinfo
 thunar
 thunar-volman
-tlp
 tldr
+tlp
 tokei
 ttc-iosevka-aile
 ttc-iosevka-etoile
