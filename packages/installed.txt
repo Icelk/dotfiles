@@ -116,6 +116,7 @@ pureref
 python-pip
 python-pynvim
 qemu
+redis
 reflector
 ripgrep
 rofi
@@ -137,6 +138,7 @@ ttf-dejavu
 ttf-roboto
 tumbler
 typescript
+unbound
 unzip
 ventoy-bin
 virt-manager

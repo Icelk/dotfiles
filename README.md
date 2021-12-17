@@ -33,6 +33,7 @@ I use
 - Brave
 - paru
 - spotifyd
+- Unbound
 
 # Installation
 
