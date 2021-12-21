@@ -160,5 +160,6 @@ xorg-xinit
 xorg-xrandr
 xorg-xwininfo
 xsel
+xsnow-comp-patch-git
 yad
 zip
