@@ -106,6 +106,7 @@ piper
 pipewire
 pipewire-alsa
 pipewire-pulse
+pipewire-zeroconf
 pkgconf
 playerctl
 plymouth-git
