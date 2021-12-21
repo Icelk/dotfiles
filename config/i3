@@ -35,7 +35,7 @@ for_window [class = "Rofi"] border pixel 0
 
 # Gaps
 gaps outer 0
-gaps inner 4
+gaps inner 12
 gaps top 20
 
 # Enable back and fourth
