@@ -3,4 +3,4 @@ Description=Send notifications from each line in ~/Reminder.txt
 
 [Service]
 Type=simple
-ExecStart=sh -c "~/scripts/reminder-send.sh"
+ExecStart=sh -c "~/scripts/reminder-send.fish"
