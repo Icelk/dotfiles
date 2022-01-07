@@ -153,6 +153,7 @@ winetricks
 wireplumber
 xdg-user-dirs
 xdg-utils
+xdotool
 xorg-server
 xorg-xauth
 xorg-xev
