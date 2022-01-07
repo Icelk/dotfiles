@@ -260,7 +260,7 @@ $sctlu restart picom
 $sctlu restart dunst
 
 # Status bar
-$sctlu restart polybar
+exec_always --no-startup-id "systemctl --user restart polybar"
 
 # Clipboard manager
 $sctlu restart clipcat
