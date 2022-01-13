@@ -12,6 +12,7 @@ brave-bin
 breeze
 breeze-hacked-cursor-theme
 btrbk
+cargo-flamegraph
 ccache
 clang
 cmake
