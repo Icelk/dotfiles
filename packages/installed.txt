@@ -1,5 +1,6 @@
 alsa-utils
 amd-ucode
+arc-gtk-theme
 audacity
 autoconf
 automake
@@ -10,8 +11,9 @@ bison
 blender
 brave-bin
 breeze
-breeze-hacked-cursor-theme
+breeze-hacked-cursor-theme-git
 btrbk
+candy-icons-git
 cargo-flamegraph
 ccache
 clang
@@ -129,6 +131,8 @@ sd
 spotify-tui
 starship
 steam
+sweet-cursor-theme-git
+sweet-gtk-theme-dark
 texinfo
 thunar
 thunar-volman
