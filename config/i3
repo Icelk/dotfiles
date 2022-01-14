@@ -125,6 +125,7 @@ bindsym XF86AudioPrev               $xs/playerctl-fast.sh previous
 #bindsym Shift+XF86AudioNext         $x playerctl position 5+
 #bindsym Shift+XF86AudioPrev         $x playerctl position 5-
 
+bindsym XF86AudioMute               $x pulsemixer --toggle-mute
 bindsym XF86AudioRaiseVolume        $x $pmc +5
 bindsym XF86AudioLowerVolume        $x $pmc -5
 
