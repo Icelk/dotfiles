@@ -1,4 +1,5 @@
 alsa-utils
+arc-gtk-theme
 audacity
 autoconf
 automake
@@ -9,8 +10,10 @@ bison
 blueman
 brave-bin
 breeze
-breeze-hacked-cursor-theme
+breeze-hacked-cursor-theme-git
 btrbk
+candy-icons-git
+cargo-flamegraph
 ccache
 clang
 compsize
@@ -120,6 +123,8 @@ sd
 spotify-tui
 starship
 steam
+sweet-cursor-theme-git
+sweet-gtk-theme-dark
 texinfo
 thunar
 thunar-volman
@@ -145,6 +150,7 @@ x86_energy_perf_policy
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
+xdotool
 xorg-server
 xorg-xauth
 xorg-xev

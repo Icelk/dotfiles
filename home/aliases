@@ -28,6 +28,10 @@ alias gf="git fetch"
 
 alias ga="git add"
 alias gaa="git add '*'"
+alias gap="git add -p"
+alias ge="git restore"
+alias gep="git restore -p"
+
 alias gc="git commit -m"
 alias gs="git status"
 alias gd="git diff"
@@ -62,7 +66,7 @@ alias cl="cargo clippy"
 alias ciwd="cargo install --path ."
 
 # Pacman / Paru
-alias pa="paru -S"
+alias pa="paru -Sy"
 alias pr="paru -Rns"
 alias pl="paru -Qi"
 alias pi="paru -Si"

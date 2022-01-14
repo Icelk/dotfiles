@@ -37,6 +37,60 @@ I use
 - Blueman (for connecting to Bluetooth)
 - Unbound
 
+# Themes
+
+I have theme support through [corpl](https://github.com/Icelk/iclu/tree/main/corpl).
+These are a few combinations of GTK themes, cursor themes, and my themes I like to use.
+
+> These are all of course available after you've [installed](#installation).
+
+> Adwaita is actually kina nice!
+
+You can change all these settings through the GUI program `lxappearance`.
+
+## General recommendations
+
+I can recommend the Arc Dark GTK theme, but think it's a bit difficult to read.
+The Breeze Hacked cursors are a long-time favourite for me.
+
+I prefer to use Roboto as the system font. Cantarell is also quite nice.
+Isoevka Aile is also quite nice.
+
+The theme collections below are formatted as follows:
+
+- My themes, accessible through `Meta (win) + Shift + t`
+- GTK theme (called `Widget` in `lxappearance`)
+- Mouse/cursor theme
+- Icon theme
+
+## OG
+
+- Any of my themes
+- Deepin Dark
+- Breeze Hacked
+- Kora
+
+## Clean
+
+- Light|dark (not "Dark split"!)
+- Adwaita dark
+- Sweet cursors
+- Breeze dark
+
+## Sweet
+
+- Dark
+- Sweet dark
+- Sweet cursors
+- Candy icons (incorrectly named, part of the Sweet set)
+
+## Balanced
+
+- Any
+- Arc dark
+- Sweet cursors
+- Candy icons
+
 # Installation
 
 I have provided install scripts in the root of this directory. By default they will symlink to this directory.
