@@ -40,6 +40,8 @@ I use
 I have theme support through [corpl](https://github.com/Icelk/iclu/tree/main/corpl).
 These are a few combinations of GTK themes, cursor themes, and my themes I like to use.
 
+[Flatery](https://store.kde.org/p/1332404/) (the black variant) is a icon theme I recommend that's not available in the AUR.
+
 > These are all of course available after you've [installed](#installation).
 
 > Adwaita is actually kina nice!
@@ -73,7 +75,7 @@ The theme collections below are formatted as follows:
 - Light|dark (not "Dark split"!)
 - Adwaita dark
 - Sweet cursors
-- Breeze dark
+- Breeze dark|[Flatery](https://store.kde.org/p/1332404/)
 
 ## Sweet
 
