@@ -149,8 +149,8 @@ wireplumber
 x86_energy_perf_policy
 xdg-user-dirs
 xdg-utils
-xf86-video-intel
 xdotool
+xf86-video-intel
 xorg-server
 xorg-xauth
 xorg-xev
