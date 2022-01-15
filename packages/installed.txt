@@ -57,6 +57,7 @@ i3-gaps
 i3lock
 inkscape
 iptables-nft
+juno-theme-git
 kdenlive
 kitty
 kora-icon-theme
