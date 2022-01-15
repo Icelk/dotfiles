@@ -78,6 +78,12 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Go to start/end of line in insert mode.
+imap <S-Left> <C-o>0
+imap <S-Right> <C-o>$
+imap <C-a> <C-o>0
+imap <C-e> <C-o>$
+
 " Expand Rust macro
 nmap <C-x> :CocCommand rust-analyzer.expandMacro<CR>
 " Open official web docs in Rust
