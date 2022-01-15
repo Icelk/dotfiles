@@ -11,6 +11,7 @@ bison
 blender
 brave-bin
 breeze
+breeze-gtk
 breeze-hacked-cursor-theme-git
 btrbk
 candy-icons-git
@@ -46,6 +47,7 @@ gimp
 git
 gn
 gnome-keyring
+gnome-themes-extra
 gparted
 gptfdisk
 groff
