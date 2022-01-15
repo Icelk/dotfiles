@@ -74,8 +74,15 @@ The theme collections below are formatted as follows:
 
 - Light|dark (not "Dark split"!)
 - Adwaita dark
+- Breeze
+- Breeze dark
+
+## Black
+
+- Dark
+- Adwaita dark
 - Sweet cursors
-- Breeze dark|[Flatery](https://store.kde.org/p/1332404/)
+- [Flatery](https://store.kde.org/p/1332404/)
 
 ## Sweet
 
