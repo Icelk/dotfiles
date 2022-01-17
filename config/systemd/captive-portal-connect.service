@@ -1,0 +1,7 @@
+[Unit]
+Description="Connect to the captive portal."
+After=network-online.target
+
+[Service]
+ExecStart=sh -c "~/scripts/captive-portal-connect.sh"
+Type=oneshot
