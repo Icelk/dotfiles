@@ -4,4 +4,4 @@ After=network-online.target
 
 [Service]
 ExecStart=sh -c "~/scripts/captive-portal-connect.fish"
-Type=oneshot
+Type=simple
