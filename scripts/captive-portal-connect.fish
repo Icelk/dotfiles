@@ -3,6 +3,7 @@
 set cjar "/tmp/captive-cookies.cookies"
 
 alias c="curl -c $cjar -b $cjar -iso /dev/null"
+alias ns="notify-send -a 'Captive portal'"
 
 # Echo to remove whitespaces
 set portal (curl -Is http://icelk.dev | grep "location: " | awk '{print $2}' | string trim)
@@ -11,18 +12,18 @@ set portal (curl -Is http://icelk.dev | grep "location: " | awk '{print $2}' | s
 set ip (echo $portal | rg -o "([0-9]+\.?)+")
 
 if test $status -ne 0
-    notify-send "Redirect not IP (we're already connected?)"
+    ns "Redirect not IP (we're already connected?)"
     exit 0
 end
 
-notify-send "Connecting to captive portal '$portal'".
+ns "Connecting to captive portal '$portal'".
 
 # Get cookies
 c $portal
 
-notify-send "Got cookies."
+ns "Got cookies."
 
 # Submit
 c $portal -d "connect="
 
-notify-send "Connected!"
+ns "Connected!"

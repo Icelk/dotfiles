@@ -45,3 +45,5 @@ These settings in `about:config` are changed:
 - `apz.fling_friction = 0.006
 apz.fling_stopped_threshold = 0.05` (Make flinging have more friction)
 - `apz.overscroll.enabled = true` (enable overscroll like on macOS. Makes flinging feel nicer)
+- `full-screen-api.warning.timeout = 0` (disable "Now in fullscreen" prompt)
+- `general.smoothScroll.msdPhysics.enabled = true` (smoother scroll)

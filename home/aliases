@@ -15,8 +15,11 @@ alias sssh="kitty +kitten ssh use-python"
 alias replace="~/scripts/replace.sh"
 
 # Systemctl
-alias sctl="sudo systemctl"
+alias sctl="doas systemctl"
 alias sctlu="systemctl --user"
+## Use `-f` after the unit name to follow.
+alias jctl="journalctl -eu"
+alias jctlu="journalctl --user -eu"
 
 # Git
 alias gclo="git clone"
