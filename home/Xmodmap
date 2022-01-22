@@ -4,3 +4,4 @@ keysym F1 = bracketleft F1 F1 F1 F1 F1
 keysym F2 = bracketright F2 F2 F2 F2 F2
 keysym F3 = braceleft F3 F3 F3 F3 F3
 keysym F4 = braceright F4 F4 F4 F4 F4
+keycode 35 = slash backslash slash backslash ampersand dead_circumflex ampersand dead_circumflex
