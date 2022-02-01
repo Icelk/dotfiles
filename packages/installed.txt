@@ -131,6 +131,7 @@ rustup
 scour
 sd
 spotify-tui
+sshfs
 starship
 steam
 sweet-cursor-theme-git
