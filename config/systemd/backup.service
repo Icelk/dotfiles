@@ -3,4 +3,4 @@ Description=Backup and snapshot
 
 [Service]
 Type=simple
-ExecStart=sh -c 'sleep 30; notify-send -a "Backup" "Starting..."; btrbk run; notify-send -a "Backup" Complete!'
+ExecStart=sh -c '~/scripts/wait-to-after-boot.fish 40; notify-send -a "Backup" "Starting..."; btrbk run; notify-send -a "Backup" Complete!'
