@@ -3,31 +3,19 @@
 
     # --- Display --- #
 
-    # The monitor to be displayed to
-    monitor = 0
-
     # Follow monitor with mouse
-    #follow = none
     follow = mouse
 
-    # The geometry of the window
-    #   [{width}]x{height}[+/-{x}+/-{y}]
-    geometry = "270x6-24+68"
+    width = 350
+    offset = 24x48
+
+    notification_limit = 15
 
     # Show how many messages are hidden
     indicate_hidden = yes
 
-    # Shrink window if it's smaller than the width.
-    shrink = no
-
-    # The transparency of the window.
-    transparency = 1
-
-    # Set height to padding + font size
-    notification_height = 0
-
     # Draw a line between multiple notifications
-    separator_height = 3
+    separator_height = 2
     
     # CORPL section separator_color = "#
     # c5c8c69f" # dark
@@ -35,8 +23,8 @@
     # CORPL end
 
     # Set notification padding
-    padding = 16
-    horizontal_padding = 16
+    padding = 8
+    horizontal_padding = 8
 
     # Disable frame (border)
     frame_width = 0
@@ -74,29 +62,14 @@
     markup = full
     format = "<b>%a</b>\n%s"
 
-    # Left align the text
-    alignment = left
-
-    # Vertical alignment of message text and icon.
-    vertical_alignment = center
-
     # Show age of message if message is old
     show_age_threshold = 30
-
-    # Wrap text if it doesn't fit in geometry
-    word_wrap = yes
-
-    # Where to place ellipses if word wrap is disabled
-    # ellipsize = middle
 
     # Use newlines '\n' in notifications.
     ignore_newline = no
 
     # Don't stack together notifications
-    stack_duplicates = false
-
-    # Hide the count of stacked notifications
-    # hide_duplicate_count = false
+    stack_duplicates = true
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -108,14 +81,14 @@
     icon_position = left
 
     # Scale small icons up to this size, set to 0 to disable.
-    min_icon_size = 0
+    min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 64
+    max_icon_size = 32
 
     # Paths to default icons.
-    #icon_path = /usr/share/icons/
-    icon_path = /usr/share/icons/kora/emotes/scalable:/usr/share/icons/kora/actions/scalable:/usr/share/icons/kora/apps/scalable:/usr/share/icons/kora/categories/scalable:/usr/share/icons/kora/mimetypes/scalable:/usr/share/icons/kora/emblems/scalable:/usr/share/icons/kora/emotes/symbolic:/usr/share/icons/kora/actions/symbolic:/usr/share/icons/kora/apps/symbolic:/usr/share/icons/kora/categories/symbolic:/usr/share/icons/kora/mimetypes/symbolic:/usr/share/icons/kora/emblems/symbolic
+    icon_theme = kora
+    enable_recursive_icon_lookup = true
 
 
     # --- History --- #
@@ -138,34 +111,13 @@
     # Define the class of the windows spawned by dunst
     class = Dunst
 
-    # Avoid printing a notification on startup
-    startup_notification = false
-
-    # Manage Dunst's desire for talking
-    verbosity = mesg
-
     # Define the corner radius of the notification window
     corner_radius = 0
-
-    # Don't ignore the dbus closeNotification message.
-    ignore_dbusclose = false
-
-
-    # --- Legacy --- #
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    force_xinerama = false
-
 
     # --- Mouse --- #
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
-
-
-[experimental]
-    per_monitor_dpi = false
-
 
 # --- Colors --- #
 
