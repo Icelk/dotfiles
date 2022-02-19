@@ -45,7 +45,7 @@ curl -Ls https://unsplash.com/photos/vaPoJZB9Mzg/download?force=true -o "Mountai
 curl -Ls https://unsplash.com/photos/-g7axSVst6Y/download?force=true -o "landscape mountain ranges under purple and pink skies photo.jpg" &
 curl -Ls https://unsplash.com/photos/h8nxGssjQXs/download?force=true -o "silhouette of off-road car.jpg" &
 curl -Ls https://unsplash.com/photos/hgGplX3PFBg/download?force=true -o "clouds during golden hour.jpg" &
-curl -Ls https://unsplash.com/photos/5477L9Z5eqI/download?force=true -o "Hurricane as seen from space.jpg" &
+curl -Ls https://unsplash.com/photos/5477L9Z5eqI/download?force=true -o "hurricane 1.jpg" &
 curl -Ls https://unsplash.com/photos/RbbdzZBKRDY/download?force=true -o "landscape mountains with cloudy skies during golden hour photo.jpg" &
 curl -Ls https://unsplash.com/photos/89PFnHKg8HE/download?force=true -o "bird's view of tall trees covered with smokes.jpg" &
 curl -Ls https://unsplash.com/photos/p3OzJuT_Dks/download?force=true -o "river overflow in between rock formation.jpg" &
@@ -63,6 +63,11 @@ curl -Ls https://unsplash.com/photos/dEzd6GpIEys/download?force=true -o "iceberg
 curl -Ls https://unsplash.com/photos/eG7lZD9c5aI/download?force=true -o "iceberg soft.jpg" &
 curl -Ls https://unsplash.com/photos/VzEgZgibC5Y/download?force=true -o "iceberg grey pile.jpg" &
 curl -Ls https://unsplash.com/photos/N46IkbWUvMU/download?force=true -o "iceberg mountain contrast.jpg" &
+
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9F%D1%96%D1%81%D0%BB%D1%8F_%D0%B1%D1%83%D0%BD%D1%82%D1%83.jpg -o "snow covered mountain with clouds.jpg"
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg -o "bird catching fish.jpg"
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg"
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg -o "hurricane 2.jpg"
 
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 
