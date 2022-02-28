@@ -12,12 +12,12 @@
 
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.cargo.allFeatures": true,
-    "rust-analyzer.lens.references": true,
+    "rust-analyzer.lens.references": false,
     "rust-analyzer.assist.importPrefix": "self",
     "rust-analyzer.assist.importGranularity": "module",
     "rust-analyzer.procMacro.enable": true,
 
-    "codeLens.enable": true,
+    "codeLens.enable": false,
 
     "html.autoClosingTags": true,
 
