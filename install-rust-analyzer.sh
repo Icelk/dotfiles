@@ -11,6 +11,7 @@ gzip -d rust-analyzer.gz
 chmod +x rust-analyzer
 
 mkdir -p ~/.local/bin/coc-rust-analyzer-data
+mkdir -p ~/.config/coc/extensions/coc-rust-analyzer-data
 
 mv ~/.config/coc/extensions/coc-rust-analyzer-data/* ~/.local/bin/coc-rust-analyzer-data/
 
