@@ -91,6 +91,7 @@ npm
 nss-mdns
 ntfs-3g
 numlockx
+oath-toolkit
 obs-studio
 obsidian
 ocl-icd

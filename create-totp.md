@@ -1,0 +1,4 @@
+- Add to device (e.g. USB memory) at (`totp/<service name>`).
+- Copy backup codes and `gpg --symmetric` them. Removed the plaintext codes.
+- Copy backup codes (encrypted) to a remote storage (e.g. NAS). Also save on as many disks as possible.
+- Use `scripts/totp.fish` to generate codes (uses the device).
