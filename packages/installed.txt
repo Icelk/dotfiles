@@ -37,6 +37,7 @@ firefox-tridactyl
 fish
 frei0r-plugins
 fuse2
+fwupd
 gcc
 gimp
 git
@@ -130,6 +131,7 @@ starship
 steam
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
+termdown
 texinfo
 thunar
 thunar-volman
