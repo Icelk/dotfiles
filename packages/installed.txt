@@ -56,6 +56,7 @@ gvfs-afc
 hexedit
 i3-gaps
 i3lock
+inkscape
 intel-media-driver
 intel-ucode
 iptables-nft
