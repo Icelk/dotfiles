@@ -41,6 +41,7 @@ firefox-tridactyl
 fish
 frei0r-plugins
 fuse2
+fwupd
 gamemode
 gcc
 gimp
