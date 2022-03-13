@@ -34,7 +34,7 @@ alias gaa="git add '*'"
 alias gap="git add -p"
 alias ge="git restore"
 alias gep="git restore -p"
-alias gep="git reset -p"
+alias grp="git reset -p"
 
 alias gc="git commit -m"
 alias gs="git status"
