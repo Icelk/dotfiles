@@ -118,6 +118,9 @@ l -f $wdr/makepkg.conf /etc/
 cp $wdr/doas.conf /etc/
 chown root:root /etc/doas.conf
 
+# journalctl max size
+l -f $wdr/journald.conf /etc/systemd/
+
 # pacman
 l -f $wdr/pacman.conf /etc/
 
