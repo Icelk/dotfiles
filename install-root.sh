@@ -100,12 +100,14 @@ read -p "Also make sure your user is part of the 'wheel' group as the doas confi
 
 # Networking: Avahi, Unbound, dhcpcd, resolv.conf
 l -f $wdr/nsswitch.conf /etc/
-l -f $wdr/unbound.conf /etc/unbound/
+unlink /etc/unbound/unbound.conf
+cp $wdr/unbound.conf /etc/unbound/
 l -f $wdr/dhcpcd.conf /etc/
 l -f $wdr/resolv.conf /etc/
 
 # Redis (used for DNS cache)
-l -f $wdr/redis.conf /etc/redis/
+unlink /etc/redis/redis.conf
+cp $wdr/redis.conf /etc/redis/
 
 # Reduced pam failure timeout
 l -f $wdr/pam-system-auth /etc/pam.d/system-auth
@@ -120,6 +122,9 @@ l -f $wdr/makepkg.conf /etc/
 # doas
 cp $wdr/doas.conf /etc/
 chown root:root /etc/doas.conf
+
+# journalctl max size
+l -f $wdr/journald.conf /etc/systemd/
 
 # pacman
 l -f $wdr/pacman.conf /etc/

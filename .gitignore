@@ -6,3 +6,6 @@ wallpapers/*.jpg
 config/systemd/timers.target.wants
 config/systemd/default.target.wants
 config/systemd/dbus.service
+
+# Ignore generated completions for Fish
+config/fish/completions
