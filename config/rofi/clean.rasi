@@ -1,7 +1,7 @@
 configuration {
     modi: "window,run,drun";
     show-icons: true;
-    font: "FiraCode 11";
+    font: "Fira Code 11";
 }
 
 @import "colors.rasi"
