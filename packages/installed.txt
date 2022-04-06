@@ -14,6 +14,7 @@ breeze-gtk
 breeze-hacked-cursor-theme-git
 btrbk
 candy-icons-git
+cargo-bloat
 cargo-flamegraph
 ccache
 clang
