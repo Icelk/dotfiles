@@ -69,6 +69,8 @@ curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Ris
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg" &
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg -o "hurricane 2.jpg" &
 
+curl -Ls "https://cdn-hz.skypixel.com/uploads/cn_files/photo/image/5225822e-73ee-4efc-905e-ade2deceb0db.jpg@!1920" -o "garden blossom.jpg" &
+
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 
 echo "Downloading..."
