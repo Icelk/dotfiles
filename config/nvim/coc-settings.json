@@ -1,14 +1,7 @@
 {
-  "suggest.noselect": false,
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnTypeFiletypes": [
-        "javascript",
-        "typescript",
-        "json",
-        "graphql",
-        "html",
-        "css"
-    ],
+    "suggest.noselect": false,
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnTypeFiletypes": ["javascript", "typescript", "json", "graphql", "html", "css"],
 
     "semanticTokens.filetypes": ["*"],
 
