@@ -52,7 +52,7 @@ function l {
 l $wdc/dunstrc $hc/dunst/
 
 ## Cargo
-l $wdc/cargo ~/.cargo/config
+l $wdc/cargo.toml ~/.cargo/config.toml
 
 ## Clipcat
 l $wdc/clipcat/ $hc/clipcat
