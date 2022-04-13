@@ -41,7 +41,7 @@ curl -Ls https://unsplash.com/photos/R44UWCU7pwg/download?force=true -o "brown m
 curl -Ls https://unsplash.com/photos/aT3VvFtsEQ8/download?force=true -o "aerial of lake viewing mountain under orange skies photo.jpg" &
 curl -Ls https://unsplash.com/photos/k6SFjtLiZWI/download?force=true -o "brown and black rock formations.jpg" &
 curl -Ls https://unsplash.com/photos/suSwPNTaQ5Q/download?force=true -o "aerial view of land.jpg" &
-curl -Ls https://unsplash.com/photos/vaPoJZB9Mzg/download?force=true -o "Mountains during golden hour.jpg" &
+curl -Ls https://unsplash.com/photos/vaPoJZB9Mzg/download?force=true -o "mountains golden hour.jpg" &
 curl -Ls https://unsplash.com/photos/-g7axSVst6Y/download?force=true -o "landscape mountain ranges under purple and pink skies photo.jpg" &
 curl -Ls https://unsplash.com/photos/h8nxGssjQXs/download?force=true -o "silhouette of off-road car.jpg" &
 curl -Ls https://unsplash.com/photos/hgGplX3PFBg/download?force=true -o "clouds during golden hour.jpg" &
@@ -64,10 +64,12 @@ curl -Ls https://unsplash.com/photos/eG7lZD9c5aI/download?force=true -o "iceberg
 curl -Ls https://unsplash.com/photos/VzEgZgibC5Y/download?force=true -o "iceberg grey pile.jpg" &
 curl -Ls https://unsplash.com/photos/N46IkbWUvMU/download?force=true -o "iceberg mountain contrast.jpg" &
 
-curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9F%D1%96%D1%81%D0%BB%D1%8F_%D0%B1%D1%83%D0%BD%D1%82%D1%83.jpg -o "snow covered mountain with clouds.jpg"
-curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg -o "bird catching fish.jpg"
-curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg"
-curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg -o "hurricane 2.jpg"
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9F%D1%96%D1%81%D0%BB%D1%8F_%D0%B1%D1%83%D0%BD%D1%82%D1%83.jpg -o "snow covered mountain with clouds.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg -o "bird catching fish.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg -o "hurricane 2.jpg" &
+
+curl -Ls "https://cdn-hz.skypixel.com/uploads/cn_files/photo/image/5225822e-73ee-4efc-905e-ade2deceb0db.jpg@!1920" -o "garden blossom.jpg" &
 
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 

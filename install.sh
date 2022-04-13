@@ -152,6 +152,9 @@ l $wdh/Exclude-backup-usr-share.txt ~/
 l $wdh/Exclude-backup-win.txt ~/
 l $wdh/Exclude-backup-home.txt ~/
 
+# GNOME settings (which libadwaita uses)
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 echo
 
 echo "Enabling user services. Only the hardware-independent are enabled. See this script for the others and the systemd directory."
