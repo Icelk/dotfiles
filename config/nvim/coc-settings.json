@@ -10,7 +10,7 @@
         "css"
     ],
 
-    "semanticTokens.filetypes": ["rust", "typescript"],
+    "semanticTokens.filetypes": ["*"],
 
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.cargo.allFeatures": true,
