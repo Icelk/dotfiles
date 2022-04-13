@@ -11,7 +11,6 @@
     "rust-analyzer.assist.importGranularity": "module",
     "rust-analyzer.inlayHints.typeHintsSeparator": "",
     "rust-analyzer.inlayHints.chainingHintsSeparator": "",
-    "rust-analyzer.inlayHints.refreshOnInsertMode": true,
 
     "codeLens.enable": true,
     "codeLens.position": "right_align",
