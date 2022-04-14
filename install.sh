@@ -58,6 +58,10 @@ l $wdc/cargo.toml ~/.cargo/config.toml
 l $wdc/clipcat/ $hc/clipcat
 mkdir -p ~/.cache/clipcat/clipcatd
 
+## Firefox
+
+l $wdc/firefox-user.js ~/.mozilla/firefox/$(/bin/ls -1 ~/.mozilla/firefox/ | rg --pcre2 "^(?!static-).*\\.default-release" | head -n1)/user.js
+
 ## Fish
 l $wdc/fish/ $hc/fish
 
