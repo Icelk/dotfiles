@@ -65,8 +65,10 @@ alias cbr="cargo build --release"
 alias cr="cargo run"
 alias crr="cargo run --release"
 alias ct="cargo test"
+alias ctw="cargo test --workspace"
 alias ca="cargo add"
 alias cl="cargo clippy"
+alias clw="cargo clippy --workspace"
 alias ciwd="cargo install --path ."
 
 # Pacman / Paru
