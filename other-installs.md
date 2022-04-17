@@ -31,7 +31,7 @@ I use these extensions:
 - Forget Me Not (great extension to clear unused `localstorage` and cookies)
 - Tridactyl (installed using `pacman`. Navigation with the keyboard)
 
-These settings in `about:config` are changed:
+These settings in `about:config` are changed (they are automatically applied when running the install script):
 - `browser.compactmode.show = true` (then go to "Customize toolbar" and select `Compact` in density)
 - `browser.search.hiddenOneOffs = Google,Amazon.co.uk` (hide awful search engines)
 - `gfx.webrender.all = true

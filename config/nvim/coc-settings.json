@@ -1,23 +1,19 @@
 {
-  "suggest.noselect": false,
-  "coc.preferences.formatOnTypeFiletypes": [
-        "javascript",
-        "typescript",
-        "json",
-        "graphql",
-        "rust",
-        "html",
-        "css"
-    ],
+    "suggest.noselect": false,
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnTypeFiletypes": ["javascript", "typescript", "json", "graphql", "html", "css"],
+
+    "semanticTokens.filetypes": ["*"],
 
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.cargo.allFeatures": true,
-    "rust-analyzer.lens.references": false,
     "rust-analyzer.assist.importPrefix": "self",
     "rust-analyzer.assist.importGranularity": "module",
-    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.inlayHints.typeHintsSeparator": "",
+    "rust-analyzer.inlayHints.chainingHintsSeparator": "",
 
-    "codeLens.enable": false,
+    "codeLens.enable": true,
+    "codeLens.position": "right_align",
 
     "html.autoClosingTags": true,
 

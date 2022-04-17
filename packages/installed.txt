@@ -16,7 +16,6 @@ btrbk
 candy-icons-git
 cargo-bloat
 cargo-flamegraph
-ccache
 clang
 compsize
 cups
@@ -124,6 +123,7 @@ ripgrep
 rofi
 rsync
 rustup
+sccache
 scour
 sd
 spotify-tui
