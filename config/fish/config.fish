@@ -12,6 +12,9 @@ if status --is-interactive
 
     bind \cb "bg"
 
+    # Fix https://github.com/mozilla/sccache/issues/837
+    SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
+
     starship init fish | source
     
     source ~/.aliases
