@@ -8,6 +8,7 @@ base
 binutils
 bison
 blueman
+bottles
 brave-bin
 breeze
 breeze-gtk
