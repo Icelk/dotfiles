@@ -1,7 +1,7 @@
 configuration {
     modi: "window";
     show-icons: true;
-    font: "FiraCode 10";
+    font: "Roboto 11";
 }
 
 @import "colors.rasi"
