@@ -1,5 +1,5 @@
 configuration {
     modi: "drun";
-    font: "Fira Code 14";
+    font: "Roboto 13";
 }
 @theme "icelk"
