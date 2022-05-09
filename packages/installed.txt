@@ -118,6 +118,7 @@ pkgconf
 playerctl
 plymouth-git
 polybar
+posy-cursors
 procs
 pulsemixer
 pureref
