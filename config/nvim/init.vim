@@ -100,11 +100,23 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 " Toggle ignorecase
 nmap <F8> :set ignorecase! ignorecase?<CR>
 
+" Close current window
+nmap <C-q> :clo<CR>
+
+" Go to next/prev git changes
+nmap [f :GitGutterPrevHunk<CR>
+nmap ]f :GitGutterNextHunk<CR>
+
+" Stage/revert hunk
+" I know this is ugly (g is usually the 'go to', but now it's Git!)
+nmap gs :GitGutterStageHunk<CR>
+nmap gu :GitGutterUndoHunk<CR>
+
 " Remap for rename current word
-map <F9> <Plug>(coc-rename)
+map <F9> <plug>(coc-rename)
 
 " Remap to go to definition
-map <F12> <Plug>(coc-definition)
+map <F12> <plug>(coc-definition)
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
