@@ -95,7 +95,6 @@ npm
 nss-mdns
 ntfs-3g
 numlockx
-nvidia
 nvidia-dkms
 nvidia-settings
 nvtop
@@ -124,7 +123,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
-qemu
+qemu-desktop
 redis
 reflector
 ripgrep
