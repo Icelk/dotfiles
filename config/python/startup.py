@@ -17,5 +17,29 @@ def quad(a, b, c):
     else:
         return [root1, root2]
 
+def sind(v):
+    return sin(radians(v))
+
+def cosd(v):
+    return cos(radians(v))
+
+def tand(v):
+    return tan(radians(v))
+
+def asind(x):
+    v=degrees(asin(x))
+    return [v, 180-v]
+
+def acosd(x):
+    v=degrees(acos(x))
+    return [v, 360-v]
+
+def atand(x):
+    v=degrees(atan(x))
+    return [v, 360-v]
+
+def cos_law(b, c, A):
+    return sqrt(b**2+c**2-2*b*c*cosd(A))
+
 g=9.8
 atm=101.3e3
