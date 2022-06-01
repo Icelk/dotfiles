@@ -14,12 +14,13 @@ if status --is-interactive
 
     # Fix https://github.com/mozilla/sccache/issues/837
     SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
-
-    starship init fish | source
     
     source ~/.aliases
 end
 
+if status --is-interactive && ! status --is-login
+    starship init fish | source
+end
 
 function on_exit --on-event fish_exit
     # Now logging out!
