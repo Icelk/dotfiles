@@ -24,6 +24,7 @@ cross
 cups
 dbus-broker
 deepin-gtk-theme
+deno
 dhcpcd
 dnsmasq
 docker
