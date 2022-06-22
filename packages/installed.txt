@@ -55,6 +55,7 @@ gptfdisk
 groff
 gvfs
 gvfs-afc
+gvfs-mtp
 hexedit
 htop
 i3-gaps
