@@ -158,6 +158,8 @@ unbound
 unzip
 ventoy-bin
 virt-manager
+wasm-bindgen
+wasm-pack
 watchexec
 which
 wine-gecko
