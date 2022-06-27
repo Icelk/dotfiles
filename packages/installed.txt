@@ -66,6 +66,7 @@ jdk-openjdk
 jdtls
 kdeconnect
 kitty
+kiwix-tools
 kora-icon-theme
 libheif
 libmpeg2
