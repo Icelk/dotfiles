@@ -53,7 +53,7 @@ set expandtab
 " Makes typing tabs more consistent
 set smarttab
 " Format on capital F
-nmap F :Format<CR>
+nmap <silent> F :Format<CR>
 " Open spelling suggestions on capital S
 nmap S z=
 " Enables plugins based on filetypes, such as syntax highlighting
@@ -85,9 +85,9 @@ imap <C-a> <C-o>0
 imap <C-e> <C-o>$
 
 " Expand Rust macro
-nmap <C-x> :CocCommand rust-analyzer.expandMacro<CR>
+nmap <silent> <C-x> :CocCommand rust-analyzer.expandMacro<CR>
 " Open official web docs in Rust
-nmap <C-d> :CocCommand rust-analyzer.openDocs<CR>
+nmap <silent> <C-d> :CocCommand rust-analyzer.openDocs<CR>
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -101,7 +101,7 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 nmap <F8> :set ignorecase! ignorecase?<CR>
 
 " Close current window
-nmap <C-q> :clo<CR>
+nmap <silent> <C-q> :clo<CR>
 
 " Go to next/prev git changes
 nmap [f :GitGutterPrevHunk<CR>
@@ -131,6 +131,7 @@ let g:NERDTreeIgnore = ['^node_modules$']
 let g:NETDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
 map <A-a> <plug>NERDCommenterToggle
+imap <A-a> <esc><plug>NERDCommenterToggle<cr>ki
 nmap <S-A-a> <plug>NERDCommenterAltDelims
 
 " ctrlp
@@ -208,6 +209,8 @@ nmap <leader>f  <Plug>(coc-format-selected)
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 map <C-a> <Plug>(coc-codeaction-selected)
+imap <C-A-space> <esc>:CocAction<cr>
+nmap <silent> <C-A-space> :CocAction<cr>
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)

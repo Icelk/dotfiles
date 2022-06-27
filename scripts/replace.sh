@@ -8,7 +8,7 @@ function print_help {
     echo
     echo "Arguments:"
     echo "    Replaces all occurrences of FIND in [directory] (defaults to '.') with REPLACE-WITH."
-    echo "    FIND can be a Regex."
+    echo "    FIND can be a Regex. If REPLACE-WITH is '<empty>', the matched text will be removed."
 
     exit 1
 }
@@ -53,6 +53,10 @@ if [ -z "$fd" ] || [ -z "$replace_with" ]; then
     echo "Must be run with at least two arguments."
     echo
     print_help
+fi
+
+if [ "$replace_with" == '<empty>' ]; then
+    replace_with=""
 fi
 
 dir=${dir:-"."}

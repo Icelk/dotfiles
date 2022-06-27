@@ -22,6 +22,7 @@ compsize
 cups
 dbus-broker
 deepin-gtk-theme
+deno
 dhcpcd
 dnsmasq
 dosfstools
@@ -150,6 +151,8 @@ typescript
 unbound
 unzip
 ventoy-bin
+wasm-bindgen
+wasm-pack
 watchexec
 which
 wine-gecko

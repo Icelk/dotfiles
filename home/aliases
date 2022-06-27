@@ -30,7 +30,7 @@ alias gpp="git pull && git push"
 alias gf="git fetch"
 
 alias ga="git add"
-alias gaa="git add '*'"
+alias gaa="git add --all"
 alias gap="git add -p"
 alias ge="git restore"
 alias gep="git restore -p"
