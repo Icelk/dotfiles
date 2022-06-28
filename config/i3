@@ -85,6 +85,7 @@ bindsym $mod+c              exec ~/.cargo/bin/clipcat-menu
 bindsym $mod+Shift+t        exec $sr/theme-change.fish
 bindsym $mod+space          exec rofi -show drun -modi drun -theme clean
 bindsym $mod+Pause          exec $sr/launch-powermenu.sh
+bindsym $mod+Shift+p        exec $sr/launch-powermenu.sh
 
 # No-ui utilities
 
@@ -119,6 +120,9 @@ bindsym XF86AudioPlay               $xs/playerctl-custom.fish
 bindsym XF86AudioPause              $xs/playerctl-custom.fish
 bindsym XF86AudioNext               $xs/playerctl-fast.sh next
 bindsym XF86AudioPrev               $xs/playerctl-fast.sh previous
+bindsym $mod+Shift+Ctrl+k           $xs/playerctl-custom.fish
+bindsym $mod+Shift+Ctrl+j           $xs/playerctl-fast.sh next
+bindsym $mod+Shift+Ctrl+l               $xs/playerctl-fast.sh previous
 
 #bindsym Shift+XF86AudioNext         $x playerctl position 5+
 #bindsym Shift+XF86AudioPrev         $x playerctl position 5-
