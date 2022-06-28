@@ -30,7 +30,7 @@ user_pref("layers.acceleration.force", true);
 
 // it says it itself
 user_pref("privacy.resistFingerprinting", true);
-user_pref("privacy.resistFingerprinting.testGranularityMask", 2);
+user_pref("privacy.resistFingerprinting.testGranularityMask", 4);
 user_pref("privacy.spoof_english", 1);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
