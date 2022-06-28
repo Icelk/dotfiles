@@ -21,7 +21,12 @@ function pctl_get
 end
 
 # Cache the initial status of spotifyd
-set spt_status (pctl_get "spotifyd" "PlaybackStatus")
+set spt_status ""
+if pactl list clients | grep -i spotifyd
+    set spt_status "Playing"
+else
+    set spt_status "Paused"
+end
 
 # Gets a media player (returned by `playerctl -l`). This prefers spotifyd above all other.
 function pref_spt

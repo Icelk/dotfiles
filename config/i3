@@ -99,7 +99,7 @@ bindsym $mod+Shift+q        $x      "dunstctl close"
 bindsym Pause               $x      i3lock -c $lock-color
 bindsym $mod+Shift+c        $xs/clipcat-clear.sh
 bindsym $mod+r              $xs/service-management.sh
-bindsym $mod+F1             $xs/xmodmap-toggle.sh
+bindsym $mod+Ctrl+1         $xs/xmodmap-toggle.sh
 
 
 ## Workspace locations
@@ -121,6 +121,9 @@ bindsym XF86AudioPlay               $xs/playerctl-custom.fish
 bindsym XF86AudioPause              $xs/playerctl-custom.fish
 bindsym XF86AudioNext               $xs/playerctl-fast.sh next
 bindsym XF86AudioPrev               $xs/playerctl-fast.sh previous
+bindsym $mod+Shift+Ctrl+k           $xs/playerctl-custom.fish
+bindsym $mod+Shift+Ctrl+j           $xs/playerctl-fast.sh next
+bindsym $mod+Shift+Ctrl+l               $xs/playerctl-fast.sh previous
 
 #bindsym Shift+XF86AudioNext         $x playerctl position 5+
 #bindsym Shift+XF86AudioPrev         $x playerctl position 5-
