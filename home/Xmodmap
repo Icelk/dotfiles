@@ -6,3 +6,4 @@ keysym F3 = braceleft F3 F3 F3 F3 F3
 keysym F4 = braceright F4 F4 F4 F4 F4
 keycode 35 = slash backslash slash backslash ampersand dead_tilde ampersand dead_tilde
 keycode 51 = apostrophe asterisk apostrophe asterisk dead_circumflex multiply dead_circumflex multiply
+keycode 21 = less dead_grave less dead_grave greater notsign greater
