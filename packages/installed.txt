@@ -61,6 +61,7 @@ htop
 i3-gaps
 i3lock
 inkscape
+inotify-tools
 iptables-nft
 kdenlive
 kitty
