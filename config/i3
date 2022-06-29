@@ -130,6 +130,8 @@ bindsym $mod+Shift+Ctrl+l               $xs/playerctl-fast.sh previous
 bindsym XF86AudioMute               $x pulsemixer --toggle-mute
 bindsym XF86AudioRaiseVolume        $x $pmc +5
 bindsym XF86AudioLowerVolume        $x $pmc -5
+bindsym $mod+Shift+period           $x $pmc +5
+bindsym $mod+Shift+comma            $x $pmc -5
 
 bindsym Shift+XF86AudioRaiseVolume  $x $pmc +1
 bindsym Shift+XF86AudioLowerVolume  $x $pmc -1
