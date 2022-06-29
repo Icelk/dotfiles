@@ -3,4 +3,4 @@
 numlockx
 
 setxkbmap se
-xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap-alternative
