@@ -89,16 +89,16 @@ bindsym $mod+Shift+p        exec $sr/launch-powermenu.sh
 
 # No-ui utilities
 
-bindsym $mod+Escape         $xs/sleep.sh
-bindsym $mod+Shift+Escape   $xs/xrandr-outputs-fix.sh
-bindsym $mod+Print          $xs/screenshot-whole.sh
-bindsym Print               $xs/screenshot.sh
-bindsym $mod+Shift+s        $xs/service-toggle.sh spotifyd Services
-bindsym $mod+Shift+q        $x      "dunstctl close"
-bindsym Pause               $x      i3lock -c $lock-color
-bindsym $mod+Shift+c        $xs/clipcat-clear.sh
-bindsym $mod+r              $xs/service-management.sh
-bindsym $mod+Ctrl+1         $xs/xmodmap-toggle.sh
+bindsym --release $mod+Escape   $xs/sleep.sh
+bindsym $mod+Shift+Escape       $xs/xrandr-outputs-fix.sh
+bindsym $mod+Print              $xs/screenshot-whole.sh
+bindsym Print                   $xs/screenshot.sh
+bindsym $mod+Shift+s            $xs/service-toggle.sh spotifyd Services
+bindsym $mod+Shift+q            $x      "dunstctl close"
+bindsym Pause                   $x      i3lock -c $lock-color
+bindsym $mod+Shift+c            $xs/clipcat-clear.sh
+bindsym $mod+r                  $xs/service-management.sh
+bindsym $mod+Ctrl+1             $xs/xmodmap-toggle.sh
 
 
 ## Workspace locations
