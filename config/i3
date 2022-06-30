@@ -151,6 +151,7 @@ bindsym $mod+q kill
 
 # Enter fullscreen mode for the focused container
 bindsym $mod+F11 fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
