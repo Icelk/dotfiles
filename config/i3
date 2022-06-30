@@ -121,8 +121,8 @@ bindsym XF86AudioPause              $xs/playerctl-custom.fish
 bindsym XF86AudioNext               $xs/playerctl-fast.sh next
 bindsym XF86AudioPrev               $xs/playerctl-fast.sh previous
 bindsym $mod+Shift+Ctrl+k           $xs/playerctl-custom.fish
-bindsym $mod+Shift+Ctrl+j           $xs/playerctl-fast.sh next
-bindsym $mod+Shift+Ctrl+l               $xs/playerctl-fast.sh previous
+bindsym $mod+Shift+Ctrl+j           $xs/playerctl-fast.sh previous
+bindsym $mod+Shift+Ctrl+l           $xs/playerctl-fast.sh next
 
 #bindsym Shift+XF86AudioNext         $x playerctl position 5+
 #bindsym Shift+XF86AudioPrev         $x playerctl position 5-
