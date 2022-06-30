@@ -58,6 +58,7 @@ i3lock
 inkscape
 intel-media-driver
 intel-ucode
+inotify-tools
 iptables-nft
 iwd
 kdenlive
