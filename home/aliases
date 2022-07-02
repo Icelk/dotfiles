@@ -13,6 +13,7 @@ alias rsng="rsync -rvPhL --del --exclude '**target**' --exclude '**.pem' --exclu
 alias rsn="rsng --exclude '**.git/'"
 alias sssh="kitty +kitten ssh use-python"
 alias replace="~/scripts/replace.sh"
+alias py="python -q"
 
 # Systemctl
 alias sctl="doas systemctl"
