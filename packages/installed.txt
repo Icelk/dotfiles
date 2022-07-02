@@ -56,9 +56,9 @@ htop
 i3-gaps
 i3lock
 inkscape
+inotify-tools
 intel-media-driver
 intel-ucode
-inotify-tools
 iptables-nft
 iwd
 kdenlive
