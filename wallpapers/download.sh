@@ -71,6 +71,11 @@ curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_fr
 
 curl -Ls "https://cdn-hz.skypixel.com/uploads/cn_files/photo/image/5225822e-73ee-4efc-905e-ade2deceb0db.jpg@!1920" -o "garden blossom.jpg" &
 
+curl -s "https://live.staticflickr.com/65535/52212049510_3f019dd5c8_o.png" -o "jwst-1.png" &
+curl -s "https://live.staticflickr.com/65535/52210580092_2075269d5c_o.png" -o "jwst-2.png" &
+curl -s "https://live.staticflickr.com/65535/52211883799_9642668157_o.png" -o "jwst-3.png" &
+curl -s "https://live.staticflickr.com/65535/52211883534_7fe30b9955_o.png" -o "jwst-4.png" &
+
 echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
 
 echo "Downloading..."
