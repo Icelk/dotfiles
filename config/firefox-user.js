@@ -22,6 +22,9 @@ user_pref("full-screen-api.warning.timeout", 0);
 // Make scroll wheel scrolling feel more snappy
 user_pref("general.smoothScroll.msdPhysics.enabled", true);
 
+// Enable some web platform features
+user_pref("layout.css.backdrop-filter.enabled", true);
+
 // Performance
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.compositor", true);
