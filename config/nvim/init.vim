@@ -2,10 +2,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -21,6 +17,9 @@ call plug#end()
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 4
+" let g:netrw_browse_split = 4
 
 " Important configuration
 
@@ -62,8 +61,12 @@ filetype plugin on
 filetype plugin indent on
 " Adds folding by syntax
 set fdm=syntax
-" Highlight symbol under cursor on CursorHold
-autocmd VimEnter * if exists(":CocAction") | autocmd CursorHold * silent call CocActionAsync('highlight')
+" Inline signcolumn (git gutter)
+set signcolumn=number
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
 
 " Set CursorHold time to 0.5 seconds
 set updatetime=300
@@ -122,10 +125,8 @@ map <F12> <plug>(coc-definition)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-" NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeIgnore = ['^node_modules$']
+" get line number
+nmap <silent> <C-n> :number<CR>
 
 " NERDCommenter
 let g:NETDCreateDefaultMappings = 1
@@ -136,12 +137,6 @@ nmap <S-A-a> <plug>NERDCommenterAltDelims
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
 
 " Download coc extensions
 let g:coc_global_extensions = [
