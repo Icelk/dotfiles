@@ -40,6 +40,10 @@ function pu
     end
 end
 
+function gds
+    git diff --stat --stat-width (tput cols) --color=always $argv | cat
+end
+
 function fish_user_key_bindings
     bind \cH backward-kill-word
 end
