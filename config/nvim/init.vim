@@ -87,6 +87,8 @@ imap <S-Right> <C-o>$
 imap <C-a> <C-o>0
 imap <C-e> <C-o>$
 
+imap <silent> <S-enter> <CR><esc>kA
+
 " Expand Rust macro
 nmap <silent> <C-x> :CocCommand rust-analyzer.expandMacro<CR>
 " Open official web docs in Rust
