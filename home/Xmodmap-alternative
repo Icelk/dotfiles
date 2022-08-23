@@ -7,7 +7,8 @@ keycode 68 = F2 F2 F2 F2 F2 F2
 keycode 69 = F3 F3 F3 F3 F3 F3
 keycode 70 = F4 F4 F4 F4 F4 F4
 
-keycode 21 = less dead_grave less dead_grave greater bar greater
+keycode 20 = plus question plus question dead_acute questiondown dead_acute questiondown
+keycode 21 = less dead_grave less dead_grave greater bar greater bar
 keycode 35 = apostrophe asterisk apostrophe asterisk dead_circumflex multiply dead_circumflex multiply
 keycode 51 = slash backslash slash backslash ampersand dead_tilde ampersand dead_tilde
 keycode 52 = z Z z Z less greater less greater z Z less greater
