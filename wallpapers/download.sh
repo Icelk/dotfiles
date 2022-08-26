@@ -27,6 +27,10 @@ curl -Ls https://unsplash.com/photos/kFHz9Xh3PPU/download?force=true -o "photo o
 curl -Ls https://unsplash.com/photos/LQK8R7wjv4w/download?force=true -o "road on mountain.jpg" &
 curl -Ls https://unsplash.com/photos/zVIcZ5sSBzo/download?force=true -o "white and brown boat on body of water near mountain during daytime.jpg" &
 curl -Ls https://unsplash.com/photos/IEHPDNk2-8w/download?force=true -o "landscape mountain during daytime photo.jpg" &
+
+# make sure we don't do too many parallel downloads.
+wait
+
 curl -Ls https://unsplash.com/photos/3no88nSvK88/download?force=true -o "three mountains covered with snow.jpg" &
 curl -Ls https://unsplash.com/photos/P_hTMaVlkzk/download?force=true -o "landscape mountain covered with snow photo.jpg" &
 curl -Ls https://unsplash.com/photos/8AdYB7M4OHY/download?force=true -o "photo of mountain range under clear sky.jpg" &
@@ -64,6 +68,8 @@ curl -Ls https://unsplash.com/photos/eG7lZD9c5aI/download?force=true -o "iceberg
 curl -Ls https://unsplash.com/photos/VzEgZgibC5Y/download?force=true -o "iceberg grey pile.jpg" &
 curl -Ls https://unsplash.com/photos/N46IkbWUvMU/download?force=true -o "iceberg mountain contrast.jpg" &
 
+wait
+
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9F%D1%96%D1%81%D0%BB%D1%8F_%D0%B1%D1%83%D0%BD%D1%82%D1%83.jpg -o "snow covered mountain with clouds.jpg" &
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg -o "bird catching fish.jpg" &
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg" &
@@ -75,8 +81,7 @@ curl -s "https://live.staticflickr.com/65535/52212049510_3f019dd5c8_o.png" -o "j
 curl -s "https://live.staticflickr.com/65535/52210580092_2075269d5c_o.png" -o "jwst-2.png" &
 curl -s "https://live.staticflickr.com/65535/52211883799_9642668157_o.png" -o "jwst-3.png" &
 curl -s "https://live.staticflickr.com/65535/52211883534_7fe30b9955_o.png" -o "jwst-4.png" &
-
-echo "I also recommend the pictures from https://www.vyncher.com/articles/mac-os-redwood"
+curl -s "https://blogs.nasa.gov/webb/wp-content/uploads/sites/326/2022/08/JWST_2022-07-27_Jupiter_2color.png" -o "jwst-jupiter.png" &
 
 echo "Downloading..."
 wait
