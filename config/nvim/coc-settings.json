@@ -6,9 +6,10 @@
     "semanticTokens.filetypes": ["*"],
 
     "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.cargo.allFeatures": true,
-    "rust-analyzer.assist.importPrefix": "self",
-    "rust-analyzer.assist.importGranularity": "module",
+    "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.imports.prefix": "self",
+    "rust-analyzer.imports.granularity.group": "module",
+    "rust-analyzer.imports.granularity.enforce": true,
     "rust-analyzer.inlayHints.typeHintsSeparator": "",
     "rust-analyzer.inlayHints.chainingHintsSeparator": "",
 
