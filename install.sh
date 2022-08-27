@@ -77,6 +77,9 @@ l $wdc/kitty.conf $hc/kitty/kitty.conf
 ## NeoVim
 l $wdc/nvim/init.vim $hc/nvim/
 l $wdc/nvim/coc-settings.json $hc/nvim/
+mkdir -p $hc/nvim/syntax
+l /usr/share/nvim/runtime/syntax/typescript.vim $hc/nvim/syntax/javascript.vim
+l /usr/share/nvim/runtime/syntax/typescriptcommon.vim $hc/nvim/syntax/
 echo "${cb}The snippets are notoriously difficult to install. If you don't have any snippets in neovim, remove the folder at ~/.config/coc/ultisnips and rerun this.${cc}"
 l $wdc/nvim/snippets $hc/coc/ultisnips
 
