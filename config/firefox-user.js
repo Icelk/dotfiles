@@ -37,3 +37,6 @@ user_pref("privacy.resistFingerprinting.testGranularityMask", 4);
 user_pref("privacy.spoof_english", 1);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+
+// Fix emoji font (by default, it is "Twemoji Mozilla")
+user_pref("font.name-list.emoji", "Noto Color Emoji");
