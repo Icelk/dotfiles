@@ -13,7 +13,7 @@ set $x      exec --no-startup-id
 set $xs     exec --no-startup-id ~/scripts
 set $xsr    exec --no-startup-id ~/scripts/rofi
 
-set $pmc pulsemixer --max-volume 100 --change-volume
+set $change-volume ~/scripts/audio-volume-change.sh
 
 set $granular_adjustment 1
 set $rough_adjustment 8
@@ -129,13 +129,13 @@ bindsym $mod+Shift+Ctrl+l           $xs/playerctl-fast.sh next
 #bindsym Shift+XF86AudioPrev         $x playerctl position 5-
 
 bindsym XF86AudioMute               $x pulsemixer --toggle-mute
-bindsym XF86AudioRaiseVolume        $x $pmc +5
-bindsym XF86AudioLowerVolume        $x $pmc -5
-bindsym $mod+Shift+period           $x $pmc +5
-bindsym $mod+Shift+comma            $x $pmc -5
+bindsym XF86AudioRaiseVolume        $x $change-volume + 5
+bindsym XF86AudioLowerVolume        $x $change-volume - 5
+bindsym $mod+Shift+period           $x $change-volume + 5
+bindsym $mod+Shift+comma            $x $change-volume - 5
 
-bindsym Shift+XF86AudioRaiseVolume  $x $pmc +1
-bindsym Shift+XF86AudioLowerVolume  $x $pmc -1
+bindsym Shift+XF86AudioRaiseVolume  $x $change-volume + 1
+bindsym Shift+XF86AudioLowerVolume  $x $change-volume - 1
 
 bindsym XF86MonBrightnessUp         $x light -A 10%
 bindsym XF86MonBrightnessDown       $x light -U 10%
