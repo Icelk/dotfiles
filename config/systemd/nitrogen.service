@@ -4,3 +4,5 @@ Description=Start (restore) wallpaper
 [Service]
 Type=oneshot
 ExecStart=nitrogen --restore
+Restart=on-failure
+RestartSec=5
