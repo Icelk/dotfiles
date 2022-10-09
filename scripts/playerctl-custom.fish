@@ -92,6 +92,10 @@ if test -f ~/.cargo/bin/pasv
     ~/.cargo/bin/pasv -d 0 0
 end
 
+# it seems like pipewire (and maybe pulseaudio) doesn't apply the volume for a bit
+# 
+# it shows up as changed in polybar and pulsemixer, but the audio output contains a short loud sound
+# Therefore, we sleep to let the volume change take effect
 sleep 0.2
 # If there was nothing to pause (the we would've `exit`ed), play from the preferred editor.
 pctl (pref_spt) "Play"
