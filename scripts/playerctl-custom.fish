@@ -1,5 +1,8 @@
 #!/bin/fish
 
+set play_pause_volume_smooth_duration 200
+set play_pause_volume_smooth_duration_s (math $play_pause_volume_smooth_duration / 1000)
+
 # Clone of `playerctl`. Sends the second argument (e.g. `PlayPause` `Pause` etc.) to the first argument's media player.
 function pctl
     dbus-send --type=method_call --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.mpris.MediaPlayer2.Player.$argv[2]"
@@ -50,8 +53,8 @@ for player in (playerctl -l)
         if string match -q $spt_status "Playing"
             if test -f ~/.cargo/bin/pasv
                 set -f volume (~/.cargo/bin/pasv -g)
-                ~/.cargo/bin/pasv -d 200 0
-                sleep 0.2
+                ~/.cargo/bin/pasv -d $play_pause_volume_smooth_duration 0
+                sleep $play_pause_volume_smooth_duration_s
             end
 
             pctl $player "Pause"
@@ -68,8 +71,8 @@ for player in (playerctl -l)
         if string match -q (pctl_get $player "PlaybackStatus") "Playing"
             if test -f ~/.cargo/bin/pasv
                 set -f volume (~/.cargo/bin/pasv -g)
-                ~/.cargo/bin/pasv -d 200 0
-                sleep 0.2
+                ~/.cargo/bin/pasv -d $play_pause_volume_smooth_duration 0
+                sleep $play_pause_volume_smooth_duration_s
             end
 
             pctl $player "Pause"
@@ -97,5 +100,5 @@ sleep 0.1
 
 # wait for play
 if test -f ~/.cargo/bin/pasv
-    ~/.cargo/bin/pasv -d 200 $volume
+    ~/.cargo/bin/pasv -d $play_pause_volume_smooth_duration $volume
 end
