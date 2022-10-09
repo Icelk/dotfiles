@@ -48,17 +48,54 @@ for player in (playerctl -l)
     if string match -q $player "spotifyd"
         # and playing, pause it.
         if string match -q $spt_status "Playing"
+            if test -f ~/.cargo/bin/pasv
+                set -f volume (~/.cargo/bin/pasv -g)
+                ~/.cargo/bin/pasv -d 200 0
+                sleep 0.2
+            end
+
             pctl $player "Pause"
+
+            # wait for pause
+            sleep 0.1
+            if test -f ~/.cargo/bin/pasv
+                ~/.cargo/bin/pasv -d 0 $volume
+            end
             exit 0
         end
     else
         # Else, if the status of the player is `Playing`, pause it and exit
         if string match -q (pctl_get $player "PlaybackStatus") "Playing"
+            if test -f ~/.cargo/bin/pasv
+                set -f volume (~/.cargo/bin/pasv -g)
+                ~/.cargo/bin/pasv -d 200 0
+                sleep 0.2
+            end
+
             pctl $player "Pause"
+
+            # wait for pause
+            sleep 0.1
+            if test -f ~/.cargo/bin/pasv
+                ~/.cargo/bin/pasv -d 0 $volume
+            end
             exit 0
         end
     end
 end
 
+if test -f ~/.cargo/bin/pasv
+    set -f volume (~/.cargo/bin/pasv -g)
+    ~/.cargo/bin/pasv -d 0 0
+end
+
+sleep 0.2
 # If there was nothing to pause (the we would've `exit`ed), play from the preferred editor.
 pctl (pref_spt) "Play"
+
+sleep 0.1
+
+# wait for play
+if test -f ~/.cargo/bin/pasv
+    ~/.cargo/bin/pasv -d 200 $volume
+end
