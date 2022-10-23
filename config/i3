@@ -28,7 +28,7 @@ focus_wrapping no
 # CORPL option dark
 # for_window [class = "^.*"] border pixel 0
 # CORPL option light
-for_window [class = "^.*"] border pixel 2
+for_window [class = "^.*"] border pixel 0
 for_window [class = "Dunst"] border pixel 0
 for_window [class = "Rofi"] border pixel 0
 # CORPL end
