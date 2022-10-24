@@ -3,6 +3,6 @@ Description=Composter
 
 [Service]
 Type=simple
-ExecStart=picom --experimental-backends
+ExecStart=sh -c "if [ -f ~/build/picom/build/src/picom ]; then ~/build/picom/build/src/picom --experimental-backends; else picom --experimental-backends; fi"
 Restart=always
 RestartSec=2
