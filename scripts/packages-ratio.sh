@@ -1,7 +1,11 @@
 #!/usr/bin/sh
 
 all=$(pacman -Q | grep "" -c)
-echo "? / $all"
+echo "$all"
 
 upgradable=$(. ~/scripts/packages-upgradable-count.sh)
-echo "$upgradable / $all"
+if [ $upgradable == 0 ]; then
+    echo "$all"
+else
+    echo "$upgradable / $all"
+fi
