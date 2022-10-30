@@ -18,8 +18,6 @@ if test -z $application
     exit 1
 end
 
-# set uuid "da2b22be-2cb9-4298-957d-63e0c70c6a0a"
-# set unlocked_uuid "918c4335-abcd-4834-9f38-59d5fffc651a"
 set uuid $argv[2]
 set unlocked_uuid $argv[3]
 if test -z $uuid || test -z $unlocked_uuid
@@ -47,6 +45,7 @@ set disk (echo "$unlock" | awk '{print $4}' | string split .)[1]
 set location (udisksctl mount -b $disk)
 if test $status -ne 0
     echo "Failed to mount device."
+    udisksctl lock -b /dev/disk/by-uuid/$uuid 1>/dev/null
     exit 1
 end
 set location (echo "$location" | awk '{print $4}')
@@ -54,6 +53,8 @@ set token (cat "$location/totp/$application")
 
 if test $status -ne 0
     echo "TOTP token file not found. Looked in $location/totp/$application"
+    udisksctl unmount -b /dev/disk/by-uuid/$unlocked_uuid 1>/dev/null
+    udisksctl lock -b /dev/disk/by-uuid/$uuid 1>/dev/null
     exit 1
 end
 
