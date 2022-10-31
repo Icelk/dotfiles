@@ -40,3 +40,6 @@ user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 
 // Fix emoji font (by default, it is "Twemoji Mozilla")
 user_pref("font.name-list.emoji", "Noto Color Emoji");
+
+// enable hardware video decoding
+user_pref("media.ffmpeg.vaapi.enabled", true);

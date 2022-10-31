@@ -100,6 +100,7 @@ ntfs-3g
 numlockx
 nvidia-dkms
 nvidia-settings
+nvidia-vaapi-driver-git
 nvtop
 oath-toolkit
 obs-studio
