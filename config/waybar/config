@@ -41,6 +41,9 @@
         "interval": 10,
         "exec": "~/scripts/video-get-users.fish  "
     },
+    "wlr/workspaces": {
+        "all-outputs": true,
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
@@ -73,7 +76,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} {signalStrength} 直",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "直",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "睊",

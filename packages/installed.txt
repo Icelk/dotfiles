@@ -59,7 +59,7 @@ gvfs-afc
 gvfs-mtp
 hexedit
 htop
-hyprland
+hyprland-nvidia-git
 i3-gaps
 i3lock
 inkscape
@@ -130,6 +130,9 @@ pureref
 python-pip
 python-pynvim
 qemu-desktop
+qemu-system-riscv
+qemu-system-riscv-firmware
+qt5ct
 redis
 reflector
 ripgrep
@@ -175,7 +178,6 @@ wine-mono
 wine-staging
 winetricks
 wireplumber
-wl-clipboard
 xdg-user-dirs
 xdg-utils
 xdotool

@@ -68,7 +68,7 @@ l $wdc/fish/ $hc/fish
 l $wdc/gtk-3.0.ini $hc/gtk-3.0/
 
 ## Hyprland (Wayland window manager & compositor)
-l $wdc/hyprland.conf $hc/hyprland/
+l -f $wdc/hyprland.conf $hc/hypr/
 
 ## i3
 l $wdc/i3 $hc/i3/config
