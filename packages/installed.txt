@@ -55,6 +55,8 @@ gst-plugins-good
 gvfs
 gvfs-afc
 hexedit
+htop
+hyprland
 i3-gaps
 i3lock
 inkscape
@@ -165,8 +167,9 @@ which
 wine-gecko
 wine-mono
 wine-staging
+wireplumber
+wl-clipboard
 x86_energy_perf_policy
-xclip
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
