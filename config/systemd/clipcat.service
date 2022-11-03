@@ -4,7 +4,7 @@ Description=Starts the clipboard daemon
 [Service]
 Type=simple
 Environment=WAYLAND_DISPLAY=wayland-0
-ExecStart=sh -c "sleep 5; PATH=~/.cargo/bin:$PATH clipcatd --no-daemon"
+ExecStart=sh -c "sleep 30; PATH=~/.cargo/bin:$PATH clipcatd --no-daemon"
 Restart=on-failure
 RestartSec=5
 
