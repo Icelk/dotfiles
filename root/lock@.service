@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock X session using swaylock for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Type=forking
+Environment=WAYLAND_DISPLAY=wayland-0 XDG_RUNTIME_DIR=/run/user/1000
+ExecStart=-/usr/bin/swaylock -S -u --effect-blur 10x4
+
+[Install]
+WantedBy=sleep.target

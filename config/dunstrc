@@ -7,7 +7,7 @@
     follow = mouse
 
     width = 350
-    offset = 24x48
+    offset = 24x24
 
     notification_limit = 15
 
@@ -112,7 +112,7 @@
     class = Dunst
 
     # Define the corner radius of the notification window
-    corner_radius = 0
+    corner_radius = 5
 
     # --- Mouse --- #
     mouse_left_click = close_current

@@ -1,0 +1,116 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 10, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/pacman", "pulseaudio", "custom/using-video", "custom/using-mic", "battery", "network", "clock#date"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "custom/arch": {
+        "format": ""
+    },
+    "custom/pacman": {
+        "interval": 600,
+        "exec": "~/scripts/packages-ratio.sh",
+        "format": "{} ",
+        "on-click": "kitty -1 --hold -e fish -c pu",
+    },
+    "custom/using-mic": {
+        "interval": 10,
+        "exec": "~/scripts/audio-mic-users.sh  "
+    },
+    "custom/using-video": {
+        "interval": 10,
+        "exec": "~/scripts/video-get-users.fish  "
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+    },
+    "clock#date": {
+        "interval": 60,
+        "format": "{:%b %d}",
+        "format-alt": "{:%a (w.%V) %Y}"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity} {icon}",
+        "format-charging": "{capacity} {icon}",
+        "format-plugged": "{capacity} {icon}",
+        // "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} {signalStrength} 直",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "睊",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{volume} 墳",
+        "format-bluetooth": "{volume} {icon}",
+        "format-bluetooth-muted": "0 {icon}",
+        "format-muted": "ﱝ",
+        "format-source": "{volume} 墳",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click-right": "kitty -1 -e pulsemixer",
+        "on-click": "pulsemixer --toggle-mute",
+        "tooltip": false
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}

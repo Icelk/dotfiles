@@ -1,0 +1,17 @@
+[Unit]
+Description=Stop spotifyd before sleep
+Before=sleep.target
+
+[Service]
+User=icelk
+Type=oneshot
+Environment=XDG_SESSION_CLASS=user
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=XDG_SESSION_TYPE=tty
+Environment=XDG_SESSION_ID=1
+Environment=XDG_SEAT=seat0
+Environment=XDG_VTNR=1
+ExecStart=-/usr/bin/systemctl --user stop spotifyd
+
+[Install]
+WantedBy=sleep.target
