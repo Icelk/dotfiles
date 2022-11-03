@@ -9,7 +9,7 @@ if status --is-interactive
     set fish_greeting
 
     set -px PATH ~/.cargo/bin ~/dev/Rust/Kvarn/target/release ~/dev/Rust/osxcross/target/bin ~/.local/bin
-    set -px PYTHONSTARTUP ~/.config/python/startup.py
+    set -x PYTHONSTARTUP ~/.config/python/startup.py
 
     bind \cb "bg"
 
