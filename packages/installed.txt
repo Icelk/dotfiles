@@ -168,6 +168,7 @@ wine-mono
 wine-staging
 wireplumber
 x86_energy_perf_policy
+wl-clipboard
 xdg-user-dirs
 xdg-utils
 xdotool

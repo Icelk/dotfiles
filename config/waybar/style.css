@@ -6,11 +6,10 @@
 
 window#waybar {
     /* CORPL option light */
-    background-color: rgba(31, 232, 239, 242);
+    background-color: rgba(232, 239, 242, 0.125);
     /* CORPL option dark */
-    /* background-color: rgba(191, 29, 31, 33); */
+    /* background-color: rgba(29, 31, 33, 0.75); */
     /* CORPL end */
-    background-color: rgba(43, 48, 59, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
