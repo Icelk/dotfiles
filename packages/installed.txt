@@ -178,6 +178,7 @@ wine-mono
 wine-staging
 winetricks
 wireplumber
+wl-clipboard
 xdg-user-dirs
 xdg-utils
 xdotool
