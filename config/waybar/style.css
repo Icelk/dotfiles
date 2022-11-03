@@ -1,0 +1,134 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "FiraCode Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 21px;
+}
+
+window#waybar {
+    /* CORPL option light */
+    background-color: rgba(31, 232, 239, 242);
+    /* CORPL option dark */
+    /* background-color: rgba(191, 29, 31, 33); */
+    /* CORPL end */
+    background-color: rgba(43, 48, 59, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+#custom-arch {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 200%;
+}
+#workspaces button {
+    padding: 0 10px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+}
+#workspaces button.focused {
+    /* background-color: #64727D; */
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#mode {
+    /* background-color: #64727D; */
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd,
+#custom-arch,
+#custom-pacman,
+#custom-using-mic,
+#custom-using-video {
+    padding: 0 6px;
+    /* CORPL option light */
+    color: #e8eff2;
+    /* CORPL option dark */
+    /* color: #c5c8c6; */
+    /* CORPL end */
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    /* background-color: #f53c3c; */
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    /* background-color: #eb4d4b; */
+}

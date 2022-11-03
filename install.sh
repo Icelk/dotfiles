@@ -59,7 +59,6 @@ l $wdc/clipcat/ $hc/clipcat
 mkdir -p ~/.cache/clipcat/clipcatd
 
 ## Firefox
-
 l $wdc/firefox-user.js ~/.mozilla/firefox/$(/bin/ls -1 ~/.mozilla/firefox/ | rg --pcre2 "^(?!static-).*\\.default-release" | head -n1)/user.js
 
 ## Fish
@@ -67,6 +66,9 @@ l $wdc/fish/ $hc/fish
 
 ## Gtk
 l $wdc/gtk-3.0.ini $hc/gtk-3.0/
+
+## Hyprland (Wayland window manager & compositor)
+l -f $wdc/hyprland.conf $hc/hypr/
 
 ## i3
 l $wdc/i3 $hc/i3/config
@@ -114,6 +116,9 @@ l $wdc/systemd/ $hc/systemd/user
 
 ## Thunar
 l $wdc/thunar-uca.xml $hc/Thunar/uca.xml
+
+## Waybar
+l $wdc/waybar/ $hc/waybar
 
 ##--------
 # Scripts

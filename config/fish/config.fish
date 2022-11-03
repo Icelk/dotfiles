@@ -1,6 +1,7 @@
 if status --is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx
+        # exec scripts/wayland.sh
+        # exec startx
     end
 end
 

@@ -17,6 +17,7 @@ btrbk
 candy-icons-git
 cargo-bloat
 cargo-flamegraph
+catch2-git
 clang
 compsize
 cups
@@ -53,6 +54,7 @@ gvfs
 gvfs-afc
 hexedit
 htop
+hyprland-nvidia-git
 i3-gaps
 i3lock
 inkscape
@@ -135,6 +137,9 @@ spotify-tui
 sshfs
 starship
 steam
+swaybg
+swayidle
+swaylock-effects-git
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
 termdown
@@ -156,6 +161,7 @@ ventoy-bin
 wasm-bindgen
 wasm-pack
 watchexec
+waybar-hyprland-git
 which
 wine-gecko
 wine-mono
