@@ -54,7 +54,7 @@ gvfs
 gvfs-afc
 hexedit
 htop
-hyprland-nvidia-git
+hyprland
 i3-gaps
 i3lock
 inkscape
@@ -167,8 +167,8 @@ wine-gecko
 wine-mono
 wine-staging
 wireplumber
-x86_energy_perf_policy
 wl-clipboard
+x86_energy_perf_policy
 xdg-user-dirs
 xdg-utils
 xdotool
