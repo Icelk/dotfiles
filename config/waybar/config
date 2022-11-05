@@ -82,7 +82,7 @@
         "format-wifi": "{essid} {signalStrength} 直",
         "format-ethernet": "直",
         "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "睊",
         "format-disconnected": "睊",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "tooltip": false
