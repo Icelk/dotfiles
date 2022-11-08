@@ -38,6 +38,7 @@ ffmpegthumbnailer
 firefox
 firefox-tridactyl
 fish
+flex
 frei0r-plugins
 fuse2
 fwupd
@@ -105,6 +106,7 @@ obsidian
 ocl-icd
 openal
 opendoas
+openssl-1.1
 pacman-contrib
 paru
 patch
@@ -127,7 +129,7 @@ python-pynvim
 redis
 reflector
 ripgrep
-rofi
+rofi-lbonn-wayland-git
 rsync
 rustup
 sccache
