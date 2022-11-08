@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cd ~
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export XCURSOR_SIZE=24
+
 export LIBVA_DRIVER_NAME=nvidia
 export XDG_SESSION_TYPE=wayland
 export GBM_BACKEND=nvidia-drm
