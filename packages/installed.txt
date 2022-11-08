@@ -41,6 +41,7 @@ ffmpegthumbnailer
 firefox
 firefox-tridactyl
 fish
+flex
 frei0r-plugins
 fuse2
 fwupd
@@ -136,7 +137,7 @@ qt5ct
 redis
 reflector
 ripgrep
-rofi
+rofi-lbonn-wayland-git
 rsync
 rustup
 sccache
