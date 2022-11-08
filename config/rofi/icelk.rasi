@@ -22,6 +22,7 @@ window {
     border: 0;
     padding: 2;
     background-color: @bg-lighter;
+    border-radius: 6px;
 }
 
 mainbox {

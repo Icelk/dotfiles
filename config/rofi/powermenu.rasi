@@ -11,6 +11,7 @@ window {
     height: 120px;
     padding: 0;
     background-color: @bg-lighter;
+    border-radius: 6px;
 }
 
 mainbox {
