@@ -141,7 +141,7 @@ starship
 steam
 swaybg
 swayidle
-swaylock-effects-git
+swaylock
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
 termdown
