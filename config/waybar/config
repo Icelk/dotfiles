@@ -90,12 +90,12 @@
         "tooltip": false
     },
     "pulseaudio": {
-        "scroll-step": 5, // %, can be a float
-        "format": "{volume} 󰕾",
-        "format-bluetooth": "{volume} {icon} ",
-        "format-bluetooth-muted": "0 {icon} ",
-        "format-muted": "󱄡",
-        "format-source": "{volume} 󰕾",
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume} 墳",
+        "format-bluetooth": "{volume} {icon}",
+        "format-bluetooth-muted": "0 {icon}",
+        "format-muted": "ﱝ",
+        "format-source": "{volume} 墳",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
