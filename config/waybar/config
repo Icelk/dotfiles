@@ -79,7 +79,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} {signalStrength} 直",
+        "format-wifi": "{signalStrength} 直",
         "format-ethernet": "直",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "睊",
