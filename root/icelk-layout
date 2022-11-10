@@ -1,0 +1,33 @@
+default xkb_symbols "basic" {
+    include "se"
+    include "capslock(escape)"
+
+    override key <AD12> { [slash, backslash, ampersand, dead_tilde ] };
+    override key <BKSL> { [apostrophe, asterisk, dead_circumflex, multiply ] };
+    override key <SPCE> { [space, space, space, space ] };
+
+    override key <FK01> { [bracketleft, F1, F1, F1] };
+    override key <FK02> { [bracketright, F2, F2, F2] };
+    override key <FK03> { [braceleft, F3, F3, F3] };
+    override key <FK04> { [braceright, F4, F4, F4] };
+};
+
+xkb_symbols "ansi" {
+    include "icelk(basic)"
+
+    override key <FK01> { [F1, F1, F1, F1] };
+    override key <FK02> { [F2, F2, F2, F2] };
+    override key <FK03> { [F3, F3, F3, F3] };
+    override key <FK04> { [F4, F4, F4, F4] };
+
+    override key <AE11> { [plus, question, dead_acute, questiondown] };
+    override key <AE12> { [less, dead_grave, greater, bar] };
+
+    override key <AB01> { [z, Z, less, greater] };
+};
+xkb_symbols "ansi-switched-slash" {
+    include "icelk(ansi)"
+
+    override key <BKSL> { [slash, backslash, ampersand, dead_tilde ] };
+    override key <AD12> { [apostrophe, asterisk, dead_circumflex, multiply ] };
+};

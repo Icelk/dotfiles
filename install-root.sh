@@ -128,6 +128,8 @@ l -f $wdr/pacman.conf /etc/
 
 l $wdr/archlinux-keyring-wkd-sync-fix.service /etc/systemd/system/archlinux-keyring-wkd-sync.service.d/override.conf
 
+l -f $wdr/icelk-layout /usr/share/X11/xkb/symbols/icelk
+
 # reflector
 # ln -sf $wdr/reflector.conf /etc/xdg/reflector/
 echo "A reflector configuration file was included, but it contains location-specific options and isn't installed. See this script for the command."
