@@ -135,6 +135,7 @@ qemu-desktop
 qemu-system-riscv
 qemu-system-riscv-firmware
 qt5ct
+qt6-wayland
 redis
 reflector
 ripgrep
