@@ -126,6 +126,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
+qt6-wayland
 redis
 reflector
 ripgrep
