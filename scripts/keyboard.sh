@@ -2,5 +2,4 @@
 
 numlockx
 
-setxkbmap se
-xmodmap ~/.Xmodmap-alternative
+setxkbmap icelk -variant ansi
