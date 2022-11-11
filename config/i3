@@ -99,7 +99,6 @@ bindsym $mod+Shift+q            $x      "dunstctl close"
 bindsym Pause                   $x      i3lock -c $lock-color
 bindsym $mod+Shift+c            $xs/clipcat-clear.sh
 bindsym $mod+r                  $xs/service-management.sh
-bindsym $mod+Ctrl+1             $xs/xmodmap-toggle.sh
 
 
 ## Workspace locations
