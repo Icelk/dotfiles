@@ -43,3 +43,16 @@ def cos_law(b, c, A):
 
 g=9.8
 atm=101.3e3
+c=299792458
+# Imprecise when using floats (c**2)
+c2=c*c
+kg_per_u=1.6605390666050e-27
+mev_per_u=931.4941024228
+me=0.000548580
+mp=1.00727655
+mn=1.00866492
+
+def u_to_J(u):
+    return u * kg_per_u * c2
+def mev_to_J(Q):
+    return u_to_J(Q/mev_per_u)
