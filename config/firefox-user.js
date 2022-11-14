@@ -1,7 +1,7 @@
 // enable overscroll like on macOS. Makes flinging (on touchpad) feel nicer
 user_pref("apz.overscroll.enabled", true);
 // decrease friction after flinging - makes a fling travel longer on the page
-user_pref("apz.fling_friction", "0.05");
+user_pref("apz.fling_friction", "0.007");
 
 // Enable the shorter tabbar.
 user_pref("browser.compactmode.show", true);
