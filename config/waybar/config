@@ -47,6 +47,7 @@
     },
     "wlr/workspaces": {
         "all-outputs": true,
+        "sort-by-number": true,
     },
     "tray": {
         // "icon-size": 21,
