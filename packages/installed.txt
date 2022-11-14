@@ -90,7 +90,6 @@ mpg123
 neofetch
 neovim
 neovim-plug
-nerd-fonts-fira-code
 nfs-utils
 ninja
 nitrogen
@@ -155,6 +154,7 @@ tokei
 ttc-iosevka-aile
 ttc-iosevka-etoile
 ttf-dejavu
+ttf-firacode-nerd
 ttf-roboto
 tumbler
 typescript
