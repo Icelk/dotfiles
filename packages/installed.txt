@@ -76,7 +76,6 @@ lxappearance
 m4
 macchanger
 mailspring
-maim
 make
 man-db
 meson
