@@ -175,7 +175,6 @@ wl-clipboard
 xdg-user-dirs
 xdg-utils
 xdotool
-xorg-xrandr
 xsnow-comp-patch-git
 yad
 zip

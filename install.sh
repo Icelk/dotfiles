@@ -70,9 +70,6 @@ l $wdc/gtk-3.0.ini $hc/gtk-3.0/
 ## Hyprland (Wayland window manager & compositor)
 l -f $wdc/hyprland.conf $hc/hypr/
 
-## i3
-l $wdc/i3 $hc/i3/config
-
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf
 
@@ -84,12 +81,6 @@ l /usr/share/nvim/runtime/syntax/typescript.vim $hc/nvim/syntax/javascript.vim
 l /usr/share/nvim/runtime/syntax/shared/typescriptcommon.vim $hc/nvim/syntax/shared/
 echo "${cb}The snippets are notoriously difficult to install. If you don't have any snippets in neovim, remove the folder at ~/.config/coc/ultisnips and rerun this.${cc}"
 l $wdc/nvim/snippets $hc/coc/ultisnips
-
-## Picom
-l $wdc/picom.conf $hc/picom/
-
-## Polybar
-l $wdc/polybar.ini $hc/polybar/config.ini
 
 ## Python
 
@@ -146,15 +137,8 @@ l $PWD/wallpapers/ ~/Pictures/wallpapers
 l $wdh/aliases ~/.aliases
 l $wdh/gitconfig ~/.gitconfig
 l $wdh/gtkrc-2.0 ~/.gtkrc-2.0
-l $wdh/profile ~/.profile
-l $wdh/xinitrc ~/.xinitrc
-l $wdh/xserverrc ~/.xserverrc
-l $wdh/zprofile ~/.zprofile
-l $wdh/zshrc ~/.zshrc
 l $wdh/Config-files.txt ~/
 l $wdh/Reminder.txt ~/
-l $wdh/Xmodmap ~/.Xmodmap
-l $wdh/Xmodmap-alternative ~/.Xmodmap-alternative
 l $wdh/vim-things.md ~/
 
 ## Backup exclude

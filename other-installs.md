@@ -1,7 +1,7 @@
 Not all programs I use exist in the AUR or Arch package repos.
 Here is a collection of the rest and how to manually install them.
 
-ToDo: Add this all the the install script!
+ToDo: Add this all to the install script!
 
 # Cargo
 Install the package `rustup` and run `rustup toolchain install stable`
@@ -25,25 +25,10 @@ That *should* be all... (PR me if I'm wrong)
 
 # Firefox
 
+Some Firefox settings are overridden by `config/firefox-user.js`
+
 I use these extensions:
 - Bitwarden (free password manager with sync and support to self-host passwords!)
 - Multi-Account Containers (a must-have with Firefox. Lets you have multiple "containers" of cookies)
 - Forget Me Not (great extension to clear unused `localstorage` and cookies)
 - Tridactyl (installed using `pacman`. Navigation with the keyboard)
-
-These settings in `about:config` are changed (they are automatically applied when running the install script):
-- `browser.compactmode.show = true` (then go to "Customize toolbar" and select `Compact` in density)
-- `browser.search.hiddenOneOffs = Google,Amazon.co.uk` (hide awful search engines)
-- `gfx.webrender.all = true
-    gfx.webrender.compositor = true
-    gfx.webrender.svg-images = true` (performance)
-- `privacy.resistFingerprinting = true`
-- `privacy.resistFingerprinting.testGranularityMask = 2` (enables `privacy.resistFingerprinting.exemptedDomains`)
-- `privacy.spoof_english = 1
-    privacy.trackingprotection.enabled = true
-    privacy.trackingprotection.socialtracking.enabled = true`
-- `apz.fling_friction = 0.006
-apz.fling_stopped_threshold = 0.05` (Make flinging have more friction)
-- `apz.overscroll.enabled = true` (enable overscroll like on macOS. Makes flinging feel nicer)
-- `full-screen-api.warning.timeout = 0` (disable "Now in fullscreen" prompt)
-- `general.smoothScroll.msdPhysics.enabled = true` (smoother scroll)
