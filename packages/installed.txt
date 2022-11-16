@@ -76,7 +76,6 @@ lld
 lxappearance
 m4
 mailspring
-maim
 make
 man-db
 meson
