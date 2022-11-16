@@ -1,7 +1,0 @@
-[Unit]
-Description=My desktop bar
-
-[Service]
-Type=simple
-ExecStart=sh -c "~/scripts/polybar.sh"
-ExecStop=rm /tmp/run/packages-upgradable-count.pid
