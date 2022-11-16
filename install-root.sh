@@ -47,15 +47,6 @@ l $wdr/kernel-info.conf /etc/sysctl.d/disable-kernel-info.conf
 # Make the main RAM more used
 l $wdr/swappiness.conf /etc/sysctl.d/less_swappy.conf
 
-# Disable mouse acceleration
-# ln -s $wdr/mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-
-# Set DPMS timeout to 5 minutes
-l $wdr/dpms.conf /etc/X11/xorg.conf.d/40-dpms.conf
-
-# Enable tapping and two-finger tapping on touchpad
-l $wdr/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-
 # Pacman config
 l $wdr/pacman.conf /etc/
 
@@ -69,20 +60,14 @@ l $bin/doas $bin/sudo
 l $wdr/rustup.hook /etc/pacman.d/hooks/
 echo "A rustup pacman hook has been installed. It will update Rust when the system updates. To remove it, unlink /etc/pacman.d/hooks/rustup.hook"
 
-# Kora icon theme hook
-l $wdr/kora.hook /etc/pacman.d/hooks/
 # Breeze icon theme hook
 l $wdr/breeze.hook /etc/pacman.d/hooks/
 l $wdr/nvidia.hook /etc/pacman.d/hooks/
-
-l $wdr/Xwrapper.config /etc/X11/
 
 
 # Enable auto-login
 #mkdir /etc/systemd/system/getty@tty1.service.d
 #ln -s $PWD/root/getty.conf /etc/systemd/system/getty@tty1.service.d/override.conf
-
-#ln -s $PWD/root/xorg.conf /etc/X11/
 
 #ln -s $PWD/root/fstab /etc/
 #ln -sf $PWD/root/btrbk.conf /etc/btrbk/
