@@ -87,7 +87,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_theme = "Breeze Dark"
+    icon_theme = "Adwaita"
     enable_recursive_icon_lookup = true
 
 

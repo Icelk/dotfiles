@@ -47,6 +47,7 @@ c=299792458
 # Imprecise when using floats (c**2)
 c2=c*c
 kg_per_u=1.6605390666050e-27
+avogadro=6.02214076e23
 mev_per_u=931.4941024228
 me=0.000548580
 mp=1.00727655
