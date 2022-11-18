@@ -51,6 +51,7 @@ gnome-keyring
 gnome-themes-extra
 gparted
 gptfdisk
+grim
 groff
 gvfs
 gvfs-afc
@@ -132,6 +133,7 @@ rustup
 sccache
 scour
 sd
+slurp
 spotify-tui
 sshfs
 starship

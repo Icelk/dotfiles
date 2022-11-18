@@ -1,8 +1,9 @@
 #!/usr/bin/sh
-path=~/Pictures/screenshot-"$(date "+%+4Y-%m-%d-%T")".png
+file=screenshot-"$(date "+%+4Y-%m-%d-%T")".png
+path=~/Pictures/"$file"
 
-maim -su $path
+grim -g "$(slurp)" $path
 
 if [ $? -eq 0 ]; then
-    notify-send -a "Maim" "Took screenshot and saved it to '$path'!"
+    notify-send -a "Screenshot" "Saved screenshot to '~/Pictures/$file'"
 fi
