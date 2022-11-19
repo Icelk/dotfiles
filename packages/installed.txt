@@ -63,6 +63,7 @@ iwd
 kdenlive
 kitty
 kiwix-tools
+kora-icon-theme
 libheif
 libmpeg2
 libnet

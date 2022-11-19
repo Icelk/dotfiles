@@ -32,3 +32,7 @@ I use these extensions:
 - Multi-Account Containers (a must-have with Firefox. Lets you have multiple "containers" of cookies)
 - Forget Me Not (great extension to clear unused `localstorage` and cookies)
 - Tridactyl (installed using `pacman`. Navigation with the keyboard)
+
+# Brave
+
+- Set `about:flags#ozone-platform-hint` to `Auto`
