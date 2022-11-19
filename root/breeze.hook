@@ -7,4 +7,4 @@ Target = breeze
 [Action]
 Description = Removing unwanted icons
 When = PostTransaction
-Exec = /usr/bin/sh -c 'cd /usr/share/icons && rem="" && for item in $(echo $rem); do rm breeze/apps/$item breeze-dark/apps/$item; done'
+Exec = /usr/bin/sh -c 'cd /usr/share/icons && rem="48/inkscape.svg" && for item in $(echo $rem); do rm breeze/apps/$item breeze-dark/apps/$item; done; true'
