@@ -64,6 +64,7 @@ inotify-tools
 iptables-nft
 kdenlive
 kitty
+kora-icon-theme
 libheif
 libmpeg2
 libnet
