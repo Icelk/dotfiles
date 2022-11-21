@@ -10,7 +10,7 @@ else
     if [ "$1" = "Shutdown" ]; then
         systemctl poweroff
     elif [ "$1" = "Close GUI" ]; then
-        i3-msg exit
+        hyprctl dispatch exit
     elif [ "$1" = "Windows®" ]; then
         ~/scripts/boot-windows.sh
     elif [ "$1" = "Reboot" ]; then
