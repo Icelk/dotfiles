@@ -173,6 +173,7 @@ wine-staging
 winetricks
 wireplumber
 wl-clipboard
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xdotool
