@@ -44,7 +44,7 @@ fuse2
 fwupd
 gamemode
 gcc
-gimp
+gimp-devel
 git
 gn
 gnome-keyring
@@ -75,7 +75,7 @@ linux-headers
 linux-zen
 linux-zen-headers
 lld
-lxappearance
+lxappearance-gtk3
 m4
 mailspring
 make
