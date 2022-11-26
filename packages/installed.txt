@@ -113,7 +113,6 @@ pipewire-pulse
 pipewire-zeroconf
 pkgconf
 playerctl
-plymouth-git
 posy-cursors
 procs
 pulsemixer
