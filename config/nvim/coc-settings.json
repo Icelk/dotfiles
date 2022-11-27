@@ -1,17 +1,14 @@
 {
     "suggest.noselect": false,
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnTypeFiletypes": ["javascript", "typescript", "json", "graphql", "html", "css"],
 
-    "semanticTokens.filetypes": ["*"],
+    "semanticTokens.enable": true,
 
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.cargo.features": "all",
     "rust-analyzer.imports.prefix": "self",
     "rust-analyzer.imports.granularity.group": "module",
     "rust-analyzer.imports.granularity.enforce": true,
-    "rust-analyzer.inlayHints.typeHintsSeparator": "",
-    "rust-analyzer.inlayHints.chainingHintsSeparator": "",
 
     "codeLens.enable": true,
     "codeLens.position": "right_align",
