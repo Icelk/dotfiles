@@ -59,6 +59,8 @@ gvfs-mtp
 hexedit
 htop
 hyprland-nvidia-git
+hyprpaper-git
+hyprpicker-git
 inkscape
 inotify-tools
 iptables-nft
@@ -138,7 +140,6 @@ spotify-tui
 sshfs
 starship
 steam
-swaybg
 swayidle
 swaylock
 sweet-cursor-theme-git
