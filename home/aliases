@@ -51,6 +51,7 @@ alias gm="git merge"
 alias gms="git merge --squash"
 alias gmt="git mergetool"
 alias gcp="git cherry-pick"
+alias gbp="git fetch --prune"
 
 alias gsm="git submodule"
 alias gcfg="git config --global"
