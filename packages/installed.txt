@@ -79,7 +79,6 @@ linux-zen-headers
 lld
 lxappearance-gtk3
 m4
-mailspring
 make
 man-db
 meson
@@ -148,6 +147,7 @@ termdown
 texinfo
 thunar
 thunar-volman
+thunderbird
 tldr
 tokei
 tor-browser
