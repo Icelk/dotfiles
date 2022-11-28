@@ -74,6 +74,11 @@ curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9F%D1%96%D1%81%
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg -o "bird catching fish.jpg" &
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Bondhus_Norway_2862.jpg -o "lake norway.jpg" &
 curl -Ls https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg -o "hurricane 2.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/9/92/Put_van_Nederhorst_in_de_mist._28-02-2021._%28d.j.b%29_31.jpg -o "trees in mist.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/8/8c/Baumsilhouetten_am_Uetliberg_mit_Novembernebel_und_Sonnenstrahlen.jpg -o "trees tall in mist.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/a/ac/Wandering_Albatross-_east_of_the_Tasman_Peninsula.jpg -o "bird over water.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/6/65/Pont_de_Bercy%2C_Paris_23_December_2021.jpg -o "bridge under.jpg" &
+curl -Ls https://upload.wikimedia.org/wikipedia/commons/1/1d/Major_Greenland_Glacier_Is_Growing.jpeg -o "glacier growing.jpg" &
 
 curl -Ls "https://cdn-hz.skypixel.com/uploads/cn_files/photo/image/5225822e-73ee-4efc-905e-ade2deceb0db.jpg@!1920" -o "garden blossom.jpg" &
 
