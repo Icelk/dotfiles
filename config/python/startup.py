@@ -53,6 +53,9 @@ me=0.000548580
 mp=1.00727655
 mn=1.00866492
 
+elementary_charge=1.602176634e-19
+planck=6.62607015e-34
+
 def u_to_J(u):
     return u * kg_per_u * c2
 def mev_to_J(Q):
