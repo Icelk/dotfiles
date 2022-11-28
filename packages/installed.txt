@@ -17,6 +17,7 @@ candy-icons-git
 cargo-bloat
 cargo-flamegraph
 clang
+cmatrix
 compsize
 cups
 dbus-broker
@@ -51,6 +52,7 @@ grim
 groff
 gvfs
 gvfs-afc
+gvfs-mtp
 hexedit
 htop
 hyprland-git
@@ -110,6 +112,7 @@ pipewire-pulse
 pipewire-zeroconf
 pkgconf
 playerctl
+plymouth-git
 posy-cursors
 procs
 pulsemixer
