@@ -40,7 +40,7 @@ frei0r-plugins
 fuse2
 fwupd
 gcc
-gimp
+gimp-devel
 git
 gn
 gnome-keyring
@@ -54,6 +54,8 @@ gvfs-afc
 hexedit
 htop
 hyprland-git
+hyprpaper-git
+hyprpicker-git
 inkscape
 inotify-tools
 intel-media-driver
@@ -74,7 +76,7 @@ light
 linux
 linux-firmware
 lld
-lxappearance
+lxappearance-gtk3
 m4
 macchanger
 mailspring
@@ -108,7 +110,6 @@ pipewire-pulse
 pipewire-zeroconf
 pkgconf
 playerctl
-plymouth-git
 posy-cursors
 procs
 pulsemixer
@@ -130,7 +131,6 @@ spotify-tui
 sshfs
 starship
 steam
-swaybg
 swayidle
 swaylock
 sweet-cursor-theme-git
@@ -163,6 +163,7 @@ wine-staging
 wireplumber
 wl-clipboard
 x86_energy_perf_policy
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xdotool
