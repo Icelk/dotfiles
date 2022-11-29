@@ -69,11 +69,11 @@
             "critical": 15
         },
         "format": "{capacity} {icon}",
-        "format-charging": "{capacity} {icon}",
+        "format-charging": "{capacity} ",
         "format-plugged": "{capacity} {icon}",
         // "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        // "format-full": "{capacity} ",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
 
