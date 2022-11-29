@@ -81,7 +81,6 @@ lld
 lxappearance-gtk3
 m4
 macchanger
-mailspring
 make
 man-db
 meson
@@ -142,6 +141,7 @@ termdown
 texinfo
 thunar
 thunar-volman
+thunderbird
 tldr
 tlp
 tokei
