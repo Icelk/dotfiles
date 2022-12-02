@@ -9,6 +9,12 @@
     "rust-analyzer.imports.prefix": "self",
     "rust-analyzer.imports.granularity.group": "module",
     "rust-analyzer.imports.granularity.enforce": true,
+    "rust-analyzer.assist.emitMustUse": true,
+    "rust-analyzer.lens.location": "above_whole_item",
+    "rust-analyzer.semanticHighlighting.operator.specialization.enable": true,
+    "rust-analyzer.semanticHighlighting.punctuation.enable": true,
+    "rust-analyzer.semanticHighlighting.punctuation.specialization.enable": true,
+    "rust-analyzer.semanticHighlighting.punctuation.separate.macro.bang": true,
 
     "codeLens.enable": true,
     "codeLens.position": "right_align",
