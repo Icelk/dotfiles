@@ -1,20 +1,28 @@
-snippet l "HTML link"
-<a href="$2">$1</a>$0
-endsnippet
+snippet l HTML link
+	<a href="$2">$1</a>$0
 
-snippet i "italics"
-<i>$1</i>$0
-endsnippet
-snippet b "bold"
-<b>$1</b>$0
-endsnippet
+snippet i italic
+	<i>$1</i>$0
 
-snippet hl "highlighted <code> block"
-<pre><code class="language-$1">$2</code></pre>$0
-endsnippet
+snippet b bold
+	<b>$1</b>$0
 
-snippet p "paragraph"
-<p>
-	$0
-</p>
-endsnippet
+snippet hl highlighted <code> block
+	<pre><code class="language-$1">$2</code></pre>$0
+
+snippet p paragraph
+	<p>
+		$0
+	</p>
+
+snippet ! Base
+	<!DOCTYPE html>
+	<html${2: lang="en-GB"}>
+		<head>
+			<title>$1</title>
+        	<meta name="color-scheme" content="dark light" />
+		</head>
+		<body>
+			$0
+		</body>
+	</html>

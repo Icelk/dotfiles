@@ -9,3 +9,8 @@ config/systemd/dbus.service
 
 # Ignore generated completions for Fish
 config/fish/completions
+
+# we fix this in the install script
+config/nvim/syntax
+config/nvim/plugin/packer_compiled.lua
+config/nvim/lua/.luarc.json
