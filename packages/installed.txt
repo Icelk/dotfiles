@@ -1,3 +1,4 @@
+adw-gtk3
 alsa-utils
 amd-ucode
 audacity
@@ -48,7 +49,6 @@ gimp-devel
 git
 gn
 gnome-keyring
-gnome-themes-extra
 gparted
 gptfdisk
 grim

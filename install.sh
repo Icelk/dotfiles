@@ -69,7 +69,7 @@ l $wdc/firefox-user.js ~/.mozilla/firefox/$(/bin/ls -1 ~/.mozilla/firefox/ | rg 
 l $wdc/fish/ $hc/fish
 
 ## Gtk
-l $wdc/gtk-3.0.ini $hc/gtk-3.0/
+cp -n $wdc/gtk-3.0.ini $hc/gtk-3.0/settings.ini
 
 ## Hyprland (Wayland window manager & compositor)
 l -f $wdc/hyprland.conf $hc/hypr/
