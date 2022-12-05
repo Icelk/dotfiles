@@ -1,3 +1,4 @@
+adw-gtk3
 alsa-utils
 audacity
 autoconf
@@ -45,7 +46,6 @@ gimp-devel
 git
 gn
 gnome-keyring
-gnome-themes-extra
 gparted
 gptfdisk
 grim
@@ -78,6 +78,7 @@ light
 linux
 linux-firmware
 lld
+lua-language-server
 lxappearance-gtk3
 m4
 macchanger
@@ -87,7 +88,6 @@ meson
 mpg123
 neofetch
 neovim
-neovim-plug
 nfs-utils
 ninja
 nodejs
@@ -95,6 +95,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntfs-3g
+nvim-packer-git
 oath-toolkit
 obs-studio
 obsidian
@@ -152,9 +153,13 @@ ttf-firacode-nerd
 ttf-roboto
 tumbler
 typescript
+typescript-language-server
 unbound
 unzip
 ventoy-bin
+vscode-css-languageserver
+vscode-html-languageserver
+vscode-json-languageserver
 wasm-bindgen
 wasm-pack
 watchexec
