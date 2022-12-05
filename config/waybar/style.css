@@ -45,6 +45,7 @@ button {
     padding: 0 10px;
     background-color: transparent;
     color: #ffffff;
+    font-weight: normal;
 }
 
 #workspaces button.active {
