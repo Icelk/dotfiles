@@ -278,7 +278,7 @@ lspc.html.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    settings = { ["html"] = { autoClosingTags = true } }
+    settings = { autoClosingTags = true }
 }
 
 local null_ls = require("null-ls")
