@@ -20,6 +20,8 @@ require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
+    use 'honza/vim-snippets'
+
     use 'airblade/vim-gitgutter'
     use 'windwp/nvim-autopairs'
     use 'terrortylor/nvim-comment'
@@ -52,6 +54,7 @@ telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.
 require "dressing".setup { select = { telescope = tele_theme } }
 
 nmap("<C-p>", function() tele_builtin.find_files(tele_theme) end)
+nmap("<C-l>", function() tele_builtin.oldfiles(tele_theme) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(tele_theme) end)
 nmap("S", function() tele_builtin.spell_suggest(tele_theme) end)
 
@@ -151,7 +154,15 @@ local on_attach = function(client, bufnr)
     nmapo('<leader>wl', function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
-    nvmapo('F', function() vim.lsp.buf.format { async = true } end, opts)
+    nvmapo('F',
+        function() vim.lsp.buf.format { async = true,
+                filter = function(c)
+                    return c.name ~= "tsserver" and c.name ~= "cssls" and
+                        c.name ~= "html"
+                end,
+
+            }
+        end, opts)
 
     -- Remap for rename current word
     nmapo("<F9>", vim.lsp.buf.rename, opts)
@@ -162,7 +173,7 @@ local on_attach = function(client, bufnr)
     -- Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
     nvmapo("<leader>a", vim.lsp.buf.code_action);
     nmapo("<C-a>", vim.lsp.buf.code_action);
-    imapo("<C-A-space>", vim.lsp.buf.code_action);
+    imapo("<C-A-Space>", vim.lsp.buf.code_action);
 
     nvmapo("<leader>f", function() vim.lsp.buf.code_action(nil, nil, true) end);
 
@@ -284,7 +295,10 @@ lspc.html.setup {
 local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
-        null_ls.builtins.completion.spell,
+        null_ls.builtins.formatting.prettier.with({
+            extra_args = { "--no-semi", "--tab-width", "4" }
+        }),
+        -- null_ls.builtins.completion.spell,
         null_ls.builtins.diagnostics.fish,
         -- null_ls.builtins.diagnostics.php,
         null_ls.builtins.formatting.fish_indent,
@@ -403,3 +417,18 @@ cmp.setup {
         { name = 'path' },
     },
 }
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+    underline = true,
+    signs = true,
+}
+)
+
+A.nvim_create_autocmd("CursorHold", {
+    callback = function() vim.diagnostic.open_float({ focusable = false }) end,
+})
+-- A.nvim_create_autocmd("CursorHoldI", {
+-- callback = function() vim.lsp.buf.signature_help() end,
+-- callback = function() vim.diagnostic.open_float({ focusable = false }) end,
+-- })

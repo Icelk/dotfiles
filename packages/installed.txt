@@ -116,6 +116,7 @@ pipewire-zeroconf
 pkgconf
 playerctl
 posy-cursors
+prettier
 procs
 pulsemixer
 pureref

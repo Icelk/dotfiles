@@ -1,8 +1,10 @@
 local map = require "map"
 local nmap = map.nmap
 local imap = map.imap
+local vmap = map.vmap
 
 nmap("'", ":", false)
+vmap("'", ":", false)
 
 
 -- lspconfig
@@ -48,3 +50,4 @@ nmap("[g", vim.diagnostic.goto_prev)
 nmap("]g", vim.diagnostic.goto_next)
 nmap("<space>k", vim.diagnostic.goto_prev)
 nmap("<space>j", vim.diagnostic.goto_next)
+imap("<C-,>", vim.lsp.buf.signature_help)
