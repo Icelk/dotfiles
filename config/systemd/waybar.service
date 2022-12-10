@@ -3,6 +3,6 @@ Description=My desktop bar
 
 [Service]
 Type=simple
-Environment=WAYLAND_DISPLAY=wayland-0
+Environment=WAYLAND_DISPLAY=wayland-1
 ExecStart=sh -c "waybar"
 ExecStop=rm /tmp/run/packages-upgradable-count.pid

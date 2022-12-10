@@ -2,6 +2,6 @@
 Description=Notifications
 
 [Service]
-Environment=WAYLAND_DISPLAY=wayland-0
+Environment=WAYLAND_DISPLAY=wayland-1
 Type=simple
 ExecStart=dunst
