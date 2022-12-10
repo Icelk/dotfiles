@@ -6,6 +6,7 @@ SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR --export MOZ_USE_XINPUT2:1
 SETUVAR --export PAGER:nvimpager
 SETUVAR --export SYSTEMD_LESS:FRSMK
+SETUVAR --export XCURSOR_THEME:Sweet\x2dcursors
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:4D5566
 SETUVAR fish_color_cancel:\x2dr

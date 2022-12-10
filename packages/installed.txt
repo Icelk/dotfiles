@@ -114,6 +114,7 @@ pkgconf
 playerctl
 plymouth-git
 posy-cursors
+prettier
 procs
 pulsemixer
 pureref

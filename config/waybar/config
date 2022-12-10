@@ -103,7 +103,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["奄", "奔", "墳"]
         },
         "on-click-right": "kitty -1 -e pulsemixer",
         "on-click": "pulsemixer --toggle-mute",
