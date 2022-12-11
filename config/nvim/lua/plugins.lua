@@ -426,9 +426,27 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 
 A.nvim_create_autocmd("CursorHold", {
-    callback = function() vim.diagnostic.open_float({ focusable = false }) end,
+    callback = function()
+        local arr = A.nvim_list_wins()
+        -- if has floating window, don't open popup
+        for i, win in ipairs(arr) do
+            if A.nvim_win_get_config(win).relative ~= '' then
+                return
+            end
+        end
+        vim.diagnostic.open_float({ focusable = false })
+    end,
 })
 -- A.nvim_create_autocmd("CursorHoldI", {
--- callback = function() vim.lsp.buf.signature_help() end,
--- callback = function() vim.diagnostic.open_float({ focusable = false }) end,
+--     callback = function()
+--         local arr = A.nvim_list_wins()
+--         -- if has floating window, don't open popup
+--         for i, win in ipairs(arr) do
+--             if A.nvim_win_get_config(win).relative ~= '' then
+--                 return
+--             end
+--         end
+--
+--         vim.lsp.buf.signature_help()
+--     end,
 -- })
