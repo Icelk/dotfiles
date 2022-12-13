@@ -158,7 +158,7 @@ local on_attach = function(client, bufnr)
         function() vim.lsp.buf.format { async = true,
                 filter = function(c)
                     return c.name ~= "tsserver" and c.name ~= "cssls" and
-                        c.name ~= "html"
+                        c.name ~= "html" and c.name ~= "jsonls"
                 end,
 
             }
