@@ -21,6 +21,7 @@ clang
 cmatrix
 compsize
 cups
+darktable
 dbus-broker
 deno
 dhcpcd
@@ -52,6 +53,7 @@ grim
 groff
 gvfs
 gvfs-afc
+gvfs-gphoto2
 gvfs-mtp
 hexedit
 htop
