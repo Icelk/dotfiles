@@ -62,6 +62,7 @@ hyprpaper-git
 hyprpicker-git
 inkscape
 inotify-tools
+intel-compute-runtime
 intel-media-driver
 intel-ucode
 iptables-nft
@@ -103,7 +104,6 @@ obs-studio
 obsidian
 ocl-icd
 openal
-opencl-nvidia
 opendoas
 pacman-contrib
 paru
