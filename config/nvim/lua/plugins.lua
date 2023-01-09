@@ -29,6 +29,7 @@ require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'hrsh7th/cmp-path'
     use 'simrat39/rust-tools.nvim'
+    use 'ron-rs/ron.vim'
     use {
         'saecki/crates.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
@@ -54,7 +55,7 @@ telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.
 require "dressing".setup { select = { telescope = tele_theme } }
 
 nmap("<C-p>", function() tele_builtin.find_files(tele_theme) end)
-nmap("<C-l>", function() tele_builtin.oldfiles(tele_theme) end)
+nmap("<C-m>", function() tele_builtin.oldfiles(tele_theme) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(tele_theme) end)
 nmap("S", function() tele_builtin.spell_suggest(tele_theme) end)
 
@@ -86,7 +87,7 @@ require('nordic').colorscheme({
     -- Options: true, false, or a table of explicit names
     -- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
     alternate_backgrounds = false,
-    custom_colors = function(c, s, cs)
+    custom_colors = function(c, _, _)
         -- set floating windows to have the same BG as normal windows
         return {
             { { 'NormalFloat', }, c.white, c.dark_black },
@@ -102,6 +103,8 @@ require("luasnip.loaders.from_snipmate").lazy_load()
 
 -- change border
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+-- we want to do that
+---@diagnostic disable-next-line: duplicate-set-field
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
     opts = opts or {}
     opts.border = opts.border or "rounded"
@@ -429,7 +432,7 @@ A.nvim_create_autocmd("CursorHold", {
     callback = function()
         local arr = A.nvim_list_wins()
         -- if has floating window, don't open popup
-        for i, win in ipairs(arr) do
+        for _, win in ipairs(arr) do
             if A.nvim_win_get_config(win).relative ~= '' then
                 return
             end

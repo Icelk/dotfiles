@@ -31,7 +31,7 @@ function ps
 end
 
 function pu
-    paru
+    paru -Suy --removemake
 
     set diff (echo "q" | pacdiff)
 
