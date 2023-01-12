@@ -45,6 +45,8 @@ fwupd
 gcc
 gimp-devel
 git
+git-lfs
+github-cli
 gn
 gnome-keyring
 gparted
