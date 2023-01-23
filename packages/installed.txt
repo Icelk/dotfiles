@@ -53,6 +53,8 @@ gparted
 gptfdisk
 grim
 groff
+gst-plugins-bad
+gst-plugins-good
 gvfs
 gvfs-afc
 gvfs-gphoto2
