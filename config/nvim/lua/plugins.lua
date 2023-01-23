@@ -55,7 +55,7 @@ telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.
 require "dressing".setup { select = { telescope = tele_theme } }
 
 nmap("<C-p>", function() tele_builtin.find_files(tele_theme) end)
-nmap("<C-h>", function() tele_builtin.oldfiles(tele_theme) end)
+nmap("<C-g>", function() tele_builtin.oldfiles(tele_theme) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(tele_theme) end)
 nmap("S", function() tele_builtin.spell_suggest(tele_theme) end)
 
