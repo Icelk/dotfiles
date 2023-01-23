@@ -56,6 +56,8 @@ gparted
 gptfdisk
 grim
 groff
+gst-plugins-bad
+gst-plugins-good
 gvfs
 gvfs-afc
 gvfs-gphoto2
@@ -74,6 +76,8 @@ kora-icon-theme
 libheif
 libmpeg2
 libnet
+libreoffice-fresh
+libreoffice-fresh-en-gb
 libtool
 linux
 linux-firmware
