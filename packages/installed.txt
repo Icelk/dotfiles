@@ -154,7 +154,6 @@ swayidle
 swaylock
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
-termdown
 texinfo
 thunar
 thunar-volman
