@@ -1,5 +1,6 @@
 [build]
 rustc-wrapper = "/usr/bin/sccache"
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 
 [target.x86_64-apple-darwin]
 linker = "x86_64-apple-darwin14-clang"

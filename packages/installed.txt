@@ -84,7 +84,6 @@ linux-firmware
 linux-headers
 linux-zen
 linux-zen-headers
-lld
 lua-language-server
 lxappearance-gtk3
 m4
@@ -92,6 +91,7 @@ make
 man-db
 meson
 minecraft-launcher
+mold
 mpg123
 neofetch
 neovim
