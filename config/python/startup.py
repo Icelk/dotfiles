@@ -1,6 +1,9 @@
 import math
 from math import *
 
+def choose(n, r):
+    return factorial(n)/(factorial(n-r)*factorial(r))
+
 def lg(exp):
     return log(exp, 10)
 def ln(exp):

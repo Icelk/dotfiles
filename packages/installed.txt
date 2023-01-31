@@ -85,7 +85,6 @@ libtool
 light
 linux
 linux-firmware
-lld
 lua-language-server
 lxappearance-gtk3
 m4
@@ -93,6 +92,7 @@ macchanger
 make
 man-db
 meson
+mold
 mpg123
 neofetch
 neovim
