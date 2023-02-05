@@ -47,5 +47,8 @@ g.maplocalleader = ' '
 o.fdm = "syntax"
 o.signcolumn = "number"
 
--- o.spell = true
+-- Spell interferes with semantic tokens if `nordic` is used, but apparently not `gruvbox`!
+o.spell = true
 o.spelllang = "en_gb,sv"
+
+vim.cmd.colorscheme("gruvbox")
