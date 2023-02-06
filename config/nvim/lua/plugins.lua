@@ -68,32 +68,32 @@ nmap("<space>g", function() tele_builtin.git_stash(tele_theme) end)
 require('nvim_comment').setup({ create_mappings = true, line_mapping = "<leader>cc", operator_mapping = "<leader>c" })
 require('crates').setup()
 
-require('nordic').colorscheme({
-    -- Underline style used for spelling
-    -- Options: 'none', 'underline', 'undercurl'
-    underline_option = 'none',
-
-    -- Italics for certain keywords such as constructors, functions,
-    -- labels and namespaces
-    italic = true,
-
-    -- Italic styled comments
-    italic_comments = false,
-
-    -- Minimal mode: different choice of colors for Tabs and StatusLine
-    minimal_mode = false,
-
-    -- Darker backgrounds for certain sidebars, popups, etc.
-    -- Options: true, false, or a table of explicit names
-    -- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
-    alternate_backgrounds = false,
-    custom_colors = function(c, _, _)
-        -- set floating windows to have the same BG as normal windows
-        return {
-            { { 'NormalFloat', }, c.white, c.dark_black },
-        }
-    end
-})
+-- require('nordic').colorscheme({
+--     -- Underline style used for spelling
+--     -- Options: 'none', 'underline', 'undercurl'
+--     underline_option = 'none',
+--
+--     -- Italics for certain keywords such as constructors, functions,
+--     -- labels and namespaces
+--     italic = true,
+--
+--     -- Italic styled comments
+--     italic_comments = false,
+--
+--     -- Minimal mode: different choice of colors for Tabs and StatusLine
+--     minimal_mode = false,
+--
+--     -- Darker backgrounds for certain sidebars, popups, etc.
+--     -- Options: true, false, or a table of explicit names
+--     -- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
+--     alternate_backgrounds = false,
+--     custom_colors = function(c, _, _)
+--         -- set floating windows to have the same BG as normal windows
+--         return {
+--             { { 'NormalFloat', }, c.white, c.dark_black },
+--         }
+--     end
+-- })
 
 local lsp_flags = {}
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
