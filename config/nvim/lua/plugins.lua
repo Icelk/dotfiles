@@ -28,6 +28,7 @@ require('packer').startup(function(use)
 
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
     use 'simrat39/rust-tools.nvim'
     use 'ron-rs/ron.vim'
     use {
@@ -418,6 +419,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
+        { name = 'buffer' }
     },
 }
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
