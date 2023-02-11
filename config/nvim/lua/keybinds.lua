@@ -51,3 +51,18 @@ nmap("]g", vim.diagnostic.goto_next)
 nmap("<space>k", vim.diagnostic.goto_prev)
 nmap("<space>j", vim.diagnostic.goto_next)
 imap("<C-,>", vim.lsp.buf.signature_help)
+
+local function show_documentation()
+    local filetype = vim.bo.filetype
+    if vim.tbl_contains({ 'vim','help' }, filetype) then
+        vim.cmd('h '..vim.fn.expand('<cword>'))
+    elseif vim.tbl_contains({ 'man' }, filetype) then
+        vim.cmd('Man '..vim.fn.expand('<cword>'))
+    elseif vim.fn.expand('%:t') == 'Cargo.toml' and require('crates').popup_available() then
+        require('crates').show_popup()
+    else
+        vim.lsp.buf.hover()
+    end
+end
+
+nmap("K", show_documentation)
