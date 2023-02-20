@@ -66,3 +66,4 @@ local function show_documentation()
 end
 
 nmap("K", show_documentation)
+map.map("t", "<Esc>", "<C-\\><C-n>")
