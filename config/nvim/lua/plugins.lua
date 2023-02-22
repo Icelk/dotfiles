@@ -152,7 +152,6 @@ local on_attach = function(client, bufnr)
     nmapo('gD', vim.lsp.buf.declaration, opts)
     -- nmapo('<C-k>', vim.lsp.buf.signature_help, bufopts)
 
-    nmapo('K', vim.lsp.buf.hover, opts)
     nmapo('<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
     nmapo('<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
     nmapo('<leader>wl', function()
@@ -418,13 +417,14 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = "crates" },
         { name = 'path' },
-        { name = 'buffer' }
+        { name = 'buffer' },
     },
 }
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = false,
+    virtual_text = true,
     underline = true,
     signs = true,
 }
