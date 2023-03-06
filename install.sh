@@ -152,6 +152,9 @@ l $wdh/Exclude-backup-win.txt ~/
 # GNOME settings (which libadwaita uses)
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+# set npm install -g to install to `.local/bin`
+npm config set prefix .local
+
 echo
 
 echo "Enabling user services. Only the hardware-independent are enabled. See this script for the others and the systemd directory."
