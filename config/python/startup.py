@@ -58,6 +58,8 @@ mn=1.00866492
 boltzmann=1.380649e-23
 elementary_charge=1.602176634e-19
 planck=6.62607015e-34
+hbar=planck/pi/2
+h=planck
 
 def u_to_J(u):
     return u * kg_per_u * c2
