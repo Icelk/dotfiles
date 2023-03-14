@@ -6,7 +6,6 @@ autoconf
 automake
 baobab
 base
-bc
 binutils
 bison
 blender
