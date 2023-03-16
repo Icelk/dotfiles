@@ -10,15 +10,14 @@ fi
 
 function pm {
     if [ "$sign" == "" ]; then
-        pulsemixer --max-volume 100 --set-volume ${sign}$vol
+        pulsemixer --max-volume 100 --set-volume $vol
     else
-        pulsemixer --max-volume 100 --change-volume ${sign}$vol
+        pulsemixer --max-volume 100 --change-volume $sign$vol
     fi
 }
 
-if [ -f ~/.cargo/bin/pasv ]; then
-    pasv_vol=$(echo "scale=2 ; $vol / 100" | bc)
-    if ! ~/.cargo/bin/pasv ${sign}$pasv_vol; then
+if [ -x ~/.cargo/bin/pasv ]; then
+    if ! ~/.cargo/bin/pasv $sign$vol%; then
         pm
     fi
 else
