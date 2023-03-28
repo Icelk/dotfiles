@@ -236,7 +236,7 @@ lspc.tsserver.setup {
 --     capabilities = capabilities,
 -- }
 lspc.clangd.setup { on_attach = on_attach, flags = lsp_flags, capabilities = capabilities }
-lspc.sumneko_lua.setup {
+lspc.lua_ls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
