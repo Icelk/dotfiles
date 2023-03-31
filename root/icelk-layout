@@ -5,6 +5,7 @@ default xkb_symbols "basic" {
     override key <AD12> { [slash, backslash, ampersand, dead_tilde ] };
     override key <BKSL> { [apostrophe, asterisk, dead_circumflex, multiply ] };
     override key <SPCE> { [space, space, space, space ] };
+    override key <AB10> { [minus, underscore, emdash, endash ] };
 };
 
 xkb_symbols "ansi" {
