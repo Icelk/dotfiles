@@ -87,6 +87,7 @@ curl -s "https://live.staticflickr.com/65535/52210580092_2075269d5c_o.png" -o "j
 curl -s "https://live.staticflickr.com/65535/52211883799_9642668157_o.png" -o "jwst-3.png" &
 curl -s "https://live.staticflickr.com/65535/52211883534_7fe30b9955_o.png" -o "jwst-4.png" &
 curl -s "https://blogs.nasa.gov/webb/wp-content/uploads/sites/326/2022/08/JWST_2022-07-27_Jupiter_2color.png" -o "jwst-jupiter.png" &
+curl -Ls "https://patch.com/img/cdn20/users/23738927/20230405/095637/styles/raw/public/processed_images/lightning01_04012023.jpg" -o "lightning-nyc.jpg" &
 
 echo "Downloading..."
 wait
