@@ -337,7 +337,7 @@ rt.setup({
         end,
         settings = {
             ["rust-analyzer"] = {
-                checkOnSave = { command = "clippy" },
+                check = { command = "clippy" },
                 cargo = { features = "all" },
                 imports = { prefix = "self", granularity = { group = "module", enforce = true } },
                 assist = { emitMustUse = true },
