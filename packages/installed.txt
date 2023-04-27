@@ -124,6 +124,7 @@ plymouth-git
 posy-cursors
 prettier
 procs
+prusa-slicer
 pulsemixer
 pureref
 python-pip

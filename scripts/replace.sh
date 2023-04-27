@@ -61,4 +61,4 @@ fi
 
 dir=${dir:-"."}
 
-sd $preview "$fd" "$replace_with" $(rg --hidden --one-file-system --files-with-matches "$fd" "$dir")
+sd $preview "$fd" "$replace_with" $(rg --hidden --one-file-system --files-with-matches "$fd" "$dir" | awk '{print "\""$0"\""}')
