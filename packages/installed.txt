@@ -70,6 +70,7 @@ hyprpicker-git
 inkscape
 inotify-tools
 iptables-nft
+kdeconnect
 kdenlive
 kitty
 kora-icon-theme
