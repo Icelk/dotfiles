@@ -41,6 +41,7 @@ firefox
 firefox-tridactyl
 fish
 flex
+freecad
 frei0r-plugins
 fuse2
 fwupd
