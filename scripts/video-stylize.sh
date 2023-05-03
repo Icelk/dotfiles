@@ -10,6 +10,11 @@ case $1 in
         c=10
         s=0
         ;;
+    normal)
+        b=75
+        c=10
+        s=40
+        ;;
     insane)
         b=100
         c=10
