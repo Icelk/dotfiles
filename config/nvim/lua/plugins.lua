@@ -294,6 +294,11 @@ lspc.html.setup {
     capabilities = capabilities,
     settings = { autoClosingTags = true }
 }
+lspc.tailwindcss.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
 
 local null_ls = require("null-ls")
 null_ls.setup({
