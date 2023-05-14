@@ -31,7 +31,7 @@
     "custom/pacman": {
         "interval": 600,
         "exec": "~/scripts/packages-ratio.sh",
-        "format": "{} 󱧕",
+        "format": "{} 󰏗",
         "on-click": "kitty -1 --hold -e fish -c pu",
         "tooltip": false,
     },
@@ -42,7 +42,7 @@
     },
     "custom/using-video": {
         "interval": 10,
-        "exec": "~/scripts/video-get-users.fish 󰃼 󰃿",
+        "exec": "~/scripts/video-get-users.fish 󰄀 󰗟 ",
         "tooltip": false,
     },
     "wlr/workspaces": {
