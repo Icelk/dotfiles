@@ -312,6 +312,12 @@ lspc.tailwindcss.setup {
     flags = lsp_flags,
     capabilities = capabilities,
 }
+lspc.svelte.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    settings = { svelte = { plugin = { typescript = { semanticTokens = { enable = false } } } } }
+}
 
 local null_ls = require("null-ls")
 null_ls.setup({

@@ -155,6 +155,7 @@ spotify-tui
 sshfs
 starship
 steam
+svelte-language-server
 swayidle
 swaylock-1.5
 sweet-cursor-theme-git
@@ -175,6 +176,7 @@ ttf-roboto
 tumbler
 typescript
 typescript-language-server
+typescript-svelte-plugin
 unbound
 unzip
 ventoy-bin
