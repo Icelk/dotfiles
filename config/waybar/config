@@ -31,18 +31,18 @@
     "custom/pacman": {
         "interval": 600,
         "exec": "~/scripts/packages-ratio.sh",
-        "format": "{} ",
+        "format": "{} 󰏗",
         "on-click": "kitty -1 --hold -e fish -c pu",
         "tooltip": false,
     },
     "custom/using-mic": {
         "interval": 10,
-        "exec": "~/scripts/audio-mic-users.sh  ",
+        "exec": "~/scripts/audio-mic-users.sh 󰍬 󰍭",
         "tooltip": false,
     },
     "custom/using-video": {
         "interval": 10,
-        "exec": "~/scripts/video-get-users.fish  ",
+        "exec": "~/scripts/video-get-users.fish 󰄀 󰗟 ",
         "tooltip": false,
     },
     "wlr/workspaces": {
@@ -69,41 +69,41 @@
             "critical": 15
         },
         "format": "{capacity} {icon}",
-        "format-charging": "{capacity} ",
+        "format-charging": "{capacity} 󰂄",
         "format-plugged": "{capacity} {icon}",
         // "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "{capacity} ",
-        "format-icons": ["", "", "", "", ""],
+        // "format-full": "{capacity} 󰂅",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "tooltip": false
 
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength} 直",
-        "format-ethernet": "直",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "睊",
-        "format-disconnected": "睊",
+        "format-wifi": "{signalStrength} 󰖩",
+        "format-ethernet": "󰖩",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "󰖪",
+        "format-disconnected": "󰖪",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "tooltip": false
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
-        "format": "{volume} 墳",
+        "format": "{volume} 󰕾",
         "format-bluetooth": "{volume} {icon} ",
         "format-bluetooth-muted": "0 {icon} ",
-        "format-muted": "ﱝ",
-        "format-source": "{volume} 墳",
+        "format-muted": "󱄡",
+        "format-source": "{volume} 󰕾",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["奄", "奔", "墳"]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click-right": "kitty -1 -e pulsemixer",
         "on-click": "pulsemixer --toggle-mute",

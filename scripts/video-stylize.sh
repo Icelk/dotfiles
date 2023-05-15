@@ -1,14 +1,19 @@
 #!/usr/bin/sh
 
-b=100
+b=75
 c=5
-s=83
+s=40
 
 case $1 in
     old)
         b=75
         c=10
         s=0
+        ;;
+    normal)
+        b=75
+        c=10
+        s=40
         ;;
     insane)
         b=100

@@ -14,11 +14,16 @@ A.nvim_create_autocmd("BufWritePost", {
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
+    use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    use 'L3MON4D3/LuaSnip'         -- Snippets plugin
 
     use 'honza/vim-snippets'
 
@@ -30,7 +35,6 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use 'simrat39/rust-tools.nvim'
-    use 'ron-rs/ron.vim'
     use {
         'saecki/crates.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
@@ -42,6 +46,14 @@ require('packer').startup(function(use)
     use 'andersevenrud/nordic.nvim'
     use "ellisonleao/gruvbox.nvim"
 end)
+
+require 'nvim-treesitter.configs'.setup {
+    ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy" },
+    auto_install = true,
+    highlight = { enable = true },
+}
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- TELESCOPE
 local telescope = require "telescope"
@@ -158,7 +170,8 @@ local on_attach = function(client, bufnr)
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
     nvmapo('F',
-        function() vim.lsp.buf.format { async = true,
+        function()
+            vim.lsp.buf.format { async = true,
                 filter = function(c)
                     return c.name ~= "tsserver" and c.name ~= "cssls" and
                         c.name ~= "html" and c.name ~= "jsonls"
@@ -294,6 +307,17 @@ lspc.html.setup {
     capabilities = capabilities,
     settings = { autoClosingTags = true }
 }
+lspc.tailwindcss.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+lspc.svelte.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    settings = { svelte = { plugin = { typescript = { semanticTokens = { enable = false } } } } }
+}
 
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -342,9 +366,14 @@ rt.setup({
                 imports = { prefix = "self", granularity = { group = "module", enforce = true } },
                 assist = { emitMustUse = true },
                 lens = { location = "above_whole_item" },
-                semanticHighlighting = { operator = { specialization = { enable = true } },
-                    puncutation = { enable = true, specialization = { enable = true },
-                        separate = { macro = { bang = true } } } },
+                semanticHighlighting = {
+                    operator = { specialization = { enable = true } },
+                    puncutation = {
+                        enable = true,
+                        specialization = { enable = true },
+                        separate = { macro = { bang = true } }
+                    }
+                },
             }
 
         }
@@ -424,10 +453,10 @@ cmp.setup {
 }
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = true,
-    underline = true,
-    signs = true,
-}
+        virtual_text = true,
+        underline = true,
+        signs = true,
+    }
 )
 
 A.nvim_create_autocmd("CursorHold", {

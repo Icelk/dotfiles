@@ -7,7 +7,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=sh -c "set -m; export PATH=~/.cargo/bin:$PATH; spotifyd --no-daemon & sleep 2 && spt pb --transfer iceTop -t; fg"
+ExecStart=sh -c "set -m; export PATH=~/.cargo/bin:$PATH; spotifyd --no-daemon & sleep 3 && spt pb --transfer iceTop -t; fg"
 Restart=always
 RestartSec=12
 

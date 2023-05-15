@@ -40,6 +40,7 @@ firefox
 firefox-tridactyl
 fish
 flex
+freecad
 frei0r-plugins
 fuse2
 fwupd
@@ -62,6 +63,8 @@ gvfs-gphoto2
 gvfs-mtp
 hexedit
 htop
+hunspell-en_gb
+hunspell-sv
 hyprland-git
 hyprpaper-git
 hyprpicker-git
@@ -72,6 +75,7 @@ intel-media-driver
 intel-ucode
 iptables-nft
 iwd
+kdeconnect
 kdenlive
 kitty
 kiwix-tools
@@ -144,10 +148,12 @@ spotify-tui
 sshfs
 starship
 steam
+svelte-language-server
 swayidle
 swaylock-1.5
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
+tailwindcss-language-server
 texinfo
 thunar
 thunar-volman
@@ -163,6 +169,7 @@ ttf-roboto
 tumbler
 typescript
 typescript-language-server
+typescript-svelte-plugin
 unbound
 unzip
 ventoy-bin
