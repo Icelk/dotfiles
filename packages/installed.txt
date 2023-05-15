@@ -40,7 +40,6 @@ firefox
 firefox-tridactyl
 fish
 flex
-freecad
 frei0r-plugins
 fuse2
 fwupd
@@ -75,7 +74,6 @@ intel-media-driver
 intel-ucode
 iptables-nft
 iwd
-kdeconnect
 kdenlive
 kitty
 kiwix-tools
