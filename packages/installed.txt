@@ -65,7 +65,7 @@ hexedit
 htop
 hunspell-en_gb
 hunspell-sv
-hyprland-git
+hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
 inkscape
