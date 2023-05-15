@@ -59,9 +59,11 @@ gvfs-afc
 gvfs-mtp
 hexedit
 htop
-hyprland-git
-i3-gaps
-i3lock
+hunspell-en_gb
+hunspell-sv
+hyprland-nvidia-git
+hyprpaper-git
+hyprpicker-git
 inkscape
 inotify-tools
 intel-compute-runtime
