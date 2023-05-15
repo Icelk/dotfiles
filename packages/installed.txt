@@ -65,6 +65,8 @@ gvfs-gphoto2
 gvfs-mtp
 hexedit
 htop
+hunspell-en_gb
+hunspell-sv
 hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
