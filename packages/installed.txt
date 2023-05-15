@@ -40,6 +40,8 @@ firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
+frei0r-plugins
+fuse2
 fwupd
 fzy
 gamemode
