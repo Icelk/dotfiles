@@ -10,7 +10,7 @@ end
 
 # Super-fast compared to (playerctl status)
 # Gets the property of the media player defined by the first argument filtered by the second argument.
-# To get the playback status of `spotifyd`, use `pctl_get "spotifyd" "PlaybackStatus"`
+# To get the playback status of `spotify`, use `pctl_get "spotify" "PlaybackStatus"`
 function pctl_get
     # Get the data from DBUS
     set response (dbus-send --reply-timeout=1000 --print-reply --dest="org.mpris.MediaPlayer2.$argv[1]" /org/mpris/MediaPlayer2 "org.freedesktop.DBus.Properties.Get" string:"org.mpris.MediaPlayer2.Player" string:"$argv[2]")
@@ -23,17 +23,19 @@ function pctl_get
     end
 end
 
-# Cache the initial status of spotifyd
+# Cache the initial status of spotify
 set spt_status ""
-if pactl list clients | grep -i spotifyd
+if pactl list clients | grep -i spotify
     set spt_status "Playing"
 else
     set spt_status "Paused"
 end
 
-# Gets a media player (returned by `playerctl -l`). This prefers spotifyd above all other.
+echo $spt_status
+
+# Gets a media player (returned by `playerctl -l`). This prefers spotify above all other.
 function pref_spt
-    set player (playerctl -l | grep "spotifyd")
+    set player (playerctl -l | grep "spotify")
     
     if test $status -eq 0
         set player (echo $player | head -n 1)
@@ -47,8 +49,8 @@ end
 # Loop on each media player
 # This checks for any media player playing, and if they are, pause and exit.
 for player in (playerctl -l)
-    # If it's spotifyd
-    if string match -q $player "spotifyd"
+    # If it's spotify
+    if string match -q $player "spotifyd" || string match -q $player spotify_player
         # and playing, pause it.
         if string match -q $spt_status "Playing"
             if test -f ~/.cargo/bin/pasv
@@ -60,7 +62,7 @@ for player in (playerctl -l)
             pctl $player "Pause"
 
             # wait for pause
-            sleep 0.1
+            sleep 0.4
             if test -f ~/.cargo/bin/pasv
                 ~/.cargo/bin/pasv -d 0 $volume
             end
@@ -78,7 +80,7 @@ for player in (playerctl -l)
             pctl $player "Pause"
 
             # wait for pause
-            sleep 0.1
+            sleep 0.2
             if test -f ~/.cargo/bin/pasv
                 ~/.cargo/bin/pasv -d 0 $volume
             end

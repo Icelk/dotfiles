@@ -1,12 +1,13 @@
 #!/bin/bash
 
 function pref_spt {
-    player=$(playerctl -l | grep "spotifyd")
+    players=$(playerctl -l)
+    player=$(echo $players | grep "spotify")
 
     if test $? -eq 0; then
-        set player $(echo $player | head -n 1)
+        player=$(echo "$player" | head -n 1)
     else
-        set player $(playerctl -l | head -n 1)
+        player=$(echo "$players" | head -n 1)
     fi
 
     echo $player
@@ -41,6 +42,9 @@ case "${1:-}" in
     ;;
 
 esac
+
+echo $(playerctl -l)
+echo $(pref_spt)
 
 exec dbus-send                                                           \
   --print-reply                                                          \
