@@ -142,7 +142,7 @@ sccache
 scour
 sd
 slurp
-spotify-tui
+spotify-player
 sshfs
 starship
 steam
