@@ -1,5 +1,0 @@
-aom opus libvorbis alsa-lib libogg libpulse pulseaudio
-Manager: pulsemixer
-
-spotifyd
-playerctl

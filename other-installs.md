@@ -10,7 +10,7 @@ Then you should be available to install the programs (while in the appropriate d
 
 All binaries in <https://github.com/Icelk/iclu>
 
-My version of spotifyd ([until it's merged with the master branch](https://github.com/Spotifyd/spotifyd/pull/750)) <https://github.com/Icelk/spotifyd> with `cargo install --path . --features "pulseaudio_backend, dbus_mpris"`
+Spotify-player `cargo install spotify_player -F notify,image,lyric-finder,pulseaudio-backend,streaming,media-control --no-default-features`
 
 [My fork of clipcat](https://github.com/Icelk/clipcat)
 

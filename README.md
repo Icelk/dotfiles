@@ -33,7 +33,7 @@ I use
 -   NeoVim
 -   Firefox
 -   paru
--   spotifyd
+-   spotify-player
 -   iwctl (for connecting to WiFi)
 -   Blueman (for connecting to Bluetooth)
 -   Unbound

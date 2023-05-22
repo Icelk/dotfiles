@@ -2,7 +2,7 @@
 
 function pref_spt {
     players=$(playerctl -l)
-    player=$(echo $players | grep "spotify")
+    player=$(echo "$players" | grep "spotify")
 
     if test $? -eq 0; then
         player=$(echo "$player" | head -n 1)
@@ -42,9 +42,6 @@ case "${1:-}" in
     ;;
 
 esac
-
-echo $(playerctl -l)
-echo $(pref_spt)
 
 exec dbus-send                                                           \
   --print-reply                                                          \
