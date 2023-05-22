@@ -7,10 +7,6 @@ home/Exclude-backup-win.txt
 8:Users/Icelk/AppData/Local/Spotify/Data
 11:Users/Icelk/AppData/Local/Temp
 
-home/gitconfig
-4:	email = main@icelk.dev
-5:	name = Icelk
-
 home/Exclude-backup-home.txt
 4:/home/icelk/nfs/
 5:/home/icelk/.cache/
@@ -38,12 +34,32 @@ home/Exclude-backup-home.txt
 27:/home/icelk/.vscode-oss/extensions/
 28:/home/icelk/.private/
 
+home/gitconfig
+4:	email = main@icelk.dev
+5:	name = Icelk
+
 scripts/rofi/open-dev.sh
 2:# Copyright © Icelk 2021-present
 
 scripts/mount-smb.txt
 2:smbclient -L nas -U icelk
 5:sudo mount -t cifs "//nas/<share>" -o username=icelk /<mountpoint>
+
+scripts/captive-portal-connect.fish
+9:set portal (curl -Is http://icelk.dev | grep "location: " | awk '{print $2}' | string trim)
+
+scripts/website-status-check.fish
+11:From: Status <status@icelk.dev>
+16:    echo $mail | sendmail main@icelk.dev
+23:set page (curl -L icelk.dev)
+26:    mail icelk.dev down
+34:    mail icelk.dev "having problems"
+38:        <img id="main-icon" src="icelk-icon.png" alt="icelk logo" />
+43:    mail icelk.dev "having problems"
+64:e | rg -q 'location: https://github.com/Icelk/agde/'                                                                                                                                                                                                        
+
+scripts/wallpaper-change.fish
+8:while :; xwinwrap -b -fs -sp -ov -- feh --bg-fill --random /home/icelk/Pictures/wallpapers/; sleep $hold; end
 
 scripts/rsync.sh
 3:while ! ssh icelk@nas; do sleep 1; done
@@ -56,31 +72,30 @@ scripts/rsync.sh
 29:    rsync -ahP --del --delete-excluded /archive icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-archive.txt"
 35:    rsync -ahP --del --delete-excluded /win icelk@nas:/mnt/main/computer_erik/ --exclude-from="/home/icelk/Exclude-backup-win.txt"
 
-config/rofi/config.rasi
-3:    theme: "icelk";
+scripts/keyboard.sh
+5:setxkbmap icelk -variant ansi
 
-config/systemd/spotifyd.service
-10:ExecStart=sh -c "set -m; ~/.cargo/bin/spotifyd --no-daemon & sleep 2 && spt pb --transfer Icelk -t; fg"
+config/rofi/config.rasi
+5:@theme "icelk"
 
 config/clipcat/clipcatd.toml
 3:history_file_path = '/home/icelk/.cache/clipcat/clipcatd/history.cch'
 
 config/fish/config.fish
-42:        ssh -TND 41523 icelk.dev
-
-config/nitrogen-saved.cfg
-2:file=/home/icelk/Pictures/backgrounds/mountain-purple.jpg
-7:file=/home/icelk/Pictures/backgrounds/mountain-blue.jpg
-
-config/spotifyd.conf
-48:device_name = "Icelk"
-59:cache_path = "/home/icelk/.cache/spotifyd"
+53:        ssh -TND 41523 icelk.dev
 
 config/ssh
 3:    User icelk
 4:Host server icelk.dev
 6:    User icelk
 13:Host server icelk.dev
+
+config/nvim/snippets/markdown.snippets
+6:		<meta name="permalinks" content="${2:not-titles}"> <!-- part of JS on icelk.dev & kvarn.org, options: disabled|enabled|not-titles -->
+
+config/hyprland.conf
+30:    kb_layout = icelk
+182:# Icelk's bindings
 
 root/getty.conf
 3:ExecStart=-/usr/bin/agetty --autologin icelk --noclear %I $TERM
@@ -90,18 +105,32 @@ root/hosts
 4:127.0.0.1	localhost icelk
 5:127.0.1.1	icelk.localdomain
 
+root/unbound.conf
+1279:#   forward-addr: 78.69.142.191@853#icelk.dev
+
+root/icelk-layout
+12:    include "icelk(basic)"
+20:    include "icelk(ansi)"
+32:    include "icelk(ansi)"
+33:    include "icelk(bracket-fn)"
+36:    include "icelk(ansi-switched-slash)"
+37:    include "icelk(bracket-fn)"
+
+drive-layout.md
+127:nas:/mnt/main/<redacted>			/home/icelk/nfs/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
+138:UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	noauto,nofail,compress-force=zstd	0  0
+
+install-root.sh
+102:echo "The hosts file contains 'icelk' as the name of this computer. You might want to change that if you want another name to link to localhost."
+119:l -f $wdr/icelk-layout /usr/share/X11/xkb/symbols/icelk
+
+README.md
+41:I have theme support through [corpl](https://github.com/Icelk/iclu/tree/main/corpl).
+
 other-installs.md
 11:All binaries in <https://github.com/Icelk/iclu>
-13:My version of spotifyd ([until it's merged with the master branch](https://github.com/Spotifyd/spotifyd/pull/750)) <https://github.com/Icelk/spotifyd> with `cargo install --path . --features "pulseaudio_backend, dbus_mpris"`
 15:[My fork of clipcat](https://github.com/Icelk/clipcat)
 
 install.sh
 7:echo "Some of the files has me (icelk) as a hardcoded user, mostly in ssh and /home/icelk."
 8:echo "The file \"icelk-specific.txt\" contains all files I'm hardcoded in, and where."
-
-drive-layout.md
-134:nas:/mnt/main/<redacted>			/home/icelk/nfs/nas	nfs	defaults,_netdev,noauto,x-systemd.automount,user,noatime	0 0
-145:UUID=<redacted>      	/run/media/icelk/icePrivate  	btrfs	nofail,x-systemd.device-timeout=1ms,compress-force=zstd	0  0
-
-install-root.sh
-106:echo "The hosts file contains 'icelk' as the name of this computer. You might want to change that if you want another name to link to localhost."

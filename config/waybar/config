@@ -1,3 +1,4 @@
+// vim: ft=jsonc
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -26,28 +27,28 @@
     // },
     "custom/arch": {
         "format": "",
-        "tooltip": false,
+        "tooltip": false
     },
     "custom/pacman": {
         "interval": 600,
         "exec": "~/scripts/packages-ratio.sh",
         "format": "{} 󰏗",
         "on-click": "kitty -1 --hold -e fish -c pu",
-        "tooltip": false,
+        "tooltip": false
     },
     "custom/using-mic": {
         "interval": 10,
         "exec": "~/scripts/audio-mic-users.sh 󰍬 󰍭",
-        "tooltip": false,
+        "tooltip": false
     },
     "custom/using-video": {
         "interval": 10,
         "exec": "~/scripts/video-get-users.fish 󰄀 󰗟 ",
-        "tooltip": false,
+        "tooltip": false
     },
     "wlr/workspaces": {
         "all-outputs": true,
-        "sort-by-number": true,
+        "sort-by-number": true
     },
     "tray": {
         // "icon-size": 21,
@@ -55,7 +56,7 @@
     },
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "{:%H:%M:%S}"
     },
     "clock#date": {
         "interval": 60,

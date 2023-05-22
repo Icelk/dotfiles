@@ -94,8 +94,8 @@ l $wdc/rofi/ $hc/rofi
 ## rust-analyzer
 l ~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer ~/.local/bin/rust-analyzer
 
-## Spotifyd
-l $wdc/spotifyd.conf $hc/spotifyd/
+## Spotify
+l $wdc/spotify-player.toml $hc/spotify-player/app.toml
 
 ## SSH
 l $wdc/ssh ~/.ssh/config

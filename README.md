@@ -33,7 +33,7 @@ I use
 -   NeoVim
 -   Firefox
 -   paru
--   spotifyd
+-   spotify-player
 -   Unbound
 
 # Themes
