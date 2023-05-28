@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # Wait for internet connection
-while ! ip address | grep "state UP">/dev/null; do sleep 0.25; done
+while ! ip address | grep "state UP">/dev/null; do sleep 2; done
 
 # The filename of your apps pid file.
 # PIDFILE="packages-upgradable-count.pid"
@@ -13,8 +13,8 @@ while ! ip address | grep "state UP">/dev/null; do sleep 0.25; done
 # Create file
 # echo $$ > "/tmp/run/$PIDFILE"
 
-OUTPUT="ERROR"
-while [[ "$OUTPUT" == *"ERROR"* ]]; do sleep 0.2; OUTPUT=$(timeout 5 checkupdates 2>&1); done
+OUTPUT=$(timeout 5 checkupdates 2>&1)
+while [[ "$OUTPUT" == *"ERROR"* ]]; do sleep 4; OUTPUT=$(timeout 5 checkupdates 2>&1); done
 if [[ -z $OUTPUT ]]; then
 	echo 0
 else
