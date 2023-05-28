@@ -83,6 +83,7 @@ libnet
 libreoffice-fresh
 libreoffice-fresh-en-gb
 libtool
+libva-nvidia-driver-git
 linux
 linux-firmware
 linux-headers
@@ -110,7 +111,6 @@ nss-mdns
 ntfs-3g
 nvidia-dkms
 nvidia-settings
-nvidia-vaapi-driver-git
 nvim-packer-git
 nvtop
 oath-toolkit
