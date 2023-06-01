@@ -55,6 +55,8 @@ require('packer').startup(function(use)
     use "ellisonleao/gruvbox.nvim"
 end)
 
+vim.cmd.colorscheme("gruvbox")
+
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy" },
     auto_install = true,
