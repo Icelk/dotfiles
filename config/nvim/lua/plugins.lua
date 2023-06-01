@@ -58,7 +58,7 @@ end)
 vim.cmd.colorscheme("gruvbox")
 
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy" },
+    ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
     auto_install = true,
     highlight = { enable = true },
 }
