@@ -10,6 +10,14 @@ A.nvim_create_autocmd("BufWritePost", {
     pattern = "plugins.lua",
     callback = function() vim.cmd("source <afile> | PackerCompile") end,
 })
+A.nvim_create_autocmd("BufRead", {
+    pattern = "*.ron",
+    callback = function() vim.o.filetype = "ron" end,
+})
+A.nvim_create_autocmd("BufNewFile", {
+    pattern = "*.ron",
+    callback = function() vim.o.filetype = "ron" end,
+})
 
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
@@ -47,8 +55,10 @@ require('packer').startup(function(use)
     use "ellisonleao/gruvbox.nvim"
 end)
 
+vim.cmd.colorscheme("gruvbox")
+
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy" },
+    ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
     auto_install = true,
     highlight = { enable = true },
 }

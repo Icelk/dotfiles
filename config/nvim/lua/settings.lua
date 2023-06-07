@@ -50,5 +50,3 @@ o.signcolumn = "number"
 -- Spell interferes with semantic tokens if `nordic` is used, but apparently not `gruvbox`!
 o.spell = true
 o.spelllang = "en_gb,sv"
-
-vim.cmd.colorscheme("gruvbox")
