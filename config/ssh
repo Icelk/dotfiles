@@ -14,6 +14,10 @@ Host server icelk.dev
     IdentityFile ~/.private/server-root.rsa
     User root
 
+Host bitbucket.org
+    IdentityFile ~/.ssh/bsl-id.pem
+    User git
+
 Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
 Compression no
 
