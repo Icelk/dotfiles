@@ -1,9 +1,9 @@
 * {
     /* CORPL option dark */
-    /* bg-darker: #05091e; */
-    /* bg-dark: #070c26; */
-    /* bg-light: #1a1f3a; */
-    /* bg-lighter: #2a2f4c; */
+    /* bg-darker: #0b0b0c; */
+    /* bg-dark: #111314; */
+    /* bg-light: #1d1f21; */
+    /* bg-lighter: #2c2f33; */
 
     /* bg-select: @bg-light; */
   
