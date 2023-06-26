@@ -56,6 +56,7 @@ require('packer').startup(function(use)
 end)
 
 vim.cmd.colorscheme("gruvbox")
+vim.cmd("highlight Normal guibg=none")
 
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
