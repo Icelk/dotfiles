@@ -320,6 +320,11 @@ lspc.html.setup {
 }
 lspc.tailwindcss.setup {
     on_attach = on_attach,
+    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
+        "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
+        "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
+        "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
+        "rescript", "typescriptreact", "vue", "svelte" },
     flags = lsp_flags,
     capabilities = capabilities,
 }
@@ -334,7 +339,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--no-semi", "--tab-width", "4" }
+            extra_args = { "--no-semi", "--tab-width", "4", "--prose-wrap", "always", "--bracket-same-line", "true" }
         }),
         -- null_ls.builtins.completion.spell,
         null_ls.builtins.diagnostics.fish,
