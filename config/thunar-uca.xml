@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1609688292476889-1</unique-id>
+	<command>kitty --working-directory %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>backgroundtool</icon>
+	<name>Wallpaper left</name>
+	<submenu></submenu>
+	<unique-id>1688507782912819-1</unique-id>
+	<command>~/scripts/hyprpaper-set-wallpaper.sh DP-2 %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>backgroundtool</icon>
+	<name>Wallpaper right</name>
+	<submenu></submenu>
+	<unique-id>1688507819984982-2</unique-id>
+	<command>~/scripts/hyprpaper-set-wallpaper.sh DP-1 %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>
