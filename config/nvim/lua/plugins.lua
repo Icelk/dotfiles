@@ -92,7 +92,8 @@ telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.
 -- Telescope for nvim UI
 require "dressing".setup { select = { telescope = tele_theme_cursor } }
 
-nmap("<C-p>", function() tele_builtin.find_files(theme()) end)
+nmap("<C-p>",
+    function() tele_builtin.find_files({ theme = theme(), find_command = { "bash","-c", "PATH=$PATH:~/.cargo/bin rg --files --one-file-system --color never --sort modified" } }) end)
 nmap("<C-g>", function() tele_builtin.oldfiles(theme()) end)
 nmap("<C-e>", function() tele_builtin.treesitter(theme()) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(theme()) end)
