@@ -1,5 +1,7 @@
 local A = vim.api
 local map = require "map"
+local utils = require "utils"
+local custom_sorter = require "top-result-sorter"
 local nmapo = map.nmapo
 local imapo = map.nmapo
 local nmap = map.nmap
@@ -72,7 +74,7 @@ local telescope_actions = require "telescope.actions"
 local tele_builtin = require "telescope.builtin"
 local tele_theme_dropdown = require "telescope.themes".get_dropdown()
 local tele_theme_cursor = require "telescope.themes".get_cursor()
-local tele_theme_default = nil
+local tele_theme_default = {}
 
 function dynamic_theme()
     local width = vim.api.nvim_win_get_width(0)
@@ -84,8 +86,8 @@ function dynamic_theme()
         return tele_theme_dropdown
     end
 end
-local theme = dynamic_theme
 
+local theme = dynamic_theme
 
 telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.close } } } }
 
@@ -93,8 +95,14 @@ telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.
 require "dressing".setup { select = { telescope = tele_theme_cursor } }
 
 nmap("<C-p>",
-    function() tele_builtin.find_files({ theme = theme(), find_command = { "bash","-c", "PATH=$PATH:~/.cargo/bin rg --files --one-file-system --color never --sort modified" } }) end)
-nmap("<C-g>", function() tele_builtin.oldfiles(theme()) end)
+    function()
+        tele_builtin.find_files(utils.spread(theme()) {
+            sorter = custom_sorter.sorter(),
+            find_command = { "bash", "-c",
+                "PATH=$PATH:~/.cargo/bin rg --files --one-file-system --color never --sort modified" }
+        })
+    end)
+nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)
 nmap("<C-e>", function() tele_builtin.treesitter(theme()) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(theme()) end)
 nmap("S", function() tele_builtin.spell_suggest(theme()) end)
