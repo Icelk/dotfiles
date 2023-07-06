@@ -6,9 +6,9 @@
 
 window#waybar {
     /* CORPL option light */
-    background-color: rgba(232, 239, 242, 0.125);
+    /* background-color: rgba(232, 239, 242, 0.125); */
     /* CORPL option dark */
-    /* background-color: rgba(29, 31, 33, 0.75); */
+    background-color: rgba(13, 14, 15, 0.45);
     /* CORPL end */
     color: #ffffff;
     transition-property: background-color;
@@ -81,9 +81,9 @@ button {
 #custom-using-video {
     padding: 0 6px;
     /* CORPL option light */
-    color: #e8eff2;
+    /* color: #e8eff2; */
     /* CORPL option dark */
-    /* color: #c5c8c6; */
+    color: #eef2ee;
     /* CORPL end */
 }
 

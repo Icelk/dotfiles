@@ -1,23 +1,23 @@
 * {
     /* CORPL option dark */
-    /* bg-darker: #05091e; */
-    /* bg-dark: #070c26; */
-    /* bg-light: #1a1f3a; */
-    /* bg-lighter: #2a2f4c; */
+    bg-darker: #0b0b0c;
+    bg-dark: #111314;
+    bg-light: #1d1f21;
+    bg-lighter: #2c2f33;
 
-    /* bg-select: @bg-light; */
+    bg-select: @bg-light;
   
-    /* text-normal: #fffffa; */
-    /* text-color: #a2c6d8; */
+    text-normal: #fffffa;
+    text-color: #a2c6d8;
     /* CORPL option light */
-    bg-darker: #6c747f;
-    bg-dark: #828b99;
-    bg-light: #e8eff2bf;
-    bg-lighter: #b7bdccbf;
+    /* bg-darker: #6c747f; */
+    /* bg-dark: #828b99; */
+    /* bg-light: #e8eff2bf; */
+    /* bg-lighter: #b7bdccbf; */
 
-    bg-select: @bg-dark;
+    /* bg-select: @bg-dark; */
 
-    text-normal: #262c3f;
-    text-color: #6688cc;
+    /* text-normal: #262c3f; */
+    /* text-color: #6688cc; */
     /* CORPL end */
 }

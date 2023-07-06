@@ -63,6 +63,7 @@ gvfs-gphoto2
 gvfs-mtp
 hexedit
 htop
+hugin
 hunspell-en_gb
 hunspell-sv
 hyprland-nvidia-git
@@ -73,6 +74,7 @@ inotify-tools
 intel-compute-runtime
 intel-media-driver
 intel-ucode
+insomnia-bin
 iptables-nft
 iwd
 kdenlive
@@ -186,6 +188,7 @@ wine-staging
 wireplumber
 wl-clipboard
 x86_energy_perf_policy
+wlr-randr
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils

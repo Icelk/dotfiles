@@ -1,5 +1,7 @@
 local A = vim.api
 local map = require "map"
+local utils = require "utils"
+local custom_sorter = require "top-result-sorter"
 local nmapo = map.nmapo
 local imapo = map.nmapo
 local nmap = map.nmap
@@ -56,6 +58,7 @@ require('packer').startup(function(use)
 end)
 
 vim.cmd.colorscheme("gruvbox")
+vim.cmd("highlight Normal guibg=none")
 
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
@@ -69,23 +72,46 @@ vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 local telescope = require "telescope"
 local telescope_actions = require "telescope.actions"
 local tele_builtin = require "telescope.builtin"
--- local tele_theme = require "telescope.themes".get_ivy()
-local tele_theme = nil
+local tele_theme_dropdown = require "telescope.themes".get_dropdown()
+local tele_theme_cursor = require "telescope.themes".get_cursor()
+local tele_theme_default = {}
+
+function dynamic_theme()
+    local width = vim.api.nvim_win_get_width(0)
+    local height = vim.api.nvim_win_get_height(0)
+
+    if width / 2 > height then
+        return tele_theme_default
+    else
+        return tele_theme_dropdown
+    end
+end
+
+local theme = dynamic_theme
 
 telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.close } } } }
 
 -- Telescope for nvim UI
-require "dressing".setup { select = { telescope = tele_theme } }
+require "dressing".setup { select = { telescope = tele_theme_cursor } }
 
-nmap("<C-p>", function() tele_builtin.find_files(tele_theme) end)
-nmap("<C-g>", function() tele_builtin.oldfiles(tele_theme) end)
-nmap("<C-A-p>", function() tele_builtin.grep_string(tele_theme) end)
-nmap("S", function() tele_builtin.spell_suggest(tele_theme) end)
+nmap("<C-p>",
+    function()
+        tele_builtin.find_files(utils.spread(theme()) {
+            sorter = custom_sorter.sorter(),
+            find_command = { "bash", "-c",
+                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' --files --one-file-system --color never --sort modified" }
+        })
+    end)
+nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)
+nmap("<C-e>", function() tele_builtin.treesitter(theme()) end)
+nmap("<C-A-p>", function() tele_builtin.grep_string(theme()) end)
+nmap("S", function() tele_builtin.spell_suggest(theme()) end)
+nmap("<C-/>", function() tele_builtin.current_buffer_fuzzy_find(theme()) end)
 
-nmap("<space>a", function() tele_builtin.diagnostics(tele_theme) end)
-nmap("<space>b", function() tele_builtin.buffers(tele_theme) end)
-nmap("<space>c", function() tele_builtin.git_bcommits(tele_theme) end)
-nmap("<space>g", function() tele_builtin.git_stash(tele_theme) end)
+nmap("<space>a", function() tele_builtin.diagnostics(theme()) end)
+nmap("<space>b", function() tele_builtin.buffers(theme()) end)
+nmap("<space>c", function() tele_builtin.git_bcommits(theme()) end)
+nmap("<space>g", function() tele_builtin.git_stash(theme()) end)
 
 
 require('nvim_comment').setup({ create_mappings = true, line_mapping = "<leader>cc", operator_mapping = "<leader>c" })
@@ -167,10 +193,10 @@ local on_attach = function(client, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
     -- Remap keys for gotos
-    nmapo("gd", function() tele_builtin.lsp_definitions(tele_theme) end, opts)
-    nmapo("gy", function() tele_builtin.lsp_type_definitions(tele_theme) end, opts)
-    nmapo("gi", function() tele_builtin.lsp_implementations(tele_theme) end, opts)
-    nmapo("gr", function() tele_builtin.lsp_references(tele_theme) end, opts)
+    nmapo("gd", function() tele_builtin.lsp_definitions(theme()) end, opts)
+    nmapo("gy", function() tele_builtin.lsp_type_definitions(theme()) end, opts)
+    nmapo("gi", function() tele_builtin.lsp_implementations(theme()) end, opts)
+    nmapo("gr", function() tele_builtin.lsp_references(theme()) end, opts)
     nmapo('gD', vim.lsp.buf.declaration, opts)
     -- nmapo('<C-k>', vim.lsp.buf.signature_help, bufopts)
 
@@ -203,8 +229,8 @@ local on_attach = function(client, bufnr)
 
     nvmapo("<leader>f", function() vim.lsp.buf.code_action(nil, nil, true) end);
 
-    nmapo("<space>o", function() tele_builtin.lsp_dynamic_workspace_symbols(tele_theme) end, opts)
-    nmapo("<space>s", function() tele_builtin.lsp_document_symbols(tele_theme) end, opts)
+    nmapo("<space>o", function() tele_builtin.lsp_dynamic_workspace_symbols(theme()) end, opts)
+    nmapo("<space>s", function() tele_builtin.lsp_document_symbols(theme()) end, opts)
 end
 
 
@@ -319,6 +345,11 @@ lspc.html.setup {
 }
 lspc.tailwindcss.setup {
     on_attach = on_attach,
+    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
+        "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
+        "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
+        "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
+        "rescript", "typescriptreact", "vue", "svelte" },
     flags = lsp_flags,
     capabilities = capabilities,
 }
@@ -333,7 +364,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--no-semi", "--tab-width", "4" }
+            extra_args = { "--no-semi", "--tab-width", "4", "--prose-wrap", "always", "--bracket-same-line", "true" }
         }),
         -- null_ls.builtins.completion.spell,
         null_ls.builtins.diagnostics.fish,
