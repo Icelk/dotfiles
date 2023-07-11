@@ -39,6 +39,7 @@ fakeroot
 fd
 ffmpegthumbnailer
 firefox
+firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
