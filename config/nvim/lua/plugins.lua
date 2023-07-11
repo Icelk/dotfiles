@@ -37,7 +37,7 @@ require('packer').startup(function(use)
 
     use 'honza/vim-snippets'
 
-    use 'airblade/vim-gitgutter'
+    use 'mhinz/vim-signify'
     use 'windwp/nvim-autopairs'
     use 'terrortylor/nvim-comment'
 
