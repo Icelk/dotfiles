@@ -36,14 +36,13 @@ nmap("<F8>", function() vim.o.ignorecase = not vim.o.ignorecase end)
 -- Close current window
 nmap("<C-q>", function() vim.api.nvim_win_close(0, false) end)
 
--- Go to next/prev git changes
-nmap("[f", "<CMD>GitGutterPrevHunk<CR>")
-nmap("]f", "<CMD>GitGutterNextHunk<CR>")
+-- Go to next/prev git changes (signify gives us [c, ]c, [C, ]C)
 
--- Stage/revert hunk
+-- revert hunk
 -- I know this is ugly (g is usually the 'go to', but now it's Git!)
-nmap("gs", "<CMD>GitGutterStageHunk<CR>")
-nmap("gu", "<CMD>GitGutterUndoHunk<CR>")
+nmap("gu", "<CMD>SignifyHunkUndo<CR>")
+-- preview diff
+nmap("<C-y>", "<CMD>SignifyHunkDiff<CR>")
 
 -- Use `[g` and `]g` to navigate diagnostics
 nmap("[g", vim.diagnostic.goto_prev)
