@@ -380,6 +380,13 @@ autopairs.setup()
 
 local rt = require("rust-tools")
 
+local function execOutput(cmd)
+    local fileHandle    = assert(io.popen(cmd, "r"))
+    local commandOutput = assert(fileHandle:read("*a"))
+    local returnTable   = { fileHandle:close() }
+    return commandOutput
+end
+
 rt.setup({
     runnables = {
         use_telescope = true,
@@ -388,7 +395,10 @@ rt.setup({
         use_telescope = true,
     },
     server = {
-        cmd = { os.getenv("HOME") .. "/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
+        cmd = {
+            os.getenv("HOME") ..
+            "/.rustup/toolchains/" ..
+            string.gmatch(execOutput("rustup show active-toolchain"), "[^%s]+")() .. "/bin/rust-analyzer" },
         flags = lsp_flags,
         capabilities,
         on_attach = function(a, bufnr)
