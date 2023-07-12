@@ -6,13 +6,17 @@ local vmap = map.vmap
 nmap("'", ":", false)
 vmap("'", ":", false)
 
+nmap("<C-f>", "<C-d>")
+nmap("<C-b>", "<C-u>")
+nmap("<C-n>", "5<C-e>")
+nmap("<C-m>", "5<C-y>")
 
 -- lspconfig
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-nmap('<space>e', vim.diagnostic.open_float)
-nmap('[d', vim.diagnostic.goto_prev)
-nmap(']d', vim.diagnostic.goto_next)
-nmap('<space>q', vim.diagnostic.setloclist)
+nmap("<space>e", vim.diagnostic.open_float)
+nmap("[d", vim.diagnostic.goto_prev)
+nmap("]d", vim.diagnostic.goto_next)
+nmap("<space>q", vim.diagnostic.setloclist)
 
 nmap("<C-h>", "<C-w>h")
 nmap("<C-j>", "<C-w>j")
