@@ -71,6 +71,7 @@ iptables-nft
 kdeconnect
 kdenlive
 kitty
+kora-icon-theme
 libheif
 libmpeg2
 libreoffice-fresh
