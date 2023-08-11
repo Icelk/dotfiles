@@ -145,6 +145,8 @@ steam
 svelte-language-server
 swayidle
 swaylock-1.5
+sweet-cursor-theme-git
+sweet-gtk-theme-dark
 tailwindcss-language-server
 thunar
 thunderbird
