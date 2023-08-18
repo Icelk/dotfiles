@@ -21,49 +21,51 @@ A.nvim_create_autocmd("BufNewFile", {
     callback = function() vim.o.filetype = "ron" end,
 })
 
-require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+require("packer").startup(function(use)
+    use "wbthomason/packer.nvim"
 
     use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
     }
 
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
-    use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip'         -- Snippets plugin
+    use "neovim/nvim-lspconfig"
+    use "hrsh7th/nvim-cmp"         -- Autocompletion plugin
+    use "hrsh7th/cmp-nvim-lsp"     -- LSP source for nvim-cmp
+    use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
+    use "L3MON4D3/LuaSnip"         -- Snippets plugin
 
-    use 'honza/vim-snippets'
+    use "honza/vim-snippets"
 
-    use 'airblade/vim-gitgutter'
-    use 'windwp/nvim-autopairs'
-    use 'terrortylor/nvim-comment'
+    use "mhinz/vim-signify"
+    use "windwp/nvim-autopairs"
+    use "terrortylor/nvim-comment"
+    use "JoosepAlviste/nvim-ts-context-commentstring"
 
-    use 'jose-elias-alvarez/null-ls.nvim'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-buffer'
-    use 'simrat39/rust-tools.nvim'
+    use "jose-elias-alvarez/null-ls.nvim"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-buffer"
+    use "simrat39/rust-tools.nvim"
     use {
-        'saecki/crates.nvim',
-        requires = { 'nvim-lua/plenary.nvim' }
+        "saecki/crates.nvim",
+        requires = { "nvim-lua/plenary.nvim" }
     }
 
     use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
-    use { 'stevearc/dressing.nvim' }
+    use { "stevearc/dressing.nvim" }
 
-    use 'andersevenrud/nordic.nvim'
+    use "andersevenrud/nordic.nvim"
     use "ellisonleao/gruvbox.nvim"
 end)
 
 vim.cmd.colorscheme("gruvbox")
 vim.cmd("highlight Normal guibg=none")
 
-require 'nvim-treesitter.configs'.setup {
+require "nvim-treesitter.configs".setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
     auto_install = true,
     highlight = { enable = true },
+    context_commentstring = { enable = true },
 }
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
@@ -114,13 +116,24 @@ nmap("<space>c", function() tele_builtin.git_bcommits(theme()) end)
 nmap("<space>g", function() tele_builtin.git_stash(theme()) end)
 
 
-require('nvim_comment').setup({ create_mappings = true, line_mapping = "<leader>cc", operator_mapping = "<leader>c" })
-require('crates').setup()
+local ctx_comment = require("ts_context_commentstring.internal")
+require("nvim_comment").setup({
+    create_mappings = true,
+    line_mapping = "<leader>cc",
+    operator_mapping = "<leader>c",
+    hook = function()
+        local ft = vim.api.nvim_buf_get_option(0, "filetype")
+        if ft == "svelte" or ft == "html" or ft == "markdown" then
+            ctx_comment.update_commentstring()
+        end
+    end,
+})
+require("crates").setup()
 
--- require('nordic').colorscheme({
+-- require("nordic").colorscheme({
 --     -- Underline style used for spelling
---     -- Options: 'none', 'underline', 'undercurl'
---     underline_option = 'none',
+--     -- Options: "none", "underline", "undercurl"
+--     underline_option = "none",
 --
 --     -- Italics for certain keywords such as constructors, functions,
 --     -- labels and namespaces
@@ -139,15 +152,15 @@ require('crates').setup()
 --     custom_colors = function(c, _, _)
 --         -- set floating windows to have the same BG as normal windows
 --         return {
---             { { 'NormalFloat', }, c.white, c.dark_black },
+--             { { "NormalFloat", }, c.white, c.dark_black },
 --         }
 --     end
 -- })
 
 local lsp_flags = {}
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspc = require 'lspconfig'
-local luasnip = require 'luasnip'
+local lspc = require "lspconfig"
+local luasnip = require "luasnip"
 require("luasnip.loaders.from_snipmate").lazy_load()
 
 -- change border
@@ -164,7 +177,7 @@ end
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
-    -- A.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    -- A.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
     local capabilities = client.server_capabilities
 
@@ -197,15 +210,15 @@ local on_attach = function(client, bufnr)
     nmapo("gy", function() tele_builtin.lsp_type_definitions(theme()) end, opts)
     nmapo("gi", function() tele_builtin.lsp_implementations(theme()) end, opts)
     nmapo("gr", function() tele_builtin.lsp_references(theme()) end, opts)
-    nmapo('gD', vim.lsp.buf.declaration, opts)
-    -- nmapo('<C-k>', vim.lsp.buf.signature_help, bufopts)
+    nmapo("gD", vim.lsp.buf.declaration, opts)
+    -- nmapo("<C-k>", vim.lsp.buf.signature_help, bufopts)
 
-    nmapo('<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
-    nmapo('<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
-    nmapo('<leader>wl', function()
+    nmapo("<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
+    nmapo("<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
+    nmapo("<leader>wl", function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
-    nvmapo('F',
+    nvmapo("F",
         function()
             vim.lsp.buf.format { async = true,
                 filter = function(c)
@@ -293,11 +306,11 @@ lspc.lua_ls.setup {
         Lua = {
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
+                version = "LuaJIT",
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = { 'vim' },
+                globals = { "vim" },
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
@@ -375,10 +388,17 @@ null_ls.setup({
     on_attach = on_attach,
 })
 
-local autopairs = require('nvim-autopairs')
+local autopairs = require("nvim-autopairs")
 autopairs.setup()
 
 local rt = require("rust-tools")
+
+local function execOutput(cmd)
+    local fileHandle    = assert(io.popen(cmd, "r"))
+    local commandOutput = assert(fileHandle:read("*a"))
+    local returnTable   = { fileHandle:close() }
+    return commandOutput
+end
 
 rt.setup({
     runnables = {
@@ -388,15 +408,18 @@ rt.setup({
         use_telescope = true,
     },
     server = {
-        cmd = { os.getenv("HOME") .. "/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
+        cmd = {
+            os.getenv("HOME") ..
+            "/.rustup/toolchains/" ..
+            string.gmatch(execOutput("rustup show active-toolchain"), "[^%s]+")() .. "/bin/rust-analyzer" },
         flags = lsp_flags,
         capabilities,
         on_attach = function(a, bufnr)
             on_attach(a, bufnr)
             -- Rust specific keybinds
             vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
-            vim.keymap.set('n', '<C-x>', rt.expand_macro.expand_macro)
-            vim.keymap.set('n', '<C-d>', rt.external_docs.open_external_docs)
+            vim.keymap.set("n", "<C-x>", rt.expand_macro.expand_macro)
+            vim.keymap.set("n", "<C-d>", rt.external_docs.open_external_docs)
             -- Code action groups
             vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
         end,
@@ -423,10 +446,10 @@ rt.setup({
 
 rt.inlay_hints.enable()
 
-local cmp = require 'cmp'
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require "cmp"
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 cmp.event:on(
-    'confirm_done',
+    "confirm_done",
     cmp_autopairs.on_confirm_done()
 )
 A.nvim_create_autocmd("BufRead", {
@@ -444,14 +467,14 @@ cmp.setup {
         end,
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete({ select = true }),
-        ['<CR>'] = cmp.mapping.confirm {
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
-        ['<Tab>'] = cmp.mapping(function(fallback)
+        ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
                 -- elseif luasnip.expand_or_jumpable() then
@@ -459,15 +482,15 @@ cmp.setup {
             else
                 fallback()
             end
-        end, { 'i', 's' }),
-        ['<C-j>'] = cmp.mapping(function(fallback)
+        end, { "i", "s" }),
+        ["<C-j>"] = cmp.mapping(function(fallback)
             if luasnip.jumpable() then
                 luasnip.jump(1)
             else
                 fallback()
             end
-        end, { 'i', 's' }),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
+        end, { "i", "s" }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -475,21 +498,21 @@ cmp.setup {
             else
                 fallback()
             end
-        end, { 'i', 's' }),
-        ['<C-k>'] = cmp.mapping(function(fallback)
+        end, { "i", "s" }),
+        ["<C-k>"] = cmp.mapping(function(fallback)
             if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else
                 fallback()
             end
-        end, { 'i', 's' }),
+        end, { "i", "s" }),
     }),
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
         { name = "crates" },
-        { name = 'path' },
-        { name = 'buffer' },
+        { name = "path" },
+        { name = "buffer" },
     },
 }
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -505,7 +528,7 @@ A.nvim_create_autocmd("CursorHold", {
         local arr = A.nvim_list_wins()
         -- if has floating window, don't open popup
         for _, win in ipairs(arr) do
-            if A.nvim_win_get_config(win).relative ~= '' then
+            if A.nvim_win_get_config(win).relative ~= "" then
                 return
             end
         end
@@ -517,7 +540,7 @@ A.nvim_create_autocmd("CursorHold", {
 --         local arr = A.nvim_list_wins()
 --         -- if has floating window, don't open popup
 --         for i, win in ipairs(arr) do
---             if A.nvim_win_get_config(win).relative ~= '' then
+--             if A.nvim_win_get_config(win).relative ~= "" then
 --                 return
 --             end
 --         end

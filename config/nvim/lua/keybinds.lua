@@ -6,13 +6,17 @@ local vmap = map.vmap
 nmap("'", ":", false)
 vmap("'", ":", false)
 
+nmap("<C-f>", "<C-d>")
+nmap("<C-b>", "<C-u>")
+nmap("<C-n>", "5<C-e>")
+nmap("<C-m>", "5<C-y>")
 
 -- lspconfig
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-nmap('<space>e', vim.diagnostic.open_float)
-nmap('[d', vim.diagnostic.goto_prev)
-nmap(']d', vim.diagnostic.goto_next)
-nmap('<space>q', vim.diagnostic.setloclist)
+nmap("<space>e", vim.diagnostic.open_float)
+nmap("[d", vim.diagnostic.goto_prev)
+nmap("]d", vim.diagnostic.goto_next)
+nmap("<space>q", vim.diagnostic.setloclist)
 
 nmap("<C-h>", "<C-w>h")
 nmap("<C-j>", "<C-w>j")
@@ -36,14 +40,13 @@ nmap("<F8>", function() vim.o.ignorecase = not vim.o.ignorecase end)
 -- Close current window
 nmap("<C-q>", function() vim.api.nvim_win_close(0, false) end)
 
--- Go to next/prev git changes
-nmap("[f", "<CMD>GitGutterPrevHunk<CR>")
-nmap("]f", "<CMD>GitGutterNextHunk<CR>")
+-- Go to next/prev git changes (signify gives us [c, ]c, [C, ]C)
 
--- Stage/revert hunk
+-- revert hunk
 -- I know this is ugly (g is usually the 'go to', but now it's Git!)
-nmap("gs", "<CMD>GitGutterStageHunk<CR>")
-nmap("gu", "<CMD>GitGutterUndoHunk<CR>")
+nmap("gu", "<CMD>SignifyHunkUndo<CR>")
+-- preview diff
+nmap("<C-y>", "<CMD>SignifyHunkDiff<CR>")
 
 -- Use `[g` and `]g` to navigate diagnostics
 nmap("[g", vim.diagnostic.goto_prev)
