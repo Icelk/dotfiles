@@ -1,6 +1,0 @@
-[Unit]
-Description=Back up Obsidian vaults
-
-[Service]
-Type=oneshot
-ExecStart=sh -c 'for f in $(find ~/obsidian -maxdepth 1 -mindepth 1 -type d); do tar -caf "$f-$(date "+%%+4Y-%%m-%%d-%%T").tzst" "$f"; done'
