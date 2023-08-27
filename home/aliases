@@ -14,6 +14,7 @@ alias rsn="rsng --exclude '**.git/'"
 alias sssh="kitty +kitten ssh use-python"
 alias replace="~/scripts/replace.sh"
 alias py="python -q"
+alias dush="bash -c 'du -shxc \$(fd --type directory --maxdepth 1 --hidden) | sort -h'"
 
 # Systemctl
 alias sctl="doas systemctl"

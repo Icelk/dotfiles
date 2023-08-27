@@ -38,7 +38,6 @@ fd
 ffmpegthumbnailer
 firefox
 firefox-nightly-bin
-firefox-tridactyl
 fish
 flex
 freecad
@@ -149,6 +148,7 @@ sweet-cursor-theme-git
 sweet-gtk-theme-dark
 tailwindcss-language-server
 thunar
+thunar-volman
 thunderbird
 tldr
 tokei

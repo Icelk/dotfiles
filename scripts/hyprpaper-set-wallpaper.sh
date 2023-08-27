@@ -1,7 +1,7 @@
 #!/bin/sh
 
 monitor=$1
-wallpaper="$2"
+wallpaper=$(realpath "$2")
 
 store_path=/tmp/hyprpaper-last-wallpaper.txt
 
@@ -13,7 +13,7 @@ echo $wallpaper
 echo hyprctl hyprpaper unload "$old_wallpaper"
 hyprctl hyprpaper unload "$old_wallpaper"
 
-hyprctl hyprpaper preload "$wallpaper"
+#hyprctl hyprpaper preload "$wallpaper"
 hyprctl hyprpaper wallpaper $monitor,"$wallpaper"
 
 echo "$wallpaper" >$store_path
