@@ -9,6 +9,7 @@ base
 binutils
 bison
 blender
+bottles
 brave-bin
 breeze
 breeze-gtk
