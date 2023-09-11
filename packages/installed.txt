@@ -31,7 +31,7 @@ docker
 dosfstools
 dunst
 efibootmgr
-epiphany
+evince
 exa
 exfatprogs
 fakeroot
@@ -69,6 +69,8 @@ hyprpicker-git
 inkscape
 insomnia-bin
 iptables-nft
+jdtls
+jre-openjdk-headless
 kdeconnect
 kdenlive
 kitty
@@ -89,6 +91,7 @@ lxappearance-gtk3
 m4
 make
 man-db
+maven
 meson
 minecraft-launcher
 mingw-w64-gcc
