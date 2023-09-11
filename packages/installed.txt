@@ -31,12 +31,12 @@ dosfstools
 dunst
 easyeffects
 efibootmgr
+evince
 exa
 fakeroot
 fd
 ffmpegthumbnailer
 firefox
-firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
@@ -177,7 +177,9 @@ wine-mono
 wine-staging
 wireplumber
 wl-clipboard
+wlr-randr
 x86_energy_perf_policy
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xf86-video-intel
