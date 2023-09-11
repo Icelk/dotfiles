@@ -30,6 +30,7 @@ dosfstools
 dunst
 efibootmgr
 epiphany
+evince
 exa
 exfatprogs
 fakeroot
@@ -69,6 +70,9 @@ intel-ucode
 insomnia-bin
 iptables-nft
 iwd
+jdtls
+jre-openjdk-headless
+kdeconnect
 kdenlive
 kitty
 kiwix-tools
@@ -86,6 +90,7 @@ m4
 macchanger
 make
 man-db
+maven
 meson
 mold
 mpv
@@ -141,7 +146,15 @@ swaylock-1.5
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
 tailwindcss-language-server
+texinfo
+texlive-basic
+texlive-binextra
+texlive-fontsrecommended
+texlive-latex
+texlive-latexrecommended
+texlive-publishers
 thunar
+thunar-volman
 thunderbird
 tldr
 tlp

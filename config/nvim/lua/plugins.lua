@@ -265,38 +265,6 @@ lspc.tsserver.setup {
         end
     end,
 }
--- lspc.rust_analyzer.setup {
---     cmd = { os.getenv("HOME") .. "/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
---     on_attach = on_attach,
---     flags = lsp_flags,
---     -- Server-specific settings...
---     runnables = {
---         use_telescope = true,
---     },
---     debuggables = {
---         use_telescope = true,
---     },
---     server = {
---         settings = {
---
---             ["rust-analyzer"] = {
---                 checkOnSave = {command = "fuck"},
---                 ["checkOnSave.command"] = "fuck",
---                 ["cargo.features"] = "all",
---                 ["imports.prefix"] = "self",
---                 ["imports.granularity.group"] = "module",
---                 ["imports.granularity.enforce"] = true,
---                 ["assist.emitMustUse"] = true,
---                 ["lens.location"] = "above_whole_item",
---                 ["semanticHighlighting.operator.specialization.enable"] = true,
---                 ["semanticHighlighting.punctuation.enable"] = true,
---                 ["semanticHighlighting.punctuation.specialization.enable"] = true,
---                 ["semanticHighlighting.punctuation.separate.macro.bang"] = true,
---             }
---         }
---     },
---     capabilities = capabilities,
--- }
 lspc.clangd.setup { on_attach = on_attach, flags = lsp_flags, capabilities = capabilities }
 lspc.lua_ls.setup {
     on_attach = on_attach,
@@ -363,6 +331,11 @@ lspc.tailwindcss.setup {
         "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
         "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
         "rescript", "typescriptreact", "vue", "svelte" },
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+lspc.jdtls.setup {
+    on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
