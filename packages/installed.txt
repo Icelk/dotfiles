@@ -29,7 +29,6 @@ dnsmasq
 dosfstools
 dunst
 efibootmgr
-epiphany
 evince
 exa
 exfatprogs
@@ -37,7 +36,6 @@ fakeroot
 fd
 ffmpegthumbnailer
 firefox
-firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
@@ -57,7 +55,6 @@ gvfs
 gvfs-gphoto2
 gvfs-mtp
 htop
-hugin
 hunspell-en_gb
 hunspell-sv
 hyprland-nvidia-git
@@ -67,7 +64,6 @@ inkscape
 intel-compute-runtime
 intel-media-driver
 intel-ucode
-insomnia-bin
 iptables-nft
 iwd
 jdtls
@@ -181,8 +177,8 @@ wine-mono
 wine-staging
 wireplumber
 wl-clipboard
-x86_energy_perf_policy
 wlr-randr
+x86_energy_perf_policy
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
