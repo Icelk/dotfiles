@@ -99,9 +99,9 @@ require "dressing".setup { select = { telescope = tele_theme_cursor } }
 nmap("<C-p>",
     function()
         tele_builtin.find_files(utils.spread(theme()) {
-            sorter = custom_sorter.sorter(),
+            -- sorter = custom_sorter.sorter(),
             find_command = { "bash", "-c",
-                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' --files --one-file-system --color never --sort modified" }
+                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' --files --one-file-system --color never --sortr modified" }
         })
     end)
 nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)

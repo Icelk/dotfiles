@@ -1,3 +1,5 @@
+cover_img_length=10
+
 [device]
 name="iceTop"
 volume=100
