@@ -60,6 +60,7 @@ elementary_charge=1.602176634e-19
 planck=6.62607015e-34
 hbar=planck/pi/2
 h=planck
+G=6.67e-11
 
 def u_to_J(u):
     return u * kg_per_u * c2
