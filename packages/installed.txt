@@ -3,6 +3,7 @@ alsa-utils
 audacity
 autoconf
 automake
+aws-cli-v2
 baobab
 base
 binutils
