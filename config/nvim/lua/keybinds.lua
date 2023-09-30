@@ -44,12 +44,6 @@ nmap("<C-q>", function() vim.api.nvim_win_close(0, false) end)
 
 -- Go to next/prev git changes (signify gives us [c, ]c, [C, ]C)
 
--- revert hunk
--- I know this is ugly (g is usually the 'go to', but now it's Git!)
-nmap("gu", "<CMD>SignifyHunkUndo<CR>")
--- preview diff
-nmap("<C-y>", "<CMD>SignifyHunkDiff<CR>")
-
 -- Use `[g` and `]g` to navigate diagnostics
 nmap("[g", vim.diagnostic.goto_prev)
 nmap("]g", vim.diagnostic.goto_next)

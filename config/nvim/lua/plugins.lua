@@ -1,10 +1,10 @@
 local A = vim.api
 local map = require "map"
 local utils = require "utils"
-local custom_sorter = require "top-result-sorter"
 local nmapo = map.nmapo
 local imapo = map.nmapo
 local nmap = map.nmap
+local vmap = map.vmap
 local nvmapo = map.nvmapo
 
 A.nvim_create_autocmd("BufWritePost", {
@@ -37,7 +37,7 @@ require("packer").startup(function(use)
 
     use "honza/vim-snippets"
 
-    use "mhinz/vim-signify"
+    use "lewis6991/gitsigns.nvim"
     use "windwp/nvim-autopairs"
     use "terrortylor/nvim-comment"
     use "JoosepAlviste/nvim-ts-context-commentstring"
@@ -99,7 +99,6 @@ require "dressing".setup { select = { telescope = tele_theme_cursor } }
 nmap("<C-p>",
     function()
         tele_builtin.find_files(utils.spread(theme()) {
-            -- sorter = custom_sorter.sorter(),
             find_command = { "bash", "-c",
                 "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' --files --one-file-system --color never --sortr modified" }
         })
@@ -115,6 +114,30 @@ nmap("<space>b", function() tele_builtin.buffers(theme()) end)
 nmap("<space>c", function() tele_builtin.git_bcommits(theme()) end)
 nmap("<space>g", function() tele_builtin.git_stash(theme()) end)
 
+local gs = require("gitsigns")
+gs.setup {
+    word_diff = true,
+    preview_config = {
+        border = "rounded",
+        col = 20,
+    },
+    current_line_blame_opts = {
+        delay = 300, -- same as updatetime
+    },
+    on_attach = function()
+        nmap("[c", gs.prev_hunk)
+        nmap("]c", gs.next_hunk)
+        nmap("gu", gs.reset_hunk)
+        nmap("gs", gs.stage_hunk)
+        nmap("gS", gs.undo_stage_hunk)
+        nmap("gp", gs.preview_hunk)
+        nmap("gb", gs.blame_line)
+        nmap("gB", gs.toggle_current_line_blame)
+        vmap('gs', function() gs.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+        vmap('gS', function() gs.undo_stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+        vmap('gu', function() gs.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+    end
+}
 
 local ctx_comment = require("ts_context_commentstring.internal")
 require("nvim_comment").setup({
