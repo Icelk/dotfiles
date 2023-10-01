@@ -126,7 +126,9 @@ gs.setup {
     },
     on_attach = function()
         nmap("[c", gs.prev_hunk)
+        nmap("<space>K", gs.prev_hunk)
         nmap("]c", gs.next_hunk)
+        nmap("<space>J", gs.next_hunk)
         nmap("gu", gs.reset_hunk)
         nmap("gs", gs.stage_hunk)
         nmap("gS", gs.undo_stage_hunk)
