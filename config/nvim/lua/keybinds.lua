@@ -2,6 +2,7 @@ local map = require "map"
 local nmap = map.nmap
 local imap = map.imap
 local vmap = map.vmap
+local gmap = map.map
 
 nmap("'", ":", false)
 vmap("'", ":", false)
@@ -18,10 +19,11 @@ nmap("[d", vim.diagnostic.goto_prev)
 nmap("]d", vim.diagnostic.goto_next)
 nmap("<space>q", vim.diagnostic.setloclist)
 
-nmap("<C-h>", "<C-w>h")
-nmap("<C-j>", "<C-w>j")
-nmap("<C-k>", "<C-w>k")
-nmap("<C-l>", "<C-w>l")
+gmap({"i", "n"}, "<C-h>", "<esc><C-w>h")
+gmap({"i", "n"}, "<C-j>", "<esc><C-w>j")
+gmap({"i", "n"}, "<C-k>", "<esc><C-w>k")
+gmap({"i", "n"}, "<C-l>", "<esc><C-w>l")
+imap("<C-w>", "<esc><C-w>")
 
 -- Go to start/end of line in insert mode.
 imap("<S-Left>", "<C-o>0")
@@ -41,12 +43,6 @@ nmap("<F8>", function() vim.o.ignorecase = not vim.o.ignorecase end)
 nmap("<C-q>", function() vim.api.nvim_win_close(0, false) end)
 
 -- Go to next/prev git changes (signify gives us [c, ]c, [C, ]C)
-
--- revert hunk
--- I know this is ugly (g is usually the 'go to', but now it's Git!)
-nmap("gu", "<CMD>SignifyHunkUndo<CR>")
--- preview diff
-nmap("<C-y>", "<CMD>SignifyHunkDiff<CR>")
 
 -- Use `[g` and `]g` to navigate diagnostics
 nmap("[g", vim.diagnostic.goto_prev)
