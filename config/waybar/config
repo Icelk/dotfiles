@@ -6,7 +6,7 @@
     // "width": 1280, // Waybar width
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/pacman", "pulseaudio", "custom/using-video", "custom/using-mic", "battery", "network", "clock#date"],
     // Modules configuration
@@ -46,7 +46,7 @@
         "exec": "~/scripts/video-get-users.fish 󰄀 󰗟 ",
         "tooltip": false
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "all-outputs": true,
         "sort-by-number": true
     },
