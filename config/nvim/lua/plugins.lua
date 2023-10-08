@@ -116,7 +116,6 @@ nmap("<space>g", function() tele_builtin.git_stash(theme()) end)
 
 local gs = require("gitsigns")
 gs.setup {
-    word_diff = true,
     preview_config = {
         border = "rounded",
         col = 20,
