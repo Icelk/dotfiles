@@ -147,6 +147,7 @@ spotify-player
 sshfs
 starship
 steam
+strace
 svelte-language-server
 swayidle
 swaylock-1.5
