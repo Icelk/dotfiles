@@ -362,6 +362,7 @@ lspc.jdtls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    cmd = { "jdtls", "-source", "19" }
 }
 lspc.svelte.setup {
     on_attach = on_attach,
