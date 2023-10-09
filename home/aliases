@@ -59,6 +59,7 @@ alias gcfg="git config --global"
 
 # Rust clones
 alias ls="exa -la -s=Name --group-directories-first --git"
+alias tree="ls --tree"
 alias grep="rg --hidden --one-file-system"
 alias find="fd --hidden --one-file-system"
 

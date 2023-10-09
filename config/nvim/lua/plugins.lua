@@ -116,7 +116,6 @@ nmap("<space>g", function() tele_builtin.git_stash(theme()) end)
 
 local gs = require("gitsigns")
 gs.setup {
-    word_diff = true,
     preview_config = {
         border = "rounded",
         col = 20,
@@ -363,6 +362,7 @@ lspc.jdtls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    cmd = { "jdtls", "-source", "19" }
 }
 lspc.svelte.setup {
     on_attach = on_attach,
