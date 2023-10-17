@@ -17,6 +17,7 @@ o.relativenumber = true
 o.signcolumn = 'yes:1'
 o.cursorline = true
 o.mouse = "a"
+o.linebreak = true
 
 -- Better editing experience
 o.expandtab = true
