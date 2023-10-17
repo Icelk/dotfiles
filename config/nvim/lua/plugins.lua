@@ -143,7 +143,7 @@ gs.setup {
 }
 
 local ctx_comment = require("ts_context_commentstring.internal")
-require("nvim_comment").setup({
+require("nvim_comment").setup {
     create_mappings = true,
     line_mapping = "<leader>cc",
     operator_mapping = "<leader>c",
@@ -153,8 +153,14 @@ require("nvim_comment").setup({
             ctx_comment.update_commentstring()
         end
     end,
-})
-require("crates").setup()
+}
+require("crates").setup {
+    src = {
+        cmp = {
+            enabled = true
+        }
+    }
+}
 
 -- require("nordic").colorscheme({
 --     -- Underline style used for spelling
