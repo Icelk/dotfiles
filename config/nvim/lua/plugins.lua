@@ -28,6 +28,7 @@ require("packer").startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     }
+    use "nvim-treesitter/nvim-treesitter-context"
 
     use "neovim/nvim-lspconfig"
     use "hrsh7th/nvim-cmp"         -- Autocompletion plugin
@@ -67,6 +68,7 @@ require "nvim-treesitter.configs".setup {
     highlight = { enable = true },
     context_commentstring = { enable = true },
 }
+require "treesitter-context".setup {}
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 
@@ -134,14 +136,14 @@ gs.setup {
         nmap("gp", gs.preview_hunk)
         nmap("gb", gs.blame_line)
         nmap("gB", gs.toggle_current_line_blame)
-        vmap('gs', function() gs.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-        vmap('gS', function() gs.undo_stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-        vmap('gu', function() gs.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+        vmap('gs', function() gs.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+        vmap('gS', function() gs.undo_stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+        vmap('gu', function() gs.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
     end
 }
 
 local ctx_comment = require("ts_context_commentstring.internal")
-require("nvim_comment").setup({
+require("nvim_comment").setup {
     create_mappings = true,
     line_mapping = "<leader>cc",
     operator_mapping = "<leader>c",
@@ -151,8 +153,14 @@ require("nvim_comment").setup({
             ctx_comment.update_commentstring()
         end
     end,
-})
-require("crates").setup()
+}
+require("crates").setup {
+    src = {
+        cmp = {
+            enabled = true
+        }
+    }
+}
 
 -- require("nordic").colorscheme({
 --     -- Underline style used for spelling
