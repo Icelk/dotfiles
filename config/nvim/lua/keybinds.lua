@@ -34,7 +34,9 @@ imap("<C-e>", "<C-o>$")
 imap("<S-enter>", "<CR><esc>kA")
 
 nmap("j", "gj")
+vmap("j", "gj")
 nmap("k", "gk")
+vmap("k", "gk")
 
 -- Toggle ignorecase
 nmap("<F8>", function() vim.o.ignorecase = not vim.o.ignorecase end)
