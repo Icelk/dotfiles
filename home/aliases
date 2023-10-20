@@ -53,6 +53,7 @@ alias gms="git merge --squash"
 alias gmt="git mergetool"
 alias gcp="git cherry-pick"
 alias gbp="git fetch --prune"
+alias grb="git rebase --committer-date-is-author-date"
 
 alias gsm="git submodule"
 alias gcfg="git config --global"
