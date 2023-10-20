@@ -64,9 +64,6 @@ echo "A rustup pacman hook has been installed. It will update Rust when the syst
 l $wdr/breeze.hook /etc/pacman.d/hooks/
 l $wdr/nvidia.hook /etc/pacman.d/hooks/
 
-# Pacman config
-l $wdr/pacman.conf /etc/
-
 # Enable auto-login
 #mkdir /etc/systemd/system/getty@tty1.service.d
 #ln -s $PWD/root/getty.conf /etc/systemd/system/getty@tty1.service.d/override.conf
@@ -126,5 +123,5 @@ echo "A reflector configuration file was included, but it contains location-spec
 
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
-read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), and CUPS (printing)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups dbus-broker
+read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker

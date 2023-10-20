@@ -29,6 +29,8 @@ I use
 -   paru
 -   spotify-player
 -   Unbound
+-   iwctl (for connecting to Wi-Fi)
+-   Blueman (for Bluetooth)
 
 # Themes
 
