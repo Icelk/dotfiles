@@ -213,7 +213,15 @@ local on_attach = function(client, bufnr)
 
     local capabilities = client.server_capabilities
 
-    A.nvim_create_autocmd("CursorHold,CursorHoldI,InsertLeave", {
+    A.nvim_create_autocmd("CursorHold", {
+        callback = function() A.nvim_command "silent! vim.lsp.codelens.refresh()" end,
+        buffer = bufnr,
+    })
+    A.nvim_create_autocmd("CursorHoldI", {
+        callback = function() A.nvim_command "silent! vim.lsp.codelens.refresh()" end,
+        buffer = bufnr,
+    })
+    A.nvim_create_autocmd("InsertLeave", {
         callback = function() A.nvim_command "silent! vim.lsp.codelens.refresh()" end,
         buffer = bufnr,
     })
@@ -224,7 +232,11 @@ local on_attach = function(client, bufnr)
             callback = vim.lsp.buf.clear_references,
             buffer = bufnr,
         })
-        A.nvim_create_autocmd("CursorHold,CursorHoldI", {
+        A.nvim_create_autocmd("CursorHold", {
+            callback = vim.lsp.buf.document_highlight,
+            buffer = bufnr,
+        })
+        A.nvim_create_autocmd("CursorHoldI", {
             callback = vim.lsp.buf.document_highlight,
             buffer = bufnr,
         })
@@ -257,7 +269,6 @@ local on_attach = function(client, bufnr)
                     return c.name ~= "tsserver" and c.name ~= "cssls" and
                         c.name ~= "html" and c.name ~= "jsonls"
                 end,
-
             }
         end, opts)
 
