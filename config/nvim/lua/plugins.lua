@@ -28,7 +28,7 @@ require("packer").startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     }
-    use "nvim-treesitter/nvim-treesitter-context"
+    -- use "nvim-treesitter/nvim-treesitter-context"
 
     use "neovim/nvim-lspconfig"
     use "hrsh7th/nvim-cmp"         -- Autocompletion plugin
@@ -68,7 +68,7 @@ require "nvim-treesitter.configs".setup {
     highlight = { enable = true },
     context_commentstring = { enable = true },
 }
-require "treesitter-context".setup {}
+-- require "treesitter-context".setup {}
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 
