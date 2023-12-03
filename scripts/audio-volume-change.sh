@@ -8,6 +8,10 @@ if [ $1 != "-" ] && [ $1 != "+" ]; then
     sign=""
 fi
 
+devices=$(playerctl -l)
+kdeconnect=$(echo "$devices" | rg kdeconnect)
+kde_error=$?
+
 function pm {
     if [ "$sign" == "" ]; then
         pulsemixer --max-volume 100 --set-volume $vol
@@ -15,6 +19,11 @@ function pm {
         pulsemixer --max-volume 100 --change-volume $sign$vol
     fi
 }
+
+if [ $kde_error == 0 ]; then
+    playerctl volume $(echo $vol | fish -c "math (playerctl volume) +$sign $vol / 100")
+    exit
+fi
 
 if [ -x ~/.cargo/bin/pasv ]; then
     if ! ~/.cargo/bin/pasv $sign$vol%; then

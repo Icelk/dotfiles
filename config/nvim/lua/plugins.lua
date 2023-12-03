@@ -102,7 +102,7 @@ nmap("<C-p>",
     function()
         tele_builtin.find_files(utils.spread(theme()) {
             find_command = { "bash", "-c",
-                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' --files --one-file-system --color never --sortr modified" }
+                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' -g '!.embuild' --files --one-file-system --color never --sortr modified" }
         })
     end)
 nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)
