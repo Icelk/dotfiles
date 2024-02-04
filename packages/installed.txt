@@ -47,6 +47,7 @@ fish
 flex
 freecad
 fwupd
+fzy
 gamemode
 gcc
 gimp-devel
@@ -72,8 +73,8 @@ hyprpicker-git
 inkscape
 insomnia-bin
 iptables-nft
+jdk-openjdk
 jdtls
-jre-openjdk-headless
 kdeconnect
 kdenlive
 kitty
