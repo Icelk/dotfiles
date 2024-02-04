@@ -54,6 +54,7 @@ require("packer").startup(function(use)
 
     use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
     use { "stevearc/dressing.nvim" }
+    use { "danielfalk/smart-open.nvim", requires = { {"kkharji/sqlite.lua"}, { "nvim-telescope/telescope-fzy-native.nvim" } } }
 
     use "andersevenrud/nordic.nvim"
     use "ellisonleao/gruvbox.nvim"
@@ -95,16 +96,19 @@ local theme = dynamic_theme
 
 telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.close } } } }
 
+telescope.load_extension("smart_open")
+
 -- Telescope for nvim UI
 require "dressing".setup { select = { telescope = tele_theme_cursor } }
 
-nmap("<C-p>",
-    function()
-        tele_builtin.find_files(utils.spread(theme()) {
-            find_command = { "bash", "-c",
-                "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' -g '!.embuild' --files --one-file-system --color never --sortr modified" }
-        })
-    end)
+-- nmap("<C-p>",
+--     function()
+--         tele_builtin.find_files(utils.spread(theme()) {
+--             find_command = { "bash", "-c",
+--                 "PATH=$PATH:~/.cargo/bin rg -. -g '!.git' -g '!.embuild' --files --one-file-system --color never --sortr modified" }
+--         })
+--     end)
+nmap("<C-p>", function() telescope.extensions.smart_open.smart_open() end)
 nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)
 nmap("<C-e>", function() tele_builtin.treesitter(theme()) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(theme()) end)
