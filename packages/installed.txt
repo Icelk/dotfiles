@@ -15,6 +15,7 @@ breeze
 breeze-gtk
 breeze-hacked-cursor-theme-git
 btrbk
+calf
 candy-icons-git
 cargo-bloat
 cargo-flamegraph
@@ -30,6 +31,7 @@ dnsmasq
 docker
 dosfstools
 dunst
+easyeffects
 efibootmgr
 epiphany
 evince
@@ -87,6 +89,7 @@ linux-headers
 linux-zen
 linux-zen-headers
 lld
+lsp-plugins-lv2
 lua-language-server
 lxappearance-gtk3
 m4
