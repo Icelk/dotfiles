@@ -121,6 +121,7 @@ obs-studio
 obsidian
 ocl-icd
 opencl-nvidia
+octave
 opendoas
 pacman-contrib
 paru
