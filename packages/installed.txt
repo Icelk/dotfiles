@@ -1,6 +1,7 @@
 adw-gtk3
 alsa-utils
 audacity
+auto-cpufreq
 autoconf
 automake
 aws-cli-v2
@@ -163,7 +164,6 @@ thunar
 thunar-volman
 thunderbird
 tldr
-tlp
 tokei
 ttf-firacode-nerd
 ttf-roboto
