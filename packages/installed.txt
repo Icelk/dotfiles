@@ -159,11 +159,14 @@ sweet-cursor-theme-git
 sweet-gtk-theme-dark
 tailwindcss-language-server
 texinfo
+texlab
 texlive-basic
 texlive-binextra
 texlive-fontsrecommended
 texlive-latex
+texlive-latexextra
 texlive-latexrecommended
+texlive-luatex
 texlive-publishers
 thunar
 thunar-volman
