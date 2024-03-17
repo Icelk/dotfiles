@@ -25,7 +25,7 @@ spt_status="$(pctl_get "spotifyd" "PlaybackStatus")"
 
 # Gets a media player (returned by `playerctl -l`). This prefers spotifyd above all other.
 function pref_spt {
-    player=$(playerctl -l | grep "spotifyd")
+    player=$(playerctl -l | grep "spotify")
     
     if [[ "$?" == 0 ]]; then
         player=$(echo $player | head -n 1)
@@ -39,8 +39,8 @@ function pref_spt {
 # Loop on each media player
 # This checks for any media player playing, and if they are, pause and exit.
 for player in $(playerctl -l); do
-    # If it's spotifyd
-    if [[ "$player" == *"spotifyd"* ]]; then
+    # If it's spotify
+    if [[ "$player" == *"spotify"* ]]; then
         # and playing, pause it.
         if [[ "$spt_status" == *"Playing"* ]]; then
             pctl $player "Pause"
