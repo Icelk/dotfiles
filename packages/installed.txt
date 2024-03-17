@@ -67,7 +67,7 @@ htop
 hugin
 hunspell-en_gb
 hunspell-sv
-hyprland-nvidia-git
+hyprland
 hyprpaper-git
 hyprpicker-git
 inkscape
@@ -174,9 +174,10 @@ thunar-volman
 thunderbird
 tldr
 tokei
-tor-browser
+tor-browser-bin
 ttf-firacode-nerd
 ttf-roboto
+ttf-ubuntu-font-family
 tumbler
 typescript
 typescript-language-server
