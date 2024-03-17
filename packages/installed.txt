@@ -25,6 +25,7 @@ cross
 cups
 darktable
 dbus-broker
+debugedit
 deno
 dhcpcd
 dnsmasq
@@ -120,8 +121,8 @@ oath-toolkit
 obs-studio
 obsidian
 ocl-icd
-opencl-nvidia
 octave
+opencl-nvidia
 opendoas
 pacman-contrib
 paru
