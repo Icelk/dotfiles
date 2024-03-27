@@ -1,0 +1,9 @@
+@import "clean.rasi"
+
+#listview {
+    columns: 4;
+    fixed-columns: true;
+}
+element-icon {
+    size: 300px;
+}

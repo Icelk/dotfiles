@@ -23,9 +23,12 @@ cargo-bloat
 cargo-flamegraph
 clang
 cmatrix
+cliphist
+cmake
 cups
 darktable
 dbus-broker
+debugedit
 deno
 dhcpcd
 dnsmasq
@@ -62,8 +65,10 @@ gvfs-mtp
 htop
 hunspell-en_gb
 hunspell-sv
-hyprland-nvidia-git
-hyprpaper-git
+hypridle
+hyprland
+hyprlock
+hyprpaper
 hyprpicker-git
 inkscape
 intel-compute-runtime
@@ -112,6 +117,7 @@ obs-studio
 obsidian
 ocl-icd
 octave
+opencl-nvidia
 opendoas
 pacman-contrib
 paru
@@ -122,6 +128,7 @@ pipewire-pulse
 pkgconf
 playerctl
 plymouth-git
+polkit-gnome
 posy-cursors
 prettier
 prusa-slicer
@@ -129,6 +136,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
+qt6ct
 redis
 reflector
 ripgrep
@@ -145,8 +153,6 @@ starship
 steam
 strace
 svelte-language-server
-swayidle
-swaylock-1.5
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
 tailwindcss-language-server
@@ -167,6 +173,7 @@ tldr
 tokei
 ttf-firacode-nerd
 ttf-roboto
+ttf-ubuntu-font-family
 tumbler
 typescript
 typescript-language-server
@@ -189,7 +196,8 @@ wireplumber
 wl-clipboard
 wlr-randr
 x86_energy_perf_policy
-xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
 zip
