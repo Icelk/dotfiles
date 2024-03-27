@@ -129,6 +129,7 @@ opencl-nvidia
 opendoas
 pacman-contrib
 paru
+patch
 piper
 pipewire
 pipewire-alsa
