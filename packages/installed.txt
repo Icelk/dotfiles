@@ -142,6 +142,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
+qt6ct
 redis
 reflector
 ripgrep

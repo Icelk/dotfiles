@@ -4,6 +4,7 @@ cd ~
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 export LIBVA_DRIVER_NAME=nvidia
 export XDG_SESSION_TYPE=wayland
