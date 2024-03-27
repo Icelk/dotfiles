@@ -20,6 +20,7 @@ candy-icons-git
 cargo-bloat
 cargo-flamegraph
 clang
+cliphist
 cmake
 cross
 cups
