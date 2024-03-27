@@ -68,8 +68,10 @@ htop
 hugin
 hunspell-en_gb
 hunspell-sv
+hypridle
 hyprland
-hyprpaper-git
+hyprlock
+hyprpaper
 hyprpicker-git
 inkscape
 insomnia-bin
@@ -155,7 +157,6 @@ starship
 steam
 strace
 svelte-language-server
-swayidle
 swaylock-1.5
 sweet-cursor-theme-git
 sweet-gtk-theme-dark

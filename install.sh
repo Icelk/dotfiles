@@ -74,7 +74,8 @@ cp -n $wdc/gtk-3.0.ini $hc/gtk-3.0/settings.ini
 
 ## Hyprland (Wayland window manager & compositor)
 l -f $wdc/hyprland.conf $hc/hypr/
-cp -n $wdc/hyprpaper.conf $hc/hypr/
+l -f $wdc/hyprpaper.conf $hc/hypr/
+l -f $wdc/hyprlock.conf $hc/hypr/
 
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf
