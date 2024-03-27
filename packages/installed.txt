@@ -134,6 +134,7 @@ pipewire-alsa
 pipewire-pulse
 pkgconf
 playerctl
+polkit-gnome
 posy-cursors
 prettier
 prusa-slicer
@@ -157,7 +158,6 @@ starship
 steam
 strace
 svelte-language-server
-swaylock-1.5
 sweet-cursor-theme-git
 sweet-gtk-theme-dark
 tailwindcss-language-server
