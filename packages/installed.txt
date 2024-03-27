@@ -22,9 +22,9 @@ candy-icons-git
 cargo-bloat
 cargo-flamegraph
 clang
-cmatrix
 cliphist
 cmake
+cmatrix
 cups
 darktable
 dbus-broker
@@ -71,6 +71,7 @@ hyprlock
 hyprpaper
 hyprpicker-git
 inkscape
+insomnia-bin
 intel-compute-runtime
 intel-media-driver
 intel-ucode
@@ -117,7 +118,6 @@ obs-studio
 obsidian
 ocl-icd
 octave
-opencl-nvidia
 opendoas
 pacman-contrib
 paru
