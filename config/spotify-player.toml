@@ -1,6 +1,11 @@
-cover_img_length=10
+cover_img_length = 10
+
+copy_command = { command = "wl-copy" }
+default_device = "Home"
+playback_refresh_duration_in_ms = 5000
 
 [device]
-name="Home"
-volume=100
-bitrate=320
+name = "Home"
+volume = 100
+bitrate = 320
+audio_cache = true
