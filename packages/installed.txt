@@ -69,7 +69,7 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
-hyprpicker-git
+hyprpicker
 inkscape
 insomnia-bin
 intel-compute-runtime
@@ -121,6 +121,7 @@ octave
 opendoas
 pacman-contrib
 paru
+patch
 piper
 pipewire
 pipewire-alsa
@@ -165,6 +166,7 @@ texlive-latex
 texlive-latexextra
 texlive-latexrecommended
 texlive-luatex
+texlive-mathscience
 texlive-publishers
 thunar
 thunar-volman

@@ -1,6 +1,11 @@
-cover_img_length=10
+cover_img_length = 10
+
+copy_command = { command = "wl-copy" }
+default_device = "Home"
+playback_refresh_duration_in_ms = 5000
 
 [device]
 name="iceTop"
-volume=100
-bitrate=320
+volume = 100
+bitrate = 320
+audio_cache = true
