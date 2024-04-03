@@ -76,6 +76,7 @@ cp -n $wdc/gtk-3.0.ini $hc/gtk-3.0/settings.ini
 l -f $wdc/hyprland.conf $hc/hypr/
 l -f $wdc/hyprpaper.conf $hc/hypr/
 l -f $wdc/hyprlock.conf $hc/hypr/
+l -f $wdc/hypridle.conf $hc/hypr/
 
 ## Kitty
 l $wdc/kitty.conf $hc/kitty/kitty.conf
