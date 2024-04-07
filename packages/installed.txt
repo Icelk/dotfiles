@@ -16,7 +16,6 @@ breeze-gtk
 breeze-hacked-cursor-theme-git
 btrbk
 calf
-candy-icons-git
 cargo-bloat
 cargo-flamegraph
 clang
@@ -162,7 +161,6 @@ steam
 strace
 svelte-language-server
 sweet-cursor-theme-git
-sweet-gtk-theme-dark
 tailwindcss-language-server
 texinfo
 texlab
@@ -205,7 +203,6 @@ wine-staging
 winetricks
 wireplumber
 wl-clipboard
-wlr-randr
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
