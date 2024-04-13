@@ -11,6 +11,8 @@ fi
 devices=$(playerctl -l)
 kdeconnect=$(echo "$devices" | rg kdeconnect)
 kde_error=$?
+spotify=$(echo "$devices" | rg spotify)
+spt_error=$?
 
 function pm {
     if [ "$sign" == "" ]; then
@@ -20,7 +22,8 @@ function pm {
     fi
 }
 
-if [ $kde_error == 0 ]; then
+if [ $kde_error == 0 ] && [ $spt_error != 0 ]; then
+    echo "kdeconnect"
     playerctl volume $(echo $vol | fish -c "math (playerctl volume) +$sign $vol / 100")
     exit
 fi
