@@ -86,6 +86,7 @@ libheif
 libmpeg2
 libreoffice-fresh
 libreoffice-fresh-en-gb
+libreoffice-fresh-sv
 libva-nvidia-driver-git
 linux
 linux-firmware
@@ -143,6 +144,7 @@ pulsemixer
 pureref
 python-pip
 python-pynvim
+qt5ct
 qt6ct
 redis
 reflector
