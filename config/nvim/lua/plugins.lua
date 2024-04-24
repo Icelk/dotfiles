@@ -67,8 +67,8 @@ require "nvim-treesitter.configs".setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
     auto_install = true,
     highlight = { enable = true },
-    context_commentstring = { enable = true },
 }
+vim.g.skip_ts_context_commentstring_module = true
 -- require "treesitter-context".setup {}
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
