@@ -4,7 +4,6 @@ audacity
 auto-cpufreq
 autoconf
 automake
-aws-cli-v2
 baobab
 base
 binutils
