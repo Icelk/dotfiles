@@ -86,7 +86,7 @@ libmpeg2
 libreoffice-fresh
 libreoffice-fresh-en-gb
 libreoffice-fresh-sv
-libva-nvidia-driver-git
+libva-nvidia-driver
 linux
 linux-firmware
 linux-headers
