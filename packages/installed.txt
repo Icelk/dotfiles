@@ -141,7 +141,7 @@ qt6ct
 redis
 reflector
 ripgrep
-rofi-lbonn-wayland-git
+rofi-wayland
 rsync
 rustup
 sccache

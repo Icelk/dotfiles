@@ -158,13 +158,7 @@ require("nvim_comment").setup {
         end
     end,
 }
-require("crates").setup {
-    src = {
-        cmp = {
-            enabled = true
-        }
-    }
-}
+require("crates").setup()
 
 -- require("nordic").colorscheme({
 --     -- Underline style used for spelling
