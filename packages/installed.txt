@@ -161,7 +161,7 @@ starship
 steam
 strace
 svelte-language-server
-sweet-cursor-theme-git
+sweet-cursors-hyprcursor-git
 tailwindcss-language-server
 texinfo
 texlab
