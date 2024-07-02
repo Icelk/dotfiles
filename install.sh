@@ -162,7 +162,7 @@ echo
 
 echo "Enabling user services. Only the hardware-independent are enabled. See this script for the others and the systemd directory."
 
-systemctl --user enable --now xdg-user-dirs-update.service packages-dump.service backup-obsidian.timer check-failed.timer reminder-notify.timer
+systemctl --user enable --now xdg-user-dirs-update.service packages-dump.service check-failed.timer reminder-notify.timer
 # Hardware-dependent
 # systemctl --user enable --now sync.timer backup.timer
 
