@@ -130,3 +130,5 @@ echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
 systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker chrony tuned powertop
+
+systemctl enable --now illuminanced
