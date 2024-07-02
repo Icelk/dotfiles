@@ -3,6 +3,27 @@ collection of the rest and how to manually install them.
 
 ToDo: Add this all to the install script!
 
+# Adding users and groups
+
+```bash
+# useradd -m -G wheel,seat,cups,docker,plugdev,libvirt -s /bin/fish icelk
+# passwd icelk
+```
+
+Add missing groups using `groupadd <group name>`
+
+# Copying /etc/doas.conf
+
+You have to install `opendoas` and copy the doas.conf file from this repo to
+`/etc/doas.conf` to use doas. I also like to force-uninstall sudo
+(`pacman -Rsndd sudo`) and symlink doas instead (`ln -sf /bin/doas /bin/sudo`).
+
+# systemd-boot
+
+Run `# bootctl install` to install the boot manager. Then you have to add
+entries to `/boot/loader/entries/`. These are not provided in this repo since
+they are device specific.
+
 # Cargo
 
 Install the package `rustup` and run `rustup toolchain install stable`
