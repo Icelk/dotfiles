@@ -77,7 +77,6 @@ hyprpaper
 hyprpicker
 illuminanced-git
 inkscape
-insomnia-bin
 iptables-nft
 iw
 jdk-openjdk
@@ -106,7 +105,6 @@ make
 man-db
 maven
 meson
-minecraft-launcher
 mingw-w64-gcc
 mold
 mpv
@@ -126,7 +124,6 @@ obs-studio
 obsidian
 ocl-icd
 octave
-opencl-nvidia
 opendoas
 pacman-contrib
 pam-fprint-grosshack
