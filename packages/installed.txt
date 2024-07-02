@@ -22,6 +22,7 @@ chrony
 clang
 cliphist
 cmake
+colord
 cross
 cups
 darktable
@@ -47,6 +48,7 @@ firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
+fprintd
 freecad
 fwupd
 fzy
@@ -74,9 +76,11 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
+illuminanced-git
 inkscape
 insomnia-bin
 iptables-nft
+iw
 jdk-openjdk
 jdtls
 kdeconnect
@@ -129,6 +133,7 @@ octave
 opencl-nvidia
 opendoas
 pacman-contrib
+pam-fprint-grosshack
 paru
 patch
 piper
@@ -137,6 +142,7 @@ pipewire-alsa
 pipewire-pulse
 pkgconf
 playerctl
+plymouth
 polkit-gnome
 posy-cursors
 powertop
@@ -199,6 +205,7 @@ ventoy-bin
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
+vulkan-radeon
 wasm-bindgen
 wasm-pack
 watchexec
@@ -209,6 +216,7 @@ wine-gecko
 wine-mono
 wine-staging
 winetricks
+wireless-regdb
 wireplumber
 wl-clipboard
 xdg-desktop-portal-gtk
