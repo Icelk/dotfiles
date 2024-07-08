@@ -79,6 +79,7 @@ illuminanced-git
 inkscape
 iptables-nft
 iw
+iwd
 jdk-openjdk
 jdtls
 kdeconnect
@@ -90,6 +91,7 @@ libmpeg2
 libreoffice-fresh
 libreoffice-fresh-en-gb
 libreoffice-fresh-sv
+libva-mesa-driver
 linux
 linux-firmware
 linux-headers
@@ -103,6 +105,7 @@ m4
 make
 man-db
 maven
+mesa-vdpau
 meson
 mingw-w64-gcc
 mold
@@ -118,6 +121,7 @@ npm
 nss-mdns
 ntfs-3g
 nvim-packer-git
+nvtop
 oath-toolkit
 obs-studio
 obsidian
@@ -185,6 +189,7 @@ ttf-firacode-nerd
 ttf-roboto
 ttf-ubuntu-font-family
 tumbler
+tuned
 typescript
 typescript-language-server
 typescript-svelte-plugin
