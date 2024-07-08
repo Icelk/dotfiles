@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/pacman", "wireplumber", "custom/using-video", "custom/using-mic", "battery", "network", "clock#date"],
+    "modules-right": ["custom/pacman", "wireplumber", "custom/using-video", "custom/using-mic", "upower", "battery", "network", "clock#date"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -64,6 +64,13 @@
         "format": "{:%b %d}",
         "format-alt": "{:%a (w.%V) %Y}",
         "tooltip": false
+    },
+    "upower": {
+        "native-path": "BAT1",
+        "format": "{time}",
+        "format-alt": "{time}",
+        "tooltip": false,
+        "show-icon": false
     },
     "battery": {
         "states": {
