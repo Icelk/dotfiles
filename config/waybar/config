@@ -92,7 +92,7 @@
         "tooltip": false
     },
     "wireplumber": {
-        "scroll-step": 5, // %, can be a float
+        "scroll-step": 1, // %, can be a float
         "format": "{volume} 󰕾 ",
         "format-muted": "󱄡",
         "on-click-right": "kitty -1 -e pulsemixer",
