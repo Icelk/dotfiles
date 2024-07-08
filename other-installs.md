@@ -3,6 +3,12 @@ collection of the rest and how to manually install them.
 
 ToDo: Add this all to the install script!
 
+# Laptop
+
+- fprint enrol
+- easyeffects profile
+- framework-dsp
+
 # Adding users and groups
 
 ```bash
