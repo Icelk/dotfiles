@@ -17,6 +17,7 @@ btrbk
 calf
 cargo-bloat
 cargo-flamegraph
+chrony
 clang
 cliphist
 cmake

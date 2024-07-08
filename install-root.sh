@@ -101,6 +101,9 @@ l -f $wdr/pam-system-auth /etc/pam.d/system-auth
 l -f $wdr/hosts /etc/
 echo "The hosts file contains 'icelk' as the name of this computer. You might want to change that if you want another name to link to localhost."
 
+# chrony
+l -f $wdr/chrony.conf /etc/
+
 # makepkg
 l -f $wdr/makepkg.conf /etc/
 
@@ -125,4 +128,4 @@ echo "A reflector configuration file was included, but it contains location-spec
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker chrony
