@@ -111,6 +111,9 @@ l -f $wdr/makepkg.conf /etc/
 cp $wdr/doas.conf /etc/
 chown root:root /etc/doas.conf
 
+# illuminanced
+l -f $wdr/illuminanced.toml /etc/
+
 # journalctl max size
 l -f $wdr/journald.conf /etc/systemd/
 
