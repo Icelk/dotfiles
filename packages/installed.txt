@@ -70,6 +70,7 @@ gst-plugins-good
 gvfs
 gvfs-gphoto2
 gvfs-mtp
+hip-runtime-amd
 htop
 hugin
 hunspell-en_gb
