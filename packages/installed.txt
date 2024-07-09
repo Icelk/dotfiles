@@ -9,6 +9,8 @@ base
 binutils
 bison
 blender
+blueman
+bluez
 brave-bin
 breeze
 breeze-gtk
