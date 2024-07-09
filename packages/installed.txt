@@ -10,6 +10,8 @@ binutils
 bison
 bitwarden
 blender
+blueman
+bluez
 brave-bin
 breeze
 breeze-gtk
