@@ -18,6 +18,10 @@ You have to install `opendoas` and copy the doas.conf file from this repo to
 `/etc/doas.conf` to use doas. I also like to force-uninstall sudo
 (`pacman -Rsndd sudo`) and symlink doas instead (`ln -sf /bin/doas /bin/sudo`).
 
+# Pasv
+
+Smooth volume changer. Download & install both crates from [this repo](https://github.com/Icelk/pulseaudio-smooth-volume-change).
+
 # systemd-boot
 
 Run `# bootctl install` to install the boot manager. Then you have to add
