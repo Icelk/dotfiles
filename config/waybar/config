@@ -30,7 +30,7 @@
         "tooltip": false
     },
     "custom/pacman": {
-        "interval": 600,
+        "interval": 3600,
         "exec": "~/scripts/packages-ratio.sh",
         "format": "{} 󰏗",
         "on-click": "kitty -1 --hold -e fish -c pu",
