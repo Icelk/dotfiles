@@ -136,4 +136,4 @@ read -p "Services will now be started. The rest of the installation is successfu
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
 systemctl enable --now fstrim.timer reflector.timer cups redis unbound dbus-broker chrony tuned powertop systemd-networkd systemd-resolved
 
-systemctl enable --now illuminanced tuned
+systemctl enable --now illuminanced tuned bluetooth
