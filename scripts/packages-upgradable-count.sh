@@ -13,8 +13,8 @@ while ! ip address | grep "state UP">/dev/null; do sleep 2; done
 # Create file
 # echo $$ > "/tmp/run/$PIDFILE"
 
-OUTPUT=$(timeout 5 checkupdates 2>&1)
-while [[ "$OUTPUT" == *"ERROR"* ]]; do sleep 4; OUTPUT=$(timeout 5 checkupdates 2>&1); done
+OUTPUT=$(timeout 20 checkupdates 2>&1)
+if [[ "$OUTPUT" == *"ERROR"* ]]; then echo "ERR"; exit 1; fi
 if [[ -z $OUTPUT ]]; then
 	echo 0
 else
