@@ -2,7 +2,7 @@
 
 while ! ssh icelk@nas; do sleep 1; done
 
-dataset="computer_erik"
+dataset="erik-framework"
 
 notify-send -a "Sync" "Starting..."
 
