@@ -1,11 +1,11 @@
 cover_img_length = 10
 
 copy_command = { command = "wl-copy" }
-default_device = "Home"
+default_device = "Framework"
 playback_refresh_duration_in_ms = 5000
 
 [device]
-name = "Home"
+name = "Framework"
 volume = 100
 bitrate = 320
 audio_cache = true
