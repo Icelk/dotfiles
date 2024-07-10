@@ -22,6 +22,10 @@ You have to install `opendoas` and copy the doas.conf file from this repo to
 
 Smooth volume changer. Download & install both crates from [this repo](https://github.com/Icelk/pulseaudio-smooth-volume-change).
 
+# Iclu
+
+Iclu utils. Download & install all crates from [this repo](https://github.com/Icelk/iclu).
+
 # systemd-boot
 
 Run `# bootctl install` to install the boot manager. Then you have to add
