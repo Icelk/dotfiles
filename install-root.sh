@@ -102,7 +102,7 @@ l -f $wdr/hosts /etc/
 echo "The hosts file contains 'icelk' as the name of this computer. You might want to change that if you want another name to link to localhost."
 
 # chrony
-l -f $wdr/chrony.conf /etc/
+cp $wdr/chrony.conf /etc/
 
 # makepkg
 l -f $wdr/makepkg.conf /etc/
