@@ -146,6 +146,7 @@ plymouth
 polkit-gnome
 posy-cursors
 power-profiles-daemon
+powertop
 prettier
 prusa-slicer
 pulsemixer
