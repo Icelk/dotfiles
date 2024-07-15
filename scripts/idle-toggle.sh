@@ -11,3 +11,5 @@ else
     corpl -k -d powersave ~/.config/hypr/hypridle.conf
     notify-send -a "Idle timers" "Disabled powersave"
 fi
+
+killall hypridle
