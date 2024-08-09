@@ -1,17 +1,17 @@
 #!/usr/bin/sh
 
 # Wait for internet connection
-while ! ip address | grep "state UP">/dev/null; do sleep 2; done
+while ! ip address | rg "inet (10.|192.|172.)" >/dev/null; do sleep 5; done
 
 # The filename of your apps pid file.
-# PIDFILE="packages-upgradable-count.pid"
+PIDFILE="packages-upgradable-count.pid"
 
 # Wait while it exists
-# while [[ -f "/tmp/run/$PIDFILE" ]]; do sleep 0.5; done
+while [[ -f "/tmp/run/$PIDFILE" ]]; do sleep 0.5; done
 # Make sure the directory exists
-# mkdir -p "/tmp/run/"
+mkdir -p "/tmp/run/"
 # Create file
-# echo $$ > "/tmp/run/$PIDFILE"
+echo $$ > "/tmp/run/$PIDFILE"
 
 OUTPUT=$(timeout 20 checkupdates 2>&1)
 if [[ "$OUTPUT" == *"ERROR"* ]]; then echo "ERR"; exit 1; fi
@@ -22,4 +22,4 @@ else
 fi
 
 # Delete it
-# rm -f "/tmp/run/$PIDFILE"
+rm -f "/tmp/run/$PIDFILE"
