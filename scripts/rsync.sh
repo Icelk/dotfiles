@@ -1,6 +1,17 @@
 #!/usr/bin/bash
 
-while ! ssh icelk@nas; do sleep 1; done
+n=1
+while ! ssh icelk@nas; do 
+    n=$((n+1))
+    if [[ n -gt 20 ]]; then
+        exit 0
+    fi
+    if [[ n -gt 10 ]]; then
+        sleep 5
+    else
+        sleep 1
+    fi
+done
 
 dataset="computer_erik"
 
