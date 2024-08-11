@@ -13,6 +13,7 @@ brave-bin
 breeze
 breeze-gtk
 breeze-hacked-cursor-theme-git
+btop
 btrbk
 calf
 cargo-bloat
