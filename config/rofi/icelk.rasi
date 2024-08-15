@@ -32,6 +32,8 @@ mainbox {
 
 listview {
     spacing: 2px;
+    lines: 40;
+    fixed-height: false;
 }
 
 element-text {

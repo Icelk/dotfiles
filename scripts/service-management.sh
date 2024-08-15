@@ -3,20 +3,12 @@
 set -e
 
 function dm {
-    rofi -dmenu -l $1 -i -p "$2" -matching ${3:normal}
+    rofi -dmenu -i -p "$1" -matching ${2:normal}
 }
 function choose-services {
     services=$(cat - | awk "{gsub(/.service/, \"\", \$1); print \$1}")
 
-    # Get count
-    count=$(echo "$services" | wc -l)
-
-    # If count >= 40, clamp it!
-    if [[ $count -gt 40 ]]; then
-        count=40
-    fi
-
-    echo "$services" | dm $count "$1" ${3:normal}
+    echo "$services" | dm "$1" ${3:normal}
 }
 function get-running-service {
     services=$(systemctl --user list-units --state=active --type=service --no-pager --no-legend)
@@ -38,7 +30,7 @@ Restart
 Stop
 Start"
 
-mode=$(echo "$modes" | dm 3 "Mode" "prefix")
+mode=$(echo "$modes" | dm "Mode" "prefix")
 
 name="Service management"
 
