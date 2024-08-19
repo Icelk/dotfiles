@@ -11,9 +11,9 @@ function choose-services {
     # Get count
     count=$(echo "$services" | wc -l)
 
-    # If count >= 40, clamp it!
-    if [[ $count -gt 40 ]]; then
-        count=40
+    # If count >= 30, clamp it!
+    if [[ $count -gt 30 ]]; then
+        count=30
     fi
 
     echo "$services" | dm $count "$1" ${3:normal}
