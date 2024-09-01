@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/pacman", "pulseaudio", "custom/using-video", "custom/using-mic", "battery", "network", "clock#date"],
+    "modules-right": ["custom/pacman", "wireplumber", "custom/using-video", "custom/using-mic", "battery", "network", "clock#date"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -89,23 +89,10 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "tooltip": false
     },
-    "pulseaudio": {
+    "wireplumber": {
         "scroll-step": 5, // %, can be a float
-        "format": "{volume} 󰕾",
-        "format-bluetooth": "{volume} {icon} ",
-        "format-bluetooth-muted": "0 {icon} ",
+        "format": "{volume} 󰕾 ",
         "format-muted": "󱄡",
-        "format-source": "{volume} 󰕾",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "󰂑",
-            "headset": "󰂑",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
         "on-click-right": "kitty -1 -e pulsemixer",
         "on-click": "pulsemixer --toggle-mute",
         "tooltip": false
