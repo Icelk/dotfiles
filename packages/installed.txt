@@ -182,6 +182,7 @@ thunderbird
 tldr
 tokei
 tor-browser-bin
+tree-sitter-cli
 ttf-firacode-nerd
 ttf-roboto
 ttf-ubuntu-font-family
