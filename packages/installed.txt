@@ -1,4 +1,4 @@
-adw-gtk3
+adw-gtk-theme
 alsa-utils
 amd-ucode
 audacity
