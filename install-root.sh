@@ -118,6 +118,7 @@ l -f $wdr/journald.conf /etc/systemd/
 l -f $wdr/pacman.conf /etc/
 
 l $wdr/archlinux-keyring-wkd-sync-fix.service /etc/systemd/system/archlinux-keyring-wkd-sync.service.d/override.conf
+l $wdr/powertop.service /etc/systemd/system/
 
 l -f $wdr/icelk-layout /usr/share/X11/xkb/symbols/icelk
 
@@ -128,4 +129,4 @@ echo "A reflector configuration file was included, but it contains location-spec
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker chrony
+systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker chrony tuned powertop

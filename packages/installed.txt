@@ -139,6 +139,7 @@ pkgconf
 playerctl
 polkit-gnome
 posy-cursors
+powertop
 prettier
 prusa-slicer
 pulsemixer
@@ -188,6 +189,7 @@ ttf-firacode-nerd
 ttf-roboto
 ttf-ubuntu-font-family
 tumbler
+tuned
 typescript
 typescript-language-server
 typescript-svelte-plugin
