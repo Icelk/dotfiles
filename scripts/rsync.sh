@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-dataset="aperol/backup/erik-home"
+dataset="aperol/backup/erik-framework"
 host="tensor"
 user="erik"
 
