@@ -43,3 +43,6 @@ user_pref("font.name-list.emoji", "Noto Color Emoji");
 
 // enable hardware video decoding
 user_pref("media.ffmpeg.vaapi.enabled", true);
+
+// enable tab hover previews (very nice feature :))
+user_pref("browser.tabs.hoverPreview.enabled", true);
