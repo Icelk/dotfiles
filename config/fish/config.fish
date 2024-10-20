@@ -7,6 +7,8 @@ end
 if status --is-interactive
     set fish_greeting
 
+    source ~/dd.fish 2>/dev/null
+
     set -px PATH ~/.cargo/bin ~/dev/Rust/osxcross/target/bin ~/.local/bin
     set -x PYTHONSTARTUP ~/.config/python/startup.py
 

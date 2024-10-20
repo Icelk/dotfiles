@@ -20,3 +20,6 @@
 	required = true
 [push]
 	autoSetupRemote = true
+
+[includeIf "gitdir:~/dev/dd/"]
+    path = ~/dev/dd/.gitconfig

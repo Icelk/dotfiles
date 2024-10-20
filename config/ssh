@@ -1,6 +1,9 @@
-Host nas
-    IdentityFile ~/.private/nas.rsa
-    User icelk
+Host tensor 10.0.0.2
+    IdentityFile ~/.private/tensor
+    User root
+Host tensor 10.0.0.2
+    IdentityFile ~/.private/tensor-erik
+    User erik
 Host server icelk.dev
     IdentityFile ~/.private/server.rsa
     User icelk
@@ -10,12 +13,17 @@ Host pi
 Host aur.archlinux.org
     IdentityFile ~/.private/aur.rsa
     User aur
-Host server icelk.dev
+Host server icelk.dev 10.0.0.8
     IdentityFile ~/.private/server-root.rsa
     User root
 
 Host bitbucket.org
     IdentityFile ~/.ssh/bsl-id.pem
+    User git
+
+host gitlab.delicious-data.com
+    IdentityFile ~/.private/dd-gitlab
+    Port 2332
     User git
 
 Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
