@@ -156,6 +156,7 @@ rustup
 sccache
 scour
 sd
+slack-desktop
 slurp
 spotify-player
 sshfs

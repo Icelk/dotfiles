@@ -54,7 +54,7 @@ require("packer").startup(function(use)
 
     use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
     use { "stevearc/dressing.nvim" }
-    use { "danielfalk/smart-open.nvim", requires = { {"kkharji/sqlite.lua"}, { "nvim-telescope/telescope-fzy-native.nvim" } } }
+    use { "danielfalk/smart-open.nvim", requires = { { "kkharji/sqlite.lua" }, { "nvim-telescope/telescope-fzy-native.nvim" } } }
 
     use "andersevenrud/nordic.nvim"
     use "ellisonleao/gruvbox.nvim"
@@ -393,17 +393,27 @@ lspc.texlab.setup {
     capabilities = capabilities,
 }
 
+local standardjs_condition = function(utils)
+    return utils.root_matches("dev/dd/frontend")
+end
+
 local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--no-semi", "--tab-width", "4", "--prose-wrap", "always", "--bracket-same-line", "true" }
+            extra_args = { "--no-semi", "--tab-width", "4", "--prose-wrap", "always", "--bracket-same-line", "true" },
+            condition = function(utils)
+                return not utils.root_matches("dev/dd/frontend")
+            end,
         }),
         -- null_ls.builtins.completion.spell,
         null_ls.builtins.diagnostics.fish,
         -- null_ls.builtins.diagnostics.php,
         null_ls.builtins.formatting.fish_indent,
         null_ls.builtins.hover.dictionary,
+
+        null_ls.builtins.formatting.standardjs.with({ condition = standardjs_condition }),
+        null_ls.builtins.diagnostics.standardjs.with({ condition = standardjs_condition }),
     },
     on_attach = on_attach,
 })
