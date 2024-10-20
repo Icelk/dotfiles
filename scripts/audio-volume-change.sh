@@ -23,7 +23,6 @@ function pm {
 }
 
 if [ $kde_error == 0 ] && [ $(playerctl status "$kdeconnect") == "Playing" ]; then
-    echo "kdeconnect"
     playerctl volume $(echo $vol | fish -c "math (playerctl volume) +$sign $vol / 100")
     exit
 fi

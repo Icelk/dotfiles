@@ -4,7 +4,7 @@ set on $argv[1]
 set off $argv[2]
 # pipewire watches from both pipewire and wireplumber
 # it doesn't seem like any application uses this interface to access video, so it's safe to ignore for now
-set watch_limit 2
+set watch_limit 0
 
 set devices (v4l2-ctl --list-devices 2>/dev/null | grep -o "/dev/video[0-9]*")
 
