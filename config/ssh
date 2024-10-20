@@ -7,6 +7,11 @@ Host tensor 10.0.0.2
 Host icelk.dev gnt 10.0.0.8
     IdentityFile ~/.private/server.rsa
     User icelk
+Host icelk-home
+    HostName icelk.dev
+    Port 477
+    IdentityFile ~/.private/home
+    User icelk
 Host pi
     IdentityFile ~/.private/pi.rsa
     User pi
