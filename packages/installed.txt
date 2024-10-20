@@ -200,6 +200,7 @@ wasm-bindgen
 wasm-pack
 watchexec
 waybar
+webkit2gtk-4.1
 which
 wine-gecko
 wine-mono
