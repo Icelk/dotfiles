@@ -4,7 +4,7 @@ Host tensor 10.0.0.2
 Host tensor 10.0.0.2
     IdentityFile ~/.private/tensor-erik
     User erik
-Host server icelk.dev
+Host server icelk.dev gnt
     IdentityFile ~/.private/server.rsa
     User icelk
 Host pi
