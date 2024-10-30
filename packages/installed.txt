@@ -133,6 +133,7 @@ obsidian
 ocl-icd
 octave
 opendoas
+openvpn
 pacman-contrib
 pam-fprint-grosshack
 paru
@@ -222,6 +223,7 @@ wine-gecko
 wine-mono
 wine-staging
 winetricks
+wireguard-tools
 wireless-regdb
 wireplumber
 wl-clipboard
