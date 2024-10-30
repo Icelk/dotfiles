@@ -41,8 +41,11 @@ user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 // Fix emoji font (by default, it is "Twemoji Mozilla")
 user_pref("font.name-list.emoji", "Noto Color Emoji");
 
-// enable hardware video decoding
-user_pref("media.ffmpeg.vaapi.enabled", true);
-
 // enable tab hover previews (very nice feature :))
 user_pref("browser.tabs.hoverPreview.enabled", true);
+
+// HW acceleration
+user_pref("widget.dmabuf.force-enabled", true);
+user_pref("gfx.x11-egl.force-enabled", true);
+user_pref("media.ffmpeg.vaapi.enabled", true);
+user_pref("media.av1.enabled", false);
