@@ -68,7 +68,6 @@
     "upower": {
         "native-path": "BAT1",
         "format": "{time}",
-        "format-alt": "{time}",
         "tooltip": false,
         "show-icon": false
     },
