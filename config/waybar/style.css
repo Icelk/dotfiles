@@ -131,3 +131,6 @@ label:focus {
     -gtk-icon-effect: highlight;
     /* background-color: #eb4d4b; */
 }
+#battery {
+    background-color: transparent;
+}
