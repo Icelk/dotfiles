@@ -264,7 +264,7 @@ local on_attach = function(client, bufnr)
         function()
             vim.lsp.buf.format { async = true,
                 filter = function(c)
-                    return c.name ~= "tsserver" and c.name ~= "cssls" and
+                    return c.name ~= "ts_ls" and c.name ~= "cssls" and
                         c.name ~= "html" and c.name ~= "jsonls"
                 end,
             }
@@ -292,7 +292,7 @@ end
 -- Else, activeate the respective
 local tss_required = lspc.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
 local deno_required = lspc.util.root_pattern("deno.json", "deno.jsonc")
-lspc.tsserver.setup {
+lspc.ts_ls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
