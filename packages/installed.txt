@@ -97,7 +97,6 @@ libmpeg2
 libreoffice-fresh
 libreoffice-fresh-en-gb
 libreoffice-fresh-sv
-libva-mesa-driver
 linux
 linux-firmware
 linux-headers
@@ -111,7 +110,6 @@ m4
 make
 man-db
 maven
-mesa-vdpau
 meson
 mingw-w64-gcc
 mold
