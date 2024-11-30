@@ -281,7 +281,7 @@ local on_attach = function(client, bufnr)
     nmapo("<C-a>", vim.lsp.buf.code_action);
     imapo("<C-A-Space>", vim.lsp.buf.code_action);
 
-    nvmapo("<leader>f", function() vim.lsp.buf.code_action(nil, nil, true) end);
+    nvmapo("<leader>f", function() vim.lsp.buf.code_action() end);
 
     nmapo("<space>o", function() tele_builtin.lsp_dynamic_workspace_symbols(theme()) end, opts)
     nmapo("<space>s", function() tele_builtin.lsp_document_symbols(theme()) end, opts)
@@ -385,7 +385,6 @@ lspc.svelte.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    settings = { svelte = { plugin = { typescript = { semanticTokens = { enable = false } } } } }
 }
 lspc.texlab.setup {
     on_attach = on_attach,
