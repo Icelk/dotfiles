@@ -158,7 +158,7 @@ require("nvim_comment").setup {
         end
     end,
 }
-require("crates").setup()
+require("crates").setup {}
 
 -- require("nordic").colorscheme({
 --     -- Underline style used for spelling
@@ -209,7 +209,7 @@ local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     -- A.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-    local capabilities = client.server_capabilities
+    local s_capabilities = client.server_capabilities
 
     A.nvim_create_autocmd("CursorHold", {
         callback = function() A.nvim_command "silent! vim.lsp.codelens.refresh()" end,
@@ -225,7 +225,7 @@ local on_attach = function(client, bufnr)
     })
     nmapo("<leader>l", vim.lsp.codelens.run)
 
-    if capabilities.documentHighlightProvider then
+    if s_capabilities.documentHighlightProvider then
         A.nvim_create_autocmd("CursorMoved", {
             callback = vim.lsp.buf.clear_references,
             buffer = bufnr,
@@ -241,7 +241,7 @@ local on_attach = function(client, bufnr)
     end
 
     -- Enable semantic tokens if it's available (from the fork at jdrouhard/neovim#lsp_semantic_tokens)
-    if vim.lsp.semantic_tokens ~= nil and capabilities.semanticTokensProvider then
+    if vim.lsp.semantic_tokens ~= nil and s_capabilities.semanticTokensProvider then
         vim.lsp.semantic_tokens.start(bufnr, client.id)
     end
 
@@ -365,16 +365,16 @@ lspc.html.setup {
     capabilities = capabilities,
     settings = { autoClosingTags = true }
 }
-lspc.tailwindcss.setup {
-    on_attach = on_attach,
-    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
-        "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
-        "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
-        "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
-        "rescript", "typescriptreact", "vue", "svelte" },
-    flags = lsp_flags,
-    capabilities = capabilities,
-}
+-- lspc.tailwindcss.setup {
+--     on_attach = on_attach,
+--     filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
+--         "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
+--         "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
+--         "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
+--         "rescript", "typescriptreact", "vue", "svelte" },
+--     flags = lsp_flags,
+--     capabilities = capabilities,
+-- }
 lspc.jdtls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
@@ -387,6 +387,16 @@ lspc.svelte.setup {
     capabilities = capabilities,
 }
 lspc.texlab.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+lspc.ruff.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+lspc.pyright.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
