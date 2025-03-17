@@ -8,6 +8,7 @@ baobab
 base
 binutils
 bison
+bitwarden
 blender
 brave-bin
 breeze
@@ -19,6 +20,7 @@ calf
 cargo-bloat
 cargo-flamegraph
 chrony
+cifs-utils
 clang
 cliphist
 cmake
@@ -31,6 +33,7 @@ deno
 dhcpcd
 dnsmasq
 docker
+docker-compose
 dosfstools
 dunst
 easyeffects
@@ -51,6 +54,7 @@ freecad
 fwupd
 fzy
 gamemode
+gamescope
 gcc
 gimp-devel
 git
@@ -135,6 +139,7 @@ piper
 pipewire
 pipewire-alsa
 pipewire-pulse
+pipewire-zeroconf
 pkgconf
 playerctl
 polkit-gnome
@@ -144,6 +149,7 @@ prettier
 prusa-slicer
 pulsemixer
 pureref
+pyright
 python-pip
 python-pynvim
 qt5ct
@@ -153,6 +159,7 @@ reflector
 ripgrep
 rofi-wayland
 rsync
+ruff
 rustup
 sccache
 scour
