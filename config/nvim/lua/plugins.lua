@@ -94,7 +94,13 @@ end
 
 local theme = dynamic_theme
 
-telescope.setup { defaults = { mappings = { i = { ["<esc>"] = telescope_actions.close } } } }
+telescope.setup {
+    defaults = {
+        mappings = { i = { ["<esc>"] = telescope_actions.close }
+        }
+    },
+    extensions = { smart_open = { result_limit = 100 } }
+}
 
 telescope.load_extension("smart_open")
 
