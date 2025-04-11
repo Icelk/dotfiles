@@ -43,10 +43,10 @@ require("packer").startup(function(use)
     use "terrortylor/nvim-comment"
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
-    use "jose-elias-alvarez/null-ls.nvim"
+    use "nvimtools/none-ls.nvim"
     use "hrsh7th/cmp-path"
     use "hrsh7th/cmp-buffer"
-    use "simrat39/rust-tools.nvim"
+    use "mrcjkb/rustaceanvim"
     use {
         "saecki/crates.nvim",
         requires = { "nvim-lua/plenary.nvim" }
@@ -60,6 +60,7 @@ require("packer").startup(function(use)
     use "ellisonleao/gruvbox.nvim"
 end)
 
+vim.lsp.inlay_hint.enable(true)
 vim.cmd.colorscheme("gruvbox")
 vim.cmd("highlight Normal guibg=none")
 
@@ -136,18 +137,14 @@ gs.setup {
         delay = 300, -- same as updatetime
     },
     on_attach = function()
-        nmap("[c", gs.prev_hunk)
-        nmap("<space>K", gs.prev_hunk)
-        nmap("]c", gs.next_hunk)
-        nmap("<space>J", gs.next_hunk)
+        nmap("[g", function() gs.nav_hunk('prev') end)
+        nmap("]g", function() gs.nav_hunk('next') end)
         nmap("gu", gs.reset_hunk)
         nmap("gs", gs.stage_hunk)
-        nmap("gS", gs.undo_stage_hunk)
         nmap("gp", gs.preview_hunk)
-        nmap("gb", gs.blame_line)
-        nmap("gB", gs.toggle_current_line_blame)
+        nmap("gb", gs.toggle_current_line_blame)
+        nmap("gB", gs.blame)
         vmap('gs', function() gs.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
-        vmap('gS', function() gs.undo_stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
         vmap('gu', function() gs.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
     end
 }
@@ -302,9 +299,11 @@ lspc.ts_ls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    single_file_support = false,
     root_dir = function(path)
         local tss = tss_required(path)
         local deno = deno_required(path)
+        print(tostring(tss) .. "" .. tostring(deno))
         if string.len(tss or "") <= string.len(deno or "") then
             return nil
         else
@@ -345,6 +344,17 @@ lspc.denols.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    filetypes = {
+      'javascript',
+      'javascriptreact',
+      'javascript.jsx',
+      'typescript',
+      'typescriptreact',
+      'typescript.tsx',
+      'json',
+      'jsonc',
+      'markdown',
+    },
     root_dir = function(path)
         local tss = tss_required(path)
         local deno = deno_required(path)
@@ -426,17 +436,12 @@ null_ls.setup({
         -- null_ls.builtins.diagnostics.php,
         null_ls.builtins.formatting.fish_indent,
         null_ls.builtins.hover.dictionary,
-
-        null_ls.builtins.formatting.standardjs.with({ condition = standardjs_condition }),
-        null_ls.builtins.diagnostics.standardjs.with({ condition = standardjs_condition }),
     },
     on_attach = on_attach,
 })
 
 local autopairs = require("nvim-autopairs")
 autopairs.setup()
-
-local rt = require("rust-tools")
 
 local function execOutput(cmd)
     local fileHandle    = assert(io.popen(cmd, "r"))
@@ -445,28 +450,23 @@ local function execOutput(cmd)
     return commandOutput
 end
 
-rt.setup({
-    runnables = {
-        use_telescope = true,
-    },
-    debuggables = {
-        use_telescope = true,
-    },
+vim.g.rustaceanvim = ({
     server = {
         cmd = {
             os.getenv("HOME") ..
             "/.rustup/toolchains/" ..
             string.gmatch(execOutput("rustup show active-toolchain"), "[^%s]+")() .. "/bin/rust-analyzer" },
         flags = lsp_flags,
-        capabilities,
+        capabilities = capabilities,
         on_attach = function(a, bufnr)
             on_attach(a, bufnr)
             -- Rust specific keybinds
-            vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
-            vim.keymap.set("n", "<C-x>", rt.expand_macro.expand_macro)
-            vim.keymap.set("n", "<C-d>", rt.external_docs.open_external_docs)
+            -- add runnables?
+            vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end)
+            vim.keymap.set("n", "<C-x>", function() vim.cmd.RustLsp('expandMacro') end)
+            vim.keymap.set("n", "<C-d>", function() vim.cmd.RustLsp('openDocs') end)
             -- Code action groups
-            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+            vim.keymap.set("n", "<Leader>a", function() vim.cmd.RustLsp("codeAction") end)
         end,
         settings = {
             ["rust-analyzer"] = {
@@ -488,8 +488,6 @@ rt.setup({
         }
     },
 })
-
-rt.inlay_hints.enable()
 
 local cmp = require "cmp"
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
