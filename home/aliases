@@ -4,7 +4,7 @@
 alias s="doas"
 alias e="exit 0"
 alias c="tput reset"
-alias cp="cp -i"
+alias cp="cp -i --reflink=auto"
 alias mv="mv -i"
 alias rm="rm -i"
 alias th="gio trash"
