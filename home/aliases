@@ -85,3 +85,6 @@ alias pi="paru -Si"
 # Aliases for useful complicated commands I don't want to memorize
 ## Export PRoxy
 alias epr="export ALL_PROXY='socks5h://localhost:41523'"
+
+alias mpvhdr="ENABLE_HDR_WSI=1 mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk --audio-channels=stereo"
+alias mpv="mpv --audio-channels=stereo"
