@@ -5,6 +5,7 @@ SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
 SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR --export MOZ_USE_XINPUT2:1
 SETUVAR --export PAGER:nvimpager
+SETUVAR --export SSH_AUTH_SOCK:/home/icelk/\x2ebitwarden\x2dssh\x2dagent\x2esock
 SETUVAR --export SYSTEMD_LESS:FRSMK
 SETUVAR --export XCURSOR_THEME:Sweet\x2dcursors
 SETUVAR __fish_initialized:3800
