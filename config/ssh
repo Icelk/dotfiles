@@ -1,10 +1,10 @@
-Host tensor 10.0.0.2
+Host tensor 10.0.4.2
     IdentityFile ~/.private/tensor
     User root
-Host tensor 10.0.0.2
+Host tensor 10.0.4.2
     IdentityFile ~/.private/tensor-erik
     User erik
-Host icelk.dev gnt 10.0.0.8
+Host icelk.dev gnt 10.0.4.8
     IdentityFile ~/.private/server.rsa
     User icelk
 Host icelk-home
@@ -18,9 +18,11 @@ Host pi
 Host aur.archlinux.org
     IdentityFile ~/.private/aur.rsa
     User aur
-Host icelk.dev gnt 10.0.0.8
+Host icelk.dev gnt 10.0.4.8
     IdentityFile ~/.private/server-root.rsa
     User root
+Host 10.0.0.11
+    IdentityFile ~/.private/hass-laptop
 
 Host bitbucket.org
     IdentityFile ~/.ssh/bsl-id.pem
