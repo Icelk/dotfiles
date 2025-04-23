@@ -56,7 +56,7 @@ fzy
 gamemode
 gamescope
 gcc
-gimp-devel
+gimp
 git
 git-lfs
 gn
