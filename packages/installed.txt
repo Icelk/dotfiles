@@ -115,7 +115,6 @@ neofetch
 neovim
 nfs-utils
 ninja
-nodejs
 noto-fonts
 noto-fonts-emoji
 npm
