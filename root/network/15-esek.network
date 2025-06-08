@@ -1,0 +1,6 @@
+[Match]
+Name=esek
+
+[Network]
+MulticastDNS=yes
+UseDomains=yes

@@ -1,0 +1,17 @@
+[Match]
+Name=wlan0
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes
+MulticastDNS=yes
+IgnoreCarrierLoss=10s
+DNSSEC=true
+DNSOverTLS=true
+DNS=81.235.149.52#icelk.dev
+DNS=1.1.1.1#cloudflare-dns.com
+DNS=1.0.0.1
+DNS=2606:4700:4700::1111
+DNS=2606:4700:4700::1001
