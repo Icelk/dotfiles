@@ -303,7 +303,6 @@ lspc.ts_ls.setup {
     root_dir = function(path)
         local tss = tss_required(path)
         local deno = deno_required(path)
-        print(tostring(tss) .. "" .. tostring(deno))
         if string.len(tss or "") <= string.len(deno or "") then
             return nil
         else

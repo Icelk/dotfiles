@@ -46,7 +46,6 @@ fakeroot
 fd
 ffmpegthumbnailer
 firefox
-firefox-nightly-bin
 firefox-tridactyl
 fish
 flex
@@ -82,7 +81,6 @@ inkscape
 insomnia-bin
 iptables-nft
 jdk-openjdk
-jdtls
 kdeconnect
 kdenlive
 kitty
@@ -153,7 +151,6 @@ python-pip
 python-pynvim
 qt5ct
 qt6ct
-redis
 reflector
 ripgrep
 rofi-wayland
@@ -201,6 +198,7 @@ typescript-language-server
 typescript-svelte-plugin
 unbound
 unzip
+valkey
 ventoy-bin
 vscode-css-languageserver
 vscode-html-languageserver
