@@ -30,7 +30,6 @@ darktable
 dbus-broker
 debugedit
 deno
-dhcpcd
 dnsmasq
 docker
 docker-compose
@@ -169,6 +168,7 @@ steam
 strace
 svelte-language-server
 sweet-cursors-hyprcursor-git
+systemd-resolvconf
 tailwindcss-language-server
 texinfo
 texlab

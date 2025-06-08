@@ -83,12 +83,14 @@ read -p "The following will override certain system files. Press Ctrl+C to quit.
 read -p "Please make sure this is what you want; it'll DELETE the target files!"
 read -p "Also make sure your user is part of the 'wheel' group as the doas configuration file only allows users in that group."
 
-# Networking: Avahi, Unbound, dhcpcd, resolv.conf
+# Networking: Avahi, Unbound, networkd, resolved
 l -f $wdr/nsswitch.conf /etc/
 unlink /etc/unbound/unbound.conf
 cp $wdr/unbound.conf /etc/unbound/
-l -f $wdr/dhcpcd.conf /etc/
-l -f $wdr/resolv.conf /etc/
+mkdir /etc/systemd/network
+ln -f $wdr/network/* /etc/systemd/network/
+ln -f $wdr/resolved.conf /etc/systemd/
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # Redis (used for DNS cache)
 unlink /etc/redis/redis.conf
@@ -98,7 +100,7 @@ cp $wdr/redis.conf /etc/redis/
 l -f $wdr/pam-system-auth /etc/pam.d/system-auth
 
 # Hosts
-l -f $wdr/hosts /etc/
+ln -f $wdr/hosts /etc/
 echo "The hosts file contains 'icelk' as the name of this computer. You might want to change that if you want another name to link to localhost."
 
 # chrony
@@ -129,4 +131,4 @@ echo "A reflector configuration file was included, but it contains location-spec
 echo
 read -p "Services will now be started. The rest of the installation is successful. Press Ctrl+C to quit."
 read -p "Are you sure you want to enable dhcpcd, periodic TRIM, reflector (Pacman mirrorlist updater), CUPS (printing), and Unbound & Redis (DNS)? These will not eat much processor time. Start avahi-daemon to discover printers on the network."
-systemctl enable --now dhcpcd fstrim.timer reflector.timer cups redis unbound dbus-broker chrony tuned powertop
+systemctl enable --now fstrim.timer reflector.timer cups redis unbound dbus-broker chrony tuned powertop systemd-networkd systemd-resolved

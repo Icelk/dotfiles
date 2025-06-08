@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # Wait for internet connection
-while ! ip address | rg "inet (10.|192.|172.)" >/dev/null; do sleep 5; done
+/lib/systemd/systemd-networkd-wait-online
 
 # The filename of your apps pid file.
 PIDFILE="packages-upgradable-count.pid"
@@ -13,7 +13,7 @@ mkdir -p "/tmp/run/"
 # Create file
 echo $$ > "/tmp/run/$PIDFILE"
 
-OUTPUT=$(timeout 20 checkupdates 2>&1)
+OUTPUT=$(timeout 30 checkupdates 2>&1)
 if [[ "$OUTPUT" == *"ERROR"* ]]; then echo "ERR"; exit 1; fi
 if [[ -z $OUTPUT ]]; then
 	echo 0
