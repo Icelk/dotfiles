@@ -1,0 +1,6 @@
+[Match]
+Name=f*
+
+[Network]
+DHCP=yes
+IgnoreCarrierLoss=10s
