@@ -5,6 +5,6 @@ Description=My desktop bar
 Type=simple
 Environment=WAYLAND_DISPLAY=wayland-1
 ExecStart=sh -c "waybar"
-ExecStop=rm /tmp/run/packages-upgradable-count.pid
+ExecStop=rm -f /tmp/run/packages-upgradable-count.pid
 Restart=always
 RestartSec=4
