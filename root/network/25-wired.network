@@ -4,3 +4,7 @@ Name=e*
 [Network]
 DHCP=yes
 MulticastDNS=yes
+DNS=
+
+[DHCPv4]
+UseDNS=no
