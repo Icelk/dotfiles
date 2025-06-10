@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # Wait for internet connection
-/lib/systemd/systemd-networkd-wait-online
+/lib/systemd/systemd-networkd-wait-online -o routable --any -4
 
 # The filename of your apps pid file.
 PIDFILE="packages-upgradable-count.pid"
