@@ -32,7 +32,7 @@ gmap({ "i", "n" }, "<C-l>", "<esc><C-w>l")
 imap("<C-w>", "<esc><C-w>")
 
 -- Go to start/end of line in insert mode.
-imap("<S-Left>", "<C-o>0")
+imap("<S-Left>", "<esc>I")
 imap("<S-Right>", "<C-o>$")
 imap("<C-a>", "<C-o>0")
 imap("<C-e>", "<C-o>$")
