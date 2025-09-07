@@ -1,5 +1,4 @@
-import math
-from math import *
+from math import sqrt, log, factorial, sin, cos, tan, asin, acos, atan, radians, degrees, e, pi
 
 def choose(n, r):
     return factorial(n)//(factorial(n-r)*factorial(r))
@@ -58,9 +57,13 @@ mn=1.00866492
 boltzmann=1.380649e-23
 elementary_charge=1.602176634e-19
 planck=6.62607015e-34
-hbar=planck/pi/2
+hbar=planck / pi / 2
 h=planck
 G=6.67e-11
+R = avogadro*boltzmann
+c_w = 4.181 # at 25°C
+c_w_fusion = 333.55
+c_w_vaporization = 2257
 
 def u_to_J(u):
     return u * kg_per_u * c2
