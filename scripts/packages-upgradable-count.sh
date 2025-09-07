@@ -13,8 +13,10 @@ mkdir -p "/tmp/run/"
 # Create file
 echo $$ > "/tmp/run/$PIDFILE"
 
+/lib/systemd/systemd-networkd-wait-online -o routable --any -4
+
 OUTPUT=$(timeout 30 checkupdates 2>&1)
-if [[ "$OUTPUT" == *"ERROR"* ]]; then echo "ERR"; exit 1; fi
+if [[ "$OUTPUT" == *"ERROR"* ]]; then echo "ERR"; fi
 if [[ -z $OUTPUT ]]; then
 	echo 0
 else
