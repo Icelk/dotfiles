@@ -4,7 +4,7 @@ These are all my dotfiles, which can be used to complete a setup with Nvidia gra
 
 > Right, almost forgot, I use **Arch Linux**. Sorry, `i use arch btw` 😎
 
-Removing the Nvidia packages and changing the [µcode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
+Removing the Intel packages and changing the [µcode](https://wiki.archlinux.org/index.php/Microcode) should be enough to make it vendor agnostic.
 
 Wayland should function regardless (see `config/hyprland.conf`)
 
@@ -16,82 +16,33 @@ Wayland should function regardless (see `config/hyprland.conf`)
 
 To use this setup on multiple systems, I've got multiple branches.
 
-A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+Since 2026-07, my laptop is the main branch, because I use it the most. There's a `stationary` branch which contains the changes made to fit my stationary computer.
 
-One named `laptop` is for a more light-weight install for a laptop using Intel graphics, with Intel microcode. It looks the same but with smaller margins for smaller screens.
+### Unmaintained
+
+- A branch named `macos` is available in this repo for other macOS users. It uses `homebrew` for managing packages.
+- One named `laptop` is for a more light-weight install for a laptop using Intel graphics, with Intel microcode. It looks the same but with smaller margins for smaller screens.
 
 # Major components
 
 I use
 
--   Btrfs
 -   Hyprland
+-   NeoVim
+-   Btrfs
 -   waybar
 -   dunst
 -   rofi (lbonn's fork for wayland support)
 -   Kitty
--   NeoVim
 -   Firefox
 -   paru
--   spotify-player
 -   Unbound
 
 # Themes
 
 I have theme support through [corpl](https://github.com/Icelk/iclu/tree/main/corpl).
-These are a few combinations of GTK themes, cursor themes, and my themes I like to use.
 
-[Flatery](https://store.kde.org/p/1332404/) (the black variant) is a icon theme I recommend that's not available in the AUR.
-
-> These are all of course available after you've [installed](#installation).
-
-> Adwaita is actually kinda nice!
-> The dark variant is what I use.
-
-You can change all these settings through the GUI program `lxappearance`.
-
-## General recommendations
-
-I can recommend the Arc Dark GTK theme, but think it's a bit difficult to read.
-The Breeze Hacked cursors are a long-time favourite for me.
-
-I prefer to use Roboto as the system font. Cantarell is also quite nice.
-Isoevka Aile is also quite nice.
-
-The theme collections below are formatted as follows:
-
--   My themes, accessible through `Meta (win) + Shift + t`
--   GTK theme (called `Widget` in `lxappearance`)
--   Mouse/cursor theme
--   Icon theme
-
-## Clean
-
--   Light|dark (not "Dark split"!)
--   Adwaita dark
--   Breeze
--   Breeze dark
-
-## Black
-
--   Dark
--   Adwaita dark
--   Sweet cursors
--   [Flatery](https://store.kde.org/p/1332404/)
-
-## Sweet
-
--   Dark
--   Sweet dark
--   Sweet cursors
--   Candy icons (incorrectly named, part of the Sweet set)
-
-## Balanced
-
--   Any
--   Arc dark
--   Sweet cursors
--   Candy icons
+You can change all these settings through the GUI program `lxappearance`. Except for my system theming which you change by pressing super + shift + t.
 
 # Installation
 
