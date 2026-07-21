@@ -58,6 +58,7 @@ firefox
 firefox-tridactyl
 fish
 flex
+font-manager
 fprintd
 freecad
 fwupd
@@ -192,6 +193,7 @@ tailwindcss-language-server
 thunar
 thunar-volman
 thunderbird
+tinymist
 tldr
 tokei
 tor-browser-bin

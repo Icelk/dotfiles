@@ -386,6 +386,11 @@ lspc("postgres_lsp", {
     flags = lsp_flags,
     capabilities = capabilities,
 })
+lspc("tinymist", {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+})
 
 require("crates").setup {
     lsp = {
