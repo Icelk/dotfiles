@@ -145,6 +145,7 @@ pipewire-zeroconf
 pkgconf
 playerctl
 plymouth
+podman
 polkit-gnome
 posy-cursors
 powertop
