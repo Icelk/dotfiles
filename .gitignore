@@ -14,3 +14,5 @@ config/fish/completions
 config/nvim/syntax
 config/nvim/plugin/packer_compiled.lua
 config/nvim/lua/.luarc.json
+
+config/nvim/nvim-pack-lock.json
