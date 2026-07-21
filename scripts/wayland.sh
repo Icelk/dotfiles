@@ -8,4 +8,4 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 
 scripts/import-gsettings-themes.sh
 
-exec Hyprland
+exec start-hyprland
