@@ -1,8 +1,8 @@
 #!/usr/bin/sh
 
-b=0
+b=30
 c=5
-s=40
+s=60
 
 case $1 in
     old)
