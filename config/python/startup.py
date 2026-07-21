@@ -82,16 +82,21 @@ mev_per_u = 931.4941024228
 me = 0.000548580
 mp = 1.00727655
 mn = 1.00866492
-boltzmann = 1.380649e-23
+k = boltzmann = 1.380649e-23
 elementary_charge = 1.602176634e-19
-planck = 6.62607015e-34
+h = planck = 6.62607015e-34
 hbar = planck / pi / 2
-h = planck
 G = 6.67e-11
 R = avogadro * boltzmann
 c_w = 4.181  # at 25°C
 c_w_fusion = 333.55
 c_w_vaporization = 2257
+k_cu = 401
+k_alu = 237
+k_n = 25.83e-3
+sigma = 5.670374419e-8
+e0 = 8.85418781e-12 # electric constant
+µ0 = magnetic_constant = 4e-7 * pi
 
 
 def u_to_J(u):
