@@ -7,11 +7,6 @@ local nmap = map.nmap
 local vmap = map.vmap
 local nvmapo = map.nvmapo
 
-A.nvim_create_autocmd("BufWritePost", {
-    group = A.nvim_create_augroup("packer_user_config", {}),
-    pattern = "plugins.lua",
-    callback = function() vim.cmd("source <afile> | PackerCompile") end,
-})
 A.nvim_create_autocmd("BufRead", {
     pattern = "*.ron",
     callback = function() vim.o.filetype = "ron" end,
@@ -21,58 +16,53 @@ A.nvim_create_autocmd("BufNewFile", {
     callback = function() vim.o.filetype = "ron" end,
 })
 
-require("packer").startup(function(use)
-    use "wbthomason/packer.nvim"
+local gh = function(x) return 'https://github.com/' .. x end
+vim.pack.add({
+    gh("romus204/tree-sitter-manager.nvim"),
 
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
-    }
-    -- use "nvim-treesitter/nvim-treesitter-context"
+    gh("neovim/nvim-lspconfig"),
+    gh("hrsh7th/nvim-cmp"),         -- Autocompletion plugin
+    gh("hrsh7th/cmp-nvim-lsp"),     -- LSP source for nvim-cmp
+    gh("saadparwaiz1/cmp_luasnip"), -- Snippets source for nvim-cmp
+    gh("L3MON4D3/LuaSnip"),         -- Snippets plugin
 
-    use "neovim/nvim-lspconfig"
-    use "hrsh7th/nvim-cmp"         -- Autocompletion plugin
-    use "hrsh7th/cmp-nvim-lsp"     -- LSP source for nvim-cmp
-    use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
-    use "L3MON4D3/LuaSnip"         -- Snippets plugin
+    gh("honza/vim-snippets"),
 
-    use "honza/vim-snippets"
+    gh("lewis6991/gitsigns.nvim"),
+    gh("windwp/nvim-autopairs"),
+    gh("terrortylor/nvim-comment"),
+    gh("JoosepAlviste/nvim-ts-context-commentstring"),
+    gh("NMAC427/guess-indent.nvim"),
 
-    use "lewis6991/gitsigns.nvim"
-    use "windwp/nvim-autopairs"
-    use "terrortylor/nvim-comment"
-    use "JoosepAlviste/nvim-ts-context-commentstring"
+    gh("nvimtools/none-ls.nvim"),
+    gh("hrsh7th/cmp-path"),
+    gh("hrsh7th/cmp-buffer"),
+    gh("mrcjkb/rustaceanvim"),
+    gh("nvim-lua/plenary.nvim"),
+    gh("saecki/crates.nvim"),
 
-    use "nvimtools/none-ls.nvim"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-buffer"
-    use "mrcjkb/rustaceanvim"
-    use {
-        "saecki/crates.nvim",
-        requires = { "nvim-lua/plenary.nvim" }
-    }
+    gh("nvim-telescope/telescope.nvim"),
+    gh("stevearc/dressing.nvim"),
 
-    use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
-    use { "stevearc/dressing.nvim" }
-    use { "danielfalk/smart-open.nvim", requires = { { "kkharji/sqlite.lua" }, { "nvim-telescope/telescope-fzy-native.nvim" } } }
+    -- required for smart open
+    gh('nvim-telescope/telescope-fzy-native.nvim'),
+    gh('kkharji/sqlite.lua'),
+    gh("danielfalk/smart-open.nvim"),
 
-    use "andersevenrud/nordic.nvim"
-    use "ellisonleao/gruvbox.nvim"
-end)
+    gh("ellisonleao/gruvbox.nvim"),
+})
 
 vim.lsp.inlay_hint.enable(true)
 vim.cmd.colorscheme("gruvbox")
 vim.cmd("highlight Normal guibg=none")
 
-require "nvim-treesitter.configs".setup {
+require "tree-sitter-manager".setup {
     ensure_installed = { "svelte", "typescript", "ron", "wgsl", "wgsl_bevy", "javascript", "css", "rust", "lua" },
     auto_install = true,
-    highlight = { enable = true },
 }
 vim.g.skip_ts_context_commentstring_module = true
--- require "treesitter-context".setup {}
 vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 -- TELESCOPE
 local telescope = require "telescope"
@@ -117,7 +107,6 @@ require "dressing".setup { select = { telescope = tele_theme_cursor } }
 --     end)
 nmap("<C-p>", function() telescope.extensions.smart_open.smart_open() end)
 nmap("<C-g>", function() tele_builtin.live_grep(theme()) end)
-nmap("<C-e>", function() tele_builtin.treesitter(theme()) end)
 nmap("<C-A-p>", function() tele_builtin.grep_string(theme()) end)
 nmap("S", function() tele_builtin.spell_suggest(theme()) end)
 nmap("<C-/>", function() tele_builtin.current_buffer_fuzzy_find(theme()) end)
@@ -161,40 +150,18 @@ require("nvim_comment").setup {
         end
     end,
 }
-require("crates").setup {}
-
--- require("nordic").colorscheme({
---     -- Underline style used for spelling
---     -- Options: "none", "underline", "undercurl"
---     underline_option = "none",
---
---     -- Italics for certain keywords such as constructors, functions,
---     -- labels and namespaces
---     italic = true,
---
---     -- Italic styled comments
---     italic_comments = false,
---
---     -- Minimal mode: different choice of colors for Tabs and StatusLine
---     minimal_mode = false,
---
---     -- Darker backgrounds for certain sidebars, popups, etc.
---     -- Options: true, false, or a table of explicit names
---     -- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
---     alternate_backgrounds = false,
---     custom_colors = function(c, _, _)
---         -- set floating windows to have the same BG as normal windows
---         return {
---             { { "NormalFloat", }, c.white, c.dark_black },
---         }
---     end
--- })
+require('guess-indent').setup {}
 
 local lsp_flags = {}
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspc = require "lspconfig"
+local lspc_util = require("lspconfig.util")
 local luasnip = require "luasnip"
 require("luasnip.loaders.from_snipmate").lazy_load()
+
+local function lspc(name, opts)
+    vim.lsp.config(name, opts)
+    vim.lsp.enable(name)
+end
 
 -- change border
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -245,7 +212,7 @@ local on_attach = function(client, bufnr)
 
     -- Enable semantic tokens if it's available (from the fork at jdrouhard/neovim#lsp_semantic_tokens)
     if vim.lsp.semantic_tokens ~= nil and s_capabilities.semanticTokensProvider then
-        vim.lsp.semantic_tokens.start(bufnr, client.id)
+        vim.lsp.semantic_tokens.enable(true, { bufnr, client_id = client.id })
     end
 
     local opts = { noremap = true, silent = true, buffer = bufnr }
@@ -293,25 +260,23 @@ end
 
 -- Activate deno when both are contenders.
 -- Else, activeate the respective
-local tss_required = lspc.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
-local deno_required = lspc.util.root_pattern("deno.json", "deno.jsonc")
-lspc.ts_ls.setup {
+local tss_required = lspc_util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
+local deno_required = lspc_util.root_pattern("deno.json", "deno.jsonc")
+lspc("ts_ls", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
     single_file_support = false,
-    root_dir = function(path)
+    root_dir = function(path, on_dir)
         local tss = tss_required(path)
         local deno = deno_required(path)
-        if string.len(tss or "") <= string.len(deno or "") then
-            return nil
-        else
-            return tss
+        if string.len(tss or "") > string.len(deno or "") then
+            on_dir(tss)
         end
     end,
-}
-lspc.clangd.setup { on_attach = on_attach, flags = lsp_flags, capabilities = capabilities }
-lspc.lua_ls.setup {
+})
+lspc("clangd", { on_attach = on_attach, flags = lsp_flags, capabilities = capabilities })
+lspc("lua_ls", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -335,86 +300,101 @@ lspc.lua_ls.setup {
             },
         },
     },
-}
+})
 vim.g.markdown_fenced_languages = {
     "ts=typescript"
 }
-lspc.denols.setup {
+lspc("denols", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
     filetypes = {
-      'javascript',
-      'javascriptreact',
-      'javascript.jsx',
-      'typescript',
-      'typescriptreact',
-      'typescript.tsx',
-      'json',
-      'jsonc',
-      'markdown',
+        'javascript',
+        'javascriptreact',
+        'javascript.jsx',
+        'typescript',
+        'typescriptreact',
+        'typescript.tsx',
+        'json',
+        'jsonc',
+        'markdown',
     },
-    root_dir = function(path)
+    root_dir = function(path, on_dir)
         local tss = tss_required(path)
         local deno = deno_required(path)
-        if string.len(deno or "") < string.len(tss or "") then
-            return nil
-        else
-            return deno
+        if string.len(deno or "") >= string.len(tss or "") then
+            return on_dir(deno)
         end
     end,
-}
-lspc.cssls.setup {
+})
+lspc("cssls", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-}
-lspc.jsonls.setup {
+})
+lspc("jsonls", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-}
-lspc.html.setup {
+})
+lspc("html", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
     settings = { autoClosingTags = true }
-}
--- lspc.tailwindcss.setup {
---     on_attach = on_attach,
---     filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
---         "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
---         "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
---         "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
---         "rescript", "typescriptreact", "vue", "svelte" },
---     flags = lsp_flags,
---     capabilities = capabilities,
--- }
-lspc.jdtls.setup {
+})
+lspc("tailwindcss", {
+    on_attach = on_attach,
+    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge",
+        "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex",
+        "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig",
+        "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascriptreact", "reason",
+        "rescript", "typescriptreact", "vue", "svelte" },
+    flags = lsp_flags,
+    capabilities = capabilities,
+})
+lspc("jdtls", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
     cmd = { "jdtls", "-source", "19" }
-}
-lspc.svelte.setup {
+})
+lspc("svelte", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-}
-lspc.texlab.setup {
+})
+lspc("texlab", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-}
-lspc.ruff.setup {
+})
+lspc("ruff", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-}
-lspc.pyright.setup {
+})
+lspc("pyright", {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+})
+lspc("postgres_lsp", {
+    cmd = { "/bin/postgres-language-server", "lsp-proxy" },
+    root_markers = { "postgres-language-server.jsonc", },
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+})
+
+require("crates").setup {
+    lsp = {
+        enabled = true,
+        on_attach = on_attach,
+        actions = true,
+        completion = true,
+        hover = true,
+    }
 }
 
 local standardjs_condition = function(utils)
@@ -427,7 +407,8 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier.with({
             extra_args = { "--no-semi", "--tab-width", "4", "--prose-wrap", "always", "--bracket-same-line", "true" },
             condition = function(utils)
-                return not utils.root_matches("dev/dd/frontend")
+                return not utils.root_matches("dev/dd/frontend") and not utils.root_matches("dev/esek") and
+                    not utils.root_matches("dev/fed/frontend")
             end,
         }),
         -- null_ls.builtins.completion.spell,
@@ -445,7 +426,7 @@ autopairs.setup()
 local function execOutput(cmd)
     local fileHandle    = assert(io.popen(cmd, "r"))
     local commandOutput = assert(fileHandle:read("*a"))
-    local returnTable   = { fileHandle:close() }
+    fileHandle:close()
     return commandOutput
 end
 
@@ -461,11 +442,11 @@ vim.g.rustaceanvim = ({
             on_attach(a, bufnr)
             -- Rust specific keybinds
             -- add runnables?
-            vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end)
-            vim.keymap.set("n", "<C-x>", function() vim.cmd.RustLsp('expandMacro') end)
-            vim.keymap.set("n", "<C-d>", function() vim.cmd.RustLsp('openDocs') end)
+            vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end, { buf = bufnr })
+            vim.keymap.set("n", "<C-x>", function() vim.cmd.RustLsp('expandMacro') end, { buf = bufnr })
+            vim.keymap.set("n", "<C-d>", function() vim.cmd.RustLsp('openDocs') end, { buf = bufnr })
             -- Code action groups
-            vim.keymap.set("n", "<Leader>a", function() vim.cmd.RustLsp("codeAction") end)
+            vim.keymap.set("n", "<Leader>a", function() vim.cmd.RustLsp("codeAction") end, { buf = bufnr })
         end,
         settings = {
             ["rust-analyzer"] = {
@@ -494,13 +475,6 @@ cmp.event:on(
     "confirm_done",
     cmp_autopairs.on_confirm_done()
 )
-A.nvim_create_autocmd("BufRead", {
-    group = A.nvim_create_augroup("CmpSourceCargo", { clear = true }),
-    pattern = "Cargo.toml",
-    callback = function()
-        cmp.setup.buffer({ sources = { { name = "crates" } } })
-    end,
-})
 cmp.setup {
     preselect = cmp.PreselectMode.Item,
     snippet = {
@@ -552,41 +526,7 @@ cmp.setup {
     sources = {
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        { name = "crates" },
         { name = "path" },
         { name = "buffer" },
     },
 }
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = true,
-        underline = true,
-        signs = true,
-    }
-)
-
-A.nvim_create_autocmd("CursorHold", {
-    callback = function()
-        local arr = A.nvim_list_wins()
-        -- if has floating window, don't open popup
-        for _, win in ipairs(arr) do
-            if A.nvim_win_get_config(win).relative ~= "" then
-                return
-            end
-        end
-        vim.diagnostic.open_float({ focusable = false })
-    end,
-})
--- A.nvim_create_autocmd("CursorHoldI", {
---     callback = function()
---         local arr = A.nvim_list_wins()
---         -- if has floating window, don't open popup
---         for i, win in ipairs(arr) do
---             if A.nvim_win_get_config(win).relative ~= "" then
---                 return
---             end
---         end
---
---         vim.lsp.buf.signature_help()
---     end,
--- })
