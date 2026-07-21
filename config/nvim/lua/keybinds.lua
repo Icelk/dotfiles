@@ -17,11 +17,12 @@ nmap("<C-b>", "<C-u>")
 nmap("<C-n>", "5<C-e>")
 nmap("<C-m>", "5<C-y>")
 
+-- make e go backwards
+nmap("e", "b")
+
 -- lspconfig
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 nmap("<space>e", vim.diagnostic.open_float)
-nmap("[g", function() vim.diagnostic.jump({count = -1}) end)
-nmap("]g", function() vim.diagnostic.jump({count = 1}) end)
 imap("<C-,>", vim.lsp.buf.signature_help)
 nmap("<space>q", vim.diagnostic.setloclist)
 
