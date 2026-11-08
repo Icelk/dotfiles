@@ -1,13 +1,11 @@
 #!/bin/sh
 
-alternate=$(rg -q "# kb_variant = ansi-switched-slash" ~/.config/hypr/hyprland.conf; echo $?)
-
 PATH=~/.cargo/bin:$PATH
 
-if [ $alternate == "0" ]; then
-    corpl -k -e ansi-switched ~/.config/hypr/hyprland.conf
+if rg -q -- '^-- inputVariant = "ansi-switched-slash"$' ~/.config/hypr/hyprland.lua; then
+    corpl --comment=-- -k -e ansi-switched ~/.config/hypr/hyprland.lua
     notify-send -a "Keyboard layout" "Now using alternate layout."
 else
-    corpl -k -d ansi-switched ~/.config/hypr/hyprland.conf
+    corpl --comment=-- -k -d ansi-switched ~/.config/hypr/hyprland.lua
     notify-send -a "Keyboard layout" "Now using default layout."
 fi
