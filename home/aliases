@@ -16,6 +16,12 @@ alias replace="~/scripts/replace.sh"
 alias py="python -q"
 alias dush="bash -c 'du -shxc \$(fd --type directory --maxdepth 1 --hidden) | sort -h'"
 
+alias pcd="podman compose down"
+alias pcu="podman compose up"
+alias pcud="podman compose up -d"
+alias pce="podman compose exec"
+alias pcl="podman compose logs"
+
 # Systemctl
 alias sctl="doas systemctl"
 alias sctlu="systemctl --user"

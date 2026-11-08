@@ -26,6 +26,7 @@ btop
 btrbk
 calf
 cargo-bloat
+cargo-clean-all
 cargo-flamegraph
 chrony
 cifs-utils

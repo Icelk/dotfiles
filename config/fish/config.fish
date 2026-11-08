@@ -56,3 +56,18 @@ function sshp
         sleep 2
     end
 end
+
+function nvimtyp
+    touch $argv[1]
+    typst c $argv[1]
+    evince (path change-extension pdf $argv[1])&
+    typst w $argv[1] &>/dev/null&
+    nvim $argv[1]
+end
+
+# pnpm
+set -gx PNPM_HOME "/home/icelk/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

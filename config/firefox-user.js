@@ -49,7 +49,7 @@ user_pref("widget.dmabuf.force-enabled", true);
 user_pref("gfx.x11-egl.force-enabled", true);
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("media.av1.enabled", true);
-user_pref("dom.media.webcodecs.h265.enabled", true)
+user_pref("dom.media.webcodecs.h265.enabled", true);
 
 // Disable the annoying middle button paste
 user_pref("middlemouse.paste", false);
